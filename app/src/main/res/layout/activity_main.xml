@@ -14,7 +14,7 @@
         android:layout_height="60dp"
         android:layout_below="@+id/passwordEdt"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="143dp"
+        android:layout_marginTop="142dp"
         android:background="@drawable/round"
         android:text="Login"
         android:textSize="28sp" />

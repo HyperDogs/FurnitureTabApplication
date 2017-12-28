@@ -2,8 +2,8 @@
 <resources>
     <color name="colorPrimary">#FF8000</color>
     <color name="colorPrimaryDark">#FF8000</color>
-    <color name="colorAccent">#FF4081</color>
-
+    <color name="colorAccent">#FF8000</color>
+    <color name="company_color">#fff979</color>
 
     <color name="btnColor"> #339933</color>
 
@@ -18,7 +18,7 @@
 
     <color name="black_semi_transparent">#B2000000</color>
     <color name="background">#e5e5e5</color>
-    <color name="half_black">#808080</color>
+    <color name="half_black">#adadad</color>
     <color name="white">#fafafa</color>
     <color name="white_pressed">#f1f1f1</color>
     <color name="pink">#e91e63</color>
