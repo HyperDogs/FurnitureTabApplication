@@ -16,9 +16,9 @@
     <color name="viewBg">#f1f5f8</color>
     <color name="album_title">#4c4c4c</color>
 
-    <color name="black_semi_transparent">#B2000000</color>
+    <color name="black_semi_transparent">#b2000000</color>
     <color name="background">#e5e5e5</color>
-    <color name="half_black">#adadad</color>
+    <color name="half_black">#e5e5e5</color>
     <color name="white">#fafafa</color>
     <color name="white_pressed">#f1f1f1</color>
     <color name="pink">#e91e63</color>

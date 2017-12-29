@@ -3,7 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/half_black"
+    android:background="@color/album_title"
     tools:context="com.example.ton.furnituretabapplication.QAPageI">
 
     <!-- TODO: Update blank fragment layout -->
@@ -47,38 +47,39 @@
             <RelativeLayout
                 android:id="@+id/relativeLayout3"
                 android:layout_width="match_parent"
-                android:layout_height="40dp"
+                android:layout_height="wrap_content"
                 android:layout_alignParentBottom="true"
                 android:layout_alignParentLeft="true"
                 android:layout_alignParentStart="true"
-                android:layout_margin="5dp">
+                android:layout_marginTop="-10dp">
 
                 <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="-15dp"
                     android:orientation="horizontal">
 
 
                     <TableRow
                         android:layout_width="match_parent"
-                        android:layout_height="match_parent">
+                        android:layout_height="wrap_content">
 
                         <CheckBox
                             android:id="@+id/checkBox"
                             android:layout_width="wrap_content"
-                            android:layout_height="match_parent"
+                            android:layout_height="wrap_content"
                             android:text="Regular inspection" />
 
                         <CheckBox
                             android:id="@+id/checkBox2"
                             android:layout_width="wrap_content"
-                            android:layout_height="match_parent"
+                            android:layout_height="wrap_content"
                             android:text="Re-inspectiion" />
 
                         <TextView
                             android:id="@+id/textView15"
                             android:layout_width="wrap_content"
-                            android:layout_height="match_parent"
+                            android:layout_height="wrap_content"
                             android:layout_marginLeft="10dp"
                             android:gravity="left|center"
                             android:text="Date : "
@@ -117,6 +118,7 @@
                         <LinearLayout
                             android:layout_width="wrap_content"
                             android:layout_height="20dp"
+                            android:layout_marginBottom="5dp"
                             android:orientation="horizontal">
 
                             <TextView
@@ -125,7 +127,7 @@
                                 android:layout_weight="1"
                                 android:text="@string/stock_no"
                                 android:textColor="@android:color/black"
-                                android:textSize="11sp"
+                                android:textSize="12sp"
                                 android:textStyle="bold" />
 
                             <TextView
@@ -138,7 +140,7 @@
 
                             <TextView
                                 android:id="@+id/dateV"
-                                android:layout_width="wrap_content"
+                                android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:layout_gravity="left"
                                 android:paddingLeft="2dp"
@@ -162,7 +164,7 @@
                                 android:layout_weight="1"
                                 android:text="@string/acme_no"
                                 android:textColor="@android:color/black"
-                                android:textSize="11sp"
+                                android:textSize="12sp"
                                 android:textStyle="bold" />
 
                             <TextView
@@ -175,7 +177,7 @@
 
                             <TextView
                                 android:id="@+id/cusNoV"
-                                android:layout_width="wrap_content"
+                                android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:layout_gravity="left"
                                 android:paddingLeft="2dp"
@@ -189,7 +191,6 @@
                         <LinearLayout
                             android:layout_width="wrap_content"
                             android:layout_height="25dp"
-                            android:layout_marginBottom="5dp"
                             android:layout_weight="1"
                             android:orientation="horizontal">
 
@@ -200,7 +201,7 @@
                                 android:layout_weight="1"
                                 android:text="@string/desc"
                                 android:textColor="@android:color/black"
-                                android:textSize="11sp"
+                                android:textSize="12sp"
                                 android:textStyle="bold" />
 
                             <TextView
@@ -216,6 +217,7 @@
                                 android:layout_width="81dp"
                                 android:layout_height="22dp"
                                 android:layout_gravity="left"
+                                android:maxLines="2"
                                 android:text="ST.IVES DOUBLE TALL BOY"
                                 android:textColor="@android:color/black"
                                 android:textSize="10sp" />
@@ -233,7 +235,7 @@
                                 android:layout_weight="1"
                                 android:text="@string/order"
                                 android:textColor="@android:color/black"
-                                android:textSize="11sp"
+                                android:textSize="12sp"
                                 android:textStyle="bold" />
 
                             <TextView
@@ -244,14 +246,14 @@
                                 android:textColor="@android:color/black"
                                 android:textSize="11sp" />
 
-                            <TextView
-                                android:id="@+id/colorVV"
-                                android:layout_width="wrap_content"
+                            <EditText
+                                android:id="@+id/order"
+                                android:layout_width="35dp"
                                 android:layout_height="wrap_content"
                                 android:layout_gravity="left"
+                                android:maxLines="1"
                                 android:paddingLeft="2dp"
                                 android:paddingTop="1dp"
-                                android:text="_____"
                                 android:textColor="@android:color/black"
                                 android:textSize="10sp" />
 
@@ -281,7 +283,7 @@
                                 android:layout_weight="1"
                                 android:text="@string/sampling"
                                 android:textColor="@android:color/black"
-                                android:textSize="11sp"
+                                android:textSize="12sp"
                                 android:textStyle="bold" />
 
                             <TextView
@@ -292,15 +294,15 @@
                                 android:textColor="@android:color/black"
                                 android:textSize="11sp" />
 
-                            <TextView
+                            <EditText
                                 android:id="@+id/colorVV3"
-                                android:layout_width="wrap_content"
+                                android:layout_width="35dp"
                                 android:layout_height="wrap_content"
                                 android:layout_gravity="left"
                                 android:layout_weight="1"
+                                android:maxLines="1"
                                 android:paddingLeft="2dp"
                                 android:paddingTop="1dp"
-                                android:text="_____"
                                 android:textColor="@android:color/black"
                                 android:textSize="10sp" />
 
@@ -359,7 +361,7 @@
                                     android:gravity="center"
                                     android:text="@string/company_name"
                                     android:textColor="@android:color/black"
-                                    android:textSize="9sp"
+                                    android:textSize="12sp"
                                     android:textStyle="bold" />
 
                                 <TextView
@@ -373,7 +375,7 @@
                                     android:gravity="center"
                                     android:text="@string/company_namesub"
                                     android:textColor="@android:color/black"
-                                    android:textSize="9sp"
+                                    android:textSize="12sp"
                                     android:textStyle="bold" />
 
                             </LinearLayout>
@@ -383,6 +385,8 @@
                         <LinearLayout
                             android:layout_width="match_parent"
                             android:layout_height="22dp"
+                            android:layout_marginBottom="5dp"
+                            android:layout_marginTop="10dp"
                             android:layout_weight="1"
                             android:orientation="horizontal">
 
@@ -393,7 +397,7 @@
                                 android:layout_weight="1"
                                 android:text="@string/cus_name"
                                 android:textColor="@android:color/black"
-                                android:textSize="11sp"
+                                android:textSize="12sp"
                                 android:textStyle="bold" />
 
                             <TextView
@@ -402,12 +406,13 @@
                                 android:layout_height="wrap_content"
                                 android:layout_weight="1"
                                 android:text="311"
+                                android:textColor="@android:color/black"
                                 android:textSize="11sp" />
 
                         </LinearLayout>
 
                         <LinearLayout
-                            android:layout_width="wrap_content"
+                            android:layout_width="match_parent"
                             android:layout_height="22dp"
                             android:layout_weight="1"
                             android:orientation="horizontal">
@@ -418,7 +423,7 @@
                                 android:layout_weight="1"
                                 android:text="@string/po_no"
                                 android:textColor="@android:color/black"
-                                android:textSize="11sp"
+                                android:textSize="12sp"
                                 android:textStyle="bold" />
 
                             <TextView
@@ -438,38 +443,75 @@
                         <LinearLayout
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
                             android:layout_weight="1"
                             android:orientation="horizontal">
 
                             <TextView
                                 android:id="@+id/textView41"
-                                android:layout_width="100dp"
+                                android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_weight="1"
                                 android:text="@string/aql"
                                 android:textColor="@android:color/black"
-                                android:textSize="11sp"
+                                android:textSize="9sp"
                                 android:textStyle="bold" />
+
+                            <EditText
+                                android:id="@+id/order2"
+                                android:layout_width="30dp"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="left|center_horizontal"
+                                android:layout_weight="1"
+                                android:maxLines="1"
+                                android:paddingLeft="2dp"
+                                android:paddingTop="1dp"
+                                android:textColor="@android:color/black"
+                                android:textSize="9sp" />
 
                             <TextView
                                 android:id="@+id/textView40"
-                                android:layout_width="100dp"
+                                android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_weight="1"
                                 android:text="@string/major"
                                 android:textColor="@android:color/black"
-                                android:textSize="11sp"
+                                android:textSize="9sp"
                                 android:textStyle="bold" />
+
+                            <EditText
+                                android:id="@+id/order3"
+                                android:layout_width="30dp"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="left|center_horizontal"
+                                android:layout_weight="1"
+                                android:maxLines="1"
+                                android:paddingLeft="2dp"
+                                android:paddingTop="1dp"
+                                android:textColor="@android:color/black"
+                                android:textSize="9sp" />
 
                             <TextView
                                 android:id="@+id/textView36"
-                                android:layout_width="100dp"
+                                android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_weight="1"
                                 android:text="@string/minor"
                                 android:textColor="@android:color/black"
-                                android:textSize="11sp"
+                                android:textSize="9sp"
                                 android:textStyle="bold" />
+
+                            <EditText
+                                android:id="@+id/order4"
+                                android:layout_width="28dp"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="left|center_horizontal"
+                                android:layout_weight="1"
+                                android:maxLines="1"
+                                android:paddingLeft="2dp"
+                                android:paddingTop="1dp"
+                                android:textColor="@android:color/black"
+                                android:textSize="9sp" />
                         </LinearLayout>
 
                     </LinearLayout>
@@ -480,17 +522,19 @@
         </RelativeLayout>
 
         <RelativeLayout
+            android:id="@+id/relativeLayout4"
             android:layout_width="match_parent"
             android:layout_height="30dp"
             android:layout_alignParentLeft="true"
             android:layout_alignParentStart="true"
             android:layout_below="@+id/relativeLayoutImg"
-            android:layout_margin="5dp"
-            android:id="@+id/relativeLayout4">
+            android:layout_marginBottom="-4dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp">
 
             <TableRow
                 android:layout_width="match_parent"
-                android:layout_height="match_parent" >
+                android:layout_height="match_parent">
 
                 <TextView
                     android:id="@+id/textView42"
@@ -525,6 +569,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
                     android:layout_margin="1dp"
+                    android:layout_marginRight="2dp"
                     android:background="@android:color/darker_gray"
                     android:gravity="center"
                     android:padding="5dp"
@@ -538,6 +583,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
                     android:layout_margin="1dp"
+                    android:layout_marginLeft="2dp"
                     android:background="@android:color/darker_gray"
                     android:gravity="center"
                     android:padding="5dp"
@@ -559,6 +605,1877 @@
                     android:textSize="11sp"
                     android:textStyle="bold" />
             </TableRow>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/relativeLayout5"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/relativeLayout4">
+
+            <TableLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp">
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:weightSum="3">
+
+                    <LinearLayout
+                        android:layout_width="100dp"
+                        android:layout_height="match_parent"
+                        android:layout_margin="1dp"
+                        android:background="@color/half_black"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/textView2"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginBottom="-20dp"
+                            android:layout_weight="1"
+                            android:gravity="top|center"
+                            android:text="Component" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginBottom="-20dp"
+                            android:layout_marginTop="-20dp"
+                            android:layout_weight="1"
+                            android:gravity="top|center"
+                            android:text="Part" />
+
+                        <TextView
+                            android:id="@+id/textView"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginBottom="-20dp"
+                            android:layout_marginTop="-40dp"
+                            android:layout_weight="1"
+                            android:gravity="top|center"
+                            android:text="Quality" />
+                    </LinearLayout>
+
+                    <TableLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1.5">
+
+                        <TableRow
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                            <TextView
+                                android:layout_width="20dp"
+                                android:layout_height="25dp"
+                                android:layout_margin="1dp"
+                                android:background="@color/half_black"
+                                android:gravity="center"
+                                android:text="1" />
+
+                            <TextView
+                                android:id="@+id/textView26"
+                                android:layout_width="227dp"
+                                android:layout_height="match_parent"
+                                android:layout_margin="1dp"
+                                android:layout_marginRight="5dp"
+                                android:background="@color/half_black"
+                                android:gravity="left|center"
+                                android:paddingLeft="2dp"
+                                android:text="RBF5191C043" />
+
+                            <FrameLayout
+                                android:layout_width="46dp"
+                                android:layout_height="match_parent"
+                                android:layout_margin="1dp"
+                                android:background="@color/half_black">
+
+                                <RadioButton
+                                    android:id="@+id/radioButton2"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center" />
+                            </FrameLayout>
+
+                            <FrameLayout
+                                android:layout_width="42dp"
+                                android:layout_height="match_parent"
+                                android:layout_margin="1dp"
+                                android:background="@color/half_black">
+
+                                <RadioButton
+                                    android:id="@+id/radioButton3"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center" />
+                            </FrameLayout>
+
+                            <FrameLayout
+                                android:layout_width="49dp"
+                                android:layout_height="match_parent"
+                                android:layout_margin="1dp"
+                                android:background="@color/half_black">
+
+                                <RadioButton
+                                    android:id="@+id/radioButton4"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center" />
+                            </FrameLayout>
+
+                            <FrameLayout
+                                android:layout_width="75dp"
+                                android:layout_height="match_parent"
+                                android:layout_margin="1dp"
+                                android:background="@color/half_black">
+
+                                <EditText
+                                    android:id="@+id/editText3"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_marginBottom="-5dp"
+                                    android:autoSizeTextType="uniform"
+                                    android:ems="10"
+                                    android:inputType="textPersonName"
+                                    android:textSize="9sp" />
+                            </FrameLayout>
+
+                        </TableRow>
+
+                        <TableRow
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                            <TextView
+                                android:layout_width="20dp"
+                                android:layout_height="25dp"
+                                android:layout_margin="1dp"
+                                android:background="@color/half_black"
+                                android:gravity="center"
+                                android:text="1" />
+
+                            <TextView
+                                android:id="@+id/textView26"
+                                android:layout_width="227dp"
+                                android:layout_height="match_parent"
+                                android:layout_margin="1dp"
+                                android:layout_marginRight="5dp"
+                                android:background="@color/half_black"
+                                android:gravity="left|center"
+                                android:paddingLeft="2dp"
+                                android:text="RBF5191C043" />
+
+                            <FrameLayout
+                                android:layout_width="46dp"
+                                android:layout_height="match_parent"
+                                android:layout_margin="1dp"
+                                android:background="@color/half_black">
+
+                                <RadioButton
+                                    android:id="@+id/radioButton2"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center" />
+                            </FrameLayout>
+
+                            <FrameLayout
+                                android:layout_width="42dp"
+                                android:layout_height="match_parent"
+                                android:layout_margin="1dp"
+                                android:background="@color/half_black">
+
+                                <RadioButton
+                                    android:id="@+id/radioButton3"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center" />
+                            </FrameLayout>
+
+                            <FrameLayout
+                                android:layout_width="49dp"
+                                android:layout_height="match_parent"
+                                android:layout_margin="1dp"
+                                android:background="@color/half_black">
+
+                                <RadioButton
+                                    android:id="@+id/radioButton4"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center" />
+                            </FrameLayout>
+
+                            <FrameLayout
+                                android:layout_width="75dp"
+                                android:layout_height="match_parent"
+                                android:layout_margin="1dp"
+                                android:background="@color/half_black">
+
+                                <EditText
+                                    android:id="@+id/editText3"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_marginBottom="-5dp"
+                                    android:autoSizeTextType="uniform"
+                                    android:ems="10"
+                                    android:inputType="textPersonName"
+                                    android:textSize="9sp" />
+                            </FrameLayout>
+
+                        </TableRow>
+
+                        <TableRow
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                            <TextView
+                                android:layout_width="20dp"
+                                android:layout_height="25dp"
+                                android:layout_margin="1dp"
+                                android:background="@color/half_black"
+                                android:gravity="center"
+                                android:text="1" />
+
+                            <TextView
+                                android:id="@+id/textView26"
+                                android:layout_width="227dp"
+                                android:layout_height="match_parent"
+                                android:layout_margin="1dp"
+                                android:layout_marginRight="5dp"
+                                android:background="@color/half_black"
+                                android:gravity="left|center"
+                                android:paddingLeft="2dp"
+                                android:text="RBF5191C043" />
+
+                            <FrameLayout
+                                android:layout_width="46dp"
+                                android:layout_height="match_parent"
+                                android:layout_margin="1dp"
+                                android:background="@color/half_black">
+
+                                <RadioButton
+                                    android:id="@+id/radioButton2"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center" />
+                            </FrameLayout>
+
+                            <FrameLayout
+                                android:layout_width="42dp"
+                                android:layout_height="match_parent"
+                                android:layout_margin="1dp"
+                                android:background="@color/half_black">
+
+                                <RadioButton
+                                    android:id="@+id/radioButton3"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center" />
+                            </FrameLayout>
+
+                            <FrameLayout
+                                android:layout_width="49dp"
+                                android:layout_height="match_parent"
+                                android:layout_margin="1dp"
+                                android:background="@color/half_black">
+
+                                <RadioButton
+                                    android:id="@+id/radioButton4"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center" />
+                            </FrameLayout>
+
+                            <FrameLayout
+                                android:layout_width="75dp"
+                                android:layout_height="match_parent"
+                                android:layout_margin="1dp"
+                                android:background="@color/half_black">
+
+                                <EditText
+                                    android:id="@+id/editText3"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_marginBottom="-5dp"
+                                    android:autoSizeTextType="uniform"
+                                    android:ems="10"
+                                    android:inputType="textPersonName"
+                                    android:textSize="9sp" />
+                            </FrameLayout>
+
+                        </TableRow>
+
+                        <TableRow
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                            <TextView
+                                android:layout_width="20dp"
+                                android:layout_height="25dp"
+                                android:layout_margin="1dp"
+                                android:background="@color/half_black"
+                                android:gravity="center"
+                                android:text="1" />
+
+                            <TextView
+                                android:id="@+id/textView26"
+                                android:layout_width="227dp"
+                                android:layout_height="match_parent"
+                                android:layout_margin="1dp"
+                                android:layout_marginRight="5dp"
+                                android:background="@color/half_black"
+                                android:gravity="left|center"
+                                android:paddingLeft="2dp"
+                                android:text="RBF5191C043" />
+
+                            <FrameLayout
+                                android:layout_width="46dp"
+                                android:layout_height="match_parent"
+                                android:layout_margin="1dp"
+                                android:background="@color/half_black">
+
+                                <RadioButton
+                                    android:id="@+id/radioButton2"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center" />
+                            </FrameLayout>
+
+                            <FrameLayout
+                                android:layout_width="42dp"
+                                android:layout_height="match_parent"
+                                android:layout_margin="1dp"
+                                android:background="@color/half_black">
+
+                                <RadioButton
+                                    android:id="@+id/radioButton3"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center" />
+                            </FrameLayout>
+
+                            <FrameLayout
+                                android:layout_width="49dp"
+                                android:layout_height="match_parent"
+                                android:layout_margin="1dp"
+                                android:background="@color/half_black">
+
+                                <RadioButton
+                                    android:id="@+id/radioButton4"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center" />
+                            </FrameLayout>
+
+                            <FrameLayout
+                                android:layout_width="75dp"
+                                android:layout_height="match_parent"
+                                android:layout_margin="1dp"
+                                android:background="@color/half_black">
+
+                                <EditText
+                                    android:id="@+id/editText3"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_marginBottom="-5dp"
+                                    android:autoSizeTextType="uniform"
+                                    android:ems="10"
+                                    android:inputType="textPersonName"
+                                    android:textSize="9sp" />
+                            </FrameLayout>
+
+                        </TableRow>
+
+                        <TableRow
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <TextView
+                                android:layout_width="20dp"
+                                android:layout_height="25dp"
+                                android:layout_margin="1dp"
+                                android:background="@color/half_black"
+                                android:gravity="center"
+                                android:text="1" />
+
+                            <TextView
+                                android:id="@+id/textView26"
+                                android:layout_width="227dp"
+                                android:layout_height="match_parent"
+                                android:layout_margin="1dp"
+                                android:layout_marginRight="5dp"
+                                android:background="@color/half_black"
+                                android:gravity="left|center"
+                                android:paddingLeft="2dp"
+                                android:text="RBF5191C043" />
+
+                            <FrameLayout
+                                android:layout_width="46dp"
+                                android:layout_height="match_parent"
+                                android:layout_margin="1dp"
+                                android:background="@color/half_black">
+
+                                <RadioButton
+                                    android:id="@+id/radioButton2"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center" />
+                            </FrameLayout>
+
+                            <FrameLayout
+                                android:layout_width="42dp"
+                                android:layout_height="match_parent"
+                                android:layout_margin="1dp"
+                                android:background="@color/half_black">
+
+                                <RadioButton
+                                    android:id="@+id/radioButton3"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center" />
+                            </FrameLayout>
+
+                            <FrameLayout
+                                android:layout_width="49dp"
+                                android:layout_height="match_parent"
+                                android:layout_margin="1dp"
+                                android:background="@color/half_black">
+
+                                <RadioButton
+                                    android:id="@+id/radioButton4"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center" />
+                            </FrameLayout>
+
+                            <FrameLayout
+                                android:layout_width="75dp"
+                                android:layout_height="match_parent"
+                                android:layout_margin="1dp"
+                                android:background="@color/half_black">
+
+                                <EditText
+                                    android:id="@+id/editText3"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_marginBottom="-5dp"
+                                    android:autoSizeTextType="uniform"
+                                    android:ems="10"
+                                    android:inputType="textPersonName"
+                                    android:textSize="9sp" />
+                            </FrameLayout>
+
+                        </TableRow>
+
+                        <TableRow
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <TextView
+                                android:id="@+id/textView5"
+                                android:layout_width="20dp"
+                                android:layout_height="25dp"
+                                android:layout_margin="1dp"
+                                android:background="@color/half_black"
+                                android:gravity="center"
+                                android:text="1" />
+
+                            <TextView
+                                android:id="@+id/textView6"
+                                android:layout_width="227dp"
+                                android:layout_height="match_parent"
+                                android:layout_margin="1dp"
+                                android:layout_marginRight="5dp"
+                                android:background="@color/half_black"
+                                android:gravity="left|center"
+                                android:paddingLeft="2dp"
+                                android:text="RBF5191C043" />
+
+                            <FrameLayout
+                                android:layout_width="46dp"
+                                android:layout_height="match_parent"
+                                android:layout_margin="1dp"
+                                android:background="@color/half_black">
+
+                                <RadioButton
+                                    android:id="@+id/radioButton2"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center" />
+                            </FrameLayout>
+
+                            <FrameLayout
+                                android:layout_width="42dp"
+                                android:layout_height="match_parent"
+                                android:layout_margin="1dp"
+                                android:background="@color/half_black">
+
+                                <RadioButton
+                                    android:id="@+id/radioButton3"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center" />
+                            </FrameLayout>
+
+                            <FrameLayout
+                                android:layout_width="49dp"
+                                android:layout_height="match_parent"
+                                android:layout_margin="1dp"
+                                android:background="@color/half_black">
+
+                                <RadioButton
+                                    android:id="@+id/radioButton4"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center" />
+                            </FrameLayout>
+
+                            <FrameLayout
+                                android:layout_width="75dp"
+                                android:layout_height="match_parent"
+                                android:layout_margin="1dp"
+                                android:background="@color/half_black">
+
+                                <EditText
+                                    android:id="@+id/editText3"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_marginBottom="-5dp"
+                                    android:autoSizeTextType="uniform"
+                                    android:ems="10"
+                                    android:inputType="textPersonName"
+                                    android:textSize="9sp" />
+                            </FrameLayout>
+                        </TableRow>
+
+                        <TableRow
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <TextView
+                                android:id="@+id/textView10"
+                                android:layout_width="20dp"
+                                android:layout_height="25dp"
+                                android:layout_margin="1dp"
+                                android:background="@color/half_black"
+                                android:gravity="center"
+                                android:text="1" />
+
+                            <TextView
+                                android:id="@+id/textView11"
+                                android:layout_width="227dp"
+                                android:layout_height="match_parent"
+                                android:layout_margin="1dp"
+                                android:layout_marginRight="5dp"
+                                android:background="@color/half_black"
+                                android:gravity="left|center"
+                                android:paddingLeft="2dp"
+                                android:text="RBF5191C043" />
+
+                            <FrameLayout
+                                android:layout_width="46dp"
+                                android:layout_height="match_parent"
+                                android:layout_margin="1dp"
+                                android:background="@color/half_black">
+
+                                <RadioButton
+                                    android:id="@+id/radioButton2"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center" />
+                            </FrameLayout>
+
+                            <FrameLayout
+                                android:layout_width="42dp"
+                                android:layout_height="match_parent"
+                                android:layout_margin="1dp"
+                                android:background="@color/half_black">
+
+                                <RadioButton
+                                    android:id="@+id/radioButton3"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center" />
+                            </FrameLayout>
+
+                            <FrameLayout
+                                android:layout_width="49dp"
+                                android:layout_height="match_parent"
+                                android:layout_margin="1dp"
+                                android:background="@color/half_black">
+
+                                <RadioButton
+                                    android:id="@+id/radioButton4"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center" />
+                            </FrameLayout>
+
+                            <FrameLayout
+                                android:layout_width="75dp"
+                                android:layout_height="match_parent"
+                                android:layout_margin="1dp"
+                                android:background="@color/half_black">
+
+                                <EditText
+                                    android:id="@+id/editText3"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_marginBottom="-5dp"
+                                    android:autoSizeTextType="uniform"
+                                    android:ems="10"
+                                    android:inputType="textPersonName"
+                                    android:textSize="9sp" />
+                            </FrameLayout>
+
+                        </TableRow>
+
+                    </TableLayout>
+
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:weightSum="3">
+
+                    <LinearLayout
+                        android:layout_width="100dp"
+                        android:layout_height="match_parent"
+                        android:layout_margin="1dp"
+                        android:background="@color/half_black"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/textView2"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginBottom="-20dp"
+                            android:layout_weight="1"
+                            android:gravity="top|center"
+                            android:text="Component" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginBottom="-20dp"
+                            android:layout_marginTop="-20dp"
+                            android:layout_weight="1"
+                            android:gravity="top|center"
+                            android:text="Part" />
+
+                        <TextView
+                            android:id="@+id/textView"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginBottom="-20dp"
+                            android:layout_marginTop="-40dp"
+                            android:layout_weight="1"
+                            android:gravity="top|center"
+                            android:text="Quality" />
+                    </LinearLayout>
+
+                    <TableLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1.5">
+
+                        <TableRow
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                            <TextView
+                                android:layout_width="20dp"
+                                android:layout_height="25dp"
+                                android:layout_margin="1dp"
+                                android:background="@color/half_black"
+                                android:gravity="center"
+                                android:text="1" />
+
+                            <TextView
+                                android:id="@+id/textView26"
+                                android:layout_width="227dp"
+                                android:layout_height="match_parent"
+                                android:layout_margin="1dp"
+                                android:layout_marginRight="5dp"
+                                android:background="@color/half_black"
+                                android:gravity="left|center"
+                                android:paddingLeft="2dp"
+                                android:text="RBF5191C043" />
+
+                            <FrameLayout
+                                android:layout_width="46dp"
+                                android:layout_height="match_parent"
+                                android:layout_margin="1dp"
+                                android:background="@color/half_black">
+
+                                <RadioButton
+                                    android:id="@+id/radioButton2"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center" />
+                            </FrameLayout>
+
+                            <FrameLayout
+                                android:layout_width="42dp"
+                                android:layout_height="match_parent"
+                                android:layout_margin="1dp"
+                                android:background="@color/half_black">
+
+                                <RadioButton
+                                    android:id="@+id/radioButton3"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center" />
+                            </FrameLayout>
+
+                            <FrameLayout
+                                android:layout_width="49dp"
+                                android:layout_height="match_parent"
+                                android:layout_margin="1dp"
+                                android:background="@color/half_black">
+
+                                <RadioButton
+                                    android:id="@+id/radioButton4"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center" />
+                            </FrameLayout>
+
+                            <FrameLayout
+                                android:layout_width="75dp"
+                                android:layout_height="match_parent"
+                                android:layout_margin="1dp"
+                                android:background="@color/half_black">
+
+                                <EditText
+                                    android:id="@+id/editText3"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_marginBottom="-5dp"
+                                    android:autoSizeTextType="uniform"
+                                    android:ems="10"
+                                    android:inputType="textPersonName"
+                                    android:textSize="9sp" />
+                            </FrameLayout>
+
+                        </TableRow>
+
+                        <TableRow
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                            <TextView
+                                android:layout_width="20dp"
+                                android:layout_height="25dp"
+                                android:layout_margin="1dp"
+                                android:background="@color/half_black"
+                                android:gravity="center"
+                                android:text="1" />
+
+                            <TextView
+                                android:id="@+id/textView26"
+                                android:layout_width="227dp"
+                                android:layout_height="match_parent"
+                                android:layout_margin="1dp"
+                                android:layout_marginRight="5dp"
+                                android:background="@color/half_black"
+                                android:gravity="left|center"
+                                android:paddingLeft="2dp"
+                                android:text="RBF5191C043" />
+
+                            <FrameLayout
+                                android:layout_width="46dp"
+                                android:layout_height="match_parent"
+                                android:layout_margin="1dp"
+                                android:background="@color/half_black">
+
+                                <RadioButton
+                                    android:id="@+id/radioButton2"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center" />
+                            </FrameLayout>
+
+                            <FrameLayout
+                                android:layout_width="42dp"
+                                android:layout_height="match_parent"
+                                android:layout_margin="1dp"
+                                android:background="@color/half_black">
+
+                                <RadioButton
+                                    android:id="@+id/radioButton3"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center" />
+                            </FrameLayout>
+
+                            <FrameLayout
+                                android:layout_width="49dp"
+                                android:layout_height="match_parent"
+                                android:layout_margin="1dp"
+                                android:background="@color/half_black">
+
+                                <RadioButton
+                                    android:id="@+id/radioButton4"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center" />
+                            </FrameLayout>
+
+                            <FrameLayout
+                                android:layout_width="75dp"
+                                android:layout_height="match_parent"
+                                android:layout_margin="1dp"
+                                android:background="@color/half_black">
+
+                                <EditText
+                                    android:id="@+id/editText3"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_marginBottom="-5dp"
+                                    android:autoSizeTextType="uniform"
+                                    android:ems="10"
+                                    android:inputType="textPersonName"
+                                    android:textSize="9sp" />
+                            </FrameLayout>
+
+                        </TableRow>
+
+                        <TableRow
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                            <TextView
+                                android:layout_width="20dp"
+                                android:layout_height="25dp"
+                                android:layout_margin="1dp"
+                                android:background="@color/half_black"
+                                android:gravity="center"
+                                android:text="1" />
+
+                            <TextView
+                                android:id="@+id/textView26"
+                                android:layout_width="227dp"
+                                android:layout_height="match_parent"
+                                android:layout_margin="1dp"
+                                android:layout_marginRight="5dp"
+                                android:background="@color/half_black"
+                                android:gravity="left|center"
+                                android:paddingLeft="2dp"
+                                android:text="RBF5191C043" />
+
+                            <FrameLayout
+                                android:layout_width="46dp"
+                                android:layout_height="match_parent"
+                                android:layout_margin="1dp"
+                                android:background="@color/half_black">
+
+                                <RadioButton
+                                    android:id="@+id/radioButton2"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center" />
+                            </FrameLayout>
+
+                            <FrameLayout
+                                android:layout_width="42dp"
+                                android:layout_height="match_parent"
+                                android:layout_margin="1dp"
+                                android:background="@color/half_black">
+
+                                <RadioButton
+                                    android:id="@+id/radioButton3"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center" />
+                            </FrameLayout>
+
+                            <FrameLayout
+                                android:layout_width="49dp"
+                                android:layout_height="match_parent"
+                                android:layout_margin="1dp"
+                                android:background="@color/half_black">
+
+                                <RadioButton
+                                    android:id="@+id/radioButton4"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center" />
+                            </FrameLayout>
+
+                            <FrameLayout
+                                android:layout_width="75dp"
+                                android:layout_height="match_parent"
+                                android:layout_margin="1dp"
+                                android:background="@color/half_black">
+
+                                <EditText
+                                    android:id="@+id/editText3"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_marginBottom="-5dp"
+                                    android:autoSizeTextType="uniform"
+                                    android:ems="10"
+                                    android:inputType="textPersonName"
+                                    android:textSize="9sp" />
+                            </FrameLayout>
+
+                        </TableRow>
+
+                        <TableRow
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                            <TextView
+                                android:layout_width="20dp"
+                                android:layout_height="25dp"
+                                android:layout_margin="1dp"
+                                android:background="@color/half_black"
+                                android:gravity="center"
+                                android:text="1" />
+
+                            <TextView
+                                android:id="@+id/textView26"
+                                android:layout_width="227dp"
+                                android:layout_height="match_parent"
+                                android:layout_margin="1dp"
+                                android:layout_marginRight="5dp"
+                                android:background="@color/half_black"
+                                android:gravity="left|center"
+                                android:paddingLeft="2dp"
+                                android:text="RBF5191C043" />
+
+                            <FrameLayout
+                                android:layout_width="46dp"
+                                android:layout_height="match_parent"
+                                android:layout_margin="1dp"
+                                android:background="@color/half_black">
+
+                                <RadioButton
+                                    android:id="@+id/radioButton2"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center" />
+                            </FrameLayout>
+
+                            <FrameLayout
+                                android:layout_width="42dp"
+                                android:layout_height="match_parent"
+                                android:layout_margin="1dp"
+                                android:background="@color/half_black">
+
+                                <RadioButton
+                                    android:id="@+id/radioButton3"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center" />
+                            </FrameLayout>
+
+                            <FrameLayout
+                                android:layout_width="49dp"
+                                android:layout_height="match_parent"
+                                android:layout_margin="1dp"
+                                android:background="@color/half_black">
+
+                                <RadioButton
+                                    android:id="@+id/radioButton4"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center" />
+                            </FrameLayout>
+
+                            <FrameLayout
+                                android:layout_width="75dp"
+                                android:layout_height="match_parent"
+                                android:layout_margin="1dp"
+                                android:background="@color/half_black">
+
+                                <EditText
+                                    android:id="@+id/editText3"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_marginBottom="-5dp"
+                                    android:autoSizeTextType="uniform"
+                                    android:ems="10"
+                                    android:inputType="textPersonName"
+                                    android:textSize="9sp" />
+                            </FrameLayout>
+
+                        </TableRow>
+
+                        <TableRow
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <TextView
+                                android:layout_width="20dp"
+                                android:layout_height="25dp"
+                                android:layout_margin="1dp"
+                                android:background="@color/half_black"
+                                android:gravity="center"
+                                android:text="1" />
+
+                            <TextView
+                                android:id="@+id/textView26"
+                                android:layout_width="227dp"
+                                android:layout_height="match_parent"
+                                android:layout_margin="1dp"
+                                android:layout_marginRight="5dp"
+                                android:background="@color/half_black"
+                                android:gravity="left|center"
+                                android:paddingLeft="2dp"
+                                android:text="RBF5191C043" />
+
+                            <FrameLayout
+                                android:layout_width="46dp"
+                                android:layout_height="match_parent"
+                                android:layout_margin="1dp"
+                                android:background="@color/half_black">
+
+                                <RadioButton
+                                    android:id="@+id/radioButton2"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center" />
+                            </FrameLayout>
+
+                            <FrameLayout
+                                android:layout_width="42dp"
+                                android:layout_height="match_parent"
+                                android:layout_margin="1dp"
+                                android:background="@color/half_black">
+
+                                <RadioButton
+                                    android:id="@+id/radioButton3"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center" />
+                            </FrameLayout>
+
+                            <FrameLayout
+                                android:layout_width="49dp"
+                                android:layout_height="match_parent"
+                                android:layout_margin="1dp"
+                                android:background="@color/half_black">
+
+                                <RadioButton
+                                    android:id="@+id/radioButton4"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center" />
+                            </FrameLayout>
+
+                            <FrameLayout
+                                android:layout_width="75dp"
+                                android:layout_height="match_parent"
+                                android:layout_margin="1dp"
+                                android:background="@color/half_black">
+
+                                <EditText
+                                    android:id="@+id/editText3"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_marginBottom="-5dp"
+                                    android:autoSizeTextType="uniform"
+                                    android:ems="10"
+                                    android:inputType="textPersonName"
+                                    android:textSize="9sp" />
+                            </FrameLayout>
+
+                        </TableRow>
+
+                        <TableRow
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <TextView
+                                android:id="@+id/textView5"
+                                android:layout_width="20dp"
+                                android:layout_height="25dp"
+                                android:layout_margin="1dp"
+                                android:background="@color/half_black"
+                                android:gravity="center"
+                                android:text="1" />
+
+                            <TextView
+                                android:id="@+id/textView6"
+                                android:layout_width="227dp"
+                                android:layout_height="match_parent"
+                                android:layout_margin="1dp"
+                                android:layout_marginRight="5dp"
+                                android:background="@color/half_black"
+                                android:gravity="left|center"
+                                android:paddingLeft="2dp"
+                                android:text="RBF5191C043" />
+
+                            <FrameLayout
+                                android:layout_width="46dp"
+                                android:layout_height="match_parent"
+                                android:layout_margin="1dp"
+                                android:background="@color/half_black">
+
+                                <RadioButton
+                                    android:id="@+id/radioButton2"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center" />
+                            </FrameLayout>
+
+                            <FrameLayout
+                                android:layout_width="42dp"
+                                android:layout_height="match_parent"
+                                android:layout_margin="1dp"
+                                android:background="@color/half_black">
+
+                                <RadioButton
+                                    android:id="@+id/radioButton3"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center" />
+                            </FrameLayout>
+
+                            <FrameLayout
+                                android:layout_width="49dp"
+                                android:layout_height="match_parent"
+                                android:layout_margin="1dp"
+                                android:background="@color/half_black">
+
+                                <RadioButton
+                                    android:id="@+id/radioButton4"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center" />
+                            </FrameLayout>
+
+                            <FrameLayout
+                                android:layout_width="75dp"
+                                android:layout_height="match_parent"
+                                android:layout_margin="1dp"
+                                android:background="@color/half_black">
+
+                                <EditText
+                                    android:id="@+id/editText3"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_marginBottom="-5dp"
+                                    android:autoSizeTextType="uniform"
+                                    android:ems="10"
+                                    android:inputType="textPersonName"
+                                    android:textSize="9sp" />
+                            </FrameLayout>
+                        </TableRow>
+
+                        <TableRow
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <TextView
+                                android:id="@+id/textView10"
+                                android:layout_width="20dp"
+                                android:layout_height="25dp"
+                                android:layout_margin="1dp"
+                                android:background="@color/half_black"
+                                android:gravity="center"
+                                android:text="1" />
+
+                            <TextView
+                                android:id="@+id/textView11"
+                                android:layout_width="227dp"
+                                android:layout_height="match_parent"
+                                android:layout_margin="1dp"
+                                android:layout_marginRight="5dp"
+                                android:background="@color/half_black"
+                                android:gravity="left|center"
+                                android:paddingLeft="2dp"
+                                android:text="RBF5191C043" />
+
+                            <FrameLayout
+                                android:layout_width="46dp"
+                                android:layout_height="match_parent"
+                                android:layout_margin="1dp"
+                                android:background="@color/half_black">
+
+                                <RadioButton
+                                    android:id="@+id/radioButton2"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center" />
+                            </FrameLayout>
+
+                            <FrameLayout
+                                android:layout_width="42dp"
+                                android:layout_height="match_parent"
+                                android:layout_margin="1dp"
+                                android:background="@color/half_black">
+
+                                <RadioButton
+                                    android:id="@+id/radioButton3"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center" />
+                            </FrameLayout>
+
+                            <FrameLayout
+                                android:layout_width="49dp"
+                                android:layout_height="match_parent"
+                                android:layout_margin="1dp"
+                                android:background="@color/half_black">
+
+                                <RadioButton
+                                    android:id="@+id/radioButton4"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center" />
+                            </FrameLayout>
+
+                            <FrameLayout
+                                android:layout_width="75dp"
+                                android:layout_height="match_parent"
+                                android:layout_margin="1dp"
+                                android:background="@color/half_black">
+
+                                <EditText
+                                    android:id="@+id/editText3"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_marginBottom="-5dp"
+                                    android:autoSizeTextType="uniform"
+                                    android:ems="10"
+                                    android:inputType="textPersonName"
+                                    android:textSize="9sp" />
+                            </FrameLayout>
+
+                        </TableRow>
+
+                    </TableLayout>
+
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:weightSum="3">
+
+                    <LinearLayout
+                        android:layout_width="100dp"
+                        android:layout_height="match_parent"
+                        android:layout_margin="1dp"
+                        android:background="@color/half_black"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/textView2"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginBottom="-20dp"
+                            android:layout_weight="1"
+                            android:gravity="top|center"
+                            android:text="Component" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginBottom="-20dp"
+                            android:layout_marginTop="-20dp"
+                            android:layout_weight="1"
+                            android:gravity="top|center"
+                            android:text="Part" />
+
+                        <TextView
+                            android:id="@+id/textView"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginBottom="-20dp"
+                            android:layout_marginTop="-40dp"
+                            android:layout_weight="1"
+                            android:gravity="top|center"
+                            android:text="Quality" />
+                    </LinearLayout>
+
+                    <TableLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1.5">
+
+                        <TableRow
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                            <TextView
+                                android:layout_width="20dp"
+                                android:layout_height="25dp"
+                                android:layout_margin="1dp"
+                                android:background="@color/half_black"
+                                android:gravity="center"
+                                android:text="1" />
+
+                            <TextView
+                                android:id="@+id/textView26"
+                                android:layout_width="227dp"
+                                android:layout_height="match_parent"
+                                android:layout_margin="1dp"
+                                android:layout_marginRight="5dp"
+                                android:background="@color/half_black"
+                                android:gravity="left|center"
+                                android:paddingLeft="2dp"
+                                android:text="RBF5191C043" />
+
+                            <FrameLayout
+                                android:layout_width="46dp"
+                                android:layout_height="match_parent"
+                                android:layout_margin="1dp"
+                                android:background="@color/half_black">
+
+                                <RadioButton
+                                    android:id="@+id/radioButton2"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center" />
+                            </FrameLayout>
+
+                            <FrameLayout
+                                android:layout_width="42dp"
+                                android:layout_height="match_parent"
+                                android:layout_margin="1dp"
+                                android:background="@color/half_black">
+
+                                <RadioButton
+                                    android:id="@+id/radioButton3"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center" />
+                            </FrameLayout>
+
+                            <FrameLayout
+                                android:layout_width="49dp"
+                                android:layout_height="match_parent"
+                                android:layout_margin="1dp"
+                                android:background="@color/half_black">
+
+                                <RadioButton
+                                    android:id="@+id/radioButton4"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center" />
+                            </FrameLayout>
+
+                            <FrameLayout
+                                android:layout_width="75dp"
+                                android:layout_height="match_parent"
+                                android:layout_margin="1dp"
+                                android:background="@color/half_black">
+
+                                <EditText
+                                    android:id="@+id/editText3"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_marginBottom="-5dp"
+                                    android:autoSizeTextType="uniform"
+                                    android:ems="10"
+                                    android:inputType="textPersonName"
+                                    android:textSize="9sp" />
+                            </FrameLayout>
+
+                        </TableRow>
+
+                        <TableRow
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                            <TextView
+                                android:layout_width="20dp"
+                                android:layout_height="25dp"
+                                android:layout_margin="1dp"
+                                android:background="@color/half_black"
+                                android:gravity="center"
+                                android:text="1" />
+
+                            <TextView
+                                android:id="@+id/textView26"
+                                android:layout_width="227dp"
+                                android:layout_height="match_parent"
+                                android:layout_margin="1dp"
+                                android:layout_marginRight="5dp"
+                                android:background="@color/half_black"
+                                android:gravity="left|center"
+                                android:paddingLeft="2dp"
+                                android:text="RBF5191C043" />
+
+                            <FrameLayout
+                                android:layout_width="46dp"
+                                android:layout_height="match_parent"
+                                android:layout_margin="1dp"
+                                android:background="@color/half_black">
+
+                                <RadioButton
+                                    android:id="@+id/radioButton2"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center" />
+                            </FrameLayout>
+
+                            <FrameLayout
+                                android:layout_width="42dp"
+                                android:layout_height="match_parent"
+                                android:layout_margin="1dp"
+                                android:background="@color/half_black">
+
+                                <RadioButton
+                                    android:id="@+id/radioButton3"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center" />
+                            </FrameLayout>
+
+                            <FrameLayout
+                                android:layout_width="49dp"
+                                android:layout_height="match_parent"
+                                android:layout_margin="1dp"
+                                android:background="@color/half_black">
+
+                                <RadioButton
+                                    android:id="@+id/radioButton4"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center" />
+                            </FrameLayout>
+
+                            <FrameLayout
+                                android:layout_width="75dp"
+                                android:layout_height="match_parent"
+                                android:layout_margin="1dp"
+                                android:background="@color/half_black">
+
+                                <EditText
+                                    android:id="@+id/editText3"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_marginBottom="-5dp"
+                                    android:autoSizeTextType="uniform"
+                                    android:ems="10"
+                                    android:inputType="textPersonName"
+                                    android:textSize="9sp" />
+                            </FrameLayout>
+
+                        </TableRow>
+
+                        <TableRow
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                            <TextView
+                                android:layout_width="20dp"
+                                android:layout_height="25dp"
+                                android:layout_margin="1dp"
+                                android:background="@color/half_black"
+                                android:gravity="center"
+                                android:text="1" />
+
+                            <TextView
+                                android:id="@+id/textView26"
+                                android:layout_width="227dp"
+                                android:layout_height="match_parent"
+                                android:layout_margin="1dp"
+                                android:layout_marginRight="5dp"
+                                android:background="@color/half_black"
+                                android:gravity="left|center"
+                                android:paddingLeft="2dp"
+                                android:text="RBF5191C043" />
+
+                            <FrameLayout
+                                android:layout_width="46dp"
+                                android:layout_height="match_parent"
+                                android:layout_margin="1dp"
+                                android:background="@color/half_black">
+
+                                <RadioButton
+                                    android:id="@+id/radioButton2"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center" />
+                            </FrameLayout>
+
+                            <FrameLayout
+                                android:layout_width="42dp"
+                                android:layout_height="match_parent"
+                                android:layout_margin="1dp"
+                                android:background="@color/half_black">
+
+                                <RadioButton
+                                    android:id="@+id/radioButton3"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center" />
+                            </FrameLayout>
+
+                            <FrameLayout
+                                android:layout_width="49dp"
+                                android:layout_height="match_parent"
+                                android:layout_margin="1dp"
+                                android:background="@color/half_black">
+
+                                <RadioButton
+                                    android:id="@+id/radioButton4"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center" />
+                            </FrameLayout>
+
+                            <FrameLayout
+                                android:layout_width="75dp"
+                                android:layout_height="match_parent"
+                                android:layout_margin="1dp"
+                                android:background="@color/half_black">
+
+                                <EditText
+                                    android:id="@+id/editText3"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_marginBottom="-5dp"
+                                    android:autoSizeTextType="uniform"
+                                    android:ems="10"
+                                    android:inputType="textPersonName"
+                                    android:textSize="9sp" />
+                            </FrameLayout>
+
+                        </TableRow>
+
+                        <TableRow
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                            <TextView
+                                android:layout_width="20dp"
+                                android:layout_height="25dp"
+                                android:layout_margin="1dp"
+                                android:background="@color/half_black"
+                                android:gravity="center"
+                                android:text="1" />
+
+                            <TextView
+                                android:id="@+id/textView26"
+                                android:layout_width="227dp"
+                                android:layout_height="match_parent"
+                                android:layout_margin="1dp"
+                                android:layout_marginRight="5dp"
+                                android:background="@color/half_black"
+                                android:gravity="left|center"
+                                android:paddingLeft="2dp"
+                                android:text="RBF5191C043" />
+
+                            <FrameLayout
+                                android:layout_width="46dp"
+                                android:layout_height="match_parent"
+                                android:layout_margin="1dp"
+                                android:background="@color/half_black">
+
+                                <RadioButton
+                                    android:id="@+id/radioButton2"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center" />
+                            </FrameLayout>
+
+                            <FrameLayout
+                                android:layout_width="42dp"
+                                android:layout_height="match_parent"
+                                android:layout_margin="1dp"
+                                android:background="@color/half_black">
+
+                                <RadioButton
+                                    android:id="@+id/radioButton3"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center" />
+                            </FrameLayout>
+
+                            <FrameLayout
+                                android:layout_width="49dp"
+                                android:layout_height="match_parent"
+                                android:layout_margin="1dp"
+                                android:background="@color/half_black">
+
+                                <RadioButton
+                                    android:id="@+id/radioButton4"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center" />
+                            </FrameLayout>
+
+                            <FrameLayout
+                                android:layout_width="75dp"
+                                android:layout_height="match_parent"
+                                android:layout_margin="1dp"
+                                android:background="@color/half_black">
+
+                                <EditText
+                                    android:id="@+id/editText3"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_marginBottom="-5dp"
+                                    android:autoSizeTextType="uniform"
+                                    android:ems="10"
+                                    android:inputType="textPersonName"
+                                    android:textSize="9sp" />
+                            </FrameLayout>
+
+                        </TableRow>
+
+                        <TableRow
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <TextView
+                                android:layout_width="20dp"
+                                android:layout_height="25dp"
+                                android:layout_margin="1dp"
+                                android:background="@color/half_black"
+                                android:gravity="center"
+                                android:text="1" />
+
+                            <TextView
+                                android:id="@+id/textView26"
+                                android:layout_width="227dp"
+                                android:layout_height="match_parent"
+                                android:layout_margin="1dp"
+                                android:layout_marginRight="5dp"
+                                android:background="@color/half_black"
+                                android:gravity="left|center"
+                                android:paddingLeft="2dp"
+                                android:text="RBF5191C043" />
+
+                            <FrameLayout
+                                android:layout_width="46dp"
+                                android:layout_height="match_parent"
+                                android:layout_margin="1dp"
+                                android:background="@color/half_black">
+
+                                <RadioButton
+                                    android:id="@+id/radioButton2"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center" />
+                            </FrameLayout>
+
+                            <FrameLayout
+                                android:layout_width="42dp"
+                                android:layout_height="match_parent"
+                                android:layout_margin="1dp"
+                                android:background="@color/half_black">
+
+                                <RadioButton
+                                    android:id="@+id/radioButton3"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center" />
+                            </FrameLayout>
+
+                            <FrameLayout
+                                android:layout_width="49dp"
+                                android:layout_height="match_parent"
+                                android:layout_margin="1dp"
+                                android:background="@color/half_black">
+
+                                <RadioButton
+                                    android:id="@+id/radioButton4"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center" />
+                            </FrameLayout>
+
+                            <FrameLayout
+                                android:layout_width="75dp"
+                                android:layout_height="match_parent"
+                                android:layout_margin="1dp"
+                                android:background="@color/half_black">
+
+                                <EditText
+                                    android:id="@+id/editText3"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_marginBottom="-5dp"
+                                    android:autoSizeTextType="uniform"
+                                    android:ems="10"
+                                    android:inputType="textPersonName"
+                                    android:textSize="9sp" />
+                            </FrameLayout>
+
+                        </TableRow>
+
+                        <TableRow
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <TextView
+                                android:id="@+id/textView5"
+                                android:layout_width="20dp"
+                                android:layout_height="25dp"
+                                android:layout_margin="1dp"
+                                android:background="@color/half_black"
+                                android:gravity="center"
+                                android:text="1" />
+
+                            <TextView
+                                android:id="@+id/textView6"
+                                android:layout_width="227dp"
+                                android:layout_height="match_parent"
+                                android:layout_margin="1dp"
+                                android:layout_marginRight="5dp"
+                                android:background="@color/half_black"
+                                android:gravity="left|center"
+                                android:paddingLeft="2dp"
+                                android:text="RBF5191C043" />
+
+                            <FrameLayout
+                                android:layout_width="46dp"
+                                android:layout_height="match_parent"
+                                android:layout_margin="1dp"
+                                android:background="@color/half_black">
+
+                                <RadioButton
+                                    android:id="@+id/radioButton2"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center" />
+                            </FrameLayout>
+
+                            <FrameLayout
+                                android:layout_width="42dp"
+                                android:layout_height="match_parent"
+                                android:layout_margin="1dp"
+                                android:background="@color/half_black">
+
+                                <RadioButton
+                                    android:id="@+id/radioButton3"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center" />
+                            </FrameLayout>
+
+                            <FrameLayout
+                                android:layout_width="49dp"
+                                android:layout_height="match_parent"
+                                android:layout_margin="1dp"
+                                android:background="@color/half_black">
+
+                                <RadioButton
+                                    android:id="@+id/radioButton4"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center" />
+                            </FrameLayout>
+
+                            <FrameLayout
+                                android:layout_width="75dp"
+                                android:layout_height="match_parent"
+                                android:layout_margin="1dp"
+                                android:background="@color/half_black">
+
+                                <EditText
+                                    android:id="@+id/editText3"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_marginBottom="-5dp"
+                                    android:autoSizeTextType="uniform"
+                                    android:ems="10"
+                                    android:inputType="textPersonName"
+                                    android:textSize="9sp" />
+                            </FrameLayout>
+                        </TableRow>
+
+                        <TableRow
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <TextView
+                                android:id="@+id/textView10"
+                                android:layout_width="20dp"
+                                android:layout_height="25dp"
+                                android:layout_margin="1dp"
+                                android:background="@color/half_black"
+                                android:gravity="center"
+                                android:text="1" />
+
+                            <TextView
+                                android:id="@+id/textView11"
+                                android:layout_width="227dp"
+                                android:layout_height="match_parent"
+                                android:layout_margin="1dp"
+                                android:layout_marginRight="5dp"
+                                android:background="@color/half_black"
+                                android:gravity="left|center"
+                                android:paddingLeft="2dp"
+                                android:text="RBF5191C043" />
+
+                            <FrameLayout
+                                android:layout_width="46dp"
+                                android:layout_height="match_parent"
+                                android:layout_margin="1dp"
+                                android:background="@color/half_black">
+
+                                <RadioButton
+                                    android:id="@+id/radioButton2"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center" />
+                            </FrameLayout>
+
+                            <FrameLayout
+                                android:layout_width="42dp"
+                                android:layout_height="match_parent"
+                                android:layout_margin="1dp"
+                                android:background="@color/half_black">
+
+                                <RadioButton
+                                    android:id="@+id/radioButton3"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center" />
+                            </FrameLayout>
+
+                            <FrameLayout
+                                android:layout_width="49dp"
+                                android:layout_height="match_parent"
+                                android:layout_margin="1dp"
+                                android:background="@color/half_black">
+
+                                <RadioButton
+                                    android:id="@+id/radioButton4"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center" />
+                            </FrameLayout>
+
+                            <FrameLayout
+                                android:layout_width="75dp"
+                                android:layout_height="match_parent"
+                                android:layout_margin="1dp"
+                                android:background="@color/half_black">
+
+                                <EditText
+                                    android:id="@+id/editText3"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_marginBottom="-5dp"
+                                    android:autoSizeTextType="uniform"
+                                    android:ems="10"
+                                    android:inputType="textPersonName"
+                                    android:textSize="9sp" />
+                            </FrameLayout>
+
+                        </TableRow>
+
+                    </TableLayout>
+
+                </TableRow>
+
+            </TableLayout>
+
         </RelativeLayout>
 
     </RelativeLayout>
