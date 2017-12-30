@@ -613,7 +613,8 @@
             android:layout_height="wrap_content"
             android:layout_alignParentLeft="true"
             android:layout_alignParentStart="true"
-            android:layout_below="@+id/relativeLayout4">
+            android:layout_below="@+id/relativeLayout4"
+            android:layout_marginBottom="-2dp">
 
             <TableLayout
                 android:layout_width="match_parent"
@@ -2475,6 +2476,200 @@
                 </TableRow>
 
             </TableLayout>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/relativeLayout5"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="6dp"
+            android:layout_marginTop="-4dp">
+
+            <FrameLayout
+                android:id="@+id/frameLayout2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="20dp"
+                    android:background="@color/half_black"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/textView18"
+                        android:layout_width="80dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="center" />
+
+                    <TextView
+                        android:id="@+id/textView14"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="N.W."
+                        android:textSize="10sp" />
+
+                    <EditText
+                        android:id="@+id/editText10"
+                        android:layout_width="20dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="-5dp"
+                        android:layout_weight="1"
+                        android:ems="10"
+                        android:inputType="textPersonName" />
+
+                    <TextView
+                        android:id="@+id/textView16"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="Kgs"
+                        android:textSize="10sp" />
+
+                    <TextView
+                        android:id="@+id/textView13"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="G.W."
+                        android:textSize="10sp" />
+
+                    <EditText
+                        android:id="@+id/editText8"
+                        android:layout_width="20dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="-5dp"
+                        android:layout_weight="1"
+                        android:ems="10"
+                        android:inputType="textPersonName" />
+
+                    <TextView
+                        android:id="@+id/textView17"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="Kgs"
+                        android:textSize="10sp" />
+
+                    <TextView
+                        android:id="@+id/textView19"
+                        android:layout_width="100dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="center" />
+                </LinearLayout>
+            </FrameLayout>
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/frameLayout2">
+
+                <TableLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:layout_marginTop="1dp">
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:weightSum="3">
+
+                        <RelativeLayout
+                            android:layout_width="441dp"
+                            android:layout_height="match_parent"
+                            android:layout_margin="1dp"
+                            android:background="@color/half_black">
+
+                            <TextView
+                                android:id="@+id/textView20"
+                                android:layout_width="150dp"
+                                android:layout_height="match_parent"
+                                android:layout_alignParentEnd="true"
+                                android:layout_alignParentRight="true"
+                                android:layout_alignParentTop="true"
+                                android:layout_marginEnd="88dp"
+                                android:layout_marginRight="88dp"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                android:text="Mr.Sathaporn Morabutr" />
+
+                            <TextView
+                                android:layout_width="100dp"
+                                android:layout_height="match_parent"
+                                android:layout_alignParentTop="true"
+                                android:layout_toLeftOf="@+id/textView20"
+                                android:layout_toStartOf="@+id/textView20"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                android:text="QA Inspection : " />
+                        </RelativeLayout>
+
+                        <TableLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1.5">
+
+                            <TableRow
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content">
+
+                                <TextView
+                                    android:layout_width="92dp"
+                                    android:layout_height="30dp"
+                                    android:layout_margin="1dp"
+                                    android:background="@color/half_black"
+                                    android:gravity="center"
+                                    android:text="RELEASE"
+                                    android:textSize="11sp" />
+
+                                <RadioButton
+                                    android:id="@+id/radioButton"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="30dp"
+                                    android:layout_gravity="center"
+                                    android:layout_margin="1dp"
+                                    android:background="@color/half_black" />
+
+                            </TableRow>
+
+                            <TableRow
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="30dp"
+                                    android:layout_margin="1dp"
+                                    android:background="@color/half_black"
+                                    android:gravity="center"
+                                    android:text="REJECT"
+                                    android:textSize="11sp" />
+
+                                <RadioButton
+                                    android:id="@+id/radioButton5"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="30dp"
+                                    android:layout_gravity="center"
+                                    android:layout_margin="1dp"
+                                    android:background="@color/half_black" />
+
+                            </TableRow>
+
+                        </TableLayout>
+
+                    </TableRow>
+
+                </TableLayout>
+            </FrameLayout>
 
         </RelativeLayout>
 
