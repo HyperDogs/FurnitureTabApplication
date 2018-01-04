@@ -20,7 +20,7 @@
         android:theme="@style/AppTheme">
         <activity
             android:name=".MainActivity"
-            android:screenOrientation="portrait"
+            android:screenOrientation="landscape"
             android:windowSoftInputMode="stateHidden|adjustResize">
             <intent-filter>
                 <action
@@ -30,11 +30,13 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".Home" />
+        <activity
+            android:name=".Home"
+            android:screenOrientation="landscape"></activity>
         <activity
             android:name=".SubActivity"
+            android:screenOrientation="landscape"
             android:label="@string/title_activity_sub"
             android:theme="@style/AppTheme"></activity>
     </application>
-
 </manifest>
