@@ -29,7 +29,7 @@
                 android:layout_alignParentTop="true">
 
                 <ImageView
-                    android:id="@+id/mainImg"
+                    android:id="@+id/picMainImg"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_alignParentBottom="true"
@@ -93,7 +93,7 @@
                                     android:textSize="11sp" />
 
                                 <TextView
-                                    android:id="@+id/stockNo"
+                                    android:id="@+id/txtStockNo"
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
                                     android:layout_gravity="left"
@@ -130,7 +130,7 @@
                                     android:textSize="11sp" />
 
                                 <TextView
-                                    android:id="@+id/acmeNo"
+                                    android:id="@+id/txtAcmeNo"
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
                                     android:layout_gravity="left"
@@ -167,7 +167,7 @@
                                     android:textSize="11sp" />
 
                                 <TextView
-                                    android:id="@+id/desc"
+                                    android:id="@+id/txtDesc"
                                     android:layout_width="match_parent"
                                     android:layout_height="22dp"
                                     android:layout_gravity="left"
@@ -201,7 +201,7 @@
                                     android:textSize="11sp" />
 
                                 <EditText
-                                    android:id="@+id/order"
+                                    android:id="@+id/txtOrder"
                                     android:layout_width="35dp"
                                     android:layout_height="wrap_content"
                                     android:layout_gravity="left"
@@ -249,7 +249,7 @@
                                     android:textSize="11sp" />
 
                                 <EditText
-                                    android:id="@+id/sampling"
+                                    android:id="@+id/txtSampling"
                                     android:layout_width="35dp"
                                     android:layout_height="wrap_content"
                                     android:layout_gravity="left"
@@ -346,7 +346,7 @@
                                     android:textStyle="bold" />
 
                                 <TextView
-                                    android:id="@+id/textView39"
+                                    android:id="@+id/txtCusName"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:layout_weight="1"
@@ -372,7 +372,7 @@
                                     android:textStyle="bold" />
 
                                 <TextView
-                                    android:id="@+id/poNo"
+                                    android:id="@+id/txtPoNo"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:layout_gravity="left"
@@ -402,7 +402,7 @@
                                     android:textStyle="bold" />
 
                                 <EditText
-                                    android:id="@+id/aql"
+                                    android:id="@+id/txtAql"
                                     android:layout_width="0dp"
                                     android:layout_height="wrap_content"
                                     android:layout_gravity="left|center_horizontal"
@@ -424,7 +424,7 @@
                                     android:textStyle="bold" />
 
                                 <EditText
-                                    android:id="@+id/major"
+                                    android:id="@+id/txtMajor"
                                     android:layout_width="0dp"
                                     android:layout_height="wrap_content"
                                     android:layout_gravity="left|center_horizontal"
@@ -446,7 +446,7 @@
                                     android:textStyle="bold" />
 
                                 <EditText
-                                    android:id="@+id/minor"
+                                    android:id="@+id/txtMinor"
                                     android:layout_width="0dp"
                                     android:layout_height="wrap_content"
                                     android:layout_gravity="left|center_horizontal"
@@ -486,14 +486,14 @@
                             android:layout_height="wrap_content">
 
                             <CheckBox
-                                android:id="@+id/checkBox"
+                                android:id="@+id/checkBoxRegular"
                                 android:layout_width="0dp"
                                 android:layout_height="wrap_content"
                                 android:layout_weight=".25"
                                 android:text="Regular inspection" />
 
                             <CheckBox
-                                android:id="@+id/checkBox2"
+                                android:id="@+id/checkBoxRe"
                                 android:layout_width="0dp"
                                 android:layout_height="wrap_content"
                                 android:layout_weight=".25"
@@ -510,7 +510,7 @@
                                 android:textColor="#000000" />
 
                             <EditText
-                                android:id="@+id/dateEdt"
+                                android:id="@+id/txtDate"
                                 android:layout_width="0dp"
                                 android:layout_height="wrap_content"
                                 android:layout_weight=".45"
@@ -656,6 +656,7 @@
                                 android:layout_height="match_parent">
 
                                 <TextView
+                                    android:id="@+id/txtNo"
                                     android:layout_width="0dp"
                                     android:layout_height="match_parent"
                                     android:layout_margin="1dp"
@@ -673,7 +674,7 @@
                                     android:orientation="horizontal">
 
                                     <TextView
-                                        android:id="@+id/textView26"
+                                        android:id="@+id/txtDetail"
                                         android:layout_width="match_parent"
                                         android:layout_height="match_parent"
                                         android:layout_margin="1dp"
@@ -690,7 +691,7 @@
                                     android:background="@color/half_black">
 
                                     <RadioButton
-                                        android:id="@+id/radioButton2"
+                                        android:id="@+id/radioAccept"
                                         android:layout_width="wrap_content"
                                         android:layout_height="wrap_content"
                                         android:layout_gravity="center" />
@@ -704,7 +705,7 @@
                                     android:background="@color/half_black">
 
                                     <RadioButton
-                                        android:id="@+id/radioButton3"
+                                        android:id="@+id/radioReject"
                                         android:layout_width="wrap_content"
                                         android:layout_height="wrap_content"
                                         android:layout_gravity="center" />
@@ -718,7 +719,7 @@
                                     android:background="@color/half_black">
 
                                     <RadioButton
-                                        android:id="@+id/radioButton4"
+                                        android:id="@+id/radioRework"
                                         android:layout_width="wrap_content"
                                         android:layout_height="wrap_content"
                                         android:layout_gravity="center" />
@@ -732,7 +733,7 @@
                                     android:background="@color/half_black">
 
                                     <EditText
-                                        android:id="@+id/editText3"
+                                        android:id="@+id/txtComment"
                                         android:layout_width="match_parent"
                                         android:layout_height="match_parent"
                                         android:layout_marginBottom="-5dp"
@@ -789,7 +790,7 @@
                             android:textSize="10sp" />
 
                         <EditText
-                            android:id="@+id/editText10"
+                            android:id="@+id/txtNW"
                             android:layout_width="20dp"
                             android:layout_height="wrap_content"
                             android:layout_marginBottom="-5dp"
@@ -816,7 +817,7 @@
                             android:textSize="10sp" />
 
                         <EditText
-                            android:id="@+id/editText8"
+                            android:id="@+id/txtGW"
                             android:layout_width="20dp"
                             android:layout_height="wrap_content"
                             android:layout_marginBottom="-5dp"
@@ -911,7 +912,7 @@
                                         android:textSize="11sp" />
 
                                     <RadioButton
-                                        android:id="@+id/radioButton"
+                                        android:id="@+id/radioReleaseF"
                                         android:layout_width="0dp"
                                         android:layout_height="wrap_content"
                                         android:layout_gravity="center"
@@ -938,7 +939,7 @@
                                         android:textSize="11sp" />
 
                                     <RadioButton
-                                        android:id="@+id/radioButton5"
+                                        android:id="@+id/txtRejectF"
                                         android:layout_width="0dp"
                                         android:layout_height="match_parent"
                                         android:layout_gravity="center"
