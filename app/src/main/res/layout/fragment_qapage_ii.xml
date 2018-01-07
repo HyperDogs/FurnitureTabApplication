@@ -15,30 +15,35 @@
 
         <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="1000dp"
+            android:layout_height="wrap_content"
             android:layout_margin="10dp"
             android:background="@color/white"
             android:paddingBottom="15dp">
 
             <RelativeLayout
-                android:id="@+id/relativeLayoutImg"
+                android:id="@+id/relativemaster"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_alignBaseline="@+id/relativemaster"
+                android:layout_alignBottom="@+id/relativemaster"
                 android:layout_alignParentLeft="true"
-                android:layout_alignParentStart="true"
-                android:layout_below="@+id/relativeLayoutImg">
+                android:layout_alignParentStart="true">
 
                 <RelativeLayout
                     android:id="@+id/relativeLayout"
                     android:layout_width="match_parent"
                     android:layout_height="50dp"
-                    android:layout_alignParentTop="true">
+                    android:layout_alignParentTop="true"
+                    android:gravity="left|center"
+                    android:paddingLeft="10dp">
 
                     <TextView
                         android:id="@+id/textView"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="TextView" />
+                        android:text="MASTER CARTON"
+                        android:textSize="30sp"
+                        android:textStyle="bold" />
                 </RelativeLayout>
 
                 <RelativeLayout
@@ -47,7 +52,9 @@
                     android:layout_height="200dp"
                     android:layout_alignParentLeft="true"
                     android:layout_alignParentStart="true"
-                    android:layout_below="@+id/relativeLayout">
+                    android:layout_below="@+id/relativeLayout"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp">
 
                     <LinearLayout
                         android:layout_width="match_parent"
@@ -59,49 +66,49 @@
 
                         <ImageView
                             android:id="@+id/mainImg4"
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
                             android:layout_alignParentBottom="true"
                             android:layout_alignParentLeft="true"
                             android:layout_alignParentStart="true"
                             android:layout_margin="5dp"
-                            android:layout_weight="1"
+                            android:layout_weight=".25"
                             android:background="@drawable/border"
                             android:src="@drawable/camera2" />
 
                         <ImageView
-                            android:id="@+id/mainImg3"
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent"
+                            android:id="@+id/mainImg4"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
                             android:layout_alignParentBottom="true"
                             android:layout_alignParentLeft="true"
                             android:layout_alignParentStart="true"
                             android:layout_margin="5dp"
-                            android:layout_weight="1"
+                            android:layout_weight=".25"
                             android:background="@drawable/border"
                             android:src="@drawable/camera2" />
 
                         <ImageView
-                            android:id="@+id/mainImg2"
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent"
+                            android:id="@+id/mainImg4"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
                             android:layout_alignParentBottom="true"
                             android:layout_alignParentLeft="true"
                             android:layout_alignParentStart="true"
                             android:layout_margin="5dp"
-                            android:layout_weight="1"
+                            android:layout_weight=".25"
                             android:background="@drawable/border"
                             android:src="@drawable/camera2" />
 
                         <ImageView
-                            android:id="@+id/mainImg"
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent"
+                            android:id="@+id/mainImg4"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
                             android:layout_alignParentBottom="true"
                             android:layout_alignParentLeft="true"
                             android:layout_alignParentStart="true"
                             android:layout_margin="5dp"
-                            android:layout_weight="1"
+                            android:layout_weight=".25"
                             android:background="@drawable/border"
                             android:src="@drawable/camera2" />
                     </LinearLayout>
@@ -113,7 +120,9 @@
                     android:layout_height="200dp"
                     android:layout_alignParentLeft="true"
                     android:layout_alignParentStart="true"
-                    android:layout_below="@+id/relativeLayout2">
+                    android:layout_below="@+id/relativeLayout2"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp">
 
                     <LinearLayout
                         android:layout_width="match_parent"
@@ -125,49 +134,49 @@
 
                         <ImageView
                             android:id="@+id/mainImg4"
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
                             android:layout_alignParentBottom="true"
                             android:layout_alignParentLeft="true"
                             android:layout_alignParentStart="true"
                             android:layout_margin="5dp"
-                            android:layout_weight="1"
+                            android:layout_weight=".25"
                             android:background="@drawable/border"
                             android:src="@drawable/camera2" />
 
                         <ImageView
-                            android:id="@+id/mainImg3"
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent"
+                            android:id="@+id/mainImg4"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
                             android:layout_alignParentBottom="true"
                             android:layout_alignParentLeft="true"
                             android:layout_alignParentStart="true"
                             android:layout_margin="5dp"
-                            android:layout_weight="1"
+                            android:layout_weight=".25"
                             android:background="@drawable/border"
                             android:src="@drawable/camera2" />
 
                         <ImageView
-                            android:id="@+id/mainImg2"
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent"
+                            android:id="@+id/mainImg4"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
                             android:layout_alignParentBottom="true"
                             android:layout_alignParentLeft="true"
                             android:layout_alignParentStart="true"
                             android:layout_margin="5dp"
-                            android:layout_weight="1"
+                            android:layout_weight=".25"
                             android:background="@drawable/border"
                             android:src="@drawable/camera2" />
 
                         <ImageView
-                            android:id="@+id/mainImg"
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent"
+                            android:id="@+id/mainImg4"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
                             android:layout_alignParentBottom="true"
                             android:layout_alignParentLeft="true"
                             android:layout_alignParentStart="true"
                             android:layout_margin="5dp"
-                            android:layout_weight="1"
+                            android:layout_weight=".25"
                             android:background="@drawable/border"
                             android:src="@drawable/camera2" />
                     </LinearLayout>
@@ -176,24 +185,28 @@
             </RelativeLayout>
 
             <RelativeLayout
-                android:id="@+id/relativeLayoutImg"
+                android:id="@+id/relativeinner"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_alignParentLeft="true"
                 android:layout_alignParentStart="true"
-                android:layout_alignParentTop="true">
+                android:layout_below="@+id/relativemaster">
 
                 <RelativeLayout
                     android:id="@+id/relativeLayout"
                     android:layout_width="match_parent"
                     android:layout_height="50dp"
-                    android:layout_alignParentTop="true">
+                    android:layout_alignParentTop="true"
+                    android:gravity="left|center"
+                    android:paddingLeft="10dp">
 
                     <TextView
                         android:id="@+id/textView"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="TextView" />
+                        android:text="INNER BOX"
+                        android:textSize="30sp"
+                        android:textStyle="bold" />
                 </RelativeLayout>
 
                 <RelativeLayout
@@ -202,7 +215,9 @@
                     android:layout_height="200dp"
                     android:layout_alignParentLeft="true"
                     android:layout_alignParentStart="true"
-                    android:layout_below="@+id/relativeLayout">
+                    android:layout_below="@+id/relativeLayout"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp">
 
                     <LinearLayout
                         android:layout_width="match_parent"
@@ -214,61 +229,91 @@
 
                         <ImageView
                             android:id="@+id/mainImg4"
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
                             android:layout_alignParentBottom="true"
                             android:layout_alignParentLeft="true"
                             android:layout_alignParentStart="true"
                             android:layout_margin="5dp"
-                            android:layout_weight="1"
+                            android:layout_weight=".25"
                             android:background="@drawable/border"
                             android:src="@drawable/camera2" />
 
                         <ImageView
-                            android:id="@+id/mainImg3"
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent"
+                            android:id="@+id/mainImg4"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
                             android:layout_alignParentBottom="true"
                             android:layout_alignParentLeft="true"
                             android:layout_alignParentStart="true"
                             android:layout_margin="5dp"
-                            android:layout_weight="1"
+                            android:layout_weight=".25"
                             android:background="@drawable/border"
                             android:src="@drawable/camera2" />
 
                         <ImageView
-                            android:id="@+id/mainImg2"
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent"
+                            android:id="@+id/mainImg4"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
                             android:layout_alignParentBottom="true"
                             android:layout_alignParentLeft="true"
                             android:layout_alignParentStart="true"
                             android:layout_margin="5dp"
-                            android:layout_weight="1"
+                            android:layout_weight=".25"
                             android:background="@drawable/border"
                             android:src="@drawable/camera2" />
 
                         <ImageView
-                            android:id="@+id/mainImg"
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent"
+                            android:id="@+id/mainImg4"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
                             android:layout_alignParentBottom="true"
                             android:layout_alignParentLeft="true"
                             android:layout_alignParentStart="true"
                             android:layout_margin="5dp"
-                            android:layout_weight="1"
+                            android:layout_weight=".25"
                             android:background="@drawable/border"
                             android:src="@drawable/camera2" />
                     </LinearLayout>
 
                 </RelativeLayout>
 
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/relativecontent"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/relativeinner">
+
                 <RelativeLayout
+                    android:id="@+id/relativeLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_alignParentTop="true"
+                    android:gravity="left|center"
+                    android:paddingLeft="10dp">
+
+                    <TextView
+                        android:id="@+id/textView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="MOISTURE CONTENT"
+                        android:textSize="30sp"
+                        android:textStyle="bold" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/relativeLayout2"
                     android:layout_width="match_parent"
                     android:layout_height="200dp"
                     android:layout_alignParentLeft="true"
                     android:layout_alignParentStart="true"
-                    android:layout_below="@+id/relativeLayout2">
+                    android:layout_below="@+id/relativeLayout"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp">
 
                     <LinearLayout
                         android:layout_width="match_parent"
@@ -280,52 +325,34 @@
 
                         <ImageView
                             android:id="@+id/mainImg4"
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
                             android:layout_alignParentBottom="true"
                             android:layout_alignParentLeft="true"
                             android:layout_alignParentStart="true"
                             android:layout_margin="5dp"
-                            android:layout_weight="1"
+                            android:layout_weight=".25"
                             android:background="@drawable/border"
                             android:src="@drawable/camera2" />
 
-                        <ImageView
-                            android:id="@+id/mainImg3"
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            android:layout_alignParentBottom="true"
-                            android:layout_alignParentLeft="true"
-                            android:layout_alignParentStart="true"
-                            android:layout_margin="5dp"
-                            android:layout_weight="1"
-                            android:background="@drawable/border"
-                            android:src="@drawable/camera2" />
+                        <TextView
+                            android:id="@+id/textView3"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight=".25"/>
+                        <TextView
+                            android:id="@+id/textView3"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight=".25" />
+                        <TextView
+                            android:id="@+id/textView3"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight=".25"/>
 
-                        <ImageView
-                            android:id="@+id/mainImg2"
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            android:layout_alignParentBottom="true"
-                            android:layout_alignParentLeft="true"
-                            android:layout_alignParentStart="true"
-                            android:layout_margin="5dp"
-                            android:layout_weight="1"
-                            android:background="@drawable/border"
-                            android:src="@drawable/camera2" />
-
-                        <ImageView
-                            android:id="@+id/mainImg"
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            android:layout_alignParentBottom="true"
-                            android:layout_alignParentLeft="true"
-                            android:layout_alignParentStart="true"
-                            android:layout_margin="5dp"
-                            android:layout_weight="1"
-                            android:background="@drawable/border"
-                            android:src="@drawable/camera2" />
                     </LinearLayout>
+
                 </RelativeLayout>
 
             </RelativeLayout>
