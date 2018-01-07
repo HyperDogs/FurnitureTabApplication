@@ -38,10 +38,10 @@
                     android:paddingLeft="10dp">
 
                     <TextView
-                        android:id="@+id/textView"
+                        android:id="@+id/txtProduct"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="MASTER CARTON"
+                        android:text="PRODUCT"
                         android:textSize="30sp"
                         android:textStyle="bold" />
                 </RelativeLayout>
@@ -65,7 +65,7 @@
                         android:orientation="horizontal">
 
                         <ImageView
-                            android:id="@+id/mainImg4"
+                            android:id="@+id/picPD_I"
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
                             android:layout_alignParentBottom="true"
@@ -77,7 +77,7 @@
                             android:src="@drawable/camera2" />
 
                         <ImageView
-                            android:id="@+id/mainImg4"
+                            android:id="@+id/picPD_II"
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
                             android:layout_alignParentBottom="true"
@@ -89,7 +89,7 @@
                             android:src="@drawable/camera2" />
 
                         <ImageView
-                            android:id="@+id/mainImg4"
+                            android:id="@+id/picPD_III"
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
                             android:layout_alignParentBottom="true"
@@ -101,7 +101,7 @@
                             android:src="@drawable/camera2" />
 
                         <ImageView
-                            android:id="@+id/mainImg4"
+                            android:id="@+id/picPD_IIII"
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
                             android:layout_alignParentBottom="true"
@@ -133,7 +133,7 @@
                         android:orientation="horizontal">
 
                         <ImageView
-                            android:id="@+id/mainImg4"
+                            android:id="@+id/picPD_IV"
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
                             android:layout_alignParentBottom="true"
@@ -145,7 +145,7 @@
                             android:src="@drawable/camera2" />
 
                         <ImageView
-                            android:id="@+id/mainImg4"
+                            android:id="@+id/picPD_V"
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
                             android:layout_alignParentBottom="true"
@@ -157,7 +157,7 @@
                             android:src="@drawable/camera2" />
 
                         <ImageView
-                            android:id="@+id/mainImg4"
+                            android:id="@+id/picPD_VI"
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
                             android:layout_alignParentBottom="true"
@@ -169,7 +169,7 @@
                             android:src="@drawable/camera2" />
 
                         <ImageView
-                            android:id="@+id/mainImg4"
+                            android:id="@+id/picPD_VII"
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
                             android:layout_alignParentBottom="true"
@@ -201,10 +201,10 @@
                     android:paddingLeft="10dp">
 
                     <TextView
-                        android:id="@+id/textView"
+                        android:id="@+id/txtFitting"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="INNER BOX"
+                        android:text="FITTING AND ASSEMBLY INSTRUCTION SHEET"
                         android:textSize="30sp"
                         android:textStyle="bold" />
                 </RelativeLayout>
@@ -228,7 +228,7 @@
                         android:orientation="horizontal">
 
                         <ImageView
-                            android:id="@+id/mainImg4"
+                            android:id="@+id/picFT_I"
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
                             android:layout_alignParentBottom="true"
@@ -240,7 +240,7 @@
                             android:src="@drawable/camera2" />
 
                         <ImageView
-                            android:id="@+id/mainImg4"
+                            android:id="@+id/picFT_II"
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
                             android:layout_alignParentBottom="true"
@@ -252,7 +252,7 @@
                             android:src="@drawable/camera2" />
 
                         <ImageView
-                            android:id="@+id/mainImg4"
+                            android:id="@+id/picFT_III"
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
                             android:layout_alignParentBottom="true"
@@ -264,7 +264,7 @@
                             android:src="@drawable/camera2" />
 
                         <ImageView
-                            android:id="@+id/mainImg4"
+                            android:id="@+id/picFT_III"
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
                             android:layout_alignParentBottom="true"
@@ -324,7 +324,7 @@
                         android:orientation="horizontal">
 
                         <ImageView
-                            android:id="@+id/mainImg2"
+                            android:id="@+id/picRI_I"
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
                             android:layout_alignParentBottom="true"
@@ -336,7 +336,7 @@
                             android:src="@drawable/camera2" />
 
                         <ImageView
-                            android:id="@+id/mainImg4"
+                            android:id="@+id/picRI_II"
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
                             android:layout_alignParentBottom="true"
@@ -348,13 +348,11 @@
                             android:src="@drawable/camera2" />
 
                         <TextView
-                            android:id="@+id/textView3"
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
                             android:layout_weight=".25" />
 
                         <TextView
-                            android:id="@+id/textView3"
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
                             android:layout_weight=".25" />
@@ -435,7 +433,7 @@
                                 android:textSize="11sp" />
 
                             <EditText
-                                android:id="@+id/order3"
+                                android:id="@+id/txtRT_I"
                                 android:layout_width="0dp"
                                 android:layout_height="wrap_content"
                                 android:layout_gravity="left"
@@ -481,7 +479,7 @@
                                 android:textSize="11sp" />
 
                             <EditText
-                                android:id="@+id/order3"
+                                android:id="@+id/txtRT_II"
                                 android:layout_width="0dp"
                                 android:layout_height="wrap_content"
                                 android:layout_gravity="left"
@@ -527,7 +525,7 @@
                                 android:textSize="11sp" />
 
                             <EditText
-                                android:id="@+id/order3"
+                                android:id="@+id/txtRT_III"
                                 android:layout_width="0dp"
                                 android:layout_height="wrap_content"
                                 android:layout_gravity="left"
@@ -573,7 +571,7 @@
                                 android:textSize="11sp" />
 
                             <EditText
-                                android:id="@+id/order3"
+                                android:id="@+id/txtRT_IIII"
                                 android:layout_width="0dp"
                                 android:layout_height="wrap_content"
                                 android:layout_gravity="left"
