@@ -1,8 +1,15 @@
 package com.example.ton.furnituretabapplication;
 
+import android.content.DialogInterface;
+import android.content.Intent;
+import android.support.design.widget.TabLayout;
 import android.support.v4.view.ViewPager;
+import android.support.v4.widget.NestedScrollView;
+import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.widget.Toolbar;
+import android.view.MenuItem;
 
 public class Home extends AppCompatActivity {
 
@@ -14,18 +21,44 @@ public class Home extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
 
+        //Toolbar
+        Toolbar toolbar = findViewById(R.id.toolbar);
+        setSupportActionBar(toolbar);
+        toolbar.setTitle("HOME");
+        // add back arrow to toolbar
+        if (getSupportActionBar() != null){
+            getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+            getSupportActionBar().setDisplayShowHomeEnabled(true);
+        }
+
 
         mSectionsPageAdapter = new SectionsPageAdapter(getSupportFragmentManager());
         // Set up the ViewPager with the sections adapter.
         mViewPager = findViewById(R.id.container);
         setupViewPager(mViewPager);
+
+        TabLayout tabLayout = findViewById(R.id.tabs);
+        tabLayout.setupWithViewPager(mViewPager);
     }
 
     private void setupViewPager(ViewPager viewPager) {
         SectionsPageAdapter adapter = new SectionsPageAdapter(getSupportFragmentManager());
-        adapter.addFragment(new QAPageI(), "TAB1");
-        adapter.addFragment(new QAPageII(), "TAB2");
-        adapter.addFragment(new QAPageIII(), "TAB3");
+        adapter.addFragment(new QAPageI(), "MAIN1");
+        adapter.addFragment(new QAPageII(), "MAIN2");
+        adapter.addFragment(new QAPageIII(), "MAIN3");
         viewPager.setAdapter(adapter);
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        // handle arrow click here
+        if (item.getItemId() == android.R.id.home) {
+            onBackPressed();
+            finish();
+            return false;
+
+        }
+
+        return super.onOptionsItemSelected(item);
     }
 }

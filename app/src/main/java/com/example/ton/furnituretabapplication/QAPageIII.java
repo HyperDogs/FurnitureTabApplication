@@ -52,7 +52,6 @@ public class QAPageIII extends Fragment {
 
         // Inflate the layout for this fragment
 
-        Toast.makeText(getActivity(),"Hello",Toast.LENGTH_SHORT).show();
 
 
         return inflater.inflate(R.layout.fragment_qapage_iii, container, false);
