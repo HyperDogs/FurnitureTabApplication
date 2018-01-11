@@ -20,7 +20,8 @@
             android:layout_height="wrap_content"
             android:background="@color/white"
             android:paddingBottom="15dp"
-            android:paddingTop="10dp">
+            android:paddingTop="10dp"
+            android:focusableInTouchMode="true">
 
             <RelativeLayout
                 android:id="@+id/relativeLayoutImg"

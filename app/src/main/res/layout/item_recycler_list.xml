@@ -10,16 +10,18 @@
 
     <ImageView
         android:id="@+id/img_user"
-        android:layout_width="60dp"
-        android:layout_height="60dp"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
         android:background="#16000000" />
 
     <LinearLayout
         android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:layout_gravity="top"
         android:layout_marginLeft="16dp"
+        android:layout_marginTop="20dp"
         android:layout_weight="1"
-        android:gravity="center_vertical"
+        android:gravity="top|left"
         android:orientation="vertical">
 
 
@@ -29,7 +31,7 @@
             android:layout_height="wrap_content"
             android:text=""
             android:textColor="#212121"
-            android:textSize="14dp" />
+            android:textSize="18sp" />
 
         <TextView
             android:id="@+id/item_txt_message"
@@ -38,7 +40,7 @@
             android:layout_marginTop="8dp"
             android:text=""
             android:textColor="#727272"
-            android:textSize="14dp" />
+            android:textSize="18sp" />
 
     </LinearLayout>
 

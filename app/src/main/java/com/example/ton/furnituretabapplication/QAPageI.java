@@ -21,6 +21,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.afollestad.materialdialogs.MaterialDialog;
+import com.squareup.picasso.Picasso;
 
 import java.io.File;
 import java.lang.reflect.Array;
@@ -34,11 +35,8 @@ import javax.security.auth.callback.Callback;
 public class QAPageI extends Fragment {
     private TableLayout tableComponent;
     private ImageView picMainImg;
-    private String[] action_camera = {"Take Picture","Choose Picture","Preview Picture","Delete Picture"};
     private File file;
-    private Uri uri;
-    private Context mContext;
-    private int headerImage = 1001,headerPickImage = 1002;
+
 
     public QAPageI() {
         // Required empty public constructor
@@ -76,24 +74,8 @@ public class QAPageI extends Fragment {
         picMainImg.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                new MaterialDialog.Builder(getActivity())
-                        .items(action_camera)
-                        .itemsCallback(new MaterialDialog.ListCallback() {
-                            @Override
-                            public void onSelection(MaterialDialog dialog, View itemView, int position, CharSequence text) {
+            file =  HelperMethod.dialogImg(getActivity(),"picMainImg");
 
-                                if (position == 0){
-                                    Intent intent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
-                                    file = CreateFile.createUnique();
-                                    //uri = FileProvider.getUriForFile(getContext(),BuildConfig.APPLICATION_ID + ".provider",file);
-                                    intent.putExtra(MediaStore.EXTRA_OUTPUT, uri);
-                                    startActivityForResult(intent, headerImage);
-                                }else {
-                                    Toast.makeText(getActivity(),""+position,Toast.LENGTH_SHORT).show();
-                                }
-                            }
-                        })
-                        .show();
 
             }
         });
@@ -102,5 +84,18 @@ public class QAPageI extends Fragment {
     @Override
     public void onActivityResult(int requestCode, int resultCode, Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
+
+        if (requestCode == 1001) {
+            Log.d("AAA","AAA");
+            try {
+                if (file !=null && resultCode == getActivity().RESULT_OK) {
+                    Log.d("xxx","xxx");
+                    Picasso.with(getActivity()).load(Uri.fromFile(file)).fit().centerCrop().into(picMainImg);
+                    picMainImg.setAlpha((float) 1.0);
+                }
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+        }
     }
 }
