@@ -4,5 +4,9 @@
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="title_activity_sub">SubActivity</string>
+    <string name="title_activity_list_q">ListQA</string>
+
+    <string name="hello_world">Hello world!</string>
+    <string name="title_activity_liat_q">LiatQA</string>
 
 </resources>

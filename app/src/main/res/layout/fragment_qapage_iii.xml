@@ -77,7 +77,7 @@
                             android:layout_margin="5dp"
                             android:layout_weight=".25"
                             android:background="@drawable/border"
-                            android:src="@drawable/camera2" />
+                            android:src="@drawable/test" />
 
                         <ImageView
                             android:id="@+id/picPD_II"
@@ -89,7 +89,7 @@
                             android:layout_margin="5dp"
                             android:layout_weight=".25"
                             android:background="@drawable/border"
-                            android:src="@drawable/camera2" />
+                            android:src="@drawable/test" />
 
                         <ImageView
                             android:id="@+id/picPD_III"
@@ -101,7 +101,7 @@
                             android:layout_margin="5dp"
                             android:layout_weight=".25"
                             android:background="@drawable/border"
-                            android:src="@drawable/camera2" />
+                            android:src="@drawable/test" />
 
                         <ImageView
                             android:id="@+id/picPD_IIII"
@@ -113,7 +113,7 @@
                             android:layout_margin="5dp"
                             android:layout_weight=".25"
                             android:background="@drawable/border"
-                            android:src="@drawable/camera2" />
+                            android:src="@drawable/test" />
                     </LinearLayout>
 
                 </RelativeLayout>
@@ -145,7 +145,7 @@
                             android:layout_margin="5dp"
                             android:layout_weight=".25"
                             android:background="@drawable/border"
-                            android:src="@drawable/camera2" />
+                            android:src="@drawable/test" />
 
                         <ImageView
                             android:id="@+id/picPD_V"
@@ -157,7 +157,7 @@
                             android:layout_margin="5dp"
                             android:layout_weight=".25"
                             android:background="@drawable/border"
-                            android:src="@drawable/camera2" />
+                            android:src="@drawable/test" />
 
                         <ImageView
                             android:id="@+id/picPD_VI"
@@ -169,7 +169,7 @@
                             android:layout_margin="5dp"
                             android:layout_weight=".25"
                             android:background="@drawable/border"
-                            android:src="@drawable/camera2" />
+                            android:src="@drawable/test" />
 
                         <ImageView
                             android:id="@+id/picPD_VII"
@@ -181,7 +181,7 @@
                             android:layout_margin="5dp"
                             android:layout_weight=".25"
                             android:background="@drawable/border"
-                            android:src="@drawable/camera2" />
+                            android:src="@drawable/test" />
                     </LinearLayout>
                 </RelativeLayout>
 
@@ -240,7 +240,7 @@
                             android:layout_margin="5dp"
                             android:layout_weight=".25"
                             android:background="@drawable/border"
-                            android:src="@drawable/camera2" />
+                            android:src="@drawable/test" />
 
                         <ImageView
                             android:id="@+id/picFT_II"
@@ -252,7 +252,7 @@
                             android:layout_margin="5dp"
                             android:layout_weight=".25"
                             android:background="@drawable/border"
-                            android:src="@drawable/camera2" />
+                            android:src="@drawable/test" />
 
                         <ImageView
                             android:id="@+id/picFT_III"
@@ -264,7 +264,7 @@
                             android:layout_margin="5dp"
                             android:layout_weight=".25"
                             android:background="@drawable/border"
-                            android:src="@drawable/camera2" />
+                            android:src="@drawable/test" />
 
                         <ImageView
                             android:id="@+id/picFT_III"
@@ -276,7 +276,7 @@
                             android:layout_margin="5dp"
                             android:layout_weight=".25"
                             android:background="@drawable/border"
-                            android:src="@drawable/camera2" />
+                            android:src="@drawable/test" />
                     </LinearLayout>
 
                 </RelativeLayout>
@@ -303,7 +303,7 @@
                         android:id="@+id/textView"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="REMARK IMAGE"
+                        android:text="REMARK"
                         android:textSize="30sp"
                         android:textStyle="bold" />
                 </RelativeLayout>
@@ -336,7 +336,7 @@
                             android:layout_margin="5dp"
                             android:layout_weight=".25"
                             android:background="@drawable/border"
-                            android:src="@drawable/camera2" />
+                            android:src="@drawable/test" />
 
                         <ImageView
                             android:id="@+id/picRI_II"
@@ -348,17 +348,196 @@
                             android:layout_margin="5dp"
                             android:layout_weight=".25"
                             android:background="@drawable/border"
-                            android:src="@drawable/camera2" />
+                            android:src="@drawable/test" />
 
-                        <TextView
+                        <RelativeLayout
+                            android:id="@+id/relativeLayout2"
                             android:layout_width="0dp"
-                            android:layout_height="wrap_content"
-                            android:layout_weight=".25" />
+                            android:layout_height="match_parent"
+                            android:layout_weight=".5"
+                            android:layout_marginTop="20dp"
+                            android:layout_marginRight="20dp"
+                            android:layout_marginLeft="20dp">
 
-                        <TextView
-                            android:layout_width="0dp"
-                            android:layout_height="wrap_content"
-                            android:layout_weight=".25" />
+                            <LinearLayout
+                                android:id="@+id/info"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight=".5"
+                                android:orientation="vertical"
+                                android:paddingTop="5dp">
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_marginBottom="15dp"
+                                    android:layout_weight="0.25"
+                                    android:orientation="horizontal">
+
+
+                                    <TextView
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                        android:layout_weight=".03"
+                                        android:text="1"
+                                        android:textColor="@android:color/black"
+                                        android:textSize="12sp"
+                                        android:textStyle="bold" />
+
+                                    <TextView
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                        android:layout_weight=".02"
+                                        android:gravity="center"
+                                        android:text=":"
+                                        android:textColor="@android:color/black"
+                                        android:textSize="11sp" />
+
+                                    <EditText
+                                        android:id="@+id/txtRT_I"
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="left"
+                                        android:layout_weight=".95"
+                                        android:backgroundTint="@color/black"
+                                        android:maxLines="1"
+                                        android:paddingLeft="2dp"
+                                        android:paddingTop="1dp"
+                                        android:textColor="@android:color/black"
+                                        android:textSize="10sp" />
+
+
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_marginBottom="15dp"
+                                    android:layout_weight="0.25"
+                                    android:orientation="horizontal">
+
+
+                                    <TextView
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                        android:layout_weight=".03"
+                                        android:text="2"
+                                        android:textColor="@android:color/black"
+                                        android:textSize="12sp"
+                                        android:textStyle="bold" />
+
+                                    <TextView
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                        android:layout_weight=".02"
+                                        android:gravity="center"
+                                        android:text=":"
+                                        android:textColor="@android:color/black"
+                                        android:textSize="11sp" />
+
+                                    <EditText
+                                        android:id="@+id/txtRT_II"
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="left"
+                                        android:layout_weight=".95"
+                                        android:backgroundTint="@color/black"
+                                        android:maxLines="1"
+                                        android:paddingLeft="2dp"
+                                        android:paddingTop="1dp"
+                                        android:textColor="@android:color/black"
+                                        android:textSize="10sp" />
+
+
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginBottom="15dp"
+                                    android:layout_weight="0.25"
+                                    android:orientation="horizontal">
+
+
+                                    <TextView
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                        android:layout_weight=".03"
+                                        android:text="3"
+                                        android:textColor="@android:color/black"
+                                        android:textSize="12sp"
+                                        android:textStyle="bold" />
+
+                                    <TextView
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                        android:layout_weight=".02"
+                                        android:gravity="center"
+                                        android:text=":"
+                                        android:textColor="@android:color/black"
+                                        android:textSize="11sp" />
+
+                                    <EditText
+                                        android:id="@+id/txtRT_III"
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="left"
+                                        android:layout_weight=".95"
+                                        android:backgroundTint="@color/black"
+                                        android:maxLines="1"
+                                        android:paddingLeft="2dp"
+                                        android:paddingTop="1dp"
+                                        android:textColor="@android:color/black"
+                                        android:textSize="10sp" />
+
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginBottom="15dp"
+                                    android:layout_weight="0.25"
+                                    android:orientation="horizontal">
+
+
+                                    <TextView
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                        android:layout_weight=".03"
+                                        android:text="4"
+                                        android:textColor="@android:color/black"
+                                        android:textSize="12sp"
+                                        android:textStyle="bold" />
+
+                                    <TextView
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                        android:layout_weight=".02"
+                                        android:gravity="center"
+                                        android:text=":"
+                                        android:textColor="@android:color/black"
+                                        android:textSize="11sp" />
+
+                                    <EditText
+                                        android:id="@+id/txtRT_IIII"
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="left"
+                                        android:layout_weight=".95"
+                                        android:backgroundTint="@color/black"
+                                        android:maxLines="1"
+                                        android:paddingLeft="2dp"
+                                        android:paddingTop="1dp"
+                                        android:textColor="@android:color/black"
+                                        android:textSize="10sp" />
+
+
+                                </LinearLayout>
+
+                            </LinearLayout>
+
+                        </RelativeLayout>
+
 
                     </LinearLayout>
 
@@ -366,238 +545,7 @@
 
             </RelativeLayout>
 
-            <RelativeLayout
-                android:id="@+id/relativeremark"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_alignParentLeft="true"
-                android:layout_alignParentStart="true"
-                android:layout_below="@+id/relativecontent">
 
-                <RelativeLayout
-                    android:id="@+id/relativeLayout"
-                    android:layout_width="match_parent"
-                    android:layout_height="50dp"
-                    android:layout_alignParentTop="true"
-                    android:gravity="left|center"
-                    android:paddingLeft="10dp">
-
-                    <TextView
-                        android:id="@+id/textView"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="REMARK TEXT"
-                        android:textSize="30sp"
-                        android:textStyle="bold" />
-                </RelativeLayout>
-
-                <RelativeLayout
-                    android:id="@+id/relativeLayout2"
-                    android:layout_width="match_parent"
-                    android:layout_height="200dp"
-                    android:layout_alignParentLeft="true"
-                    android:layout_alignParentStart="true"
-                    android:layout_below="@+id/relativeLayout"
-                    android:layout_marginLeft="20dp"
-                    android:layout_marginRight="20dp">
-
-                    <LinearLayout
-                        android:id="@+id/info"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_weight=".5"
-                        android:orientation="vertical"
-                        android:paddingTop="5dp">
-
-                        <LinearLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            android:layout_marginBottom="15dp"
-                            android:layout_weight="0.25"
-                            android:orientation="horizontal">
-
-
-                            <TextView
-                                android:layout_width="0dp"
-                                android:layout_height="wrap_content"
-                                android:layout_weight=".01"
-                                android:text="1"
-                                android:textColor="@android:color/black"
-                                android:textSize="12sp"
-                                android:textStyle="bold" />
-
-                            <TextView
-                                android:layout_width="0dp"
-                                android:layout_height="wrap_content"
-                                android:layout_weight=".04"
-                                android:gravity="center"
-                                android:text=":"
-                                android:textColor="@android:color/black"
-                                android:textSize="11sp" />
-
-                            <EditText
-                                android:id="@+id/txtRT_I"
-                                android:layout_width="0dp"
-                                android:layout_height="wrap_content"
-                                android:layout_gravity="left"
-                                android:layout_weight=".45"
-                                android:maxLines="1"
-                                android:paddingLeft="2dp"
-                                android:paddingTop="1dp"
-                                android:textColor="@android:color/black"
-                                android:textSize="10sp" />
-
-                            <TextView
-                                android:id="@+id/textView21"
-                                android:layout_width="0dp"
-                                android:layout_height="wrap_content"
-                                android:layout_weight=".50" />
-
-                        </LinearLayout>
-
-                        <LinearLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            android:layout_marginBottom="15dp"
-                            android:layout_weight="0.25"
-                            android:orientation="horizontal">
-
-
-                            <TextView
-                                android:layout_width="0dp"
-                                android:layout_height="wrap_content"
-                                android:layout_weight=".01"
-                                android:text="2"
-                                android:textColor="@android:color/black"
-                                android:textSize="12sp"
-                                android:textStyle="bold" />
-
-                            <TextView
-                                android:layout_width="0dp"
-                                android:layout_height="wrap_content"
-                                android:layout_weight=".04"
-                                android:gravity="center"
-                                android:text=":"
-                                android:textColor="@android:color/black"
-                                android:textSize="11sp" />
-
-                            <EditText
-                                android:id="@+id/txtRT_II"
-                                android:layout_width="0dp"
-                                android:layout_height="wrap_content"
-                                android:layout_gravity="left"
-                                android:layout_weight=".45"
-                                android:maxLines="1"
-                                android:paddingLeft="2dp"
-                                android:paddingTop="1dp"
-                                android:textColor="@android:color/black"
-                                android:textSize="10sp" />
-
-                            <TextView
-                                android:id="@+id/textView21"
-                                android:layout_width="0dp"
-                                android:layout_height="wrap_content"
-                                android:layout_weight=".50" />
-
-                        </LinearLayout>
-
-                        <LinearLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_marginBottom="15dp"
-                            android:layout_weight="0.25"
-                            android:orientation="horizontal">
-
-
-                            <TextView
-                                android:layout_width="0dp"
-                                android:layout_height="wrap_content"
-                                android:layout_weight=".01"
-                                android:text="3"
-                                android:textColor="@android:color/black"
-                                android:textSize="12sp"
-                                android:textStyle="bold" />
-
-                            <TextView
-                                android:layout_width="0dp"
-                                android:layout_height="wrap_content"
-                                android:layout_weight=".04"
-                                android:gravity="center"
-                                android:text=":"
-                                android:textColor="@android:color/black"
-                                android:textSize="11sp" />
-
-                            <EditText
-                                android:id="@+id/txtRT_III"
-                                android:layout_width="0dp"
-                                android:layout_height="wrap_content"
-                                android:layout_gravity="left"
-                                android:layout_weight=".45"
-                                android:maxLines="1"
-                                android:paddingLeft="2dp"
-                                android:paddingTop="1dp"
-                                android:textColor="@android:color/black"
-                                android:textSize="10sp" />
-
-                            <TextView
-                                android:id="@+id/textView21"
-                                android:layout_width="0dp"
-                                android:layout_height="wrap_content"
-                                android:layout_weight=".50" />
-
-                        </LinearLayout>
-
-                        <LinearLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_marginBottom="15dp"
-                            android:layout_weight="0.25"
-                            android:orientation="horizontal">
-
-
-                            <TextView
-                                android:layout_width="0dp"
-                                android:layout_height="wrap_content"
-                                android:layout_weight=".01"
-                                android:text="4"
-                                android:textColor="@android:color/black"
-                                android:textSize="12sp"
-                                android:textStyle="bold" />
-
-                            <TextView
-                                android:layout_width="0dp"
-                                android:layout_height="wrap_content"
-                                android:layout_weight=".04"
-                                android:gravity="center"
-                                android:text=":"
-                                android:textColor="@android:color/black"
-                                android:textSize="11sp" />
-
-                            <EditText
-                                android:id="@+id/txtRT_IIII"
-                                android:layout_width="0dp"
-                                android:layout_height="wrap_content"
-                                android:layout_gravity="left"
-                                android:layout_weight=".45"
-                                android:maxLines="1"
-                                android:paddingLeft="2dp"
-                                android:paddingTop="1dp"
-                                android:textColor="@android:color/black"
-                                android:textSize="10sp" />
-
-                            <TextView
-                                android:id="@+id/textView21"
-                                android:layout_width="0dp"
-                                android:layout_height="wrap_content"
-                                android:layout_weight=".50" />
-
-                        </LinearLayout>
-
-                    </LinearLayout>
-
-                </RelativeLayout>
-
-            </RelativeLayout>
 
         </RelativeLayout>
     </android.support.v4.widget.NestedScrollView>>

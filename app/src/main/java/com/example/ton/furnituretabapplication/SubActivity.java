@@ -47,7 +47,8 @@ public class SubActivity extends AppCompatActivity {
         listqabtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
+                Intent i = new Intent(SubActivity.this,ListQA.class);
+                startActivity(i);
             }
         });
 
