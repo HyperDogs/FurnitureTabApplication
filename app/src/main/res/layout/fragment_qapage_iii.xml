@@ -267,7 +267,7 @@
                             android:src="@drawable/test" />
 
                         <ImageView
-                            android:id="@+id/picFT_III"
+                            android:id="@+id/picFT_IIII"
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
                             android:layout_alignParentBottom="true"

@@ -17,7 +17,7 @@ import java.io.File;
  * Created by ton on 1/11/18.
  */
 
-public class HelperMethod {
+public class HelperMethod extends Activity {
 
 
     final private static String[] action_camera = {"Take Picture","Choose Picture","Preview Picture","Delete Picture"};
