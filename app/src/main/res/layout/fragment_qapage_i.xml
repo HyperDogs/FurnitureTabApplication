@@ -81,6 +81,7 @@
                                 <TextView
                                     android:layout_width="100dp"
                                     android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
                                     android:layout_weight="1"
                                     android:text="@string/stock_no"
                                     android:textColor="@android:color/black"
@@ -90,21 +91,23 @@
                                 <TextView
                                     android:layout_width="15dp"
                                     android:layout_height="wrap_content"
-                                    android:gravity="center"
+                                    android:layout_gravity="center"
                                     android:text=":"
                                     android:textColor="@android:color/black"
                                     android:textSize="11sp" />
 
-                                <TextView
+                                <EditText
                                     android:id="@+id/txtStockNo"
-                                    android:layout_width="match_parent"
+                                    android:layout_width="150dp"
                                     android:layout_height="wrap_content"
-                                    android:layout_gravity="left"
+                                    android:layout_gravity="center"
+                                    android:layout_marginBottom="-5dp"
+                                    android:maxLength="20"
                                     android:paddingLeft="2dp"
                                     android:paddingTop="1dp"
                                     android:text="849/80501"
                                     android:textColor="@android:color/black"
-                                    android:textSize="10sp" />
+                                    android:textSize="12sp" />
 
                             </LinearLayout>
 
@@ -118,6 +121,7 @@
                                 <TextView
                                     android:layout_width="100dp"
                                     android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
                                     android:layout_weight="1"
                                     android:text="@string/acme_no"
                                     android:textColor="@android:color/black"
@@ -127,21 +131,24 @@
                                 <TextView
                                     android:layout_width="15dp"
                                     android:layout_height="wrap_content"
-                                    android:gravity="center"
+                                    android:layout_gravity="center"
                                     android:text=":"
                                     android:textColor="@android:color/black"
                                     android:textSize="11sp" />
 
-                                <TextView
+                                <EditText
                                     android:id="@+id/txtAcmeNo"
-                                    android:layout_width="match_parent"
+                                    android:layout_width="150dp"
                                     android:layout_height="wrap_content"
-                                    android:layout_gravity="left"
+                                    android:layout_gravity="center"
+                                    android:layout_marginBottom="-5dp"
+                                    android:focusable="false"
+                                    android:maxLength="20"
                                     android:paddingLeft="2dp"
                                     android:paddingTop="1dp"
                                     android:text="RBF5191C043"
                                     android:textColor="@android:color/black"
-                                    android:textSize="10sp" />
+                                    android:textSize="12sp" />
 
                             </LinearLayout>
 
@@ -159,25 +166,28 @@
                                     android:text="@string/desc"
                                     android:textColor="@android:color/black"
                                     android:textSize="12sp"
-                                    android:textStyle="bold" />
+                                    android:textStyle="bold"
+                                    android:layout_gravity="center" />
 
                                 <TextView
                                     android:layout_width="15dp"
                                     android:layout_height="wrap_content"
-                                    android:gravity="center"
+                                    android:layout_gravity="center"
                                     android:text=":"
                                     android:textColor="@android:color/black"
                                     android:textSize="11sp" />
 
-                                <TextView
+                                <EditText
                                     android:id="@+id/txtDesc"
-                                    android:layout_width="match_parent"
-                                    android:layout_height="22dp"
+                                    android:layout_width="150dp"
+                                    android:layout_height="wrap_content"
                                     android:layout_gravity="left"
-                                    android:maxLines="2"
+                                    android:layout_marginTop="-5dp"
+                                    android:maxLength="20"
+                                    android:maxLines="1"
                                     android:text="ST.IVES DOUBLE TALL BOY"
                                     android:textColor="@android:color/black"
-                                    android:textSize="10sp" />
+                                    android:textSize="12sp" />
                             </LinearLayout>
 
                             <LinearLayout
@@ -189,6 +199,7 @@
                                 <TextView
                                     android:layout_width="100dp"
                                     android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
                                     android:layout_weight="1"
                                     android:text="@string/order"
                                     android:textColor="@android:color/black"
@@ -198,27 +209,29 @@
                                 <TextView
                                     android:layout_width="15dp"
                                     android:layout_height="wrap_content"
-                                    android:gravity="center"
+                                    android:layout_gravity="center"
                                     android:text=":"
                                     android:textColor="@android:color/black"
                                     android:textSize="11sp" />
 
                                 <EditText
                                     android:id="@+id/txtOrder"
-                                    android:layout_width="35dp"
+                                    android:layout_width="150dp"
                                     android:layout_height="wrap_content"
-                                    android:layout_gravity="left"
+                                    android:layout_gravity="center"
+                                    android:layout_marginBottom="-5dp"
+                                    android:maxLength="20"
                                     android:maxLines="1"
                                     android:paddingLeft="2dp"
                                     android:paddingTop="1dp"
                                     android:textColor="@android:color/black"
-                                    android:textSize="10sp" />
+                                    android:textSize="12sp" />
 
                                 <TextView
                                     android:id="@+id/colorVV"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
-                                    android:layout_gravity="left"
+                                    android:layout_gravity="center"
                                     android:layout_weight="1"
                                     android:paddingLeft="2dp"
                                     android:paddingTop="1dp"
@@ -237,6 +250,7 @@
                                 <TextView
                                     android:layout_width="100dp"
                                     android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
                                     android:layout_weight="1"
                                     android:text="@string/sampling"
                                     android:textColor="@android:color/black"
@@ -246,28 +260,30 @@
                                 <TextView
                                     android:layout_width="15dp"
                                     android:layout_height="wrap_content"
-                                    android:gravity="center"
+                                    android:layout_gravity="center"
                                     android:text=":"
                                     android:textColor="@android:color/black"
                                     android:textSize="11sp" />
 
                                 <EditText
                                     android:id="@+id/txtSampling"
-                                    android:layout_width="35dp"
+                                    android:layout_width="150dp"
                                     android:layout_height="wrap_content"
-                                    android:layout_gravity="left"
+                                    android:layout_gravity="center"
+                                    android:layout_marginBottom="-5dp"
                                     android:layout_weight="1"
+                                    android:maxLength="20"
                                     android:maxLines="1"
                                     android:paddingLeft="2dp"
                                     android:paddingTop="1dp"
                                     android:textColor="@android:color/black"
-                                    android:textSize="10sp" />
+                                    android:textSize="12sp" />
 
                                 <TextView
                                     android:id="@+id/colorVV2"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
-                                    android:layout_gravity="left"
+                                    android:layout_gravity="center"
                                     android:layout_weight="1"
                                     android:paddingLeft="2dp"
                                     android:paddingTop="1dp"
@@ -340,7 +356,7 @@
 
 
                                 <TextView
-                                    android:layout_width="wrap_content"
+                                    android:layout_width="59dp"
                                     android:layout_height="wrap_content"
                                     android:layout_weight="1"
                                     android:text="@string/cus_name"
@@ -348,9 +364,9 @@
                                     android:textSize="12sp"
                                     android:textStyle="bold" />
 
-                                <TextView
+                                <EditText
                                     android:id="@+id/txtCusName"
-                                    android:layout_width="wrap_content"
+                                    android:layout_width="150dp"
                                     android:layout_height="wrap_content"
                                     android:layout_weight="1"
                                     android:text="311"
@@ -366,7 +382,7 @@
                                 android:orientation="horizontal">
 
                                 <TextView
-                                    android:layout_width="wrap_content"
+                                    android:layout_width="59dp"
                                     android:layout_height="wrap_content"
                                     android:layout_weight="1"
                                     android:text="@string/po_no"
@@ -374,9 +390,9 @@
                                     android:textSize="12sp"
                                     android:textStyle="bold" />
 
-                                <TextView
+                                <EditText
                                     android:id="@+id/txtPoNo"
-                                    android:layout_width="wrap_content"
+                                    android:layout_width="150dp"
                                     android:layout_height="wrap_content"
                                     android:layout_gravity="left"
                                     android:layout_weight="1"
@@ -516,8 +532,8 @@
                                 android:id="@+id/txtDate"
                                 android:layout_width="0dp"
                                 android:layout_height="wrap_content"
+                                android:focusable="false"
                                 android:layout_weight=".45"
-                                android:ems="10"
                                 android:inputType="textPersonName" />
                         </TableRow>
                     </LinearLayout>

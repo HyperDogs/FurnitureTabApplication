@@ -6,7 +6,6 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
-    tools:context="com.example.ton.furnituretabapplication.SubActivity"
     tools:showIn="@layout/activity_preview">
 
     <com.davemorrissey.labs.subscaleview.SubsamplingScaleImageView
@@ -16,6 +15,6 @@
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
-        android:background="@android:color/black"
-        android:src="@drawable/test" />
+        android:background="@color/half_black"
+        app:src="@drawable/test" />
 </RelativeLayout>

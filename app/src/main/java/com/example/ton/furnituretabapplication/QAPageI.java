@@ -1,32 +1,27 @@
 package com.example.ton.furnituretabapplication;
 
 
-import android.content.Context;
+import android.app.DatePickerDialog;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
-import android.provider.MediaStore;
 import android.support.v4.app.Fragment;
-import android.support.v4.content.FileProvider;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.DatePicker;
+import android.widget.EditText;
 import android.widget.ImageView;
-import android.widget.LinearLayout;
-import android.widget.Spinner;
 import android.widget.TableLayout;
 import android.widget.TableRow;
-import android.widget.TextView;
 import android.widget.Toast;
 
-import com.afollestad.materialdialogs.MaterialDialog;
 import com.squareup.picasso.Picasso;
 
 import java.io.File;
-import java.lang.reflect.Array;
-
-import javax.security.auth.callback.Callback;
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
 
 
 /**
@@ -36,6 +31,9 @@ public class QAPageI extends Fragment {
     private TableLayout tableComponent;
     private ImageView picMainImg;
     private File file;
+    private DatePickerDialog.OnDateSetListener datePick;
+    private Calendar myCalendar;
+    private EditText txtDate;
 
 
     public QAPageI() {
@@ -67,6 +65,7 @@ public class QAPageI extends Fragment {
     private void initView(View view){
         tableComponent = view.findViewById(R.id.tableComponent);
         picMainImg = view.findViewById(R.id.picMainImg);
+        txtDate = view.findViewById(R.id.txtDate);
 
     }
 
@@ -75,10 +74,30 @@ public class QAPageI extends Fragment {
             @Override
             public void onClick(View view) {
             file =  HelperMethod.dialogImg(getActivity(),"picMainImg");
-
-
             }
         });
+        myCalendar = Calendar.getInstance();
+        txtDate.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                new DatePickerDialog(getActivity(), datePick, myCalendar
+                        .get(Calendar.YEAR), myCalendar.get(Calendar.MONTH),
+                        myCalendar.get(Calendar.DAY_OF_MONTH)).show();
+                Toast.makeText(getActivity(),"xxx",Toast.LENGTH_SHORT).show();
+            }
+        });
+        datePick = new DatePickerDialog.OnDateSetListener() {
+            @Override
+            public void onDateSet(DatePicker view, int year, int monthOfYear, int dayOfMonth) {
+                // TODO Auto-generated method stub
+                myCalendar.set(Calendar.YEAR, year);
+                myCalendar.set(Calendar.MONTH, monthOfYear);
+                myCalendar.set(Calendar.DAY_OF_MONTH, dayOfMonth);
+                SimpleDateFormat sdf = new SimpleDateFormat("dd-MM-yyyy");
+                txtDate.setText(sdf.format(myCalendar.getTime()));
+            }
+        };
+
     }
 
     @Override
@@ -98,6 +117,7 @@ public class QAPageI extends Fragment {
             }
         }
     }
+
     @Override
     public void onDestroy() {
         freeMemory();
