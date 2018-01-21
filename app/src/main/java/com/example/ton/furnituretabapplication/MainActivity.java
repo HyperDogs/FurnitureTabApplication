@@ -3,10 +3,12 @@ package com.example.ton.furnituretabapplication;
 import android.Manifest;
 import android.content.Intent;
 import android.database.sqlite.SQLiteDatabase;
+import android.os.StrictMode;
 import android.support.design.widget.TabLayout;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -38,12 +40,23 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        StrictMode.ThreadPolicy policy = new StrictMode.ThreadPolicy.Builder().permitAll().build();
+        StrictMode.setThreadPolicy(policy);
         loginBth = (Button)findViewById(R.id.loginBtn);
         username = (EditText)findViewById(R.id.usernameEdt);
         password = (EditText)findViewById(R.id.passwordEdt);
         loginBth.setOnClickListener(doLogin);
         accessPermission();
         createDB();
+
+        //ทดสอบ webService
+        //WebService webService = new WebService();
+        //webService.getQASectionDetail();
+        //ArrayList<String> qaTypeList = webService.getQaSectionType();
+        //ArrayList<String> qaDescList = webService.getQaSectionDesc();
+        //for(int i=0; i<qaTypeList.size(); i++){
+        //    Log.i("QA TYPE"+(i+1),qaTypeList.get(i).toString() +" : "+qaDescList.get(i).toString() );
+        //}
 
         //login = findViewById(R.id.loginBtn);
         //login.setOnClickListener(new View.OnClickListener() {
