@@ -1,11 +1,13 @@
 package com.example.ton.furnituretabapplication;
 
+import android.support.v4.app.FragmentManager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
 import android.support.v7.widget.LinearLayoutManager;
 
 import android.support.v7.widget.RecyclerView;
+import android.view.MenuItem;
 import android.view.View;
 
 import java.util.ArrayList;
@@ -35,6 +37,15 @@ public class ListQA extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_liat_q);
+        //Toolbar
+        Toolbar toolbar = findViewById(R.id.toolbar);
+        setSupportActionBar(toolbar);
+        toolbar.setTitle("HOME");
+        // add back arrow to toolbar
+        if (getSupportActionBar() != null){
+            getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+            getSupportActionBar().setDisplayShowHomeEnabled(true);
+        }
 
         // ButterKnife.bind(this);
         findViews();
@@ -45,8 +56,8 @@ public class ListQA extends AppCompatActivity {
     }
 
     private void findViews() {
-        toolbar = (Toolbar) findViewById(R.id.toolbar);
-        recyclerView = (RecyclerView) findViewById(R.id.recycler_view);
+        toolbar = findViewById(R.id.toolbar);
+        recyclerView = findViewById(R.id.recycler_view);
     }
 
     public void initToolbar(String title) {
@@ -103,6 +114,18 @@ public class ListQA extends AppCompatActivity {
         });
 
 
+    }
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        // handle arrow click here
+        if (item.getItemId() == android.R.id.home) {
+            onBackPressed();
+            finish();
+            return false;
+
+        }
+
+        return super.onOptionsItemSelected(item);
     }
 
 

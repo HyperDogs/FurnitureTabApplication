@@ -49,6 +49,7 @@ public class SubActivity extends AppCompatActivity {
             public void onClick(View view) {
                 Intent i = new Intent(SubActivity.this,ListQA.class);
                 startActivity(i);
+
             }
         });
 
@@ -89,6 +90,7 @@ public class SubActivity extends AppCompatActivity {
 
                             Intent i = new Intent(SubActivity.this,MainActivity.class);
                             startActivity(i);
+                            finish();
 
                         }
                     })
@@ -96,6 +98,17 @@ public class SubActivity extends AppCompatActivity {
             return false;
         }
         return super.onKeyDown(keyCode, event);
+    }
+    @Override
+    protected void onDestroy() {
+        freeMemory();
+        super.onDestroy();
+    }
+
+    public void freeMemory() {
+        System.runFinalization();
+        Runtime.getRuntime().gc();
+        System.gc();
     }
 
 }

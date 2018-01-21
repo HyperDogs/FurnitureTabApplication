@@ -102,5 +102,16 @@ public class MainActivity extends AppCompatActivity {
         }, Manifest.permission.CAMERA, Manifest.permission.WRITE_EXTERNAL_STORAGE, Manifest.permission.READ_PHONE_STATE);
 
     }
+    @Override
+    protected void onDestroy() {
+        freeMemory();
+        super.onDestroy();
+    }
+
+    public void freeMemory() {
+        System.runFinalization();
+        Runtime.getRuntime().gc();
+        System.gc();
+    }
 
 }

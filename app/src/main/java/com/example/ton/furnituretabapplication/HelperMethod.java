@@ -39,7 +39,15 @@ public class HelperMethod extends Activity {
                             //uri = FileProvider.getUriForFile(getContext(),BuildConfig.APPLICATION_ID + ".provider",file);
                             intent.putExtra(MediaStore.EXTRA_OUTPUT, uri);
                             ((Activity)mContext).startActivityForResult(intent, headerImage);
-                        }else {
+                        }else if (position == 1){
+                            Intent pickPhoto = new Intent(Intent.ACTION_PICK,
+                                    android.provider.MediaStore.Images.Media.EXTERNAL_CONTENT_URI);
+                            ((Activity)mContext).startActivityForResult(pickPhoto, headerPickImage);
+                        }else if(position == 2){
+                            Intent previewImg = new Intent(mContext,Preview.class);
+                            mContext.startActivity(previewImg);
+                        }
+                        else {
                             Toast.makeText(mContext,""+position,Toast.LENGTH_SHORT).show();
                         }
                     }

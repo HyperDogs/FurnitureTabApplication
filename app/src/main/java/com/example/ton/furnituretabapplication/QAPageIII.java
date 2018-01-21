@@ -159,5 +159,16 @@ public class QAPageIII extends Fragment {
             }
         });
     }
+    @Override
+    public void onDestroy() {
+        freeMemory();
+        super.onDestroy();
+    }
+
+    public void freeMemory() {
+        System.runFinalization();
+        Runtime.getRuntime().gc();
+        System.gc();
+    }
 
 }

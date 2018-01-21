@@ -41,7 +41,8 @@
         <activity
             android:name=".ListQA"
             android:label="@string/title_activity_liat_q"
-            android:theme="@style/AppTheme"></activity>
+            android:theme="@style/AppTheme" />
+        <activity android:name=".Preview"></activity>
     </application>
 
 </manifest>

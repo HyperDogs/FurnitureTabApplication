@@ -12,7 +12,8 @@
         android:id="@+id/img_user"
         android:layout_width="120dp"
         android:layout_height="120dp"
-        android:background="#16000000" />
+        android:background="#16000000"
+        android:src="@drawable/test"/>
 
     <LinearLayout
         android:layout_width="0dp"
