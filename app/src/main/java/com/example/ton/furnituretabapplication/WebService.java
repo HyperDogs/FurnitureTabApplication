@@ -27,7 +27,12 @@ public class WebService {
     public ArrayList<String> qaSectionType;
     public ArrayList<String> qaSectionDesc;
 
-    public void getQASectionDetail(){
+    public ArrayList<String> qaDetailSeq;
+    public ArrayList<String> qaDetailType;
+    public ArrayList<String> qaDetailDesc;
+    public ArrayList<String> qaDetailTxtUse;
+
+    public void getQASection(){
         RequestBody qaParams = new FormBody.Builder()
                 .build();
 
@@ -57,5 +62,49 @@ public class WebService {
 
     public ArrayList<String> getQaSectionDesc(){
         return  qaSectionDesc;
+    }
+
+    public void getQADetail(){
+        RequestBody qaParams = new FormBody.Builder()
+                .build();
+
+        String qaResult = okHttpHelper.serverRequest(URL_qaDetail, qaParams);
+
+        try {
+            JSONArray data = new JSONArray(qaResult);
+
+            if(data.length()>0) {
+                qaDetailSeq = new ArrayList<String>();
+                qaDetailType = new ArrayList<String>();
+                qaDetailDesc = new ArrayList<String>();
+                qaDetailTxtUse = new ArrayList<String>();
+
+                for (int i = 0; i < data.length(); i++) {
+                    JSONObject c = data.getJSONObject(i);
+                    qaDetailSeq.add(c.getString("SEQ").toString());
+                    qaDetailType.add(c.getString("TYPE").toString());
+                    qaDetailDesc.add(c.getString("DESC").toString());
+                    qaDetailTxtUse.add(c.getString("TXT_USE").toString());
+                }
+            }
+        } catch (JSONException e) {
+            e.printStackTrace();
+        }
+    }
+
+    public ArrayList<String> getQaDetailSeq(){
+        return qaDetailSeq;
+    }
+
+    public ArrayList<String> getQaDetailType(){
+        return  qaDetailType;
+    }
+
+    public ArrayList<String> getQaDetailDesc(){
+        return qaDetailDesc;
+    }
+
+    public ArrayList<String> getQaDetailTxtUse(){
+        return  qaDetailTxtUse;
     }
 }
