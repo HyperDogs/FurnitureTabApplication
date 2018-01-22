@@ -3,6 +3,7 @@ package com.example.ton.furnituretabapplication;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.net.Uri;
 import android.support.design.widget.TabLayout;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.view.ViewPager;
@@ -11,7 +12,12 @@ import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
+import android.util.Log;
 import android.view.MenuItem;
+import android.widget.ImageView;
+import android.widget.Toast;
+
+import com.squareup.picasso.Picasso;
 
 public class Home extends AppCompatActivity {
 
@@ -72,6 +78,14 @@ public class Home extends AppCompatActivity {
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
+            if (requestCode == 1001 && resultCode == RESULT_OK) {
+                    ImageView picMainImg = findViewById(R.id.picMainImg);
+                    Picasso.with(Home.this).load(Uri.fromFile(HelperMethod.filePagei)).fit().centerCrop().into(picMainImg);
+                }
+            else if (requestCode == 1002 && resultCode == RESULT_OK){
+                    ImageView picMCI = findViewById(R.id.picMC_I);
+                    Picasso.with(Home.this).load(Uri.fromFile(HelperMethod.filePagei)).fit().centerCrop().into(picMCI);
+            }
     }
     @Override
     protected void onDestroy() {

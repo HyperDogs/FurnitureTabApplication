@@ -64,98 +64,98 @@ public class QAPageIII extends Fragment {
         picPDI.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                file =  HelperMethod.dialogImg(getActivity(),"picMainImg");
+                //file =  HelperMethod.dialogImg(getActivity(),"picMainImg");
             }
         });
 
         picPDII.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                file =  HelperMethod.dialogImg(getActivity(),"picMainImg");
+                //file =  HelperMethod.dialogImg(getActivity(),"picMainImg");
             }
         });
 
         picPDIII.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                file =  HelperMethod.dialogImg(getActivity(),"picMainImg");
+                //file =  HelperMethod.dialogImg(getActivity(),"picMainImg");
             }
         });
 
         picPDIIII.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                file =  HelperMethod.dialogImg(getActivity(),"picMainImg");
+                //file =  HelperMethod.dialogImg(getActivity(),"picMainImg");
             }
         });
 
         picPDIV.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                file =  HelperMethod.dialogImg(getActivity(),"picMainImg");
+                //file =  HelperMethod.dialogImg(getActivity(),"picMainImg");
             }
         });
 
         picPDV.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                file =  HelperMethod.dialogImg(getActivity(),"picMainImg");
+                //file =  HelperMethod.dialogImg(getActivity(),"picMainImg");
             }
         });
 
         picPDVI.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                file =  HelperMethod.dialogImg(getActivity(),"picMainImg");
+                //file =  HelperMethod.dialogImg(getActivity(),"picMainImg");
             }
         });
 
         picPDVII.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                file =  HelperMethod.dialogImg(getActivity(),"picMainImg");
+                //file =  HelperMethod.dialogImg(getActivity(),"picMainImg");
             }
         });
 
         picFTI.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                file =  HelperMethod.dialogImg(getActivity(),"picMainImg");
+                //file =  HelperMethod.dialogImg(getActivity(),"picMainImg");
             }
         });
 
         picFTII.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                file =  HelperMethod.dialogImg(getActivity(),"picMainImg");
+                //file =  HelperMethod.dialogImg(getActivity(),"picMainImg");
             }
         });
 
         picFTIII.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                file =  HelperMethod.dialogImg(getActivity(),"picMainImg");
+                //file =  HelperMethod.dialogImg(getActivity(),"picMainImg");
             }
         });
 
         picFTIIII.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                file =  HelperMethod.dialogImg(getActivity(),"picMainImg");
+                //file =  HelperMethod.dialogImg(getActivity(),"picMainImg");
             }
         });
 
         picRII.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                file =  HelperMethod.dialogImg(getActivity(),"picMainImg");
+                //file =  HelperMethod.dialogImg(getActivity(),"picMainImg");
             }
         });
 
         picRIII.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                file =  HelperMethod.dialogImg(getActivity(),"picMainImg");
+                //file =  HelperMethod.dialogImg(getActivity(),"picMainImg");
             }
         });
     }

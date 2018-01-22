@@ -5,6 +5,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.net.Uri;
 import android.provider.MediaStore;
+import android.support.v4.content.FileProvider;
 import android.util.Log;
 import android.view.View;
 import android.widget.Toast;
@@ -21,11 +22,11 @@ public class HelperMethod extends Activity {
 
 
     final private static String[] action_camera = {"Take Picture","Choose Picture","Preview Picture","Delete Picture"};
-    private static File file;
-    private static Uri uri;
-    private static int headerImage = 1001,headerPickImage = 1002;
+    public static File filePagei;
+    public static Uri uri;
+    public static int headerImage = 1001,headerPickImage = 1002;
 
-    public static File dialogImg(final Context mContext, String imageViewStr){
+    public static File dialogImg(final Context mContext, final int imageViewInt){
         Log.d("context",String.valueOf(mContext));
         new MaterialDialog.Builder(mContext)
                 .items(action_camera)
@@ -35,10 +36,10 @@ public class HelperMethod extends Activity {
 
                         if (position == 0){
                             Intent intent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
-                            file = CreateFile.createUnique();
-                            //uri = FileProvider.getUriForFile(getContext(),BuildConfig.APPLICATION_ID + ".provider",file);
+                            filePagei = CreateFile.createUnique();
+                            uri = Uri.fromFile(filePagei);
                             intent.putExtra(MediaStore.EXTRA_OUTPUT, uri);
-                            ((Activity)mContext).startActivityForResult(intent, headerImage);
+                            ((Activity)mContext).startActivityForResult(intent, imageViewInt);
                         }else if (position == 1){
                             Intent pickPhoto = new Intent(Intent.ACTION_PICK,
                                     android.provider.MediaStore.Images.Media.EXTERNAL_CONTENT_URI);
@@ -53,6 +54,6 @@ public class HelperMethod extends Activity {
                     }
                 })
                 .show();
-        return file;
+        return filePagei;
     }
 }

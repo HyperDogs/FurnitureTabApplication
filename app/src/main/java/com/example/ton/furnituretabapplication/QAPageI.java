@@ -73,7 +73,7 @@ public class QAPageI extends Fragment {
         picMainImg.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-            file =  HelperMethod.dialogImg(getActivity(),"picMainImg");
+            file =  HelperMethod.dialogImg(getActivity(),1001);
             }
         });
         myCalendar = Calendar.getInstance();
@@ -103,19 +103,8 @@ public class QAPageI extends Fragment {
     @Override
     public void onActivityResult(int requestCode, int resultCode, Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
+        Toast.makeText(getActivity(),"aaaa"+requestCode,Toast.LENGTH_SHORT).show();
 
-        if (requestCode == 1001) {
-            Log.d("AAA","AAA");
-            try {
-                if (file !=null && resultCode == getActivity().RESULT_OK) {
-                    Log.d("xxx","xxx");
-                    Picasso.with(getActivity()).load(Uri.fromFile(file)).fit().centerCrop().into(picMainImg);
-                    picMainImg.setAlpha((float) 1.0);
-                }
-            } catch (Exception e) {
-                e.printStackTrace();
-            }
-        }
     }
 
     @Override
