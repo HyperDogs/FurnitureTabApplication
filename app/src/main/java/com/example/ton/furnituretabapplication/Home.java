@@ -81,6 +81,7 @@ public class Home extends AppCompatActivity {
             if (requestCode == 1001 && resultCode == RESULT_OK) {
                     ImageView picMainImg = findViewById(R.id.picMainImg);
                     Picasso.with(Home.this).load(Uri.fromFile(HelperMethod.filePagei)).fit().centerCrop().into(picMainImg);
+                    VariableName.vaPicMainImg = Uri.fromFile(HelperMethod.filePagei).getLastPathSegment();
                 }
             else if (requestCode == 1002 && resultCode == RESULT_OK){
                     ImageView picMCI = findViewById(R.id.picMC_I);
