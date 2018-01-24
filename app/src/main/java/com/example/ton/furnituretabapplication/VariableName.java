@@ -1,10 +1,16 @@
 package com.example.ton.furnituretabapplication;
 
+import android.os.Environment;
+
+import java.io.File;
+
 /**
  * Created by marisalom on 10/01/2018.
  */
 
 public class VariableName {
+
+    public static String imageStorageFolder = Environment.getExternalStorageDirectory() + File.separator + "DCIM" + File.separator + "Camera" + File.separator;
 
     //Qa Page I
     public static String vaPicMainImg;

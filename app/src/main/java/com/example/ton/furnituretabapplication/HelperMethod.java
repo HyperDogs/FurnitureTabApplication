@@ -24,9 +24,9 @@ public class HelperMethod extends Activity {
     final private static String[] action_camera = {"Take Picture","Choose Picture","Preview Picture","Delete Picture"};
     public static File filePagei;
     public static Uri uri;
-    public static int headerImage = 1001,headerPickImage = 1002;
+    public static int headerImage = 1001,headerPickImage = 2001;
 
-    public static File dialogImg(final Context mContext, final int imageViewInt){
+    public static File dialogImg(final Context mContext, final int imageViewInt, final String nameImage){
         Log.d("context",String.valueOf(mContext));
         new MaterialDialog.Builder(mContext)
                 .items(action_camera)
@@ -43,10 +43,16 @@ public class HelperMethod extends Activity {
                         }else if (position == 1){
                             Intent pickPhoto = new Intent(Intent.ACTION_PICK,
                                     android.provider.MediaStore.Images.Media.EXTERNAL_CONTENT_URI);
-                            ((Activity)mContext).startActivityForResult(pickPhoto, headerPickImage);
+                            ((Activity)mContext).startActivityForResult(pickPhoto, imageViewInt);
                         }else if(position == 2){
-                            Intent previewImg = new Intent(mContext,Preview.class);
-                            mContext.startActivity(previewImg);
+                            if (nameImage == null || nameImage.isEmpty()){
+                                Toast.makeText(mContext,"Please input image. ",Toast.LENGTH_SHORT).show();
+                            }
+                            else {
+                                Intent previewImg = new Intent(mContext,Preview.class);
+                                previewImg.putExtra("NAME_IMAGE_VIEW",nameImage);
+                                mContext.startActivity(previewImg);
+                            }
                         }
                         else {
                             Toast.makeText(mContext,""+position,Toast.LENGTH_SHORT).show();

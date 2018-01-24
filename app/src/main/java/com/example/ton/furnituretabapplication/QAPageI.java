@@ -73,7 +73,7 @@ public class QAPageI extends Fragment {
         picMainImg.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-            file =  HelperMethod.dialogImg(getActivity(),1001);
+            file =  HelperMethod.dialogImg(getActivity(),1001,VariableName.vaPicMainImg);
             }
         });
         myCalendar = Calendar.getInstance();
@@ -83,7 +83,6 @@ public class QAPageI extends Fragment {
                 new DatePickerDialog(getActivity(), datePick, myCalendar
                         .get(Calendar.YEAR), myCalendar.get(Calendar.MONTH),
                         myCalendar.get(Calendar.DAY_OF_MONTH)).show();
-                Toast.makeText(getActivity(),"xxx",Toast.LENGTH_SHORT).show();
             }
         });
         datePick = new DatePickerDialog.OnDateSetListener() {
@@ -100,12 +99,6 @@ public class QAPageI extends Fragment {
 
     }
 
-    @Override
-    public void onActivityResult(int requestCode, int resultCode, Intent data) {
-        super.onActivityResult(requestCode, resultCode, data);
-        Toast.makeText(getActivity(),"aaaa"+requestCode,Toast.LENGTH_SHORT).show();
-
-    }
 
     @Override
     public void onDestroy() {

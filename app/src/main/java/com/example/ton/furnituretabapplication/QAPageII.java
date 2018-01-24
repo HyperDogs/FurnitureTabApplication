@@ -55,7 +55,7 @@ public class QAPageII extends Fragment {
         picMCI.setOnClickListener(new View.OnClickListener() {
                             @Override
                             public void onClick(View view) {
-                                file =  HelperMethod.dialogImg(getActivity(),1002);
+                                file =  HelperMethod.dialogImg(getActivity(),1002,VariableName.vaPicMC1);
             }
         });
 

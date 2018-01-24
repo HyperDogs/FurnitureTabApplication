@@ -1,16 +1,16 @@
 package com.example.ton.furnituretabapplication;
 
 import android.content.Context;
-import android.content.DialogInterface;
 import android.content.Intent;
+import android.database.Cursor;
 import android.net.Uri;
+import android.os.Bundle;
+import android.os.Environment;
+import android.provider.MediaStore;
 import android.support.design.widget.TabLayout;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.view.ViewPager;
-import android.support.v4.widget.NestedScrollView;
-import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
 import android.util.Log;
 import android.view.MenuItem;
@@ -19,11 +19,18 @@ import android.widget.Toast;
 
 import com.squareup.picasso.Picasso;
 
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.nio.channels.FileChannel;
+
 public class Home extends AppCompatActivity {
 
     private SectionsPageAdapter mSectionsPageAdapter;
     private ViewPager mViewPager;
     public static Context mContext;
+    private File file;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -66,7 +73,7 @@ public class Home extends AppCompatActivity {
             // in my case I get the support fragment manager, it should work with the native one too
             FragmentManager fragmentManager = getSupportFragmentManager();
             // this will clear the back stack and displays no animation on the screen
-            fragmentManager.popBackStackImmediate(null, FragmentManager.POP_BACK_STACK_INCLUSIVE);
+            //fragmentManager.popBackStackImmediate(null, FragmentManager.POP_BACK_STACK_INCLUSIVE);
             finish();
             return false;
 
@@ -78,16 +85,76 @@ public class Home extends AppCompatActivity {
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
-            if (requestCode == 1001 && resultCode == RESULT_OK) {
-                    ImageView picMainImg = findViewById(R.id.picMainImg);
-                    Picasso.with(Home.this).load(Uri.fromFile(HelperMethod.filePagei)).fit().centerCrop().into(picMainImg);
-                    VariableName.vaPicMainImg = Uri.fromFile(HelperMethod.filePagei).getLastPathSegment();
+        //Toast.makeText(Home.this,"REQCODE"+data,Toast.LENGTH_SHORT).show();
+        Uri selectedImage = null;
+        if (requestCode == 1001 && resultCode == RESULT_OK) {
+            ImageView picMainImg = findViewById(R.id.picMainImg);
+                    if (data != null){
+                        selectedImage = data.getData();
+
+                        Uri uri = Uri.parse(getRealPathFromURI(Home.this,selectedImage));
+                        File destFile = new File(VariableName.imageStorageFolder);
+                        Log.d("PATH_DEST", String.valueOf(destFile));
+                        Log.d("PATH_SOURCE", String.valueOf(uri));
+                            try {
+                                copyFile(new File(uri.toString()), destFile);
+                            } catch (IOException e) {
+                                e.printStackTrace();
+                            }
+
+                        Picasso.with(Home.this).load(selectedImage).fit().centerCrop().into(picMainImg);
+                        VariableName.vaPicMainImg = uri.getLastPathSegment();
+                        Toast.makeText(Home.this,"namepath"+VariableName.vaPicMainImg,Toast.LENGTH_SHORT).show();
+                    } else {
+                        Picasso.with(Home.this).load(Uri.fromFile(HelperMethod.filePagei)).fit().centerCrop().into(picMainImg);
+                        VariableName.vaPicMainImg = Uri.fromFile(HelperMethod.filePagei).getLastPathSegment();
+                    }
+
                 }
-            else if (requestCode == 1002 && resultCode == RESULT_OK){
+        else if (requestCode == 1002 && resultCode == RESULT_OK){
                     ImageView picMCI = findViewById(R.id.picMC_I);
                     Picasso.with(Home.this).load(Uri.fromFile(HelperMethod.filePagei)).fit().centerCrop().into(picMCI);
             }
     }
+
+    public String getRealPathFromURI(Context context, Uri contentUri) {
+        Cursor cursor = null;
+        try {
+            String[] proj = { MediaStore.Images.Media.DATA };
+            cursor = context.getContentResolver().query(contentUri,  proj, null, null, null);
+            int column_index = cursor.getColumnIndexOrThrow(MediaStore.Images.Media.DATA);
+            cursor.moveToFirst();
+            return cursor.getString(column_index);
+        } finally {
+            if (cursor != null) {
+                cursor.close();
+            }
+        }
+    }
+
+    private void copyFile(File sourceFile, File destFile) throws IOException {
+
+        if (!sourceFile.exists()) {
+            Log.d("EXISTS ","EXISTS");
+            return;
+        }
+        //destFile = new File(destFile,sourceFile.getName());
+        FileChannel  source = new FileInputStream(sourceFile).getChannel();
+        FileChannel  destination = new FileOutputStream(destFile).getChannel();
+        Log.d("COPY_FILE_DEST ", String.valueOf(destination));
+        //if (destination != null && source != null) {
+            Log.d("SOURCE ", String.valueOf(source));
+            Log.d("DEST ", String.valueOf(destination));
+            destination.transferFrom(source, 0, source.size());
+       // }
+        if (source != null) {
+            source.close();
+        }
+        if (destination != null) {
+            destination.close();
+        }
+    }
+
     @Override
     protected void onDestroy() {
         freeMemory();
