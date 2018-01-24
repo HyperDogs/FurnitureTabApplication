@@ -24,6 +24,8 @@ import com.karumi.dexter.listener.multi.MultiplePermissionsListener;
 import java.util.ArrayList;
 import java.util.List;
 
+import Model.QADetailModel;
+import Model.QASectionModel;
 import resource.AsyncTaskLogin;
 
 public class MainActivity extends AppCompatActivity {
@@ -55,8 +57,16 @@ public class MainActivity extends AppCompatActivity {
         //ArrayList<String> qaSectionTypeList = webServiceQASection.getQaSectionType();
         //ArrayList<String> qaSectionDescList = webServiceQASection.getQaSectionDesc();
         //for(int i=0; i<qaSectionTypeList.size(); i++){
-        //    Log.i("QA SECTION"+(i+1),qaSectionTypeList.get(i).toString() +" : "+qaSectionDescList.get(i).toString() );
+            //Log.i("QA SECTION"+(i+1),qaSectionTypeList.get(i).toString() +" : "+qaSectionDescList.get(i).toString() );
         //}
+        //List<QASectionModel> qaSectionModelList = new ArrayList();
+        //for(int i=0; i<qaSectionTypeList.size(); i++){
+        //    QASectionModel qaSectionModel = new QASectionModel();
+        //    qaSectionModel.setQaSectionType(qaSectionTypeList.get(i));
+        //    qaSectionModel.setQaSectionDesc(qaSectionDescList.get(i));
+        //    qaSectionModelList.add(qaSectionModel);
+        //}
+
 
         //WebService webServiceQADetail = new WebService();
         //webServiceQADetail.getQADetail();
@@ -71,6 +81,21 @@ public class MainActivity extends AppCompatActivity {
         //            Log.i("QA DETAIL",qaDetailSeqList.get(j).toString() +" : "+qaDetailTypeList.get(j).toString()+" : "+qaDetailDescList.get(j).toString()+" : "+qaDetailTxtUseList.get(j).toString() );
         //        }
         //    }
+        //}
+        //for(int i=0; i<qaSectionModelList.size(); i++){
+        //    List<QADetailModel> qaDetailModelList = new ArrayList();
+        //    QASectionModel qaSectionModel = qaSectionModelList.get(i);
+        //    for(int j=0; j<qaDetailTypeList.size(); j++){
+        //        if(qaSectionModel.getQaSectionType().equals(qaDetailTypeList.get(j))){
+        //            QADetailModel qaDetailModel = new QADetailModel();
+        //            qaDetailModel.setQaDetailSeq(qaDetailSeqList.get(j));
+        //            qaDetailModel.setQaDetailType(qaDetailTypeList.get(j));
+        //            qaDetailModel.setQaDetailDesc(qaDetailDescList.get(j));
+        //            qaDetailModel.setQaDetailTxtUse(qaDetailTxtUseList.get(j));
+        //            qaDetailModelList.add(qaDetailModel);
+        //        }
+        //    }
+        //    qaSectionModel.setQaDetailModelList(qaDetailModelList);
         //}
 
 
