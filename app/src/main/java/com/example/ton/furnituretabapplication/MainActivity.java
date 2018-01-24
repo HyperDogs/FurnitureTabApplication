@@ -49,14 +49,30 @@ public class MainActivity extends AppCompatActivity {
         accessPermission();
         createDB();
 
-        //ทดสอบ webService
-        //WebService webService = new WebService();
-        //webService.getQASectionDetail();
-        //ArrayList<String> qaTypeList = webService.getQaSectionType();
-        //ArrayList<String> qaDescList = webService.getQaSectionDesc();
-        //for(int i=0; i<qaTypeList.size(); i++){
-        //    Log.i("QA TYPE"+(i+1),qaTypeList.get(i).toString() +" : "+qaDescList.get(i).toString() );
+        //test webService
+        //WebService webServiceQASection = new WebService();
+        //webServiceQASection.getQASection();
+        //ArrayList<String> qaSectionTypeList = webServiceQASection.getQaSectionType();
+        //ArrayList<String> qaSectionDescList = webServiceQASection.getQaSectionDesc();
+        //for(int i=0; i<qaSectionTypeList.size(); i++){
+        //    Log.i("QA SECTION"+(i+1),qaSectionTypeList.get(i).toString() +" : "+qaSectionDescList.get(i).toString() );
         //}
+
+        //WebService webServiceQADetail = new WebService();
+        //webServiceQADetail.getQADetail();
+        //ArrayList<String> qaDetailSeqList = webServiceQADetail.getQaDetailSeq();
+        //ArrayList<String> qaDetailTypeList = webServiceQADetail.getQaDetailType();
+        //ArrayList<String> qaDetailDescList = webServiceQADetail.getQaDetailDesc();
+        //ArrayList<String> qaDetailTxtUseList = webServiceQADetail.getQaDetailTxtUse();
+        //for(int i=0; i<qaSectionTypeList.size(); i++){
+        //    Log.i("QA SECTION",qaSectionTypeList.get(i).toString() +" : "+qaSectionDescList.get(i).toString() );
+        //    for(int j=0; j<qaDetailSeqList.size(); j++){
+        //        if(qaSectionTypeList.get(i).toString().equals(qaDetailTypeList.get(j).toString())){
+        //            Log.i("QA DETAIL",qaDetailSeqList.get(j).toString() +" : "+qaDetailTypeList.get(j).toString()+" : "+qaDetailDescList.get(j).toString()+" : "+qaDetailTxtUseList.get(j).toString() );
+        //        }
+        //    }
+        //}
+
 
         //login = findViewById(R.id.loginBtn);
         //login.setOnClickListener(new View.OnClickListener() {
