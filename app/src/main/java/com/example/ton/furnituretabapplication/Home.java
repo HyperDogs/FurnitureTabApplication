@@ -13,6 +13,7 @@ import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.util.Log;
+import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.ImageView;
 import android.widget.Toast;
@@ -59,9 +60,9 @@ public class Home extends AppCompatActivity {
 
     private void setupViewPager(ViewPager viewPager) {
         SectionsPageAdapter adapter = new SectionsPageAdapter(getSupportFragmentManager());
-        adapter.addFragment(new QAPageI(), "MAIN1");
-        adapter.addFragment(new QAPageII(), "MAIN2");
-        adapter.addFragment(new QAPageIII(), "MAIN3");
+        adapter.addFragment(new QAPageI(), "PAGE1");
+        adapter.addFragment(new QAPageII(), "PAGE2");
+        adapter.addFragment(new QAPageIII(), "PAGE3");
         viewPager.setAdapter(adapter);
     }
 
@@ -79,6 +80,10 @@ public class Home extends AppCompatActivity {
 
         }
 
+        if (item.getItemId() == R.id.mybutton) {
+                // do something here
+            Toast.makeText(Home.this,"Saved",Toast.LENGTH_SHORT).show();
+        }
         return super.onOptionsItemSelected(item);
     }
 
@@ -138,15 +143,15 @@ public class Home extends AppCompatActivity {
             Log.d("EXISTS ","EXISTS");
             return;
         }
-        //destFile = new File(destFile,sourceFile.getName());
+        destFile = CreateFile.createUnique();
         FileChannel  source = new FileInputStream(sourceFile).getChannel();
         FileChannel  destination = new FileOutputStream(destFile).getChannel();
         Log.d("COPY_FILE_DEST ", String.valueOf(destination));
-        //if (destination != null && source != null) {
+        if (destination != null && source != null) {
             Log.d("SOURCE ", String.valueOf(source));
             Log.d("DEST ", String.valueOf(destination));
             destination.transferFrom(source, 0, source.size());
-       // }
+        }
         if (source != null) {
             source.close();
         }
@@ -154,6 +159,15 @@ public class Home extends AppCompatActivity {
             destination.close();
         }
     }
+
+    // create an action bar button
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.mymenu, menu);
+        return super.onCreateOptionsMenu(menu);
+    }
+
+
 
     @Override
     protected void onDestroy() {
