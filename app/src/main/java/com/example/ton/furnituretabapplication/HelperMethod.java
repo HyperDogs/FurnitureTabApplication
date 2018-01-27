@@ -1,18 +1,23 @@
 package com.example.ton.furnituretabapplication;
 
+import android.annotation.SuppressLint;
 import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
+import android.graphics.drawable.Drawable;
 import android.net.Uri;
 import android.provider.MediaStore;
 import android.support.v4.content.FileProvider;
 import android.util.Log;
 import android.view.View;
+import android.widget.ImageView;
 import android.widget.Toast;
 
 import com.afollestad.materialdialogs.MaterialDialog;
 
 import java.io.File;
+
+import static com.example.ton.furnituretabapplication.R.drawable.test;
 
 /**
  * Created by ton on 1/11/18.
@@ -26,7 +31,7 @@ public class HelperMethod extends Activity {
     public static Uri uri;
     public static int headerImage = 1001,headerPickImage = 2001;
 
-    public static File dialogImg(final Context mContext, final int imageViewInt, final String nameImage){
+    public static File dialogImg(final Context mContext, final int imageViewInt, final String nameImage, final ImageView imageView){
         Log.d("context",String.valueOf(mContext));
         new MaterialDialog.Builder(mContext)
                 .items(action_camera)
@@ -55,7 +60,10 @@ public class HelperMethod extends Activity {
                             }
                         }
                         else {
-                            Toast.makeText(mContext,""+position,Toast.LENGTH_SHORT).show();
+                             @SuppressLint({"NewApi", "LocalSuppress"}) Drawable drawable = mContext.getDrawable(R.drawable.test);
+                                    imageView.setImageDrawable(drawable);
+                                Toast.makeText(mContext,"Removed",Toast.LENGTH_SHORT).show();
+
                         }
                     }
                 })

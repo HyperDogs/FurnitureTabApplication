@@ -109,11 +109,12 @@ public class Home extends AppCompatActivity {
 
                         Picasso.with(Home.this).load(selectedImage).fit().centerCrop().into(picMainImg);
                         VariableName.vaPicMainImg = uri.getLastPathSegment();
-                        Toast.makeText(Home.this,"namepath"+VariableName.vaPicMainImg,Toast.LENGTH_SHORT).show();
+                        //Toast.makeText(Home.this,"namepath"+VariableName.vaPicMainImg,Toast.LENGTH_SHORT).show();
                     } else {
                         Picasso.with(Home.this).load(Uri.fromFile(HelperMethod.filePagei)).fit().centerCrop().into(picMainImg);
                         VariableName.vaPicMainImg = Uri.fromFile(HelperMethod.filePagei).getLastPathSegment();
                     }
+
 
                 }
         else if (requestCode == 1002 && resultCode == RESULT_OK){
