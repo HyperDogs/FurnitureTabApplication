@@ -64,98 +64,98 @@ public class QAPageIII extends Fragment {
         picPDI.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                //file =  HelperMethod.dialogImg(getActivity(),"picMainImg");
+                file =  HelperMethod.dialogImg(getActivity(),1015,VariableName.vaPicPD1, picPDI);
             }
         });
 
         picPDII.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                //file =  HelperMethod.dialogImg(getActivity(),"picMainImg");
+                file =  HelperMethod.dialogImg(getActivity(),1016,VariableName.vaPicPD2, picPDII);
             }
         });
 
         picPDIII.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                //file =  HelperMethod.dialogImg(getActivity(),"picMainImg");
+                file =  HelperMethod.dialogImg(getActivity(),1017,VariableName.vaPicPD3, picPDIII);
             }
         });
 
         picPDIIII.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                //file =  HelperMethod.dialogImg(getActivity(),"picMainImg");
+                file =  HelperMethod.dialogImg(getActivity(),1018,VariableName.vaPicPD4, picPDIIII);
             }
         });
 
         picPDIV.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                //file =  HelperMethod.dialogImg(getActivity(),"picMainImg");
+                file =  HelperMethod.dialogImg(getActivity(),1019,VariableName.vaPicPD5, picPDIV);
             }
         });
 
         picPDV.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                //file =  HelperMethod.dialogImg(getActivity(),"picMainImg");
+                file =  HelperMethod.dialogImg(getActivity(),1020,VariableName.vaPicPD6, picPDV);
             }
         });
 
         picPDVI.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                //file =  HelperMethod.dialogImg(getActivity(),"picMainImg");
+                file =  HelperMethod.dialogImg(getActivity(),1021,VariableName.vaPicPD7, picPDVI);
             }
         });
 
         picPDVII.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                //file =  HelperMethod.dialogImg(getActivity(),"picMainImg");
+                file =  HelperMethod.dialogImg(getActivity(),1022,VariableName.vaPicPD8, picPDVII);
             }
         });
 
         picFTI.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                //file =  HelperMethod.dialogImg(getActivity(),"picMainImg");
+                file =  HelperMethod.dialogImg(getActivity(),1023,VariableName.vaPicFT1, picFTI);
             }
         });
 
         picFTII.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                //file =  HelperMethod.dialogImg(getActivity(),"picMainImg");
+                file =  HelperMethod.dialogImg(getActivity(),1024,VariableName.vaPicFT2, picFTII);
             }
         });
 
         picFTIII.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                //file =  HelperMethod.dialogImg(getActivity(),"picMainImg");
+                file =  HelperMethod.dialogImg(getActivity(),1025,VariableName.vaPicFT3, picFTIII);
             }
         });
 
         picFTIIII.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                //file =  HelperMethod.dialogImg(getActivity(),"picMainImg");
+                file =  HelperMethod.dialogImg(getActivity(),1026,VariableName.vaPicFT4, picFTIIII);
             }
         });
 
         picRII.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                //file =  HelperMethod.dialogImg(getActivity(),"picMainImg");
+                file =  HelperMethod.dialogImg(getActivity(),1027,VariableName.vaPicRI1, picRII);
             }
         });
 
         picRIII.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                //file =  HelperMethod.dialogImg(getActivity(),"picMainImg");
+                file =  HelperMethod.dialogImg(getActivity(),1028,VariableName.vaPicRI2, picRIII);
             }
         });
     }

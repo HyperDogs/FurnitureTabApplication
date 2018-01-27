@@ -118,9 +118,600 @@ public class Home extends AppCompatActivity {
 
                 }
         else if (requestCode == 1002 && resultCode == RESULT_OK){
-                    ImageView picMCI = findViewById(R.id.picMC_I);
-                    Picasso.with(Home.this).load(Uri.fromFile(HelperMethod.filePagei)).fit().centerCrop().into(picMCI);
+            ImageView picMCI = findViewById(R.id.picMC_I);
+            if (data != null){
+                selectedImage = data.getData();
+
+                Uri uri = Uri.parse(getRealPathFromURI(Home.this,selectedImage));
+                File destFile = new File(VariableName.imageStorageFolder);
+                Log.d("PATH_DEST", String.valueOf(destFile));
+                Log.d("PATH_SOURCE", String.valueOf(uri));
+                try {
+                    copyFile(new File(uri.toString()), destFile);
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+
+                Picasso.with(Home.this).load(selectedImage).fit().centerCrop().into(picMCI);
+                VariableName.vaPicMC1 = uri.getLastPathSegment();
+            } else {
+                Picasso.with(Home.this).load(Uri.fromFile(HelperMethod.filePagei)).fit().centerCrop().into(picMCI);
+                VariableName.vaPicMC1 = Uri.fromFile(HelperMethod.filePagei).getLastPathSegment();
             }
+            //Picasso.with(Home.this).load(Uri.fromFile(HelperMethod.filePagei)).fit().centerCrop().into(picMCI);
+        }
+        else if (requestCode == 1003 && resultCode == RESULT_OK){
+            ImageView picMCII = findViewById(R.id.picMC_II);
+            if (data != null){
+                selectedImage = data.getData();
+
+                Uri uri = Uri.parse(getRealPathFromURI(Home.this,selectedImage));
+                File destFile = new File(VariableName.imageStorageFolder);
+                Log.d("PATH_DEST", String.valueOf(destFile));
+                Log.d("PATH_SOURCE", String.valueOf(uri));
+                try {
+                    copyFile(new File(uri.toString()), destFile);
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+
+                Picasso.with(Home.this).load(selectedImage).fit().centerCrop().into(picMCII);
+                VariableName.vaPicMC2 = uri.getLastPathSegment();
+            } else {
+                Picasso.with(Home.this).load(Uri.fromFile(HelperMethod.filePagei)).fit().centerCrop().into(picMCII);
+                VariableName.vaPicMC2 = Uri.fromFile(HelperMethod.filePagei).getLastPathSegment();
+            }
+        }
+        else if (requestCode == 1004 && resultCode == RESULT_OK){
+            ImageView picMCIII = findViewById(R.id.picMC_III);
+            if (data != null){
+                selectedImage = data.getData();
+
+                Uri uri = Uri.parse(getRealPathFromURI(Home.this,selectedImage));
+                File destFile = new File(VariableName.imageStorageFolder);
+                Log.d("PATH_DEST", String.valueOf(destFile));
+                Log.d("PATH_SOURCE", String.valueOf(uri));
+                try {
+                    copyFile(new File(uri.toString()), destFile);
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+
+                Picasso.with(Home.this).load(selectedImage).fit().centerCrop().into(picMCIII);
+                VariableName.vaPicMC3 = uri.getLastPathSegment();
+            } else {
+                Picasso.with(Home.this).load(Uri.fromFile(HelperMethod.filePagei)).fit().centerCrop().into(picMCIII);
+                VariableName.vaPicMC3 = Uri.fromFile(HelperMethod.filePagei).getLastPathSegment();
+            }
+        }
+        else if (requestCode == 1005 && resultCode == RESULT_OK){
+            ImageView picMCIIII = findViewById(R.id.picMC_IIII);
+            if (data != null){
+                selectedImage = data.getData();
+
+                Uri uri = Uri.parse(getRealPathFromURI(Home.this,selectedImage));
+                File destFile = new File(VariableName.imageStorageFolder);
+                Log.d("PATH_DEST", String.valueOf(destFile));
+                Log.d("PATH_SOURCE", String.valueOf(uri));
+                try {
+                    copyFile(new File(uri.toString()), destFile);
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+
+                Picasso.with(Home.this).load(selectedImage).fit().centerCrop().into(picMCIIII);
+                VariableName.vaPicMC4 = uri.getLastPathSegment();
+            } else {
+                Picasso.with(Home.this).load(Uri.fromFile(HelperMethod.filePagei)).fit().centerCrop().into(picMCIIII);
+                VariableName.vaPicMC4 = Uri.fromFile(HelperMethod.filePagei).getLastPathSegment();
+            }
+        }
+        else if (requestCode == 1006 && resultCode == RESULT_OK){
+            ImageView picMCIV = findViewById(R.id.picMC_IV);
+            if (data != null){
+                selectedImage = data.getData();
+
+                Uri uri = Uri.parse(getRealPathFromURI(Home.this,selectedImage));
+                File destFile = new File(VariableName.imageStorageFolder);
+                Log.d("PATH_DEST", String.valueOf(destFile));
+                Log.d("PATH_SOURCE", String.valueOf(uri));
+                try {
+                    copyFile(new File(uri.toString()), destFile);
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+
+                Picasso.with(Home.this).load(selectedImage).fit().centerCrop().into(picMCIV);
+                VariableName.vaPicMC5 = uri.getLastPathSegment();
+            } else {
+                Picasso.with(Home.this).load(Uri.fromFile(HelperMethod.filePagei)).fit().centerCrop().into(picMCIV);
+                VariableName.vaPicMC5 = Uri.fromFile(HelperMethod.filePagei).getLastPathSegment();
+            }
+        }
+        else if (requestCode == 1007 && resultCode == RESULT_OK){
+            ImageView picMCV = findViewById(R.id.picMC_V);
+            if (data != null){
+                selectedImage = data.getData();
+
+                Uri uri = Uri.parse(getRealPathFromURI(Home.this,selectedImage));
+                File destFile = new File(VariableName.imageStorageFolder);
+                Log.d("PATH_DEST", String.valueOf(destFile));
+                Log.d("PATH_SOURCE", String.valueOf(uri));
+                try {
+                    copyFile(new File(uri.toString()), destFile);
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+
+                Picasso.with(Home.this).load(selectedImage).fit().centerCrop().into(picMCV);
+                VariableName.vaPicMC6 = uri.getLastPathSegment();
+            } else {
+                Picasso.with(Home.this).load(Uri.fromFile(HelperMethod.filePagei)).fit().centerCrop().into(picMCV);
+                VariableName.vaPicMC6 = Uri.fromFile(HelperMethod.filePagei).getLastPathSegment();
+            }
+        }
+        else if (requestCode == 1008 && resultCode == RESULT_OK){
+            ImageView picMCVI = findViewById(R.id.picMC_VI);
+            if (data != null){
+                selectedImage = data.getData();
+
+                Uri uri = Uri.parse(getRealPathFromURI(Home.this,selectedImage));
+                File destFile = new File(VariableName.imageStorageFolder);
+                Log.d("PATH_DEST", String.valueOf(destFile));
+                Log.d("PATH_SOURCE", String.valueOf(uri));
+                try {
+                    copyFile(new File(uri.toString()), destFile);
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+
+                Picasso.with(Home.this).load(selectedImage).fit().centerCrop().into(picMCVI);
+                VariableName.vaPicMC7 = uri.getLastPathSegment();
+            } else {
+                Picasso.with(Home.this).load(Uri.fromFile(HelperMethod.filePagei)).fit().centerCrop().into(picMCVI);
+                VariableName.vaPicMC7 = Uri.fromFile(HelperMethod.filePagei).getLastPathSegment();
+            }
+        }
+        else if (requestCode == 1009 && resultCode == RESULT_OK){
+            ImageView picMCVII = findViewById(R.id.picMC_VII);
+            if (data != null){
+                selectedImage = data.getData();
+
+                Uri uri = Uri.parse(getRealPathFromURI(Home.this,selectedImage));
+                File destFile = new File(VariableName.imageStorageFolder);
+                Log.d("PATH_DEST", String.valueOf(destFile));
+                Log.d("PATH_SOURCE", String.valueOf(uri));
+                try {
+                    copyFile(new File(uri.toString()), destFile);
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+
+                Picasso.with(Home.this).load(selectedImage).fit().centerCrop().into(picMCVII);
+                VariableName.vaPicMC8 = uri.getLastPathSegment();
+            } else {
+                Picasso.with(Home.this).load(Uri.fromFile(HelperMethod.filePagei)).fit().centerCrop().into(picMCVII);
+                VariableName.vaPicMC8 = Uri.fromFile(HelperMethod.filePagei).getLastPathSegment();
+            }
+        }
+        else if (requestCode == 1010 && resultCode == RESULT_OK){
+            ImageView picIBI = findViewById(R.id.picIB_I);
+            if (data != null){
+                selectedImage = data.getData();
+
+                Uri uri = Uri.parse(getRealPathFromURI(Home.this,selectedImage));
+                File destFile = new File(VariableName.imageStorageFolder);
+                Log.d("PATH_DEST", String.valueOf(destFile));
+                Log.d("PATH_SOURCE", String.valueOf(uri));
+                try {
+                    copyFile(new File(uri.toString()), destFile);
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+
+                Picasso.with(Home.this).load(selectedImage).fit().centerCrop().into(picIBI);
+                VariableName.vaPicIB1 = uri.getLastPathSegment();
+            } else {
+                Picasso.with(Home.this).load(Uri.fromFile(HelperMethod.filePagei)).fit().centerCrop().into(picIBI);
+                VariableName.vaPicIB1 = Uri.fromFile(HelperMethod.filePagei).getLastPathSegment();
+            }
+        }
+        else if (requestCode == 1011 && resultCode == RESULT_OK){
+            ImageView picIBII = findViewById(R.id.picIB_II);
+            if (data != null){
+                selectedImage = data.getData();
+
+                Uri uri = Uri.parse(getRealPathFromURI(Home.this,selectedImage));
+                File destFile = new File(VariableName.imageStorageFolder);
+                Log.d("PATH_DEST", String.valueOf(destFile));
+                Log.d("PATH_SOURCE", String.valueOf(uri));
+                try {
+                    copyFile(new File(uri.toString()), destFile);
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+
+                Picasso.with(Home.this).load(selectedImage).fit().centerCrop().into(picIBII);
+                VariableName.vaPicIB2 = uri.getLastPathSegment();
+            } else {
+                Picasso.with(Home.this).load(Uri.fromFile(HelperMethod.filePagei)).fit().centerCrop().into(picIBII);
+                VariableName.vaPicIB2 = Uri.fromFile(HelperMethod.filePagei).getLastPathSegment();
+            }
+        }
+        else if (requestCode == 1012 && resultCode == RESULT_OK){
+            ImageView picIBIII = findViewById(R.id.picIB_III);
+            if (data != null){
+                selectedImage = data.getData();
+
+                Uri uri = Uri.parse(getRealPathFromURI(Home.this,selectedImage));
+                File destFile = new File(VariableName.imageStorageFolder);
+                Log.d("PATH_DEST", String.valueOf(destFile));
+                Log.d("PATH_SOURCE", String.valueOf(uri));
+                try {
+                    copyFile(new File(uri.toString()), destFile);
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+
+                Picasso.with(Home.this).load(selectedImage).fit().centerCrop().into(picIBIII);
+                VariableName.vaPicIB3 = uri.getLastPathSegment();
+            } else {
+                Picasso.with(Home.this).load(Uri.fromFile(HelperMethod.filePagei)).fit().centerCrop().into(picIBIII);
+                VariableName.vaPicIB3 = Uri.fromFile(HelperMethod.filePagei).getLastPathSegment();
+            }
+        }
+        else if (requestCode == 1013 && resultCode == RESULT_OK){
+            ImageView picIBIIII = findViewById(R.id.picIB_IIII);
+            if (data != null){
+                selectedImage = data.getData();
+
+                Uri uri = Uri.parse(getRealPathFromURI(Home.this,selectedImage));
+                File destFile = new File(VariableName.imageStorageFolder);
+                Log.d("PATH_DEST", String.valueOf(destFile));
+                Log.d("PATH_SOURCE", String.valueOf(uri));
+                try {
+                    copyFile(new File(uri.toString()), destFile);
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+
+                Picasso.with(Home.this).load(selectedImage).fit().centerCrop().into(picIBIIII);
+                VariableName.vaPicIB4 = uri.getLastPathSegment();
+            } else {
+                Picasso.with(Home.this).load(Uri.fromFile(HelperMethod.filePagei)).fit().centerCrop().into(picIBIIII);
+                VariableName.vaPicIB4 = Uri.fromFile(HelperMethod.filePagei).getLastPathSegment();
+            }
+        }
+        else if (requestCode == 1014 && resultCode == RESULT_OK){
+            ImageView picMOI = findViewById(R.id.picMOI);
+            if (data != null){
+                selectedImage = data.getData();
+
+                Uri uri = Uri.parse(getRealPathFromURI(Home.this,selectedImage));
+                File destFile = new File(VariableName.imageStorageFolder);
+                Log.d("PATH_DEST", String.valueOf(destFile));
+                Log.d("PATH_SOURCE", String.valueOf(uri));
+                try {
+                    copyFile(new File(uri.toString()), destFile);
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+
+                Picasso.with(Home.this).load(selectedImage).fit().centerCrop().into(picMOI);
+                VariableName.vaPicMO1 = uri.getLastPathSegment();
+            } else {
+                Picasso.with(Home.this).load(Uri.fromFile(HelperMethod.filePagei)).fit().centerCrop().into(picMOI);
+                VariableName.vaPicMO1 = Uri.fromFile(HelperMethod.filePagei).getLastPathSegment();
+            }
+        }
+        else if (requestCode == 1015 && resultCode == RESULT_OK){
+            ImageView picPDI = findViewById(R.id.picPD_I);
+            if (data != null){
+                selectedImage = data.getData();
+
+                Uri uri = Uri.parse(getRealPathFromURI(Home.this,selectedImage));
+                File destFile = new File(VariableName.imageStorageFolder);
+                Log.d("PATH_DEST", String.valueOf(destFile));
+                Log.d("PATH_SOURCE", String.valueOf(uri));
+                try {
+                    copyFile(new File(uri.toString()), destFile);
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+
+                Picasso.with(Home.this).load(selectedImage).fit().centerCrop().into(picPDI);
+                VariableName.vaPicPD1 = uri.getLastPathSegment();
+            } else {
+                Picasso.with(Home.this).load(Uri.fromFile(HelperMethod.filePagei)).fit().centerCrop().into(picPDI);
+                VariableName.vaPicPD1 = Uri.fromFile(HelperMethod.filePagei).getLastPathSegment();
+            }
+        }
+        else if (requestCode == 1016 && resultCode == RESULT_OK){
+            ImageView picPDII = findViewById(R.id.picPD_II);
+            if (data != null){
+                selectedImage = data.getData();
+
+                Uri uri = Uri.parse(getRealPathFromURI(Home.this,selectedImage));
+                File destFile = new File(VariableName.imageStorageFolder);
+                Log.d("PATH_DEST", String.valueOf(destFile));
+                Log.d("PATH_SOURCE", String.valueOf(uri));
+                try {
+                    copyFile(new File(uri.toString()), destFile);
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+
+                Picasso.with(Home.this).load(selectedImage).fit().centerCrop().into(picPDII);
+                VariableName.vaPicPD2 = uri.getLastPathSegment();
+            } else {
+                Picasso.with(Home.this).load(Uri.fromFile(HelperMethod.filePagei)).fit().centerCrop().into(picPDII);
+                VariableName.vaPicPD2 = Uri.fromFile(HelperMethod.filePagei).getLastPathSegment();
+            }
+        }
+        else if (requestCode == 1017 && resultCode == RESULT_OK){
+            ImageView picPDIII = findViewById(R.id.picPD_III);
+            if (data != null){
+                selectedImage = data.getData();
+
+                Uri uri = Uri.parse(getRealPathFromURI(Home.this,selectedImage));
+                File destFile = new File(VariableName.imageStorageFolder);
+                Log.d("PATH_DEST", String.valueOf(destFile));
+                Log.d("PATH_SOURCE", String.valueOf(uri));
+                try {
+                    copyFile(new File(uri.toString()), destFile);
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+
+                Picasso.with(Home.this).load(selectedImage).fit().centerCrop().into(picPDIII);
+                VariableName.vaPicPD3 = uri.getLastPathSegment();
+            } else {
+                Picasso.with(Home.this).load(Uri.fromFile(HelperMethod.filePagei)).fit().centerCrop().into(picPDIII);
+                VariableName.vaPicPD3 = Uri.fromFile(HelperMethod.filePagei).getLastPathSegment();
+            }
+        }
+        else if (requestCode == 1018 && resultCode == RESULT_OK){
+            ImageView picPDIIII = findViewById(R.id.picPD_IIII);
+            if (data != null){
+                selectedImage = data.getData();
+
+                Uri uri = Uri.parse(getRealPathFromURI(Home.this,selectedImage));
+                File destFile = new File(VariableName.imageStorageFolder);
+                Log.d("PATH_DEST", String.valueOf(destFile));
+                Log.d("PATH_SOURCE", String.valueOf(uri));
+                try {
+                    copyFile(new File(uri.toString()), destFile);
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+
+                Picasso.with(Home.this).load(selectedImage).fit().centerCrop().into(picPDIIII);
+                VariableName.vaPicPD4 = uri.getLastPathSegment();
+            } else {
+                Picasso.with(Home.this).load(Uri.fromFile(HelperMethod.filePagei)).fit().centerCrop().into(picPDIIII);
+                VariableName.vaPicPD4 = Uri.fromFile(HelperMethod.filePagei).getLastPathSegment();
+            }
+        }
+        else if (requestCode == 1019 && resultCode == RESULT_OK){
+            ImageView picPDIV = findViewById(R.id.picPD_IV);
+            if (data != null){
+                selectedImage = data.getData();
+
+                Uri uri = Uri.parse(getRealPathFromURI(Home.this,selectedImage));
+                File destFile = new File(VariableName.imageStorageFolder);
+                Log.d("PATH_DEST", String.valueOf(destFile));
+                Log.d("PATH_SOURCE", String.valueOf(uri));
+                try {
+                    copyFile(new File(uri.toString()), destFile);
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+
+                Picasso.with(Home.this).load(selectedImage).fit().centerCrop().into(picPDIV);
+                VariableName.vaPicPD5 = uri.getLastPathSegment();
+            } else {
+                Picasso.with(Home.this).load(Uri.fromFile(HelperMethod.filePagei)).fit().centerCrop().into(picPDIV);
+                VariableName.vaPicPD5 = Uri.fromFile(HelperMethod.filePagei).getLastPathSegment();
+            }
+        }
+        else if (requestCode == 1020 && resultCode == RESULT_OK){
+            ImageView picPDV = findViewById(R.id.picPD_V);
+            if (data != null){
+                selectedImage = data.getData();
+
+                Uri uri = Uri.parse(getRealPathFromURI(Home.this,selectedImage));
+                File destFile = new File(VariableName.imageStorageFolder);
+                Log.d("PATH_DEST", String.valueOf(destFile));
+                Log.d("PATH_SOURCE", String.valueOf(uri));
+                try {
+                    copyFile(new File(uri.toString()), destFile);
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+
+                Picasso.with(Home.this).load(selectedImage).fit().centerCrop().into(picPDV);
+                VariableName.vaPicPD6 = uri.getLastPathSegment();
+            } else {
+                Picasso.with(Home.this).load(Uri.fromFile(HelperMethod.filePagei)).fit().centerCrop().into(picPDV);
+                VariableName.vaPicPD6 = Uri.fromFile(HelperMethod.filePagei).getLastPathSegment();
+            }
+        }
+        else if (requestCode == 1021 && resultCode == RESULT_OK){
+            ImageView picPDVI = findViewById(R.id.picPD_VI);
+            if (data != null){
+                selectedImage = data.getData();
+
+                Uri uri = Uri.parse(getRealPathFromURI(Home.this,selectedImage));
+                File destFile = new File(VariableName.imageStorageFolder);
+                Log.d("PATH_DEST", String.valueOf(destFile));
+                Log.d("PATH_SOURCE", String.valueOf(uri));
+                try {
+                    copyFile(new File(uri.toString()), destFile);
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+
+                Picasso.with(Home.this).load(selectedImage).fit().centerCrop().into(picPDVI);
+                VariableName.vaPicPD7 = uri.getLastPathSegment();
+            } else {
+                Picasso.with(Home.this).load(Uri.fromFile(HelperMethod.filePagei)).fit().centerCrop().into(picPDVI);
+                VariableName.vaPicPD7 = Uri.fromFile(HelperMethod.filePagei).getLastPathSegment();
+            }
+        }
+        else if (requestCode == 1022 && resultCode == RESULT_OK){
+            ImageView picPDVII = findViewById(R.id.picPD_VII);
+            if (data != null){
+                selectedImage = data.getData();
+
+                Uri uri = Uri.parse(getRealPathFromURI(Home.this,selectedImage));
+                File destFile = new File(VariableName.imageStorageFolder);
+                Log.d("PATH_DEST", String.valueOf(destFile));
+                Log.d("PATH_SOURCE", String.valueOf(uri));
+                try {
+                    copyFile(new File(uri.toString()), destFile);
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+
+                Picasso.with(Home.this).load(selectedImage).fit().centerCrop().into(picPDVII);
+                VariableName.vaPicPD8 = uri.getLastPathSegment();
+            } else {
+                Picasso.with(Home.this).load(Uri.fromFile(HelperMethod.filePagei)).fit().centerCrop().into(picPDVII);
+                VariableName.vaPicPD8 = Uri.fromFile(HelperMethod.filePagei).getLastPathSegment();
+            }
+        }
+        else if (requestCode == 1023 && resultCode == RESULT_OK){
+            ImageView picFTI = findViewById(R.id.picFT_I);
+            if (data != null){
+                selectedImage = data.getData();
+
+                Uri uri = Uri.parse(getRealPathFromURI(Home.this,selectedImage));
+                File destFile = new File(VariableName.imageStorageFolder);
+                Log.d("PATH_DEST", String.valueOf(destFile));
+                Log.d("PATH_SOURCE", String.valueOf(uri));
+                try {
+                    copyFile(new File(uri.toString()), destFile);
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+
+                Picasso.with(Home.this).load(selectedImage).fit().centerCrop().into(picFTI);
+                VariableName.vaPicFT1 = uri.getLastPathSegment();
+            } else {
+                Picasso.with(Home.this).load(Uri.fromFile(HelperMethod.filePagei)).fit().centerCrop().into(picFTI);
+                VariableName.vaPicFT1 = Uri.fromFile(HelperMethod.filePagei).getLastPathSegment();
+            }
+        }
+        else if (requestCode == 1024 && resultCode == RESULT_OK){
+            ImageView picFTII = findViewById(R.id.picFT_II);
+            if (data != null){
+                selectedImage = data.getData();
+
+                Uri uri = Uri.parse(getRealPathFromURI(Home.this,selectedImage));
+                File destFile = new File(VariableName.imageStorageFolder);
+                Log.d("PATH_DEST", String.valueOf(destFile));
+                Log.d("PATH_SOURCE", String.valueOf(uri));
+                try {
+                    copyFile(new File(uri.toString()), destFile);
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+
+                Picasso.with(Home.this).load(selectedImage).fit().centerCrop().into(picFTII);
+                VariableName.vaPicFT2 = uri.getLastPathSegment();
+            } else {
+                Picasso.with(Home.this).load(Uri.fromFile(HelperMethod.filePagei)).fit().centerCrop().into(picFTII);
+                VariableName.vaPicFT2 = Uri.fromFile(HelperMethod.filePagei).getLastPathSegment();
+            }
+        }
+        else if (requestCode == 1025 && resultCode == RESULT_OK){
+            ImageView picFTIII = findViewById(R.id.picFT_III);
+            if (data != null){
+                selectedImage = data.getData();
+
+                Uri uri = Uri.parse(getRealPathFromURI(Home.this,selectedImage));
+                File destFile = new File(VariableName.imageStorageFolder);
+                Log.d("PATH_DEST", String.valueOf(destFile));
+                Log.d("PATH_SOURCE", String.valueOf(uri));
+                try {
+                    copyFile(new File(uri.toString()), destFile);
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+
+                Picasso.with(Home.this).load(selectedImage).fit().centerCrop().into(picFTIII);
+                VariableName.vaPicFT3 = uri.getLastPathSegment();
+            } else {
+                Picasso.with(Home.this).load(Uri.fromFile(HelperMethod.filePagei)).fit().centerCrop().into(picFTIII);
+                VariableName.vaPicFT3 = Uri.fromFile(HelperMethod.filePagei).getLastPathSegment();
+            }
+        }
+        else if (requestCode == 1026 && resultCode == RESULT_OK){
+            ImageView picFTIIII = findViewById(R.id.picFT_IIII);
+            if (data != null){
+                selectedImage = data.getData();
+
+                Uri uri = Uri.parse(getRealPathFromURI(Home.this,selectedImage));
+                File destFile = new File(VariableName.imageStorageFolder);
+                Log.d("PATH_DEST", String.valueOf(destFile));
+                Log.d("PATH_SOURCE", String.valueOf(uri));
+                try {
+                    copyFile(new File(uri.toString()), destFile);
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+
+                Picasso.with(Home.this).load(selectedImage).fit().centerCrop().into(picFTIIII);
+                VariableName.vaPicFT4 = uri.getLastPathSegment();
+            } else {
+                Picasso.with(Home.this).load(Uri.fromFile(HelperMethod.filePagei)).fit().centerCrop().into(picFTIIII);
+                VariableName.vaPicFT4 = Uri.fromFile(HelperMethod.filePagei).getLastPathSegment();
+            }
+        }
+        else if (requestCode == 1027 && resultCode == RESULT_OK){
+            ImageView picRII = findViewById(R.id.picRI_I);
+            if (data != null){
+                selectedImage = data.getData();
+
+                Uri uri = Uri.parse(getRealPathFromURI(Home.this,selectedImage));
+                File destFile = new File(VariableName.imageStorageFolder);
+                Log.d("PATH_DEST", String.valueOf(destFile));
+                Log.d("PATH_SOURCE", String.valueOf(uri));
+                try {
+                    copyFile(new File(uri.toString()), destFile);
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+
+                Picasso.with(Home.this).load(selectedImage).fit().centerCrop().into(picRII);
+                VariableName.vaPicRI1 = uri.getLastPathSegment();
+            } else {
+                Picasso.with(Home.this).load(Uri.fromFile(HelperMethod.filePagei)).fit().centerCrop().into(picRII);
+                VariableName.vaPicRI1 = Uri.fromFile(HelperMethod.filePagei).getLastPathSegment();
+            }
+        }
+        else if (requestCode == 1028 && resultCode == RESULT_OK){
+            ImageView picRIII = findViewById(R.id.picRI_II);
+            if (data != null){
+                selectedImage = data.getData();
+
+                Uri uri = Uri.parse(getRealPathFromURI(Home.this,selectedImage));
+                File destFile = new File(VariableName.imageStorageFolder);
+                Log.d("PATH_DEST", String.valueOf(destFile));
+                Log.d("PATH_SOURCE", String.valueOf(uri));
+                try {
+                    copyFile(new File(uri.toString()), destFile);
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+
+                Picasso.with(Home.this).load(selectedImage).fit().centerCrop().into(picRIII);
+                VariableName.vaPicRI2 = uri.getLastPathSegment();
+            } else {
+                Picasso.with(Home.this).load(Uri.fromFile(HelperMethod.filePagei)).fit().centerCrop().into(picRIII);
+                VariableName.vaPicRI2 = Uri.fromFile(HelperMethod.filePagei).getLastPathSegment();
+            }
+        }
     }
 
     public String getRealPathFromURI(Context context, Uri contentUri) {
