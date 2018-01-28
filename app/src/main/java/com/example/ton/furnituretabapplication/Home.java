@@ -92,6 +92,7 @@ public class Home extends AppCompatActivity {
         super.onActivityResult(requestCode, resultCode, data);
         //Toast.makeText(Home.this,"REQCODE"+data,Toast.LENGTH_SHORT).show();
         Uri selectedImage = null;
+        String fileName = null;
         if (requestCode == 1001 && resultCode == RESULT_OK) {
             ImageView picMainImg = findViewById(R.id.picMainImg);
                     if (data != null){
@@ -99,16 +100,14 @@ public class Home extends AppCompatActivity {
 
                         Uri uri = Uri.parse(getRealPathFromURI(Home.this,selectedImage));
                         File destFile = new File(VariableName.imageStorageFolder);
-                        Log.d("PATH_DEST", String.valueOf(destFile));
-                        Log.d("PATH_SOURCE", String.valueOf(uri));
                             try {
-                                copyFile(new File(uri.toString()), destFile);
+                                fileName = copyFile(new File(uri.toString()), destFile);
                             } catch (IOException e) {
                                 e.printStackTrace();
                             }
 
                         Picasso.with(Home.this).load(selectedImage).fit().centerCrop().into(picMainImg);
-                        VariableName.vaPicMainImg = uri.getLastPathSegment();
+                        VariableName.vaPicMainImg = fileName;
                         //Toast.makeText(Home.this,"namepath"+VariableName.vaPicMainImg,Toast.LENGTH_SHORT).show();
                     } else {
                         Picasso.with(Home.this).load(Uri.fromFile(HelperMethod.filePagei)).fit().centerCrop().into(picMainImg);
@@ -127,13 +126,13 @@ public class Home extends AppCompatActivity {
                 Log.d("PATH_DEST", String.valueOf(destFile));
                 Log.d("PATH_SOURCE", String.valueOf(uri));
                 try {
-                    copyFile(new File(uri.toString()), destFile);
+                    fileName = copyFile(new File(uri.toString()), destFile);
                 } catch (IOException e) {
                     e.printStackTrace();
                 }
 
                 Picasso.with(Home.this).load(selectedImage).fit().centerCrop().into(picMCI);
-                VariableName.vaPicMC1 = uri.getLastPathSegment();
+                VariableName.vaPicMC1 = fileName;
             } else {
                 Picasso.with(Home.this).load(Uri.fromFile(HelperMethod.filePagei)).fit().centerCrop().into(picMCI);
                 VariableName.vaPicMC1 = Uri.fromFile(HelperMethod.filePagei).getLastPathSegment();
@@ -150,13 +149,13 @@ public class Home extends AppCompatActivity {
                 Log.d("PATH_DEST", String.valueOf(destFile));
                 Log.d("PATH_SOURCE", String.valueOf(uri));
                 try {
-                    copyFile(new File(uri.toString()), destFile);
+                    fileName =  copyFile(new File(uri.toString()), destFile);
                 } catch (IOException e) {
                     e.printStackTrace();
                 }
 
                 Picasso.with(Home.this).load(selectedImage).fit().centerCrop().into(picMCII);
-                VariableName.vaPicMC2 = uri.getLastPathSegment();
+                VariableName.vaPicMC2 = fileName;
             } else {
                 Picasso.with(Home.this).load(Uri.fromFile(HelperMethod.filePagei)).fit().centerCrop().into(picMCII);
                 VariableName.vaPicMC2 = Uri.fromFile(HelperMethod.filePagei).getLastPathSegment();
@@ -172,13 +171,13 @@ public class Home extends AppCompatActivity {
                 Log.d("PATH_DEST", String.valueOf(destFile));
                 Log.d("PATH_SOURCE", String.valueOf(uri));
                 try {
-                    copyFile(new File(uri.toString()), destFile);
+                    fileName = copyFile(new File(uri.toString()), destFile);
                 } catch (IOException e) {
                     e.printStackTrace();
                 }
 
                 Picasso.with(Home.this).load(selectedImage).fit().centerCrop().into(picMCIII);
-                VariableName.vaPicMC3 = uri.getLastPathSegment();
+                VariableName.vaPicMC3 = fileName;
             } else {
                 Picasso.with(Home.this).load(Uri.fromFile(HelperMethod.filePagei)).fit().centerCrop().into(picMCIII);
                 VariableName.vaPicMC3 = Uri.fromFile(HelperMethod.filePagei).getLastPathSegment();
@@ -194,13 +193,13 @@ public class Home extends AppCompatActivity {
                 Log.d("PATH_DEST", String.valueOf(destFile));
                 Log.d("PATH_SOURCE", String.valueOf(uri));
                 try {
-                    copyFile(new File(uri.toString()), destFile);
+                    fileName = copyFile(new File(uri.toString()), destFile);
                 } catch (IOException e) {
                     e.printStackTrace();
                 }
 
                 Picasso.with(Home.this).load(selectedImage).fit().centerCrop().into(picMCIIII);
-                VariableName.vaPicMC4 = uri.getLastPathSegment();
+                VariableName.vaPicMC4 = fileName;
             } else {
                 Picasso.with(Home.this).load(Uri.fromFile(HelperMethod.filePagei)).fit().centerCrop().into(picMCIIII);
                 VariableName.vaPicMC4 = Uri.fromFile(HelperMethod.filePagei).getLastPathSegment();
@@ -216,13 +215,13 @@ public class Home extends AppCompatActivity {
                 Log.d("PATH_DEST", String.valueOf(destFile));
                 Log.d("PATH_SOURCE", String.valueOf(uri));
                 try {
-                    copyFile(new File(uri.toString()), destFile);
+                    fileName = copyFile(new File(uri.toString()), destFile);
                 } catch (IOException e) {
                     e.printStackTrace();
                 }
 
                 Picasso.with(Home.this).load(selectedImage).fit().centerCrop().into(picMCIV);
-                VariableName.vaPicMC5 = uri.getLastPathSegment();
+                VariableName.vaPicMC5 = fileName;
             } else {
                 Picasso.with(Home.this).load(Uri.fromFile(HelperMethod.filePagei)).fit().centerCrop().into(picMCIV);
                 VariableName.vaPicMC5 = Uri.fromFile(HelperMethod.filePagei).getLastPathSegment();
@@ -238,13 +237,13 @@ public class Home extends AppCompatActivity {
                 Log.d("PATH_DEST", String.valueOf(destFile));
                 Log.d("PATH_SOURCE", String.valueOf(uri));
                 try {
-                    copyFile(new File(uri.toString()), destFile);
+                    fileName = copyFile(new File(uri.toString()), destFile);
                 } catch (IOException e) {
                     e.printStackTrace();
                 }
 
                 Picasso.with(Home.this).load(selectedImage).fit().centerCrop().into(picMCV);
-                VariableName.vaPicMC6 = uri.getLastPathSegment();
+                VariableName.vaPicMC6 = fileName;
             } else {
                 Picasso.with(Home.this).load(Uri.fromFile(HelperMethod.filePagei)).fit().centerCrop().into(picMCV);
                 VariableName.vaPicMC6 = Uri.fromFile(HelperMethod.filePagei).getLastPathSegment();
@@ -260,13 +259,13 @@ public class Home extends AppCompatActivity {
                 Log.d("PATH_DEST", String.valueOf(destFile));
                 Log.d("PATH_SOURCE", String.valueOf(uri));
                 try {
-                    copyFile(new File(uri.toString()), destFile);
+                    fileName = copyFile(new File(uri.toString()), destFile);
                 } catch (IOException e) {
                     e.printStackTrace();
                 }
 
                 Picasso.with(Home.this).load(selectedImage).fit().centerCrop().into(picMCVI);
-                VariableName.vaPicMC7 = uri.getLastPathSegment();
+                VariableName.vaPicMC7 = fileName;
             } else {
                 Picasso.with(Home.this).load(Uri.fromFile(HelperMethod.filePagei)).fit().centerCrop().into(picMCVI);
                 VariableName.vaPicMC7 = Uri.fromFile(HelperMethod.filePagei).getLastPathSegment();
@@ -282,13 +281,13 @@ public class Home extends AppCompatActivity {
                 Log.d("PATH_DEST", String.valueOf(destFile));
                 Log.d("PATH_SOURCE", String.valueOf(uri));
                 try {
-                    copyFile(new File(uri.toString()), destFile);
+                    fileName = copyFile(new File(uri.toString()), destFile);
                 } catch (IOException e) {
                     e.printStackTrace();
                 }
 
                 Picasso.with(Home.this).load(selectedImage).fit().centerCrop().into(picMCVII);
-                VariableName.vaPicMC8 = uri.getLastPathSegment();
+                VariableName.vaPicMC8 = fileName;
             } else {
                 Picasso.with(Home.this).load(Uri.fromFile(HelperMethod.filePagei)).fit().centerCrop().into(picMCVII);
                 VariableName.vaPicMC8 = Uri.fromFile(HelperMethod.filePagei).getLastPathSegment();
@@ -304,13 +303,13 @@ public class Home extends AppCompatActivity {
                 Log.d("PATH_DEST", String.valueOf(destFile));
                 Log.d("PATH_SOURCE", String.valueOf(uri));
                 try {
-                    copyFile(new File(uri.toString()), destFile);
+                    fileName = copyFile(new File(uri.toString()), destFile);
                 } catch (IOException e) {
                     e.printStackTrace();
                 }
 
                 Picasso.with(Home.this).load(selectedImage).fit().centerCrop().into(picIBI);
-                VariableName.vaPicIB1 = uri.getLastPathSegment();
+                VariableName.vaPicIB1 = fileName;
             } else {
                 Picasso.with(Home.this).load(Uri.fromFile(HelperMethod.filePagei)).fit().centerCrop().into(picIBI);
                 VariableName.vaPicIB1 = Uri.fromFile(HelperMethod.filePagei).getLastPathSegment();
@@ -326,13 +325,13 @@ public class Home extends AppCompatActivity {
                 Log.d("PATH_DEST", String.valueOf(destFile));
                 Log.d("PATH_SOURCE", String.valueOf(uri));
                 try {
-                    copyFile(new File(uri.toString()), destFile);
+                    fileName = copyFile(new File(uri.toString()), destFile);
                 } catch (IOException e) {
                     e.printStackTrace();
                 }
 
                 Picasso.with(Home.this).load(selectedImage).fit().centerCrop().into(picIBII);
-                VariableName.vaPicIB2 = uri.getLastPathSegment();
+                VariableName.vaPicIB2 = fileName;
             } else {
                 Picasso.with(Home.this).load(Uri.fromFile(HelperMethod.filePagei)).fit().centerCrop().into(picIBII);
                 VariableName.vaPicIB2 = Uri.fromFile(HelperMethod.filePagei).getLastPathSegment();
@@ -348,13 +347,13 @@ public class Home extends AppCompatActivity {
                 Log.d("PATH_DEST", String.valueOf(destFile));
                 Log.d("PATH_SOURCE", String.valueOf(uri));
                 try {
-                    copyFile(new File(uri.toString()), destFile);
+                    fileName = copyFile(new File(uri.toString()), destFile);
                 } catch (IOException e) {
                     e.printStackTrace();
                 }
 
                 Picasso.with(Home.this).load(selectedImage).fit().centerCrop().into(picIBIII);
-                VariableName.vaPicIB3 = uri.getLastPathSegment();
+                VariableName.vaPicIB3 = fileName;
             } else {
                 Picasso.with(Home.this).load(Uri.fromFile(HelperMethod.filePagei)).fit().centerCrop().into(picIBIII);
                 VariableName.vaPicIB3 = Uri.fromFile(HelperMethod.filePagei).getLastPathSegment();
@@ -370,13 +369,13 @@ public class Home extends AppCompatActivity {
                 Log.d("PATH_DEST", String.valueOf(destFile));
                 Log.d("PATH_SOURCE", String.valueOf(uri));
                 try {
-                    copyFile(new File(uri.toString()), destFile);
+                    fileName = copyFile(new File(uri.toString()), destFile);
                 } catch (IOException e) {
                     e.printStackTrace();
                 }
 
                 Picasso.with(Home.this).load(selectedImage).fit().centerCrop().into(picIBIIII);
-                VariableName.vaPicIB4 = uri.getLastPathSegment();
+                VariableName.vaPicIB4 = fileName;
             } else {
                 Picasso.with(Home.this).load(Uri.fromFile(HelperMethod.filePagei)).fit().centerCrop().into(picIBIIII);
                 VariableName.vaPicIB4 = Uri.fromFile(HelperMethod.filePagei).getLastPathSegment();
@@ -392,13 +391,13 @@ public class Home extends AppCompatActivity {
                 Log.d("PATH_DEST", String.valueOf(destFile));
                 Log.d("PATH_SOURCE", String.valueOf(uri));
                 try {
-                    copyFile(new File(uri.toString()), destFile);
+                    fileName = copyFile(new File(uri.toString()), destFile);
                 } catch (IOException e) {
                     e.printStackTrace();
                 }
 
                 Picasso.with(Home.this).load(selectedImage).fit().centerCrop().into(picMOI);
-                VariableName.vaPicMO1 = uri.getLastPathSegment();
+                VariableName.vaPicMO1 = fileName;
             } else {
                 Picasso.with(Home.this).load(Uri.fromFile(HelperMethod.filePagei)).fit().centerCrop().into(picMOI);
                 VariableName.vaPicMO1 = Uri.fromFile(HelperMethod.filePagei).getLastPathSegment();
@@ -414,13 +413,13 @@ public class Home extends AppCompatActivity {
                 Log.d("PATH_DEST", String.valueOf(destFile));
                 Log.d("PATH_SOURCE", String.valueOf(uri));
                 try {
-                    copyFile(new File(uri.toString()), destFile);
+                    fileName = copyFile(new File(uri.toString()), destFile);
                 } catch (IOException e) {
                     e.printStackTrace();
                 }
 
                 Picasso.with(Home.this).load(selectedImage).fit().centerCrop().into(picPDI);
-                VariableName.vaPicPD1 = uri.getLastPathSegment();
+                VariableName.vaPicPD1 = fileName;
             } else {
                 Picasso.with(Home.this).load(Uri.fromFile(HelperMethod.filePagei)).fit().centerCrop().into(picPDI);
                 VariableName.vaPicPD1 = Uri.fromFile(HelperMethod.filePagei).getLastPathSegment();
@@ -436,13 +435,13 @@ public class Home extends AppCompatActivity {
                 Log.d("PATH_DEST", String.valueOf(destFile));
                 Log.d("PATH_SOURCE", String.valueOf(uri));
                 try {
-                    copyFile(new File(uri.toString()), destFile);
+                    fileName = copyFile(new File(uri.toString()), destFile);
                 } catch (IOException e) {
                     e.printStackTrace();
                 }
 
                 Picasso.with(Home.this).load(selectedImage).fit().centerCrop().into(picPDII);
-                VariableName.vaPicPD2 = uri.getLastPathSegment();
+                VariableName.vaPicPD2 = fileName;
             } else {
                 Picasso.with(Home.this).load(Uri.fromFile(HelperMethod.filePagei)).fit().centerCrop().into(picPDII);
                 VariableName.vaPicPD2 = Uri.fromFile(HelperMethod.filePagei).getLastPathSegment();
@@ -458,13 +457,13 @@ public class Home extends AppCompatActivity {
                 Log.d("PATH_DEST", String.valueOf(destFile));
                 Log.d("PATH_SOURCE", String.valueOf(uri));
                 try {
-                    copyFile(new File(uri.toString()), destFile);
+                    fileName = copyFile(new File(uri.toString()), destFile);
                 } catch (IOException e) {
                     e.printStackTrace();
                 }
 
                 Picasso.with(Home.this).load(selectedImage).fit().centerCrop().into(picPDIII);
-                VariableName.vaPicPD3 = uri.getLastPathSegment();
+                VariableName.vaPicPD3 = fileName;
             } else {
                 Picasso.with(Home.this).load(Uri.fromFile(HelperMethod.filePagei)).fit().centerCrop().into(picPDIII);
                 VariableName.vaPicPD3 = Uri.fromFile(HelperMethod.filePagei).getLastPathSegment();
@@ -480,13 +479,13 @@ public class Home extends AppCompatActivity {
                 Log.d("PATH_DEST", String.valueOf(destFile));
                 Log.d("PATH_SOURCE", String.valueOf(uri));
                 try {
-                    copyFile(new File(uri.toString()), destFile);
+                    fileName = copyFile(new File(uri.toString()), destFile);
                 } catch (IOException e) {
                     e.printStackTrace();
                 }
 
                 Picasso.with(Home.this).load(selectedImage).fit().centerCrop().into(picPDIIII);
-                VariableName.vaPicPD4 = uri.getLastPathSegment();
+                VariableName.vaPicPD4 = fileName;
             } else {
                 Picasso.with(Home.this).load(Uri.fromFile(HelperMethod.filePagei)).fit().centerCrop().into(picPDIIII);
                 VariableName.vaPicPD4 = Uri.fromFile(HelperMethod.filePagei).getLastPathSegment();
@@ -502,13 +501,13 @@ public class Home extends AppCompatActivity {
                 Log.d("PATH_DEST", String.valueOf(destFile));
                 Log.d("PATH_SOURCE", String.valueOf(uri));
                 try {
-                    copyFile(new File(uri.toString()), destFile);
+                    fileName = copyFile(new File(uri.toString()), destFile);
                 } catch (IOException e) {
                     e.printStackTrace();
                 }
 
                 Picasso.with(Home.this).load(selectedImage).fit().centerCrop().into(picPDIV);
-                VariableName.vaPicPD5 = uri.getLastPathSegment();
+                VariableName.vaPicPD5 = fileName;
             } else {
                 Picasso.with(Home.this).load(Uri.fromFile(HelperMethod.filePagei)).fit().centerCrop().into(picPDIV);
                 VariableName.vaPicPD5 = Uri.fromFile(HelperMethod.filePagei).getLastPathSegment();
@@ -524,13 +523,13 @@ public class Home extends AppCompatActivity {
                 Log.d("PATH_DEST", String.valueOf(destFile));
                 Log.d("PATH_SOURCE", String.valueOf(uri));
                 try {
-                    copyFile(new File(uri.toString()), destFile);
+                    fileName = copyFile(new File(uri.toString()), destFile);
                 } catch (IOException e) {
                     e.printStackTrace();
                 }
 
                 Picasso.with(Home.this).load(selectedImage).fit().centerCrop().into(picPDV);
-                VariableName.vaPicPD6 = uri.getLastPathSegment();
+                VariableName.vaPicPD6 = fileName;
             } else {
                 Picasso.with(Home.this).load(Uri.fromFile(HelperMethod.filePagei)).fit().centerCrop().into(picPDV);
                 VariableName.vaPicPD6 = Uri.fromFile(HelperMethod.filePagei).getLastPathSegment();
@@ -546,13 +545,13 @@ public class Home extends AppCompatActivity {
                 Log.d("PATH_DEST", String.valueOf(destFile));
                 Log.d("PATH_SOURCE", String.valueOf(uri));
                 try {
-                    copyFile(new File(uri.toString()), destFile);
+                    fileName =  copyFile(new File(uri.toString()), destFile);
                 } catch (IOException e) {
                     e.printStackTrace();
                 }
 
                 Picasso.with(Home.this).load(selectedImage).fit().centerCrop().into(picPDVI);
-                VariableName.vaPicPD7 = uri.getLastPathSegment();
+                VariableName.vaPicPD7 = fileName;
             } else {
                 Picasso.with(Home.this).load(Uri.fromFile(HelperMethod.filePagei)).fit().centerCrop().into(picPDVI);
                 VariableName.vaPicPD7 = Uri.fromFile(HelperMethod.filePagei).getLastPathSegment();
@@ -568,13 +567,13 @@ public class Home extends AppCompatActivity {
                 Log.d("PATH_DEST", String.valueOf(destFile));
                 Log.d("PATH_SOURCE", String.valueOf(uri));
                 try {
-                    copyFile(new File(uri.toString()), destFile);
+                    fileName = copyFile(new File(uri.toString()), destFile);
                 } catch (IOException e) {
                     e.printStackTrace();
                 }
 
                 Picasso.with(Home.this).load(selectedImage).fit().centerCrop().into(picPDVII);
-                VariableName.vaPicPD8 = uri.getLastPathSegment();
+                VariableName.vaPicPD8 = fileName;
             } else {
                 Picasso.with(Home.this).load(Uri.fromFile(HelperMethod.filePagei)).fit().centerCrop().into(picPDVII);
                 VariableName.vaPicPD8 = Uri.fromFile(HelperMethod.filePagei).getLastPathSegment();
@@ -590,13 +589,13 @@ public class Home extends AppCompatActivity {
                 Log.d("PATH_DEST", String.valueOf(destFile));
                 Log.d("PATH_SOURCE", String.valueOf(uri));
                 try {
-                    copyFile(new File(uri.toString()), destFile);
+                    fileName = copyFile(new File(uri.toString()), destFile);
                 } catch (IOException e) {
                     e.printStackTrace();
                 }
 
                 Picasso.with(Home.this).load(selectedImage).fit().centerCrop().into(picFTI);
-                VariableName.vaPicFT1 = uri.getLastPathSegment();
+                VariableName.vaPicFT1 = fileName;
             } else {
                 Picasso.with(Home.this).load(Uri.fromFile(HelperMethod.filePagei)).fit().centerCrop().into(picFTI);
                 VariableName.vaPicFT1 = Uri.fromFile(HelperMethod.filePagei).getLastPathSegment();
@@ -612,13 +611,13 @@ public class Home extends AppCompatActivity {
                 Log.d("PATH_DEST", String.valueOf(destFile));
                 Log.d("PATH_SOURCE", String.valueOf(uri));
                 try {
-                    copyFile(new File(uri.toString()), destFile);
+                    fileName = copyFile(new File(uri.toString()), destFile);
                 } catch (IOException e) {
                     e.printStackTrace();
                 }
 
                 Picasso.with(Home.this).load(selectedImage).fit().centerCrop().into(picFTII);
-                VariableName.vaPicFT2 = uri.getLastPathSegment();
+                VariableName.vaPicFT2 = fileName;
             } else {
                 Picasso.with(Home.this).load(Uri.fromFile(HelperMethod.filePagei)).fit().centerCrop().into(picFTII);
                 VariableName.vaPicFT2 = Uri.fromFile(HelperMethod.filePagei).getLastPathSegment();
@@ -634,13 +633,13 @@ public class Home extends AppCompatActivity {
                 Log.d("PATH_DEST", String.valueOf(destFile));
                 Log.d("PATH_SOURCE", String.valueOf(uri));
                 try {
-                    copyFile(new File(uri.toString()), destFile);
+                    fileName = copyFile(new File(uri.toString()), destFile);
                 } catch (IOException e) {
                     e.printStackTrace();
                 }
 
                 Picasso.with(Home.this).load(selectedImage).fit().centerCrop().into(picFTIII);
-                VariableName.vaPicFT3 = uri.getLastPathSegment();
+                VariableName.vaPicFT3 = fileName;
             } else {
                 Picasso.with(Home.this).load(Uri.fromFile(HelperMethod.filePagei)).fit().centerCrop().into(picFTIII);
                 VariableName.vaPicFT3 = Uri.fromFile(HelperMethod.filePagei).getLastPathSegment();
@@ -656,13 +655,13 @@ public class Home extends AppCompatActivity {
                 Log.d("PATH_DEST", String.valueOf(destFile));
                 Log.d("PATH_SOURCE", String.valueOf(uri));
                 try {
-                    copyFile(new File(uri.toString()), destFile);
+                    fileName = copyFile(new File(uri.toString()), destFile);
                 } catch (IOException e) {
                     e.printStackTrace();
                 }
 
                 Picasso.with(Home.this).load(selectedImage).fit().centerCrop().into(picFTIIII);
-                VariableName.vaPicFT4 = uri.getLastPathSegment();
+                VariableName.vaPicFT4 = fileName;
             } else {
                 Picasso.with(Home.this).load(Uri.fromFile(HelperMethod.filePagei)).fit().centerCrop().into(picFTIIII);
                 VariableName.vaPicFT4 = Uri.fromFile(HelperMethod.filePagei).getLastPathSegment();
@@ -678,13 +677,13 @@ public class Home extends AppCompatActivity {
                 Log.d("PATH_DEST", String.valueOf(destFile));
                 Log.d("PATH_SOURCE", String.valueOf(uri));
                 try {
-                    copyFile(new File(uri.toString()), destFile);
+                    fileName = copyFile(new File(uri.toString()), destFile);
                 } catch (IOException e) {
                     e.printStackTrace();
                 }
 
                 Picasso.with(Home.this).load(selectedImage).fit().centerCrop().into(picRII);
-                VariableName.vaPicRI1 = uri.getLastPathSegment();
+                VariableName.vaPicRI1 = fileName;
             } else {
                 Picasso.with(Home.this).load(Uri.fromFile(HelperMethod.filePagei)).fit().centerCrop().into(picRII);
                 VariableName.vaPicRI1 = Uri.fromFile(HelperMethod.filePagei).getLastPathSegment();
@@ -700,13 +699,13 @@ public class Home extends AppCompatActivity {
                 Log.d("PATH_DEST", String.valueOf(destFile));
                 Log.d("PATH_SOURCE", String.valueOf(uri));
                 try {
-                    copyFile(new File(uri.toString()), destFile);
+                    fileName = copyFile(new File(uri.toString()), destFile);
                 } catch (IOException e) {
                     e.printStackTrace();
                 }
 
                 Picasso.with(Home.this).load(selectedImage).fit().centerCrop().into(picRIII);
-                VariableName.vaPicRI2 = uri.getLastPathSegment();
+                VariableName.vaPicRI2 = fileName;
             } else {
                 Picasso.with(Home.this).load(Uri.fromFile(HelperMethod.filePagei)).fit().centerCrop().into(picRIII);
                 VariableName.vaPicRI2 = Uri.fromFile(HelperMethod.filePagei).getLastPathSegment();
@@ -729,11 +728,11 @@ public class Home extends AppCompatActivity {
         }
     }
 
-    private void copyFile(File sourceFile, File destFile) throws IOException {
+    private String copyFile(File sourceFile, File destFile) throws IOException {
 
         if (!sourceFile.exists()) {
             Log.d("EXISTS ","EXISTS");
-            return;
+            return "Duplicate";
         }
         destFile = CreateFile.createUnique();
         FileChannel  source = new FileInputStream(sourceFile).getChannel();
@@ -750,6 +749,7 @@ public class Home extends AppCompatActivity {
         if (destination != null) {
             destination.close();
         }
+        return destFile.getName();
     }
 
     // create an action bar button
