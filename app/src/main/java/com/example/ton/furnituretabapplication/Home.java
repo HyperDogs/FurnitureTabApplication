@@ -135,9 +135,11 @@ public class Home extends AppCompatActivity {
 
                 Picasso.with(Home.this).load(selectedImage).fit().centerCrop().into(picMCI);
                 VariableName.vaPicMC1 = fileName;
+                picMCI.setTag("any");
             } else {
                 Picasso.with(Home.this).load(Uri.fromFile(HelperMethod.filePagei)).fit().centerCrop().into(picMCI);
                 VariableName.vaPicMC1 = Uri.fromFile(HelperMethod.filePagei).getLastPathSegment();
+                picMCI.setTag("any");
             }
             //Picasso.with(Home.this).load(Uri.fromFile(HelperMethod.filePagei)).fit().centerCrop().into(picMCI);
         }
@@ -158,9 +160,11 @@ public class Home extends AppCompatActivity {
 
                 Picasso.with(Home.this).load(selectedImage).fit().centerCrop().into(picMCII);
                 VariableName.vaPicMC2 = fileName;
+                picMCII.setTag("any");
             } else {
                 Picasso.with(Home.this).load(Uri.fromFile(HelperMethod.filePagei)).fit().centerCrop().into(picMCII);
                 VariableName.vaPicMC2 = Uri.fromFile(HelperMethod.filePagei).getLastPathSegment();
+                picMCII.setTag("any");
             }
         }
         else if (requestCode == 1004 && resultCode == RESULT_OK){
@@ -180,9 +184,11 @@ public class Home extends AppCompatActivity {
 
                 Picasso.with(Home.this).load(selectedImage).fit().centerCrop().into(picMCIII);
                 VariableName.vaPicMC3 = fileName;
+                picMCIII.setTag("any");
             } else {
                 Picasso.with(Home.this).load(Uri.fromFile(HelperMethod.filePagei)).fit().centerCrop().into(picMCIII);
                 VariableName.vaPicMC3 = Uri.fromFile(HelperMethod.filePagei).getLastPathSegment();
+                picMCIII.setTag("any");
             }
         }
         else if (requestCode == 1005 && resultCode == RESULT_OK){
@@ -202,9 +208,11 @@ public class Home extends AppCompatActivity {
 
                 Picasso.with(Home.this).load(selectedImage).fit().centerCrop().into(picMCIIII);
                 VariableName.vaPicMC4 = fileName;
+                picMCIIII.setTag("any");
             } else {
                 Picasso.with(Home.this).load(Uri.fromFile(HelperMethod.filePagei)).fit().centerCrop().into(picMCIIII);
                 VariableName.vaPicMC4 = Uri.fromFile(HelperMethod.filePagei).getLastPathSegment();
+                picMCIIII.setTag("any");
             }
         }
         else if (requestCode == 1006 && resultCode == RESULT_OK){
@@ -224,9 +232,11 @@ public class Home extends AppCompatActivity {
 
                 Picasso.with(Home.this).load(selectedImage).fit().centerCrop().into(picMCIV);
                 VariableName.vaPicMC5 = fileName;
+                picMCIV.setTag("any");
             } else {
                 Picasso.with(Home.this).load(Uri.fromFile(HelperMethod.filePagei)).fit().centerCrop().into(picMCIV);
                 VariableName.vaPicMC5 = Uri.fromFile(HelperMethod.filePagei).getLastPathSegment();
+                picMCIV.setTag("any");
             }
         }
         else if (requestCode == 1007 && resultCode == RESULT_OK){
@@ -246,9 +256,11 @@ public class Home extends AppCompatActivity {
 
                 Picasso.with(Home.this).load(selectedImage).fit().centerCrop().into(picMCV);
                 VariableName.vaPicMC6 = fileName;
+                picMCV.setTag("any");
             } else {
                 Picasso.with(Home.this).load(Uri.fromFile(HelperMethod.filePagei)).fit().centerCrop().into(picMCV);
                 VariableName.vaPicMC6 = Uri.fromFile(HelperMethod.filePagei).getLastPathSegment();
+                picMCV.setTag("any");
             }
         }
         else if (requestCode == 1008 && resultCode == RESULT_OK){
@@ -268,9 +280,11 @@ public class Home extends AppCompatActivity {
 
                 Picasso.with(Home.this).load(selectedImage).fit().centerCrop().into(picMCVI);
                 VariableName.vaPicMC7 = fileName;
+                picMCVI.setTag("any");
             } else {
                 Picasso.with(Home.this).load(Uri.fromFile(HelperMethod.filePagei)).fit().centerCrop().into(picMCVI);
                 VariableName.vaPicMC7 = Uri.fromFile(HelperMethod.filePagei).getLastPathSegment();
+                picMCVI.setTag("any");
             }
         }
         else if (requestCode == 1009 && resultCode == RESULT_OK){
@@ -290,9 +304,11 @@ public class Home extends AppCompatActivity {
 
                 Picasso.with(Home.this).load(selectedImage).fit().centerCrop().into(picMCVII);
                 VariableName.vaPicMC8 = fileName;
+                picMCVII.setTag("any");
             } else {
                 Picasso.with(Home.this).load(Uri.fromFile(HelperMethod.filePagei)).fit().centerCrop().into(picMCVII);
                 VariableName.vaPicMC8 = Uri.fromFile(HelperMethod.filePagei).getLastPathSegment();
+                picMCVII.setTag("any");
             }
         }
         else if (requestCode == 1010 && resultCode == RESULT_OK){
@@ -312,9 +328,11 @@ public class Home extends AppCompatActivity {
 
                 Picasso.with(Home.this).load(selectedImage).fit().centerCrop().into(picIBI);
                 VariableName.vaPicIB1 = fileName;
+                picIBI.setTag("any");
             } else {
                 Picasso.with(Home.this).load(Uri.fromFile(HelperMethod.filePagei)).fit().centerCrop().into(picIBI);
                 VariableName.vaPicIB1 = Uri.fromFile(HelperMethod.filePagei).getLastPathSegment();
+                picIBI.setTag("any");
             }
         }
         else if (requestCode == 1011 && resultCode == RESULT_OK){
@@ -334,9 +352,11 @@ public class Home extends AppCompatActivity {
 
                 Picasso.with(Home.this).load(selectedImage).fit().centerCrop().into(picIBII);
                 VariableName.vaPicIB2 = fileName;
+                picIBII.setTag("any");
             } else {
                 Picasso.with(Home.this).load(Uri.fromFile(HelperMethod.filePagei)).fit().centerCrop().into(picIBII);
                 VariableName.vaPicIB2 = Uri.fromFile(HelperMethod.filePagei).getLastPathSegment();
+                picIBII.setTag("any");
             }
         }
         else if (requestCode == 1012 && resultCode == RESULT_OK){
@@ -356,9 +376,11 @@ public class Home extends AppCompatActivity {
 
                 Picasso.with(Home.this).load(selectedImage).fit().centerCrop().into(picIBIII);
                 VariableName.vaPicIB3 = fileName;
+                picIBIII.setTag("any");
             } else {
                 Picasso.with(Home.this).load(Uri.fromFile(HelperMethod.filePagei)).fit().centerCrop().into(picIBIII);
                 VariableName.vaPicIB3 = Uri.fromFile(HelperMethod.filePagei).getLastPathSegment();
+                picIBIII.setTag("any");
             }
         }
         else if (requestCode == 1013 && resultCode == RESULT_OK){
@@ -378,9 +400,11 @@ public class Home extends AppCompatActivity {
 
                 Picasso.with(Home.this).load(selectedImage).fit().centerCrop().into(picIBIIII);
                 VariableName.vaPicIB4 = fileName;
+                picIBIIII.setTag("any");
             } else {
                 Picasso.with(Home.this).load(Uri.fromFile(HelperMethod.filePagei)).fit().centerCrop().into(picIBIIII);
                 VariableName.vaPicIB4 = Uri.fromFile(HelperMethod.filePagei).getLastPathSegment();
+                picIBIIII.setTag("any");
             }
         }
         else if (requestCode == 1014 && resultCode == RESULT_OK){
@@ -400,9 +424,11 @@ public class Home extends AppCompatActivity {
 
                 Picasso.with(Home.this).load(selectedImage).fit().centerCrop().into(picMOI);
                 VariableName.vaPicMO1 = fileName;
+                picMOI.setTag("any");
             } else {
                 Picasso.with(Home.this).load(Uri.fromFile(HelperMethod.filePagei)).fit().centerCrop().into(picMOI);
                 VariableName.vaPicMO1 = Uri.fromFile(HelperMethod.filePagei).getLastPathSegment();
+                picMOI.setTag("any");
             }
         }
         else if (requestCode == 1015 && resultCode == RESULT_OK){
@@ -422,9 +448,11 @@ public class Home extends AppCompatActivity {
 
                 Picasso.with(Home.this).load(selectedImage).fit().centerCrop().into(picPDI);
                 VariableName.vaPicPD1 = fileName;
+                picPDI.setTag("any");
             } else {
                 Picasso.with(Home.this).load(Uri.fromFile(HelperMethod.filePagei)).fit().centerCrop().into(picPDI);
                 VariableName.vaPicPD1 = Uri.fromFile(HelperMethod.filePagei).getLastPathSegment();
+                picPDI.setTag("any");
             }
         }
         else if (requestCode == 1016 && resultCode == RESULT_OK){
@@ -444,9 +472,11 @@ public class Home extends AppCompatActivity {
 
                 Picasso.with(Home.this).load(selectedImage).fit().centerCrop().into(picPDII);
                 VariableName.vaPicPD2 = fileName;
+                picPDII.setTag("any");
             } else {
                 Picasso.with(Home.this).load(Uri.fromFile(HelperMethod.filePagei)).fit().centerCrop().into(picPDII);
                 VariableName.vaPicPD2 = Uri.fromFile(HelperMethod.filePagei).getLastPathSegment();
+                picPDII.setTag("any");
             }
         }
         else if (requestCode == 1017 && resultCode == RESULT_OK){
@@ -466,9 +496,11 @@ public class Home extends AppCompatActivity {
 
                 Picasso.with(Home.this).load(selectedImage).fit().centerCrop().into(picPDIII);
                 VariableName.vaPicPD3 = fileName;
+                picPDIII.setTag("any");
             } else {
                 Picasso.with(Home.this).load(Uri.fromFile(HelperMethod.filePagei)).fit().centerCrop().into(picPDIII);
                 VariableName.vaPicPD3 = Uri.fromFile(HelperMethod.filePagei).getLastPathSegment();
+                picPDIII.setTag("any");
             }
         }
         else if (requestCode == 1018 && resultCode == RESULT_OK){
@@ -488,9 +520,11 @@ public class Home extends AppCompatActivity {
 
                 Picasso.with(Home.this).load(selectedImage).fit().centerCrop().into(picPDIIII);
                 VariableName.vaPicPD4 = fileName;
+                picPDIIII.setTag("any");
             } else {
                 Picasso.with(Home.this).load(Uri.fromFile(HelperMethod.filePagei)).fit().centerCrop().into(picPDIIII);
                 VariableName.vaPicPD4 = Uri.fromFile(HelperMethod.filePagei).getLastPathSegment();
+                picPDIIII.setTag("any");
             }
         }
         else if (requestCode == 1019 && resultCode == RESULT_OK){
@@ -510,9 +544,11 @@ public class Home extends AppCompatActivity {
 
                 Picasso.with(Home.this).load(selectedImage).fit().centerCrop().into(picPDIV);
                 VariableName.vaPicPD5 = fileName;
+                picPDIV.setTag("any");
             } else {
                 Picasso.with(Home.this).load(Uri.fromFile(HelperMethod.filePagei)).fit().centerCrop().into(picPDIV);
                 VariableName.vaPicPD5 = Uri.fromFile(HelperMethod.filePagei).getLastPathSegment();
+                picPDIV.setTag("any");
             }
         }
         else if (requestCode == 1020 && resultCode == RESULT_OK){
@@ -532,9 +568,11 @@ public class Home extends AppCompatActivity {
 
                 Picasso.with(Home.this).load(selectedImage).fit().centerCrop().into(picPDV);
                 VariableName.vaPicPD6 = fileName;
+                picPDV.setTag("any");
             } else {
                 Picasso.with(Home.this).load(Uri.fromFile(HelperMethod.filePagei)).fit().centerCrop().into(picPDV);
                 VariableName.vaPicPD6 = Uri.fromFile(HelperMethod.filePagei).getLastPathSegment();
+                picPDV.setTag("any");
             }
         }
         else if (requestCode == 1021 && resultCode == RESULT_OK){
@@ -554,9 +592,11 @@ public class Home extends AppCompatActivity {
 
                 Picasso.with(Home.this).load(selectedImage).fit().centerCrop().into(picPDVI);
                 VariableName.vaPicPD7 = fileName;
+                picPDVI.setTag("any");
             } else {
                 Picasso.with(Home.this).load(Uri.fromFile(HelperMethod.filePagei)).fit().centerCrop().into(picPDVI);
                 VariableName.vaPicPD7 = Uri.fromFile(HelperMethod.filePagei).getLastPathSegment();
+                picPDVI.setTag("any");
             }
         }
         else if (requestCode == 1022 && resultCode == RESULT_OK){
@@ -576,9 +616,11 @@ public class Home extends AppCompatActivity {
 
                 Picasso.with(Home.this).load(selectedImage).fit().centerCrop().into(picPDVII);
                 VariableName.vaPicPD8 = fileName;
+                picPDVII.setTag("any");
             } else {
                 Picasso.with(Home.this).load(Uri.fromFile(HelperMethod.filePagei)).fit().centerCrop().into(picPDVII);
                 VariableName.vaPicPD8 = Uri.fromFile(HelperMethod.filePagei).getLastPathSegment();
+                picPDVII.setTag("any");
             }
         }
         else if (requestCode == 1023 && resultCode == RESULT_OK){
@@ -598,9 +640,11 @@ public class Home extends AppCompatActivity {
 
                 Picasso.with(Home.this).load(selectedImage).fit().centerCrop().into(picFTI);
                 VariableName.vaPicFT1 = fileName;
+                picFTI.setTag("any");
             } else {
                 Picasso.with(Home.this).load(Uri.fromFile(HelperMethod.filePagei)).fit().centerCrop().into(picFTI);
                 VariableName.vaPicFT1 = Uri.fromFile(HelperMethod.filePagei).getLastPathSegment();
+                picFTI.setTag("any");
             }
         }
         else if (requestCode == 1024 && resultCode == RESULT_OK){
@@ -620,9 +664,11 @@ public class Home extends AppCompatActivity {
 
                 Picasso.with(Home.this).load(selectedImage).fit().centerCrop().into(picFTII);
                 VariableName.vaPicFT2 = fileName;
+                picFTII.setTag("any");
             } else {
                 Picasso.with(Home.this).load(Uri.fromFile(HelperMethod.filePagei)).fit().centerCrop().into(picFTII);
                 VariableName.vaPicFT2 = Uri.fromFile(HelperMethod.filePagei).getLastPathSegment();
+                picFTII.setTag("any");
             }
         }
         else if (requestCode == 1025 && resultCode == RESULT_OK){
@@ -642,9 +688,11 @@ public class Home extends AppCompatActivity {
 
                 Picasso.with(Home.this).load(selectedImage).fit().centerCrop().into(picFTIII);
                 VariableName.vaPicFT3 = fileName;
+                picFTIII.setTag("any");
             } else {
                 Picasso.with(Home.this).load(Uri.fromFile(HelperMethod.filePagei)).fit().centerCrop().into(picFTIII);
                 VariableName.vaPicFT3 = Uri.fromFile(HelperMethod.filePagei).getLastPathSegment();
+                picFTIII.setTag("any");
             }
         }
         else if (requestCode == 1026 && resultCode == RESULT_OK){
@@ -664,9 +712,11 @@ public class Home extends AppCompatActivity {
 
                 Picasso.with(Home.this).load(selectedImage).fit().centerCrop().into(picFTIIII);
                 VariableName.vaPicFT4 = fileName;
+                picFTIIII.setTag("any");
             } else {
                 Picasso.with(Home.this).load(Uri.fromFile(HelperMethod.filePagei)).fit().centerCrop().into(picFTIIII);
                 VariableName.vaPicFT4 = Uri.fromFile(HelperMethod.filePagei).getLastPathSegment();
+                picFTIIII.setTag("any");
             }
         }
         else if (requestCode == 1027 && resultCode == RESULT_OK){
@@ -686,9 +736,11 @@ public class Home extends AppCompatActivity {
 
                 Picasso.with(Home.this).load(selectedImage).fit().centerCrop().into(picRII);
                 VariableName.vaPicRI1 = fileName;
+                picRII.setTag("any");
             } else {
                 Picasso.with(Home.this).load(Uri.fromFile(HelperMethod.filePagei)).fit().centerCrop().into(picRII);
                 VariableName.vaPicRI1 = Uri.fromFile(HelperMethod.filePagei).getLastPathSegment();
+                picRII.setTag("any");
             }
         }
         else if (requestCode == 1028 && resultCode == RESULT_OK){
@@ -708,9 +760,11 @@ public class Home extends AppCompatActivity {
 
                 Picasso.with(Home.this).load(selectedImage).fit().centerCrop().into(picRIII);
                 VariableName.vaPicRI2 = fileName;
+                picRIII.setTag("any");
             } else {
                 Picasso.with(Home.this).load(Uri.fromFile(HelperMethod.filePagei)).fit().centerCrop().into(picRIII);
                 VariableName.vaPicRI2 = Uri.fromFile(HelperMethod.filePagei).getLastPathSegment();
+                picRIII.setTag("any");
             }
         }
     }

@@ -77,7 +77,8 @@
                             android:layout_margin="5dp"
                             android:layout_weight=".25"
                             android:background="@drawable/border"
-                            android:src="@drawable/test" />
+                            android:src="@drawable/test"
+                            android:tag="defult"/>
 
                         <ImageView
                             android:id="@+id/picPD_II"
@@ -89,7 +90,8 @@
                             android:layout_margin="5dp"
                             android:layout_weight=".25"
                             android:background="@drawable/border"
-                            android:src="@drawable/test" />
+                            android:src="@drawable/test"
+                            android:tag="defult"/>
 
                         <ImageView
                             android:id="@+id/picPD_III"
@@ -101,7 +103,8 @@
                             android:layout_margin="5dp"
                             android:layout_weight=".25"
                             android:background="@drawable/border"
-                            android:src="@drawable/test" />
+                            android:src="@drawable/test"
+                            android:tag="defult"/>
 
                         <ImageView
                             android:id="@+id/picPD_IIII"
@@ -113,7 +116,8 @@
                             android:layout_margin="5dp"
                             android:layout_weight=".25"
                             android:background="@drawable/border"
-                            android:src="@drawable/test" />
+                            android:src="@drawable/test"
+                            android:tag="defult"/>
                     </LinearLayout>
 
                 </RelativeLayout>
@@ -145,7 +149,8 @@
                             android:layout_margin="5dp"
                             android:layout_weight=".25"
                             android:background="@drawable/border"
-                            android:src="@drawable/test" />
+                            android:src="@drawable/test"
+                            android:tag="defult"/>
 
                         <ImageView
                             android:id="@+id/picPD_V"
@@ -157,7 +162,8 @@
                             android:layout_margin="5dp"
                             android:layout_weight=".25"
                             android:background="@drawable/border"
-                            android:src="@drawable/test" />
+                            android:src="@drawable/test"
+                            android:tag="defult"/>
 
                         <ImageView
                             android:id="@+id/picPD_VI"
@@ -169,7 +175,8 @@
                             android:layout_margin="5dp"
                             android:layout_weight=".25"
                             android:background="@drawable/border"
-                            android:src="@drawable/test" />
+                            android:src="@drawable/test"
+                            android:tag="defult"/>
 
                         <ImageView
                             android:id="@+id/picPD_VII"
@@ -181,7 +188,8 @@
                             android:layout_margin="5dp"
                             android:layout_weight=".25"
                             android:background="@drawable/border"
-                            android:src="@drawable/test" />
+                            android:src="@drawable/test"
+                            android:tag="defult"/>
                     </LinearLayout>
                 </RelativeLayout>
 
@@ -240,7 +248,8 @@
                             android:layout_margin="5dp"
                             android:layout_weight=".25"
                             android:background="@drawable/border"
-                            android:src="@drawable/test" />
+                            android:src="@drawable/test"
+                            android:tag="defult"/>
 
                         <ImageView
                             android:id="@+id/picFT_II"
@@ -252,7 +261,8 @@
                             android:layout_margin="5dp"
                             android:layout_weight=".25"
                             android:background="@drawable/border"
-                            android:src="@drawable/test" />
+                            android:src="@drawable/test"
+                            android:tag="defult"/>
 
                         <ImageView
                             android:id="@+id/picFT_III"
@@ -264,7 +274,8 @@
                             android:layout_margin="5dp"
                             android:layout_weight=".25"
                             android:background="@drawable/border"
-                            android:src="@drawable/test" />
+                            android:src="@drawable/test"
+                            android:tag="defult"/>
 
                         <ImageView
                             android:id="@+id/picFT_IIII"
@@ -276,7 +287,8 @@
                             android:layout_margin="5dp"
                             android:layout_weight=".25"
                             android:background="@drawable/border"
-                            android:src="@drawable/test" />
+                            android:src="@drawable/test"
+                            android:tag="defult"/>
                     </LinearLayout>
 
                 </RelativeLayout>
@@ -336,7 +348,8 @@
                             android:layout_margin="5dp"
                             android:layout_weight=".25"
                             android:background="@drawable/border"
-                            android:src="@drawable/test" />
+                            android:src="@drawable/test"
+                            android:tag="defult"/>
 
                         <ImageView
                             android:id="@+id/picRI_II"
@@ -348,7 +361,8 @@
                             android:layout_margin="5dp"
                             android:layout_weight=".25"
                             android:background="@drawable/border"
-                            android:src="@drawable/test" />
+                            android:src="@drawable/test"
+                            android:tag="defult"/>
 
                         <RelativeLayout
                             android:id="@+id/relativeLayout2"
