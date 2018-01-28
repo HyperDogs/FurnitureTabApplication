@@ -19,9 +19,9 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="@color/white"
+            android:focusableInTouchMode="true"
             android:paddingBottom="15dp"
-            android:paddingTop="10dp"
-            android:focusableInTouchMode="true">
+            android:paddingTop="10dp">
 
             <RelativeLayout
                 android:id="@+id/relativeLayoutImg"
@@ -40,7 +40,8 @@
                     android:layout_alignParentStart="true"
                     android:layout_margin="5dp"
                     android:background="@drawable/border"
-                    android:src="@drawable/test" />
+                    android:src="@drawable/test"
+                    android:tag="defult" />
 
             </RelativeLayout>
 
@@ -68,7 +69,7 @@
                             android:id="@+id/info"
                             android:layout_width="0dp"
                             android:layout_height="match_parent"
-                            android:layout_weight=".50"
+                            android:layout_weight=".60"
                             android:orientation="vertical"
                             android:paddingTop="5dp">
 
@@ -98,7 +99,7 @@
 
                                 <EditText
                                     android:id="@+id/txtStockNo"
-                                    android:layout_width="150dp"
+                                    android:layout_width="330dp"
                                     android:layout_height="wrap_content"
                                     android:layout_gravity="center"
                                     android:layout_marginBottom="-5dp"
@@ -139,7 +140,7 @@
 
                                 <EditText
                                     android:id="@+id/txtAcmeNo"
-                                    android:layout_width="150dp"
+                                    android:layout_width="330dp"
                                     android:layout_height="wrap_content"
                                     android:layout_gravity="center"
                                     android:layout_marginBottom="-5dp"
@@ -164,12 +165,12 @@
                                 <TextView
                                     android:layout_width="100dp"
                                     android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
                                     android:layout_weight="1"
                                     android:text="@string/desc"
                                     android:textColor="@android:color/black"
                                     android:textSize="12sp"
-                                    android:textStyle="bold"
-                                    android:layout_gravity="center" />
+                                    android:textStyle="bold" />
 
                                 <TextView
                                     android:layout_width="15dp"
@@ -181,7 +182,7 @@
 
                                 <EditText
                                     android:id="@+id/txtDesc"
-                                    android:layout_width="150dp"
+                                    android:layout_width="330dp"
                                     android:layout_height="wrap_content"
                                     android:layout_gravity="left"
                                     android:layout_marginTop="-5dp"
@@ -219,17 +220,17 @@
 
                                 <EditText
                                     android:id="@+id/txtOrder"
-                                    android:layout_width="150dp"
+                                    android:layout_width="280dp"
                                     android:layout_height="wrap_content"
                                     android:layout_gravity="center"
                                     android:layout_marginBottom="-5dp"
+                                    android:backgroundTint="@color/black"
                                     android:maxLength="20"
                                     android:maxLines="1"
                                     android:paddingLeft="2dp"
                                     android:paddingTop="1dp"
                                     android:textColor="@android:color/black"
-                                    android:textSize="12sp"
-                                    android:backgroundTint="@color/black" />
+                                    android:textSize="12sp" />
 
                                 <TextView
                                     android:id="@+id/colorVV"
@@ -271,7 +272,7 @@
 
                                 <EditText
                                     android:id="@+id/txtSampling"
-                                    android:layout_width="150dp"
+                                    android:layout_width="280dp"
                                     android:layout_height="wrap_content"
                                     android:layout_gravity="center"
                                     android:layout_marginBottom="-5dp"
@@ -304,7 +305,7 @@
                             android:id="@+id/info"
                             android:layout_width="0dp"
                             android:layout_height="match_parent"
-                            android:layout_weight=".50"
+                            android:layout_weight=".40"
                             android:orientation="vertical"
                             android:paddingTop="5dp">
 
@@ -361,7 +362,7 @@
 
 
                                 <TextView
-                                    android:layout_width="59dp"
+                                    android:layout_width="250dp"
                                     android:layout_height="wrap_content"
                                     android:layout_weight="1"
                                     android:text="@string/cus_name"
@@ -371,7 +372,7 @@
 
                                 <EditText
                                     android:id="@+id/txtCusName"
-                                    android:layout_width="150dp"
+                                    android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
                                     android:layout_weight="1"
                                     android:text="311"
@@ -387,9 +388,9 @@
                                 android:orientation="horizontal">
 
                                 <TextView
-                                    android:layout_width="59dp"
+                                    android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
-                                    android:layout_weight="1"
+                                    android:layout_gravity="center"
                                     android:text="@string/po_no"
                                     android:textColor="@android:color/black"
                                     android:textSize="12sp"
@@ -397,9 +398,9 @@
 
                                 <EditText
                                     android:id="@+id/txtPoNo"
-                                    android:layout_width="150dp"
+                                    android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
-                                    android:layout_gravity="left"
+                                    android:layout_gravity="center"
                                     android:layout_weight="1"
                                     android:paddingLeft="2dp"
                                     android:paddingTop="1dp"
@@ -419,7 +420,9 @@
                                     android:id="@+id/textView41"
                                     android:layout_width="0dp"
                                     android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
                                     android:layout_weight=".50"
+                                    android:gravity="center"
                                     android:text="@string/aql"
                                     android:textColor="@android:color/black"
                                     android:textSize="9sp"
@@ -441,7 +444,9 @@
                                     android:id="@+id/textView40"
                                     android:layout_width="0dp"
                                     android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
                                     android:layout_weight=".50"
+                                    android:gravity="center"
                                     android:text="@string/major"
                                     android:textColor="@android:color/black"
                                     android:textSize="9sp"
@@ -463,7 +468,9 @@
                                     android:id="@+id/textView36"
                                     android:layout_width="0dp"
                                     android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
                                     android:layout_weight=".50"
+                                    android:gravity="center"
                                     android:text="@string/minor"
                                     android:textColor="@android:color/black"
                                     android:textSize="9sp"
@@ -537,8 +544,8 @@
                                 android:id="@+id/txtDate"
                                 android:layout_width="0dp"
                                 android:layout_height="wrap_content"
-                                android:focusable="false"
                                 android:layout_weight=".45"
+                                android:focusable="false"
                                 android:inputType="textPersonName" />
                         </TableRow>
                     </LinearLayout>
@@ -566,7 +573,7 @@
                         android:layout_width="0dp"
                         android:layout_height="match_parent"
                         android:layout_margin="1dp"
-                        android:layout_weight=".75"
+                        android:layout_weight="0.65"
                         android:background="@android:color/darker_gray"
                         android:gravity="center"
                         android:text="Detail"
@@ -623,7 +630,7 @@
                         android:layout_width="0dp"
                         android:layout_height="match_parent"
                         android:layout_margin="1dp"
-                        android:layout_weight=".10"
+                        android:layout_weight=".20"
                         android:background="@android:color/darker_gray"
                         android:gravity="center"
                         android:padding="5dp"
@@ -694,7 +701,7 @@
                                     android:layout_width="0dp"
                                     android:layout_height="match_parent"
                                     android:layout_margin="1dp"
-                                    android:layout_weight=".50"
+                                    android:layout_weight=".40"
                                     android:background="@color/half_black"
                                     android:orientation="horizontal">
 
@@ -754,7 +761,7 @@
                                     android:layout_width="0dp"
                                     android:layout_height="match_parent"
                                     android:layout_margin="1dp"
-                                    android:layout_weight=".10"
+                                    android:layout_weight=".20"
                                     android:background="@color/half_black">
 
                                     <EditText
@@ -797,6 +804,7 @@
                         </LinearLayout>
 
                         <TableLayout
+                            android:id="@+id/tableComponent"
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
                             android:layout_weight=".80">
@@ -819,7 +827,7 @@
                                     android:layout_width="0dp"
                                     android:layout_height="match_parent"
                                     android:layout_margin="1dp"
-                                    android:layout_weight=".50"
+                                    android:layout_weight=".40"
                                     android:background="@color/half_black"
                                     android:orientation="horizontal">
 
@@ -879,7 +887,7 @@
                                     android:layout_width="0dp"
                                     android:layout_height="match_parent"
                                     android:layout_margin="1dp"
-                                    android:layout_weight=".10"
+                                    android:layout_weight=".20"
                                     android:background="@color/half_black">
 
                                     <EditText
@@ -922,6 +930,7 @@
                         </LinearLayout>
 
                         <TableLayout
+                            android:id="@+id/tableComponent"
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
                             android:layout_weight=".80">
@@ -944,7 +953,7 @@
                                     android:layout_width="0dp"
                                     android:layout_height="match_parent"
                                     android:layout_margin="1dp"
-                                    android:layout_weight=".50"
+                                    android:layout_weight=".40"
                                     android:background="@color/half_black"
                                     android:orientation="horizontal">
 
@@ -1004,7 +1013,7 @@
                                     android:layout_width="0dp"
                                     android:layout_height="match_parent"
                                     android:layout_margin="1dp"
-                                    android:layout_weight=".10"
+                                    android:layout_weight=".20"
                                     android:background="@color/half_black">
 
                                     <EditText
@@ -1060,9 +1069,9 @@
                             android:layout_width="wrap_content"
                             android:layout_height="match_parent"
                             android:layout_weight="1"
-                            android:gravity="center"
+                            android:gravity="right|center"
                             android:text="N.W."
-                            android:textSize="10sp" />
+                            android:textSize="13sp" />
 
                         <EditText
                             android:id="@+id/txtNW"
@@ -1078,18 +1087,18 @@
                             android:layout_width="wrap_content"
                             android:layout_height="match_parent"
                             android:layout_weight="1"
-                            android:gravity="center"
+                            android:gravity="left|center"
                             android:text="Kgs"
-                            android:textSize="10sp" />
+                            android:textSize="13sp" />
 
                         <TextView
                             android:id="@+id/textView13"
                             android:layout_width="wrap_content"
                             android:layout_height="match_parent"
                             android:layout_weight="1"
-                            android:gravity="center"
+                            android:gravity="right|center"
                             android:text="G.W."
-                            android:textSize="10sp" />
+                            android:textSize="13sp" />
 
                         <EditText
                             android:id="@+id/txtGW"
@@ -1105,9 +1114,9 @@
                             android:layout_width="wrap_content"
                             android:layout_height="match_parent"
                             android:layout_weight="1"
-                            android:gravity="center"
+                            android:gravity="left|center"
                             android:text="Kgs"
-                            android:textSize="10sp" />
+                            android:textSize="13sp" />
 
                         <TextView
                             android:id="@+id/textView19"
@@ -1144,11 +1153,9 @@
                                     android:id="@+id/textView20"
                                     android:layout_width="150dp"
                                     android:layout_height="match_parent"
-                                    android:layout_alignParentEnd="true"
-                                    android:layout_alignParentRight="true"
                                     android:layout_alignParentTop="true"
-                                    android:layout_marginEnd="88dp"
-                                    android:layout_marginRight="88dp"
+                                    android:layout_toEndOf="@+id/textView6"
+                                    android:layout_toRightOf="@+id/textView6"
                                     android:layout_weight="1"
                                     android:gravity="center"
                                     android:text="Mr.Sathaporn Morabutr" />
@@ -1156,14 +1163,15 @@
                                 <TextView
                                     android:layout_width="100dp"
                                     android:layout_height="match_parent"
+                                    android:layout_alignParentLeft="true"
+                                    android:layout_alignParentStart="true"
                                     android:layout_alignParentTop="true"
-                                    android:layout_marginEnd="149dp"
-                                    android:layout_marginRight="149dp"
-                                    android:layout_toLeftOf="@+id/textView20"
-                                    android:layout_toStartOf="@+id/textView20"
+                                    android:layout_marginLeft="330dp"
+                                    android:layout_marginStart="330dp"
                                     android:layout_weight="1"
                                     android:gravity="center"
-                                    android:text="QA Inspection : " />
+                                    android:text="QA Inspection : "
+                                    android:id="@+id/textView6" />
                             </RelativeLayout>
 
                             <TableLayout

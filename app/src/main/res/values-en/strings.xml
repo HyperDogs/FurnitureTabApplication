@@ -15,8 +15,8 @@
     <string name="order">ORDER QUANTITY  </string>
     <string name="sampling">SAMPLING SIZE  </string>
     <string name="pcs">PCS</string>
-    <string name="cus_name">CUSTOMER NAME : # </string>
-    <string name="po_no">P/O No : </string>
+    <string name="cus_name">CUSTOMER NAME </string>
+    <string name="po_no">P/O No </string>
     <string name="aql">AQL:Level</string>
     <string name="major">MAJOR</string>
     <string name="minor">MINOR</string>

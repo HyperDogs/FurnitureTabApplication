@@ -108,10 +108,12 @@ public class Home extends AppCompatActivity {
 
                         Picasso.with(Home.this).load(selectedImage).fit().centerCrop().into(picMainImg);
                         VariableName.vaPicMainImg = fileName;
+                        picMainImg.setTag("any");
                         //Toast.makeText(Home.this,"namepath"+VariableName.vaPicMainImg,Toast.LENGTH_SHORT).show();
                     } else {
                         Picasso.with(Home.this).load(Uri.fromFile(HelperMethod.filePagei)).fit().centerCrop().into(picMainImg);
                         VariableName.vaPicMainImg = Uri.fromFile(HelperMethod.filePagei).getLastPathSegment();
+                        picMainImg.setTag("any");
                     }
 
 

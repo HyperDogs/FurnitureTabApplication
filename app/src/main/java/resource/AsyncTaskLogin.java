@@ -57,7 +57,7 @@ public class AsyncTaskLogin extends AsyncTask<String, Void, String> {
                         progressDialog.dismiss();
 
                         if (errDesc.equals("")) {
-                            Intent intent = new Intent(activity, SubActivity.class);
+                            Intent intent = new Intent(activity, Home.class);
                             activity.startActivity(intent);
                             activity.finish();
                         } else {

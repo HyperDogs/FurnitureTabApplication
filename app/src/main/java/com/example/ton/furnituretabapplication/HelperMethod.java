@@ -45,7 +45,7 @@ public class HelperMethod extends Activity {
                                     android.provider.MediaStore.Images.Media.EXTERNAL_CONTENT_URI);
                             ((Activity)mContext).startActivityForResult(pickPhoto, imageViewInt);
                         }else if(position == 2){
-                            if (nameImage == null || nameImage.isEmpty()){
+                            if (nameImage == null || nameImage.isEmpty() || imageView.getTag().equals("defult")){
                                 Toast.makeText(mContext,"Please input image. ",Toast.LENGTH_SHORT).show();
                             }
                             else {
@@ -57,16 +57,11 @@ public class HelperMethod extends Activity {
                         else {
                              @SuppressLint({"NewApi", "LocalSuppress"}) Drawable drawable = mContext.getDrawable(R.drawable.test);
 
-                             String nameDrawable = mContext.getResources().getResourceEntryName(R.drawable.test);
+                             //String nameDrawable = mContext.getResources().getResourceEntryName(R.drawable.test);
+                                imageView.setImageDrawable(drawable);
+                                imageView.setTag("defult");
+                                Toast.makeText(mContext,"Removed",Toast.LENGTH_SHORT).show();
 
-                                    imageView.setImageDrawable(drawable);
-
-                                Drawable drawable1 = imageView.getDrawable();
-
-                                Log.d("xxxx",String.valueOf(drawable.getCallback().toString().equals(drawable1.getCallback().toString())));
-
-                                Toast.makeText(mContext,"Removed"+drawable,Toast.LENGTH_SHORT).show();
-                            Toast.makeText(mContext,"Removed"+drawable1.hashCode(),Toast.LENGTH_SHORT).show();
 
                         }
                     }
