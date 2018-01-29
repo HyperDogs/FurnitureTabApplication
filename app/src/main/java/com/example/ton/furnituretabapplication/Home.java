@@ -1,15 +1,15 @@
 package com.example.ton.furnituretabapplication;
 
 import android.content.Context;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.database.Cursor;
 import android.net.Uri;
 import android.os.Bundle;
-import android.os.Environment;
 import android.provider.MediaStore;
 import android.support.design.widget.TabLayout;
-import android.support.v4.app.FragmentManager;
 import android.support.v4.view.ViewPager;
+import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.util.Log;
@@ -70,14 +70,21 @@ public class Home extends AppCompatActivity {
     public boolean onOptionsItemSelected(MenuItem item) {
         // handle arrow click here
         if (item.getItemId() == android.R.id.home) {
-            onBackPressed();
-            // in my case I get the support fragment manager, it should work with the native one too
-            FragmentManager fragmentManager = getSupportFragmentManager();
-            // this will clear the back stack and displays no animation on the screen
-            //fragmentManager.popBackStackImmediate(null, FragmentManager.POP_BACK_STACK_INCLUSIVE);
-            finish();
-            return false;
+            //onBackPressed();
+            new AlertDialog.Builder(Home.this)
+                    .setTitle("Logout")
+                    .setMessage("Would you like to logout ?")
+                    .setPositiveButton(android.R.string.yes, new DialogInterface.OnClickListener() {
 
+                        public void onClick(DialogInterface dialog, int whichButton) {
+
+                            Intent i = new Intent(Home.this,MainActivity.class);
+                            startActivity(i);
+                            finish();
+
+                        }
+                    })
+                    .setNegativeButton(android.R.string.no, null).show();
         }
 
         if (item.getItemId() == R.id.mybutton) {

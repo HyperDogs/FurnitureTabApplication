@@ -1,9 +1,8 @@
 package com.example.ton.furnituretabapplication;
 
 
+import android.annotation.SuppressLint;
 import android.app.DatePickerDialog;
-import android.content.Intent;
-import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.util.Log;
@@ -15,9 +14,8 @@ import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TableLayout;
 import android.widget.TableRow;
+import android.widget.TextView;
 import android.widget.Toast;
-
-import com.squareup.picasso.Picasso;
 
 import java.io.File;
 import java.text.SimpleDateFormat;
@@ -48,18 +46,38 @@ public class QAPageI extends Fragment {
         View view = inflater.inflate(R.layout.fragment_qapage_i, container, false);
         initView(view);
         setOnClick();
-        tableComponent.removeAllViews();
-        for (int i = 0;i<5;i++){
-            TableRow tableRow = new TableRow(getContext());
-            inflater.inflate(R.layout.row_table,tableRow);
-            tableComponent.addView(tableRow);
+        initTable(inflater,view);
 
-        }
 
 
 
 
         return view;
+    }
+
+    @SuppressLint("ResourceAsColor")
+    private void initTable(LayoutInflater inflater,View view) {
+        tableComponent.removeAllViews();
+        TableRow tableRow = null;
+        int i = 0;
+
+        for (i = 0;i<6;i++){
+
+            tableRow = new TableRow(getContext());
+            inflater.inflate(R.layout.row_table,tableRow);
+            TextView rowNum = view.findViewById(R.id.txtNo);
+            rowNum.setId(i);
+            rowNum.setText(""+i);
+
+            tableComponent.addView(tableRow,i);
+        }
+        TextView rowNum = view.findViewById(R.id.txtNo);
+        Log.d("rowNum",String.valueOf(rowNum.getId()));
+        rowNum.setId(i+1);
+        Log.d("rowNum",String.valueOf(rowNum.getId()));
+        rowNum.setText(""+i);
+       // Toast.makeText(getContext(),""+countRow,Toast.LENGTH_SHORT).show();
+        Toast.makeText(getContext(),""+tableRow.getVirtualChildCount(),Toast.LENGTH_SHORT).show();
     }
 
     private void initView(View view){
@@ -69,11 +87,11 @@ public class QAPageI extends Fragment {
 
     }
 
-    private void setOnClick(){
+    private void setOnClick() {
         picMainImg.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-            file =  HelperMethod.dialogImg(getActivity(),1001,VariableName.vaPicMainImg,picMainImg);
+                file = HelperMethod.dialogImg(getActivity(), 1001, VariableName.vaPicMainImg, picMainImg);
             }
         });
         myCalendar = Calendar.getInstance();
@@ -98,7 +116,6 @@ public class QAPageI extends Fragment {
         };
 
     }
-
 
     @Override
     public void onDestroy() {

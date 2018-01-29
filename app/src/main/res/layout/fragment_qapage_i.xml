@@ -716,7 +716,8 @@
                                         android:text="RBF5191C043" />
                                 </LinearLayout>
 
-                                <FrameLayout
+                                <LinearLayout
+                                    android:orientation="vertical"
                                     android:layout_width="0dp"
                                     android:layout_height="match_parent"
                                     android:layout_margin="1dp"
@@ -728,7 +729,7 @@
                                         android:layout_width="wrap_content"
                                         android:layout_height="wrap_content"
                                         android:layout_gravity="center" />
-                                </FrameLayout>
+                                </LinearLayout>
 
                                 <FrameLayout
                                     android:layout_width="0dp"
@@ -769,7 +770,6 @@
                                         android:id="@+id/txtComment"
                                         android:layout_width="match_parent"
                                         android:layout_height="match_parent"
-                                        android:layout_marginBottom="-5dp"
                                         android:autoSizeTextType="uniform"
                                         android:ems="10"
                                         android:inputType="textPersonName"
@@ -805,7 +805,7 @@
                         </LinearLayout>
 
                         <TableLayout
-                            android:id="@+id/tableComponent"
+                            android:id="@+id/xx"
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
                             android:layout_weight=".80">
@@ -931,7 +931,7 @@
                         </LinearLayout>
 
                         <TableLayout
-                            android:id="@+id/tableComponent"
+                            android:id="@+id/xxxx"
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
                             android:layout_weight=".80">
