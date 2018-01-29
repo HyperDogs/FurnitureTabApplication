@@ -5,7 +5,6 @@ import android.annotation.SuppressLint;
 import android.app.DatePickerDialog;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -15,7 +14,6 @@ import android.widget.ImageView;
 import android.widget.TableLayout;
 import android.widget.TableRow;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import java.io.File;
 import java.text.SimpleDateFormat;
@@ -72,12 +70,8 @@ public class QAPageI extends Fragment {
             tableComponent.addView(tableRow,i);
         }
         TextView rowNum = view.findViewById(R.id.txtNo);
-        Log.d("rowNum",String.valueOf(rowNum.getId()));
         rowNum.setId(i+1);
-        Log.d("rowNum",String.valueOf(rowNum.getId()));
         rowNum.setText(""+i);
-       // Toast.makeText(getContext(),""+countRow,Toast.LENGTH_SHORT).show();
-        Toast.makeText(getContext(),""+tableRow.getVirtualChildCount(),Toast.LENGTH_SHORT).show();
     }
 
     private void initView(View view){
