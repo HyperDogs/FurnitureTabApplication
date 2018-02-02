@@ -26,12 +26,20 @@ import java.io.FileOutputStream;
 import java.io.IOException;
 import java.nio.channels.FileChannel;
 
+import resource.AsyncTaskLogin;
+import resource.AsyncTaskSave;
+
+import static com.example.ton.furnituretabapplication.VariableName.vaAcmeNo;
+import static com.example.ton.furnituretabapplication.VariableName.vaPicMainImg;
+import static com.example.ton.furnituretabapplication.VariableName.vaStockNo;
+
 public class Home extends AppCompatActivity {
 
     private SectionsPageAdapter mSectionsPageAdapter;
     private ViewPager mViewPager;
     public static Context mContext;
     private File file;
+    private VariableName varName;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -89,7 +97,25 @@ public class Home extends AppCompatActivity {
 
         if (item.getItemId() == R.id.mybutton) {
                 // do something here
-            Toast.makeText(Home.this,"Saved",Toast.LENGTH_SHORT).show();
+            if(vaPicMainImg.equals("")
+                    || vaStockNo.equals("")
+                    || vaAcmeNo.equals("")){
+                Toast.makeText(Home.this,"กรณากรอกข้อมูลสินค้าให้ครบถ้วน",Toast.LENGTH_SHORT).show();
+            }else {
+                new AlertDialog.Builder(Home.this)
+                    .setTitle("Save")
+                    .setMessage("Would you like to save ?")
+                    .setPositiveButton(android.R.string.yes, new DialogInterface.OnClickListener() {
+
+                        public void onClick(DialogInterface dialog, int whichButton) {
+                            AsyncTaskSave atlLogin = new AsyncTaskSave(Home.this, "", "");
+                            atlLogin.execute();
+                            dialog.dismiss();
+                        }
+                    })
+                    .setNegativeButton(android.R.string.no, null).show();
+            }
+            //Toast.makeText(Home.this,"Saved",Toast.LENGTH_SHORT).show();
         }
         return super.onOptionsItemSelected(item);
     }
@@ -114,12 +140,12 @@ public class Home extends AppCompatActivity {
                             }
 
                         Picasso.with(Home.this).load(selectedImage).fit().centerCrop().into(picMainImg);
-                        VariableName.vaPicMainImg = fileName;
+                        vaPicMainImg = fileName;
                         picMainImg.setTag("any");
                         //Toast.makeText(Home.this,"namepath"+VariableName.vaPicMainImg,Toast.LENGTH_SHORT).show();
                     } else {
                         Picasso.with(Home.this).load(Uri.fromFile(HelperMethod.filePagei)).fit().centerCrop().into(picMainImg);
-                        VariableName.vaPicMainImg = Uri.fromFile(HelperMethod.filePagei).getLastPathSegment();
+                        vaPicMainImg = Uri.fromFile(HelperMethod.filePagei).getLastPathSegment();
                         picMainImg.setTag("any");
                     }
 
