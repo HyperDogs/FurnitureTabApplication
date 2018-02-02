@@ -95,7 +95,12 @@ public class QAPageI extends Fragment {
             for (int a = 0;a < qaDetailModelList.size();a++){
                 QADetailModel qaDetailModel = qaDetailModelList.get(a);
                     tableRow1 = new TableRow(getContext());
-                    inflater.inflate(R.layout.row_table, tableRow1);
+                    if (qaDetailModel.getQaDetailTxtUse().equals("Y")) {
+                        inflater.inflate(R.layout.row_table, tableRow1);
+                    }else {
+                        inflater.inflate(R.layout.row_table_edt,tableRow1);
+                    }
+
                     tableCom.addView(tableRow1);
                     TextView rowNum = view.findViewById(R.id.txtNo);
                     rowNum.setId(1 + a);
@@ -104,8 +109,8 @@ public class QAPageI extends Fragment {
                     String detailStr = qaDetailModel.getQaDetailDesc();
                     TextView detailTxt = view.findViewById(R.id.txtDetail);
                     detailTxt.setId(detailInt + a);
-                    //detailTxt.setText(detailStr);
-                    detailTxt.setText(qaDetailModel.getQaDetailSeq() + ":" + qaDetailModel.getQaDetailType() + ":" + qaDetailModel.getQaDetailDesc());
+                    detailTxt.setText(detailStr);
+
 
             }
         }

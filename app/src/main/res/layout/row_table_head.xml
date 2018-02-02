@@ -74,7 +74,7 @@
                     android:background="@color/half_black"
                     android:orientation="vertical">
 
-                    <RadioButton
+                    <CheckBox
                         android:id="@+id/radioAccept"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -88,7 +88,7 @@
                     android:layout_weight=".05"
                     android:background="@color/half_black">
 
-                    <RadioButton
+                    <CheckBox
                         android:id="@+id/radioReject"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -102,7 +102,7 @@
                     android:layout_weight=".05"
                     android:background="@color/half_black">
 
-                    <RadioButton
+                    <CheckBox
                         android:id="@+id/radioRework"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
