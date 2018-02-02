@@ -8,61 +8,13 @@ import android.widget.Toast;
 
 import com.example.ton.furnituretabapplication.CopyImageToServer;
 import com.example.ton.furnituretabapplication.OkHttpHelper;
+import com.example.ton.furnituretabapplication.VariableName;
 import com.example.ton.furnituretabapplication.WebService;
 
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
-
-
-import Model.TBUserLoginModel;
 import okhttp3.FormBody;
-
-import static com.example.ton.furnituretabapplication.VariableName.vaAcmeNo;
-import static com.example.ton.furnituretabapplication.VariableName.vaAql;
-import static com.example.ton.furnituretabapplication.VariableName.vaCheckBoxReIns;
-import static com.example.ton.furnituretabapplication.VariableName.vaCheckBoxRegularIns;
-import static com.example.ton.furnituretabapplication.VariableName.vaCusName;
-import static com.example.ton.furnituretabapplication.VariableName.vaDate;
-import static com.example.ton.furnituretabapplication.VariableName.vaDesc;
-import static com.example.ton.furnituretabapplication.VariableName.vaMajor;
-import static com.example.ton.furnituretabapplication.VariableName.vaMinor;
-import static com.example.ton.furnituretabapplication.VariableName.vaOrder;
-import static com.example.ton.furnituretabapplication.VariableName.vaPicFT1;
-import static com.example.ton.furnituretabapplication.VariableName.vaPicFT2;
-import static com.example.ton.furnituretabapplication.VariableName.vaPicFT3;
-import static com.example.ton.furnituretabapplication.VariableName.vaPicFT4;
-import static com.example.ton.furnituretabapplication.VariableName.vaPicIB1;
-import static com.example.ton.furnituretabapplication.VariableName.vaPicIB2;
-import static com.example.ton.furnituretabapplication.VariableName.vaPicIB3;
-import static com.example.ton.furnituretabapplication.VariableName.vaPicIB4;
-import static com.example.ton.furnituretabapplication.VariableName.vaPicMC1;
-import static com.example.ton.furnituretabapplication.VariableName.vaPicMC2;
-import static com.example.ton.furnituretabapplication.VariableName.vaPicMC3;
-import static com.example.ton.furnituretabapplication.VariableName.vaPicMC4;
-import static com.example.ton.furnituretabapplication.VariableName.vaPicMC5;
-import static com.example.ton.furnituretabapplication.VariableName.vaPicMC6;
-import static com.example.ton.furnituretabapplication.VariableName.vaPicMC7;
-import static com.example.ton.furnituretabapplication.VariableName.vaPicMC8;
-import static com.example.ton.furnituretabapplication.VariableName.vaPicMO1;
-import static com.example.ton.furnituretabapplication.VariableName.vaPicMainImg;
-import static com.example.ton.furnituretabapplication.VariableName.vaPicPD1;
-import static com.example.ton.furnituretabapplication.VariableName.vaPicPD2;
-import static com.example.ton.furnituretabapplication.VariableName.vaPicPD3;
-import static com.example.ton.furnituretabapplication.VariableName.vaPicPD4;
-import static com.example.ton.furnituretabapplication.VariableName.vaPicPD5;
-import static com.example.ton.furnituretabapplication.VariableName.vaPicPD6;
-import static com.example.ton.furnituretabapplication.VariableName.vaPicPD7;
-import static com.example.ton.furnituretabapplication.VariableName.vaPicPD8;
-import static com.example.ton.furnituretabapplication.VariableName.vaPicRI1;
-import static com.example.ton.furnituretabapplication.VariableName.vaPicRI2;
-import static com.example.ton.furnituretabapplication.VariableName.vaPoNo;
-import static com.example.ton.furnituretabapplication.VariableName.vaRemarkText1;
-import static com.example.ton.furnituretabapplication.VariableName.vaRemarkText2;
-import static com.example.ton.furnituretabapplication.VariableName.vaRemarkText3;
-import static com.example.ton.furnituretabapplication.VariableName.vaRemarkText4;
-import static com.example.ton.furnituretabapplication.VariableName.vaSampling;
-import static com.example.ton.furnituretabapplication.VariableName.vaStockNo;
 
 /**
  * Created by marisalom on 28/01/2018.
@@ -139,53 +91,53 @@ public class AsyncTaskSave extends AsyncTask<String, Void, String> {
         mUploadPhoto.sendFileToServer(imgName, mWebService.URL_uploadFile,"HEADER");
 
         FormBody params = new FormBody.Builder()
-                .add("PARAM_1", vaPicMainImg)
-                .add("PARAM_2", vaStockNo)
-                .add("PARAM_3", vaAcmeNo)
-                .add("PARAM_4", vaDesc)
-                .add("PARAM_5", vaOrder)
-                .add("PARAM_6", vaSampling)
-                .add("PARAM_7", vaCusName)
-                .add("PARAM_8", vaPoNo)
-                .add("PARAM_9", vaAql)
-                .add("PARAM_10", vaMajor)
-                .add("PARAM_11", vaMinor)
-                .add("PARAM_12", vaCheckBoxRegularIns)
-                .add("PARAM_13", vaCheckBoxReIns)
-                .add("PARAM_14", vaDate)
+                .add("PARAM_1", VariableName.vaPicMainImg)
+                .add("PARAM_2", VariableName.vaStockNo)
+                .add("PARAM_3", VariableName.vaAcmeNo)
+                .add("PARAM_4", VariableName.vaDesc)
+                .add("PARAM_5", VariableName.vaOrder)
+                .add("PARAM_6", VariableName.vaSampling)
+                .add("PARAM_7", VariableName.vaCusName)
+                .add("PARAM_8", VariableName.vaPoNo)
+                .add("PARAM_9", VariableName.vaAql)
+                .add("PARAM_10", VariableName.vaMajor)
+                .add("PARAM_11", VariableName.vaMinor)
+                .add("PARAM_12", VariableName.vaCheckBoxRegularIns)
+                .add("PARAM_13", VariableName.vaCheckBoxReIns)
+                .add("PARAM_14", VariableName.vaDate)
 
-                .add("PARAM_15", vaPicMC1)
-                .add("PARAM_16", vaPicMC2)
-                .add("PARAM_17", vaPicMC3)
-                .add("PARAM_18", vaPicMC4)
-                .add("PARAM_19", vaPicMC5)
-                .add("PARAM_20", vaPicMC6)
-                .add("PARAM_21", vaPicMC7)
-                .add("PARAM_22", vaPicMC8)
-                .add("PARAM_23", vaPicIB1)
-                .add("PARAM_24", vaPicIB2)
-                .add("PARAM_25", vaPicIB3)
-                .add("PARAM_26", vaPicIB4)
-                .add("PARAM_27", vaPicMO1)
+                .add("PARAM_15", VariableName.vaPicMC1)
+                .add("PARAM_16", VariableName.vaPicMC2)
+                .add("PARAM_17", VariableName.vaPicMC3)
+                .add("PARAM_18", VariableName.vaPicMC4)
+                .add("PARAM_19", VariableName.vaPicMC5)
+                .add("PARAM_20", VariableName.vaPicMC6)
+                .add("PARAM_21", VariableName.vaPicMC7)
+                .add("PARAM_22", VariableName.vaPicMC8)
+                .add("PARAM_23", VariableName.vaPicIB1)
+                .add("PARAM_24", VariableName.vaPicIB2)
+                .add("PARAM_25", VariableName.vaPicIB3)
+                .add("PARAM_26", VariableName.vaPicIB4)
+                .add("PARAM_27", VariableName.vaPicMO1)
 
-                .add("PARAM_28", vaPicPD1)
-                .add("PARAM_29", vaPicPD2)
-                .add("PARAM_30", vaPicPD3)
-                .add("PARAM_31", vaPicPD4)
-                .add("PARAM_32", vaPicPD5)
-                .add("PARAM_33", vaPicPD6)
-                .add("PARAM_34", vaPicPD7)
-                .add("PARAM_35", vaPicPD8)
-                .add("PARAM_36", vaPicFT1)
-                .add("PARAM_37", vaPicFT2)
-                .add("PARAM_38", vaPicFT3)
-                .add("PARAM_39", vaPicFT4)
-                .add("PARAM_40", vaPicRI1)
-                .add("PARAM_41", vaPicRI2)
-                .add("PARAM_42", vaRemarkText1)
-                .add("PARAM_43", vaRemarkText2)
-                .add("PARAM_44", vaRemarkText3)
-                .add("PARAM_45", vaRemarkText4)
+                .add("PARAM_28", VariableName.vaPicPD1)
+                .add("PARAM_29", VariableName.vaPicPD2)
+                .add("PARAM_30", VariableName.vaPicPD3)
+                .add("PARAM_31", VariableName.vaPicPD4)
+                .add("PARAM_32", VariableName.vaPicPD5)
+                .add("PARAM_33", VariableName.vaPicPD6)
+                .add("PARAM_34", VariableName.vaPicPD7)
+                .add("PARAM_35", VariableName.vaPicPD8)
+                .add("PARAM_36", VariableName.vaPicFT1)
+                .add("PARAM_37", VariableName.vaPicFT2)
+                .add("PARAM_38", VariableName.vaPicFT3)
+                .add("PARAM_39", VariableName.vaPicFT4)
+                .add("PARAM_40", VariableName.vaPicRI1)
+                .add("PARAM_41", VariableName.vaPicRI2)
+                .add("PARAM_42", VariableName.vaRemarkText1)
+                .add("PARAM_43", VariableName.vaRemarkText2)
+                .add("PARAM_44", VariableName.vaRemarkText3)
+                .add("PARAM_45", VariableName.vaRemarkText4)
 
                 .build();
 

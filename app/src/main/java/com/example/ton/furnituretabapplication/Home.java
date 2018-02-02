@@ -15,6 +15,9 @@ import android.support.v7.widget.Toolbar;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.CheckBox;
+import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.Toast;
 
@@ -26,12 +29,9 @@ import java.io.FileOutputStream;
 import java.io.IOException;
 import java.nio.channels.FileChannel;
 
-import resource.AsyncTaskLogin;
 import resource.AsyncTaskSave;
 
-import static com.example.ton.furnituretabapplication.VariableName.vaAcmeNo;
 import static com.example.ton.furnituretabapplication.VariableName.vaPicMainImg;
-import static com.example.ton.furnituretabapplication.VariableName.vaStockNo;
 
 public class Home extends AppCompatActivity {
 
@@ -40,6 +40,9 @@ public class Home extends AppCompatActivity {
     public static Context mContext;
     private File file;
     private VariableName varName;
+    private ImageView picMainImg;
+    private EditText txtStockNo, txtAcmeNo, txtDesc, txtOrder, txtSampling, txtCusName, txtPoNo, txtAql, txtMajor, txtMinor, txtDate, txtRT_I, txtRT_II, txtRT_III, txtRT_IIII;
+    private CheckBox checkBoxRegular, checkBoxRe;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -68,11 +71,61 @@ public class Home extends AppCompatActivity {
 
     private void setupViewPager(ViewPager viewPager) {
         SectionsPageAdapter adapter = new SectionsPageAdapter(getSupportFragmentManager());
-        adapter.addFragment(new QAPageI(), "PAGE1");
-        adapter.addFragment(new QAPageII(), "PAGE2");
-        adapter.addFragment(new QAPageIII(), "PAGE3");
+        adapter.addFragment(new QAPageI(), "PAGE 1");
+        adapter.addFragment(new QAPageII(), "PAGE 2");
+        adapter.addFragment(new QAPageIII(), "PAGE 3");
         viewPager.setAdapter(adapter);
     }
+
+    private void initView(View view){
+        //Page I
+        picMainImg = view.findViewById(R.id.picMainImg);
+        txtStockNo = view.findViewById(R.id.txtStockNo);
+        txtAcmeNo = view.findViewById(R.id.txtAcmeNo);
+        txtDesc = view.findViewById(R.id.txtDesc);
+        txtOrder = view.findViewById(R.id.txtOrder);
+        txtSampling = view.findViewById(R.id.txtSampling);
+        txtCusName = view.findViewById(R.id.txtCusName);
+        txtPoNo = view.findViewById(R.id.txtPoNo);
+        txtAql = view.findViewById(R.id.txtAql);
+        txtMajor = view.findViewById(R.id.txtMajor);
+        txtMinor = view.findViewById(R.id.txtMinor);
+        txtDate = view.findViewById(R.id.txtDate);
+        checkBoxRegular  = view.findViewById(R.id.checkBoxRegular);
+        checkBoxRe = view.findViewById(R.id.checkBoxRe);
+
+        //Page II
+
+        //Page III
+        txtRT_I = view.findViewById(R.id.txtRT_I);
+        txtRT_II = view.findViewById(R.id.txtRT_II);
+        txtRT_III = view.findViewById(R.id.txtRT_III);
+        txtRT_IIII = view.findViewById(R.id.txtRT_IIII);
+    }
+     private void setData(){
+        //Page I
+        VariableName.vaStockNo = txtStockNo.getText().toString();
+        VariableName.vaAcmeNo = txtAcmeNo.getText().toString();
+        VariableName.vaDesc = txtDesc.getText().toString();
+        VariableName.vaOrder = txtOrder.getText().toString();
+        VariableName.vaSampling = txtSampling.getText().toString();
+        VariableName.vaCusName = txtCusName.getText().toString();
+        VariableName.vaPoNo = txtPoNo.getText().toString();
+        VariableName.vaAql = txtAql.getText().toString();
+        VariableName.vaMajor = txtMajor.getText().toString();
+        VariableName.vaMinor = txtMinor.getText().toString();
+        VariableName.vaDate = txtDate.getText().toString();
+        VariableName.vaCheckBoxRegularIns = checkBoxRegular.getText().toString();
+        VariableName.vaCheckBoxReIns = checkBoxRe.getText().toString();
+
+        //Page II
+
+        //Page III
+        VariableName.vaRemarkText1 = txtRT_I.getText().toString();
+        VariableName.vaRemarkText2 = txtRT_II.getText().toString();
+        VariableName.vaRemarkText3 = txtRT_III.getText().toString();
+        VariableName.vaRemarkText4 = txtRT_IIII.getText().toString();
+     }
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
@@ -96,10 +149,11 @@ public class Home extends AppCompatActivity {
         }
 
         if (item.getItemId() == R.id.mybutton) {
-                // do something here
-            if(vaPicMainImg.equals("")
-                    || vaStockNo.equals("")
-                    || vaAcmeNo.equals("")){
+            // do something here
+            setData();
+            if(VariableName.vaPicMainImg.equals("")
+                    || VariableName.vaStockNo.equals("")
+                    || VariableName.vaAcmeNo.equals("")){
                 Toast.makeText(Home.this,"กรณากรอกข้อมูลสินค้าให้ครบถ้วน",Toast.LENGTH_SHORT).show();
             }else {
                 new AlertDialog.Builder(Home.this)
