@@ -5,6 +5,7 @@ import android.annotation.SuppressLint;
 import android.app.DatePickerDialog;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -17,14 +18,19 @@ import android.widget.TextView;
 
 import java.io.File;
 import java.text.SimpleDateFormat;
+import java.util.ArrayList;
 import java.util.Calendar;
+import java.util.List;
+
+import Model.QADetailModel;
+import Model.QASectionModel;
 
 
 /**
  * A simple {@link Fragment} subclass.
  */
 public class QAPageI extends Fragment {
-    private TableLayout tableComponent;
+    private TableLayout tableComponent,maintable;
     private ImageView picMainImg;
     private File file;
     private DatePickerDialog.OnDateSetListener datePick;
@@ -55,26 +61,59 @@ public class QAPageI extends Fragment {
 
     @SuppressLint("ResourceAsColor")
     private void initTable(LayoutInflater inflater,View view) {
-        tableComponent.removeAllViews();
+
+        List<QASectionModel> qaSectionlModelList = VariableName.qaSectionList;
+        Log.d("qaSectionSize",String.valueOf(qaSectionlModelList.size()));
+        VariableName.idHeader = new ArrayList();
+        VariableName.idDetail = new ArrayList();
+        maintable.removeAllViews();
         TableRow tableRow = null;
-        int i = 0;
-
-        for (i = 0;i<6;i++){
-
+        TableRow tableRow1 = null;
+        int headerInt = 1110;
+        int detailInt = 2220;
+        for (int i = 0;i < qaSectionlModelList.size();i++){
+            QASectionModel qaSectionModel = qaSectionlModelList.get(i);
+            Log.d("qaSecTionModel",qaSectionModel.getQaSectionType());
+            List<QADetailModel> qaDetailModelList = qaSectionlModelList.get(i).getQaDetailModelList();
+            Log.d("qaDetailModelList",String.valueOf(qaSectionlModelList.get(i).getQaDetailModelList().size()));
             tableRow = new TableRow(getContext());
-            inflater.inflate(R.layout.row_table,tableRow);
-            TextView rowNum = view.findViewById(R.id.txtNo);
-            rowNum.setId(i);
-            rowNum.setText(""+i);
+            inflater.inflate(R.layout.row_table_head,tableRow);
+            maintable.addView(tableRow);
 
-            tableComponent.addView(tableRow,i);
+            String headerStr = qaSectionModel.getQaSectionDesc();
+            TextView headerTxt = view.findViewById(R.id.header);
+            headerTxt.setId(headerInt + i);
+            headerTxt.setText(headerStr);
+            VariableName.idHeader.add(headerTxt.getId());
+
+
+            TableLayout tableCom = view.findViewById(R.id.tableComponent);
+            tableCom.setId(1+i);
+            tableCom.removeAllViews();
+
+
+            for (int a = 0;a < qaDetailModelList.size();a++){
+                QADetailModel qaDetailModel = qaDetailModelList.get(a);
+                    tableRow1 = new TableRow(getContext());
+                    inflater.inflate(R.layout.row_table, tableRow1);
+                    tableCom.addView(tableRow1);
+                    TextView rowNum = view.findViewById(R.id.txtNo);
+                    rowNum.setId(1 + a);
+                    rowNum.setText(qaDetailModel.getQaDetailSeq());
+
+                    String detailStr = qaDetailModel.getQaDetailDesc();
+                    TextView detailTxt = view.findViewById(R.id.txtDetail);
+                    detailTxt.setId(detailInt + a);
+                    //detailTxt.setText(detailStr);
+                    detailTxt.setText(qaDetailModel.getQaDetailSeq() + ":" + qaDetailModel.getQaDetailType() + ":" + qaDetailModel.getQaDetailDesc());
+
+            }
         }
-        TextView rowNum = view.findViewById(R.id.txtNo);
-        rowNum.setId(i+1);
-        rowNum.setText(""+i);
+
     }
 
     private void initView(View view){
+        maintable = view.findViewById(R.id.maintable);
         tableComponent = view.findViewById(R.id.tableComponent);
         picMainImg = view.findViewById(R.id.picMainImg);
         txtDate = view.findViewById(R.id.txtDate);

@@ -3,6 +3,10 @@ package com.example.ton.furnituretabapplication;
 import android.os.Environment;
 
 import java.io.File;
+import java.util.ArrayList;
+import java.util.List;
+
+import Model.QASectionModel;
 
 /**
  * Created by marisalom on 10/01/2018.
@@ -11,7 +15,9 @@ import java.io.File;
 public class VariableName {
 
     public static String imageStorageFolder = Environment.getExternalStorageDirectory() + File.separator + "DCIM" + File.separator + "Camera" + File.separator;
-
+    public static ArrayList idHeader;
+    public static ArrayList idDetail;
+    public static List<QASectionModel> qaSectionList;
     //Qa Page I
     public static String vaPicMainImg;
     public static String vaStockNo;
