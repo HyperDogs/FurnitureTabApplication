@@ -68,7 +68,7 @@ public class Home extends AppCompatActivity {
         TabLayout tabLayout = findViewById(R.id.tabs);
         tabLayout.setupWithViewPager(mViewPager);
 
-        initView();
+
     }
 
     private void setupViewPager(ViewPager viewPager) {
@@ -152,10 +152,19 @@ public class Home extends AppCompatActivity {
 
         if (item.getItemId() == R.id.mybutton) {
             // do something here
-            setData();
+            initView();
             if(VariableName.vaPicMainImg.equals("")
-                    || VariableName.vaStockNo.equals("")
-                    || VariableName.vaAcmeNo.equals("")){
+                    || txtStockNo.getText().toString().isEmpty()
+                    || txtAcmeNo.getText().toString().isEmpty()
+                    || txtDesc.getText().toString().isEmpty()
+                    || txtOrder.getText().toString().isEmpty()
+                    || txtSampling.getText().toString().isEmpty()
+                    || txtCusName.getText().toString().isEmpty()
+                    || txtPoNo.getText().toString().isEmpty()
+                    || txtAql.getText().toString().isEmpty()
+                    || txtMajor.getText().toString().isEmpty()
+                    || txtMinor.getText().toString().isEmpty()
+                    || txtDate.getText().toString().isEmpty()){
                 Toast.makeText(Home.this,"กรณากรอกข้อมูลสินค้าให้ครบถ้วน",Toast.LENGTH_SHORT).show();
             }else {
                 new AlertDialog.Builder(Home.this)
@@ -164,6 +173,7 @@ public class Home extends AppCompatActivity {
                     .setPositiveButton(android.R.string.yes, new DialogInterface.OnClickListener() {
 
                         public void onClick(DialogInterface dialog, int whichButton) {
+                            //setData();
                             AsyncTaskSave atlLogin = new AsyncTaskSave(Home.this, "", "");
                             atlLogin.execute();
                             dialog.dismiss();
