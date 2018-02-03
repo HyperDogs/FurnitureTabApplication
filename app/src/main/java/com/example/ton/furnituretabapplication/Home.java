@@ -15,7 +15,6 @@ import android.support.v7.widget.Toolbar;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.view.View;
 import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.ImageView;
@@ -31,6 +30,7 @@ import java.nio.channels.FileChannel;
 
 import resource.AsyncTaskSave;
 
+import static com.example.ton.furnituretabapplication.VariableName.vaAcmeNo;
 import static com.example.ton.furnituretabapplication.VariableName.vaPicMainImg;
 
 public class Home extends AppCompatActivity {
@@ -67,6 +67,8 @@ public class Home extends AppCompatActivity {
 
         TabLayout tabLayout = findViewById(R.id.tabs);
         tabLayout.setupWithViewPager(mViewPager);
+
+        initView();
     }
 
     private void setupViewPager(ViewPager viewPager) {
@@ -77,30 +79,30 @@ public class Home extends AppCompatActivity {
         viewPager.setAdapter(adapter);
     }
 
-    private void initView(View view){
+    private void initView(){
         //Page I
-        picMainImg = view.findViewById(R.id.picMainImg);
-        txtStockNo = view.findViewById(R.id.txtStockNo);
-        txtAcmeNo = view.findViewById(R.id.txtAcmeNo);
-        txtDesc = view.findViewById(R.id.txtDesc);
-        txtOrder = view.findViewById(R.id.txtOrder);
-        txtSampling = view.findViewById(R.id.txtSampling);
-        txtCusName = view.findViewById(R.id.txtCusName);
-        txtPoNo = view.findViewById(R.id.txtPoNo);
-        txtAql = view.findViewById(R.id.txtAql);
-        txtMajor = view.findViewById(R.id.txtMajor);
-        txtMinor = view.findViewById(R.id.txtMinor);
-        txtDate = view.findViewById(R.id.txtDate);
-        checkBoxRegular  = view.findViewById(R.id.checkBoxRegular);
-        checkBoxRe = view.findViewById(R.id.checkBoxRe);
+        picMainImg = findViewById(R.id.picMainImg);
+        txtStockNo = findViewById(R.id.txtStockNo);
+        txtAcmeNo = findViewById(R.id.txtAcmeNo);
+        txtDesc = findViewById(R.id.txtDesc);
+        txtOrder = findViewById(R.id.txtOrder);
+        txtSampling = findViewById(R.id.txtSampling);
+        txtCusName = findViewById(R.id.txtCusName);
+        txtPoNo = findViewById(R.id.txtPoNo);
+        txtAql = findViewById(R.id.txtAql);
+        txtMajor = findViewById(R.id.txtMajor);
+        txtMinor = findViewById(R.id.txtMinor);
+        txtDate = findViewById(R.id.txtDate);
+        checkBoxRegular  = findViewById(R.id.checkBoxRegular);
+        checkBoxRe = findViewById(R.id.checkBoxRe);
 
         //Page II
 
         //Page III
-        txtRT_I = view.findViewById(R.id.txtRT_I);
-        txtRT_II = view.findViewById(R.id.txtRT_II);
-        txtRT_III = view.findViewById(R.id.txtRT_III);
-        txtRT_IIII = view.findViewById(R.id.txtRT_IIII);
+        txtRT_I = findViewById(R.id.txtRT_I);
+        txtRT_II = findViewById(R.id.txtRT_II);
+        txtRT_III = findViewById(R.id.txtRT_III);
+        txtRT_IIII = findViewById(R.id.txtRT_IIII);
     }
      private void setData(){
         //Page I
