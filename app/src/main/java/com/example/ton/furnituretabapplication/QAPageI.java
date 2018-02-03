@@ -95,7 +95,7 @@ public class QAPageI extends Fragment {
 
             TableLayout tableCom = view.findViewById(R.id.tableComponent);
             tableCom.setId(i);
-            tableCom.removeAllViews();
+             tableCom.removeAllViews();
 
 
             for (int a = 0;a < qaDetailModelList.size();a++){
