@@ -36,6 +36,9 @@ public class QAPageI extends Fragment {
     private DatePickerDialog.OnDateSetListener datePick;
     private Calendar myCalendar;
     private EditText txtDate;
+    private ArrayList checkBox;
+    //private CheckBox  checkAccept,checkReject,checkRework;
+    private boolean fistRec = true;
 
 
     public QAPageI() {
@@ -63,6 +66,7 @@ public class QAPageI extends Fragment {
     private void initTable(LayoutInflater inflater,View view) {
 
         List<QASectionModel> qaSectionlModelList = VariableName.qaSectionList;
+        checkBox = new ArrayList();
         Log.d("qaSectionSize",String.valueOf(qaSectionlModelList.size()));
         VariableName.idHeader = new ArrayList();
         VariableName.idDetail = new ArrayList();
@@ -71,6 +75,8 @@ public class QAPageI extends Fragment {
         TableRow tableRow1 = null;
         int headerInt = 1110;
         int detailInt = 2220;
+
+
         for (int i = 0;i < qaSectionlModelList.size();i++){
             QASectionModel qaSectionModel = qaSectionlModelList.get(i);
             Log.d("qaSecTionModel",qaSectionModel.getQaSectionType());
@@ -88,11 +94,12 @@ public class QAPageI extends Fragment {
 
 
             TableLayout tableCom = view.findViewById(R.id.tableComponent);
-            tableCom.setId(1+i);
+            tableCom.setId(i);
             tableCom.removeAllViews();
 
 
             for (int a = 0;a < qaDetailModelList.size();a++){
+
                 QADetailModel qaDetailModel = qaDetailModelList.get(a);
                     tableRow1 = new TableRow(getContext());
                     if (qaDetailModel.getQaDetailTxtUse().equals("Y")) {
@@ -100,6 +107,8 @@ public class QAPageI extends Fragment {
                     }else {
                         inflater.inflate(R.layout.row_table_edt,tableRow1);
                     }
+
+
 
                     tableCom.addView(tableRow1);
                     TextView rowNum = view.findViewById(R.id.txtNo);
@@ -109,11 +118,20 @@ public class QAPageI extends Fragment {
                     String detailStr = qaDetailModel.getQaDetailDesc();
                     TextView detailTxt = view.findViewById(R.id.txtDetail);
                     detailTxt.setId(detailInt + a);
+                    detailTxt.setTag("detailTxt"+a);
                     detailTxt.setText(detailStr);
 
 
+
+
+
+
+
             }
+
+
         }
+        //Toast.makeText(getContext(),"Checkbox"+checkBox.size(),Toast.LENGTH_LONG).show();
 
     }
 

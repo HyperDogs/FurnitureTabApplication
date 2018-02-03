@@ -75,7 +75,7 @@
                     android:orientation="vertical">
 
                     <CheckBox
-                        android:id="@+id/radioAccept"
+                        android:id="@+id/checkAccept"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center" />
@@ -89,7 +89,7 @@
                     android:background="@color/half_black">
 
                     <CheckBox
-                        android:id="@+id/radioReject"
+                        android:id="@+id/checkReject"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center" />
@@ -103,7 +103,7 @@
                     android:background="@color/half_black">
 
                     <CheckBox
-                        android:id="@+id/radioRework"
+                        android:id="@+id/checkRework"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center" />

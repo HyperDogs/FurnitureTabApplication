@@ -18,7 +18,7 @@
             android:layout_weight=".05"
             android:background="@color/half_black"
             android:gravity="center"
-            android:text="x" />
+            android:text="1" />
 
         <LinearLayout
             android:layout_width="0dp"
@@ -26,59 +26,66 @@
             android:layout_margin="1dp"
             android:layout_weight=".40"
             android:background="@color/half_black"
-            android:orientation="horizontal">
+            android:orientation="horizontal"
+            android:paddingRight="40dp">
 
             <TextView
                 android:id="@+id/txtDetail"
-                android:layout_width="match_parent"
+                android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:layout_margin="1dp"
                 android:gravity="left|center"
                 android:paddingLeft="2dp"
-                android:text="RBF5191C043" />
+                android:text="xxxxxxxxx" />
+
         </LinearLayout>
 
-        <FrameLayout
+        <RelativeLayout
             android:layout_width="0dp"
             android:layout_height="match_parent"
-            android:layout_margin="1dp"
-            android:layout_weight=".05"
-            android:background="@color/half_black">
+            android:layout_gravity="center_vertical|center_horizontal|center"
+            android:layout_weight=".15">
 
-            <CheckBox
-                android:id="@+id/checkAccept"
-                android:layout_width="wrap_content"
+            <RadioGroup
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_gravity="center" />
-        </FrameLayout>
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:orientation="horizontal">
 
-        <FrameLayout
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_margin="1dp"
-            android:layout_weight=".05"
-            android:background="@color/half_black">
+                <RadioButton
+                    android:id="@+id/radioReject"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical|center_horizontal|center"
+                    android:layout_margin="1dp"
+                    android:layout_weight=".05"
+                    android:checked="true"
+                    android:background="@color/half_black"
+                    android:gravity="center_vertical|center" />
 
-            <CheckBox
-                android:id="@+id/checkReject"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center" />
-        </FrameLayout>
+                <RadioButton
+                    android:id="@+id/radioAccept"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical|center_horizontal|center"
+                    android:layout_margin="1dp"
+                    android:layout_weight=".05"
+                    android:background="@color/half_black"
+                    android:gravity="center_vertical|center" />
 
-        <FrameLayout
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_margin="1dp"
-            android:layout_weight=".05"
-            android:background="@color/half_black">
+                <RadioButton
+                    android:id="@+id/radioRework"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical|center_horizontal|center"
+                    android:layout_margin="1dp"
+                    android:layout_weight=".05"
+                    android:background="@color/half_black"
+                    android:gravity="center_vertical|center" />
 
-            <CheckBox
-                android:id="@+id/checkRework"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center" />
-        </FrameLayout>
+            </RadioGroup>
+        </RelativeLayout>
 
         <FrameLayout
             android:layout_width="0dp"
@@ -91,7 +98,9 @@
                 android:id="@+id/txtComment"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout_gravity="bottom"
+                android:autoSizeTextType="uniform"
+                android:ems="10"
+                android:inputType="textPersonName"
                 android:textSize="9sp" />
         </FrameLayout>
 
