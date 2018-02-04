@@ -2,6 +2,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:background="@color/album_title"
     tools:context="com.example.ton.furnituretabapplication.QAPageI">
 
@@ -736,34 +737,41 @@
                                         android:gravity="center"
                                         android:orientation="horizontal">
 
-                                        <RadioButton
-                                            android:id="@+id/radioReject"
+                                        <me.omidh.liquidradiobutton.LiquidRadioButton
                                             android:layout_width="0dp"
                                             android:layout_height="wrap_content"
-                                            android:layout_gravity="center_vertical|center_horizontal|center"
                                             android:layout_weight=".05"
                                             android:background="@color/half_black"
-                                            android:gravity="center_vertical|center" />
-
-                                        <RadioButton
-                                            android:id="@+id/radioAccept"
-                                            android:layout_width="0dp"
-                                            android:layout_height="wrap_content"
-                                            android:layout_gravity="center_vertical|center_horizontal|center"
                                             android:layout_margin="1dp"
-                                            android:layout_weight=".05"
-                                            android:background="@color/half_black"
-                                            android:gravity="center_vertical|center" />
+                                            android:gravity="center"
+                                            app:lrb_outterPadding="14dp"
+                                            app:lrb_checkedColor="@android:color/holo_green_dark"
+                                            app:lrb_unCheckedColor="@android:color/holo_red_light"
+                                            />
 
-                                        <RadioButton
-                                            android:id="@+id/radioRework"
+                                        <me.omidh.liquidradiobutton.LiquidRadioButton
                                             android:layout_width="0dp"
                                             android:layout_height="wrap_content"
-                                            android:layout_gravity="center_vertical|center_horizontal|center"
-                                            android:layout_margin="1dp"
                                             android:layout_weight=".05"
                                             android:background="@color/half_black"
-                                            android:gravity="center_vertical|center" />
+                                            android:layout_margin="1dp"
+                                            android:gravity="center"
+                                            app:lrb_outterPadding="14dp"
+                                            app:lrb_checkedColor="@android:color/holo_green_dark"
+                                            app:lrb_unCheckedColor="@android:color/holo_red_light"
+                                            />
+
+                                        <me.omidh.liquidradiobutton.LiquidRadioButton
+                                            android:layout_width="0dp"
+                                            android:layout_height="wrap_content"
+                                            android:layout_weight=".05"
+                                            android:background="@color/half_black"
+                                            android:layout_margin="1dp"
+                                            android:gravity="center"
+                                            app:lrb_outterPadding="14dp"
+                                            app:lrb_checkedColor="@android:color/holo_green_dark"
+                                            app:lrb_unCheckedColor="@android:color/holo_red_light"
+                                            />
 
                                     </RadioGroup>
                                 </RelativeLayout>
