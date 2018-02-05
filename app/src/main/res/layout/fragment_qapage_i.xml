@@ -227,7 +227,8 @@
                                     android:paddingLeft="2dp"
                                     android:paddingTop="1dp"
                                     android:textColor="@android:color/black"
-                                    android:textSize="12sp" />
+                                    android:textSize="12sp"
+                                    android:inputType="numberDecimal"/>
 
                                 <TextView
                                     android:id="@+id/colorVV"
@@ -280,7 +281,8 @@
                                     android:paddingLeft="2dp"
                                     android:paddingTop="1dp"
                                     android:textColor="@android:color/black"
-                                    android:textSize="12sp" />
+                                    android:textSize="12sp"
+                                    android:inputType="numberDecimal"/>
 
                                 <TextView
                                     android:id="@+id/colorVV2"
