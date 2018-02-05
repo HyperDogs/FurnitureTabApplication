@@ -123,10 +123,22 @@ public class Home extends AppCompatActivity {
         //Page II
 
         //Page III
-        VariableName.vaRemarkText1 = txtRT_I.getText().toString();
-        VariableName.vaRemarkText2 = txtRT_II.getText().toString();
-        VariableName.vaRemarkText3 = txtRT_III.getText().toString();
-        VariableName.vaRemarkText4 = txtRT_IIII.getText().toString();
+         if(txtRT_I != null){
+             VariableName.vaRemarkText1 = txtRT_I.getText().toString();
+         }
+
+         if(txtRT_II != null){
+             VariableName.vaRemarkText2 = txtRT_II.getText().toString();
+         }
+
+         if(txtRT_III != null){
+             VariableName.vaRemarkText3 = txtRT_III.getText().toString();
+         }
+
+         if(txtRT_IIII != null){
+             VariableName.vaRemarkText4 = txtRT_IIII.getText().toString();
+         }
+
      }
 
     @Override
@@ -173,7 +185,7 @@ public class Home extends AppCompatActivity {
                     .setPositiveButton(android.R.string.yes, new DialogInterface.OnClickListener() {
 
                         public void onClick(DialogInterface dialog, int whichButton) {
-                            //setData();
+                            setData();
                             AsyncTaskSave atlLogin = new AsyncTaskSave(Home.this, "", "");
                             atlLogin.execute();
                             dialog.dismiss();
