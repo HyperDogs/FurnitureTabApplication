@@ -136,7 +136,7 @@ public class QAPageI extends Fragment {
                         detailEdt.setText("###");
                     }else {
                         detailEdt.setVisibility(View.VISIBLE);
-                        detailEdt.setText("xxx");
+                        detailEdt.setText("");
                     }
 
 
@@ -216,7 +216,7 @@ public class QAPageI extends Fragment {
 
 
             EditText detailEdt = editTextsDetailList.get(i);
-            String detailEdtStr;
+            String detailEdtStr="";
             if (detailEdt.getText().toString().equals("###")){
                 detailEdtStr = "";
             }else {
