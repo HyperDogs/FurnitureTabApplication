@@ -6,6 +6,7 @@ import java.io.File;
 import java.util.ArrayList;
 import java.util.List;
 
+import Model.QADataTable;
 import Model.QASectionModel;
 
 /**
@@ -17,7 +18,14 @@ public class VariableName {
     public static String imageStorageFolder = Environment.getExternalStorageDirectory() + File.separator + "DCIM" + File.separator + "Camera" + File.separator;
     public static ArrayList idHeader;
     public static ArrayList idDetail;
+    public static ArrayList idRadio;
+    public static ArrayList dataTable;
     public static List<QASectionModel> qaSectionList;
+    public static ArrayList<QADataTable> dataTablesList;
+    final public static String ACCEPT = "ACCEPT";
+    final public static String REJECT = "REJECT";
+    final public static String REWORK = "REWORK";
+
     //Qa Page I
     public static String vaPicMainImg = "";
     public static String vaStockNo = "";
@@ -68,5 +76,7 @@ public class VariableName {
     public static String vaRemarkText2 = "";
     public static String vaRemarkText3 = "";
     public static String vaRemarkText4 = "";
+
+
 
 }

@@ -3,6 +3,7 @@ package com.example.ton.furnituretabapplication;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.content.res.Resources;
 import android.database.Cursor;
 import android.net.Uri;
 import android.os.Bundle;
@@ -30,7 +31,6 @@ import java.nio.channels.FileChannel;
 
 import resource.AsyncTaskSave;
 
-import static com.example.ton.furnituretabapplication.VariableName.vaAcmeNo;
 import static com.example.ton.furnituretabapplication.VariableName.vaPicMainImg;
 
 public class Home extends AppCompatActivity {
@@ -43,11 +43,14 @@ public class Home extends AppCompatActivity {
     private ImageView picMainImg;
     private EditText txtStockNo, txtAcmeNo, txtDesc, txtOrder, txtSampling, txtCusName, txtPoNo, txtAql, txtMajor, txtMinor, txtDate, txtRT_I, txtRT_II, txtRT_III, txtRT_IIII;
     private CheckBox checkBoxRegular, checkBoxRe;
+    public static Resources mResources;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
+
+        mResources = getResources();
 
         //Toolbar
         Toolbar toolbar = findViewById(R.id.toolbar);
