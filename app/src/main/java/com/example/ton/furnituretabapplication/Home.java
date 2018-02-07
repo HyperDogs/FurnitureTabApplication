@@ -32,6 +32,7 @@ import java.nio.channels.FileChannel;
 import resource.AsyncTaskSave;
 
 import static com.example.ton.furnituretabapplication.VariableName.vaPicMainImg;
+import static resource.AsyncTaskLogin.getDeviceImei;
 
 public class Home extends AppCompatActivity {
 
@@ -189,8 +190,8 @@ public class Home extends AppCompatActivity {
 
                         public void onClick(DialogInterface dialog, int whichButton) {
                             setData();
-                            AsyncTaskSave atlLogin = new AsyncTaskSave(Home.this, "", "");
-                            atlLogin.execute();
+                            AsyncTaskSave atlSave = new AsyncTaskSave(Home.this, getDeviceImei(Home.this));
+                            atlSave.execute();
                             dialog.dismiss();
                         }
                     })

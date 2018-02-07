@@ -169,7 +169,7 @@ public class QAPageI extends Fragment {
         picMainImg.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                VariableName.dataTablesList = getDataTable();
+
                 file = HelperMethod.dialogImg(getActivity(), 1001, VariableName.vaPicMainImg, picMainImg);
             }
         });

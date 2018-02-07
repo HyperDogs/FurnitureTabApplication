@@ -4,6 +4,7 @@ import android.app.Activity;
 import android.app.ProgressDialog;
 import android.os.AsyncTask;
 import android.os.Handler;
+import android.util.Log;
 import android.widget.Toast;
 
 import com.example.ton.furnituretabapplication.CopyImageToServer;
@@ -14,7 +15,14 @@ import com.example.ton.furnituretabapplication.WebService;
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import Model.QADataTable;
 import okhttp3.FormBody;
+
+import static com.example.ton.furnituretabapplication.QAPageI.getDataTable;
 
 /**
  * Created by marisalom on 28/01/2018.
@@ -23,22 +31,33 @@ import okhttp3.FormBody;
 public class AsyncTaskSave extends AsyncTask<String, Void, String> {
     private Activity activity;
     private ProgressDialog progressDialog;
-    private String Imei, imgName;
+    private String Imei;
     private boolean SAVE_STATUS = false;
     private Handler handler = new Handler();
 
     private OkHttpHelper mOkHttpHelper;
     private WebService mWebService;
     private CopyImageToServer mUploadPhoto;
+    private int mNewDocumentNo = 0;
 
-    public AsyncTaskSave(Activity act, String Imei, String imgName){
+    List<String> MPList;
+    List<String> IBList;
+    List<String> MCList;
+    List<String> PRList;
+    List<String> FIList;
+    List<String> RMList;
+    List<String> RTList;
+
+    public AsyncTaskSave(Activity act, String Imei){
         this.activity = act;
         this.Imei = Imei;
-        this.imgName = imgName;
 
         this.mOkHttpHelper = new OkHttpHelper();
         this.mWebService = new WebService();
+        this.mUploadPhoto = new CopyImageToServer();
 
+        setFileName();
+        setRemarkText();
     }
 
     @Override
@@ -55,6 +74,52 @@ public class AsyncTaskSave extends AsyncTask<String, Void, String> {
                 if (Imei.equals("")){
                     SAVE_STATUS = false;
                 }else {
+                    //Header
+                    sendHeaderToServer();
+
+                    //Detail
+                    VariableName.dataTablesList = getDataTable();
+                    for (int i = 1; i <= VariableName.dataTablesList.size(); i++) {
+                        QADataTable qaDataTable = VariableName.dataTablesList.get(i);
+                        sendDetailToServer(String.valueOf(i), qaDataTable);
+                    }
+
+                    //Image
+                    for (int i = 1; i <= MPList.size(); i++) {
+                        String fileName = MPList.get(i);
+                        sendImageToServer(String.valueOf(i), "MP", fileName);
+                    }
+
+                    for (int i = 1; i <= IBList.size(); i++) {
+                        String fileName = IBList.get(i);
+                        sendImageToServer(String.valueOf(i), "IB", fileName);
+                    }
+
+                    for (int i = 1; i <= MCList.size(); i++) {
+                        String fileName = MCList.get(i);
+                        sendImageToServer(String.valueOf(i), "MC", fileName);
+                    }
+
+                    for (int i = 1; i <= PRList.size(); i++) {
+                        String fileName = PRList.get(i);
+                        sendImageToServer(String.valueOf(i), "PR", fileName);
+                    }
+
+                    for (int i = 1; i <= FIList.size(); i++) {
+                        String fileName = FIList.get(i);
+                        sendImageToServer(String.valueOf(i), "FI", fileName);
+                    }
+
+                    for (int i = 1; i <= RMList.size(); i++) {
+                        String fileName = RMList.get(i);
+                        sendImageToServer(String.valueOf(i), "RM", fileName);
+                    }
+
+                    //Remark Text
+                    for (int i = 1; i <= RTList.size(); i++) {
+                        String text = RTList.get(i);
+                        sendRemarkToServer(String.valueOf(i), "RT", "");
+                    }
 
                 }
 
@@ -88,7 +153,7 @@ public class AsyncTaskSave extends AsyncTask<String, Void, String> {
     }
 
     private String sendHeaderToServer(){
-        mUploadPhoto.sendFileToServer(imgName, mWebService.URL_uploadFile,"HEADER");
+        mUploadPhoto.sendFileToServer(VariableName.vaPicMainImg, mWebService.URL_uploadFile,"HEADER");
 
         FormBody params = new FormBody.Builder()
                 .add("PARAM_1", VariableName.vaPicMainImg)
@@ -106,41 +171,56 @@ public class AsyncTaskSave extends AsyncTask<String, Void, String> {
                 .add("PARAM_13", VariableName.vaCheckBoxReIns)
                 .add("PARAM_14", VariableName.vaDate)
 
-                .add("PARAM_15", VariableName.vaPicMC1)
-                .add("PARAM_16", VariableName.vaPicMC2)
-                .add("PARAM_17", VariableName.vaPicMC3)
-                .add("PARAM_18", VariableName.vaPicMC4)
-                .add("PARAM_19", VariableName.vaPicMC5)
-                .add("PARAM_20", VariableName.vaPicMC6)
-                .add("PARAM_21", VariableName.vaPicMC7)
-                .add("PARAM_22", VariableName.vaPicMC8)
-                .add("PARAM_23", VariableName.vaPicIB1)
-                .add("PARAM_24", VariableName.vaPicIB2)
-                .add("PARAM_25", VariableName.vaPicIB3)
-                .add("PARAM_26", VariableName.vaPicIB4)
-                .add("PARAM_27", VariableName.vaPicMO1)
+                .build();
 
-                .add("PARAM_28", VariableName.vaPicPD1)
-                .add("PARAM_29", VariableName.vaPicPD2)
-                .add("PARAM_30", VariableName.vaPicPD3)
-                .add("PARAM_31", VariableName.vaPicPD4)
-                .add("PARAM_32", VariableName.vaPicPD5)
-                .add("PARAM_33", VariableName.vaPicPD6)
-                .add("PARAM_34", VariableName.vaPicPD7)
-                .add("PARAM_35", VariableName.vaPicPD8)
-                .add("PARAM_36", VariableName.vaPicFT1)
-                .add("PARAM_37", VariableName.vaPicFT2)
-                .add("PARAM_38", VariableName.vaPicFT3)
-                .add("PARAM_39", VariableName.vaPicFT4)
-                .add("PARAM_40", VariableName.vaPicRI1)
-                .add("PARAM_41", VariableName.vaPicRI2)
-                .add("PARAM_42", VariableName.vaRemarkText1)
-                .add("PARAM_43", VariableName.vaRemarkText2)
-                .add("PARAM_44", VariableName.vaRemarkText3)
-                .add("PARAM_45", VariableName.vaRemarkText4)
+        try {
+            JSONArray data = new JSONArray(mOkHttpHelper.serverRequest(mWebService.URL_createNew,params));
+            JSONObject c = data.getJSONObject(0);
+
+            if(c.getInt("STATUS") == 0){
+                return c.getString("DESCRIPTION");
+            } else {
+                return "";
+            }
+        } catch (JSONException e) {
+            return e.getMessage().toString();
+        }
+    }
+
+    private String sendDetailToServer(String seq, QADataTable qaDataTable){
+        FormBody params = new FormBody.Builder()
+                .add("PARAM_1", seq)
+                .add("PARAM_2", qaDataTable.getSection())
+                .add("PARAM_3", qaDataTable.getDetail())
+                .add("PARAM_4", qaDataTable.getDetailExtra())
+                .add("PARAM_5", qaDataTable.getRadio())
+                .add("PARAM_6", qaDataTable.getComment())
 
                 .build();
 
+        try {
+            JSONArray data = new JSONArray(mOkHttpHelper.serverRequest(mWebService.URL_createNew,params));
+            JSONObject c = data.getJSONObject(0);
+
+            if(c.getInt("STATUS") == 0){
+                return c.getString("DESCRIPTION");
+            } else {
+                return "";
+            }
+        } catch (JSONException e) {
+            return e.getMessage().toString();
+        }
+    }
+
+    private String sendImageToServer(String seq, String type, String fileName){
+        mUploadPhoto.sendFileToServer(fileName, mWebService.URL_uploadFile,"IMAGE");
+
+        FormBody params = new FormBody.Builder()
+                .add("PARAM_1", seq)
+                .add("PARAM_2", type)
+                .add("PARAM_3", fileName)
+
+                .build();
 
         try {
             JSONArray data = new JSONArray(mOkHttpHelper.serverRequest(mWebService.URL_createNew, params));
@@ -156,5 +236,77 @@ public class AsyncTaskSave extends AsyncTask<String, Void, String> {
         }
     }
 
+    private String sendRemarkToServer(String seq, String type, String text){
+
+        FormBody params = new FormBody.Builder()
+                .add("PARAM_1", seq)
+                .add("PARAM_2", type)
+                .add("PARAM_3", text)
+
+                .build();
+
+        try {
+            JSONArray data = new JSONArray(mOkHttpHelper.serverRequest(mWebService.URL_createNew, params));
+            JSONObject c = data.getJSONObject(0);
+
+            if(c.getInt("STATUS") == 0){
+                return c.getString("DESCRIPTION");
+            } else {
+                return "";
+            }
+        } catch (JSONException e) {
+            return e.getMessage().toString();
+        }
+    }
+
+    private void setFileName(){
+        MPList = new ArrayList<>();
+        MPList.add(VariableName.vaPicMC1);
+        MPList.add(VariableName.vaPicMC2);
+        MPList.add(VariableName.vaPicMC3);
+        MPList.add(VariableName.vaPicMC4);
+        MPList.add(VariableName.vaPicMC5);
+        MPList.add(VariableName.vaPicMC6);
+        MPList.add(VariableName.vaPicMC7);
+        MPList.add(VariableName.vaPicMC8);
+
+        IBList = new ArrayList<>();
+        IBList.add(VariableName.vaPicIB1);
+        IBList.add(VariableName.vaPicIB2);
+        IBList.add(VariableName.vaPicIB3);
+        IBList.add(VariableName.vaPicIB4);
+
+        MCList = new ArrayList<>();
+        MCList.add(VariableName.vaPicMO1);
+
+        PRList = new ArrayList<>();
+        PRList.add(VariableName.vaPicPD1);
+        PRList.add(VariableName.vaPicPD2);
+        PRList.add(VariableName.vaPicPD3);
+        PRList.add(VariableName.vaPicPD4);
+        PRList.add(VariableName.vaPicPD5);
+        PRList.add(VariableName.vaPicPD6);
+        PRList.add(VariableName.vaPicPD7);
+        PRList.add(VariableName.vaPicPD8);
+
+        FIList = new ArrayList<>();
+        FIList.add(VariableName.vaPicFT1);
+        FIList.add(VariableName.vaPicFT2);
+        FIList.add(VariableName.vaPicFT3);
+        FIList.add(VariableName.vaPicFT4);
+
+        RMList = new ArrayList<>();
+        RMList.add(VariableName.vaPicRI1);
+        RMList.add(VariableName.vaPicRI2);
+
+    }
+
+    private void setRemarkText(){
+        RTList = new ArrayList<>();
+        RTList.add(VariableName.vaRemarkText1);
+        RTList.add(VariableName.vaRemarkText2);
+        RTList.add(VariableName.vaRemarkText3);
+        RTList.add(VariableName.vaRemarkText4);
+    }
 
 }
