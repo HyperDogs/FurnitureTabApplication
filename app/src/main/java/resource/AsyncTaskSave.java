@@ -4,7 +4,6 @@ import android.app.Activity;
 import android.app.ProgressDialog;
 import android.os.AsyncTask;
 import android.os.Handler;
-import android.util.Log;
 import android.widget.Toast;
 
 import com.example.ton.furnituretabapplication.CopyImageToServer;
@@ -120,6 +119,7 @@ public class AsyncTaskSave extends AsyncTask<String, Void, String> {
                         String text = RTList.get(i);
                         sendRemarkToServer(String.valueOf(i), "RT", text);
                     }
+                    Toast.makeText(activity,"Send Complete",Toast.LENGTH_LONG).show();
 
                 }
 
@@ -213,27 +213,32 @@ public class AsyncTaskSave extends AsyncTask<String, Void, String> {
     }
 
     private String sendImageToServer(String seq, String type, String fileName){
-        mUploadPhoto.sendFileToServer(fileName, mWebService.URL_uploadFile,"IMAGE");
+        if (fileName != null){
+            mUploadPhoto.sendFileToServer(fileName, mWebService.URL_uploadFile,"IMAGE");
 
-        FormBody params = new FormBody.Builder()
-                .add("SEQ", seq)
-                .add("TYPE", type)
-                .add("PICNAME", fileName)
+            FormBody params = new FormBody.Builder()
+                    .add("SEQ", seq)
+                    .add("TYPE", type)
+                    .add("PICNAME", fileName)
 
-                .build();
+                    .build();
 
-        try {
-            JSONArray data = new JSONArray(mOkHttpHelper.serverRequest(mWebService.URL_createNew, params));
-            JSONObject c = data.getJSONObject(0);
+            try {
+                JSONArray data = new JSONArray(mOkHttpHelper.serverRequest(mWebService.URL_createNew, params));
+                JSONObject c = data.getJSONObject(0);
 
-            if(c.getInt("STATUS") == 0){
-                return c.getString("DESCRIPTION");
-            } else {
-                return "";
+                if(c.getInt("STATUS") == 0){
+                    return c.getString("DESCRIPTION");
+                } else {
+                    return "";
+                }
+            } catch (JSONException e) {
+                return e.getMessage().toString();
             }
-        } catch (JSONException e) {
-            return e.getMessage().toString();
+        }else {
+            return null;
         }
+
     }
 
     private String sendRemarkToServer(String seq, String type, String text){

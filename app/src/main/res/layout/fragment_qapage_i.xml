@@ -990,7 +990,7 @@
                                         android:textSize="11sp" />
 
                                     <RadioButton
-                                        android:id="@+id/txtRejectF"
+                                        android:id="@+id/radioRejectF"
                                         android:layout_width="0dp"
                                         android:layout_height="match_parent"
                                         android:layout_gravity="center"

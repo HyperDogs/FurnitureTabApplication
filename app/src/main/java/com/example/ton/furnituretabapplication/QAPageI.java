@@ -12,6 +12,7 @@ import android.view.ViewGroup;
 import android.widget.DatePicker;
 import android.widget.EditText;
 import android.widget.ImageView;
+import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.TableLayout;
 import android.widget.TableRow;
@@ -33,6 +34,7 @@ import Model.QASectionModel;
  */
 public class QAPageI extends Fragment {
     private TableLayout tableComponent,maintable;
+    private RadioButton releaseRdo,rejectRdo;
     private ImageView picMainImg;
     private File file;
     private DatePickerDialog.OnDateSetListener datePick;
@@ -162,6 +164,8 @@ public class QAPageI extends Fragment {
         tableComponent = view.findViewById(R.id.tableComponent);
         picMainImg = view.findViewById(R.id.picMainImg);
         txtDate = view.findViewById(R.id.txtDate);
+        releaseRdo = view.findViewById(R.id.radioReleaseF);
+        rejectRdo = view.findViewById(R.id.radioRejectF);
 
     }
 
@@ -193,6 +197,7 @@ public class QAPageI extends Fragment {
                 txtDate.setText(sdf.format(myCalendar.getTime()));
             }
         };
+
 
     }
 

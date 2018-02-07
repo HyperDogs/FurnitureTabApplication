@@ -1,7 +1,6 @@
 package com.example.ton.furnituretabapplication;
 
 import android.graphics.Bitmap;
-import android.os.Environment;
 import android.util.Log;
 
 import java.io.ByteArrayOutputStream;
@@ -91,18 +90,18 @@ public class CopyImageToServer {
 
     public void sendFileToServer(String strSDPath, String strUrlServer, String actionMode) {
 
-        File sdCard = Environment.getExternalStorageDirectory();
-        String imageStorageFolder = File.separator + "DCIM" + File.separator + "Camera" + File.separator;
-        Bitmap bitmap = BitmapManager.decode(sdCard+imageStorageFolder+strSDPath, 1000, 1500);
+        //File sdCard = Environment.getExternalStorageDirectory();
+        //String imageStorageFolder = File.separator + "DCIM" + File.separator + "Camera" + File.separator;
+        Bitmap bitmap = BitmapManager.decode(VariableName.imageStorageFolder+strSDPath, 1000, 1500);
         String imgString = BitmapManager.getEncoded64ImageStringFromBitmap(bitmap);
 
         FormBody.Builder params = new FormBody.Builder()
                 .add("image", imgString)
                 .add("MODE", actionMode)
-                .add("filename", sdCard+imageStorageFolder+strSDPath);
+                .add("filename", VariableName.imageStorageFolder+strSDPath);
         RequestBody formBody = params.build();
 
-        Log.e("IMG NAME",sdCard+imageStorageFolder+strSDPath);
+        Log.e("IMG NAME",VariableName.imageStorageFolder+strSDPath);
         Log.e("IMG STR", imgString);
 
         okHttpHelper.serverRequest(strUrlServer, formBody);
