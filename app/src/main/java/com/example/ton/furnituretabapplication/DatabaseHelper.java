@@ -83,8 +83,10 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
             // CHECK LOGIN
             if(result.equals("")) {
-                cursor = database.query(TABLE_USERLOGIN, null, COL_ULUSERLOGINID + " = ? AND " + COL_ULPASS + " = ? AND " + COL_ULDESC + " = ? ", new String[]{userName, passWord, imei}, null, null, null);
+                cursor = database.query(TABLE_USERLOGIN, new String[]{COL_ULNAME}, COL_ULUSERLOGINID + " = ? AND " + COL_ULPASS + " = ? AND " + COL_ULDESC + " = ? ", new String[]{userName, passWord, imei}, null, null, null);
                 if (cursor.getCount() > 0) {
+                    cursor.moveToNext();
+                    VariableName.employeeName = cursor.getString(0);
                     result = "";
                 } else {
                     result = "Your device is not support !!";

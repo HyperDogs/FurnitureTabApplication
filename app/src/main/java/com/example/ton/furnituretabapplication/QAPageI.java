@@ -40,7 +40,8 @@ public class QAPageI extends Fragment {
     private DatePickerDialog.OnDateSetListener datePick;
     private Calendar myCalendar;
     private EditText txtDate;
-    //private CheckBox  checkAccept,checkReject,checkRework;
+    private TextView txtEmployee;
+    private RadioButton radioReleaseF, radioRejectF;
     private boolean fistRec = true;
     private View view;
     public static ArrayList<TextView> textViewsSectionList;
@@ -64,7 +65,7 @@ public class QAPageI extends Fragment {
         initView(view);
         setOnClick();
         initTable(inflater,view);
-
+        txtEmployee.setText(VariableName.employeeName);
 
 
 
@@ -166,7 +167,10 @@ public class QAPageI extends Fragment {
         txtDate = view.findViewById(R.id.txtDate);
         releaseRdo = view.findViewById(R.id.radioReleaseF);
         rejectRdo = view.findViewById(R.id.radioRejectF);
-
+        txtEmployee = view.findViewById(R.id.txtEmployee);
+        radioReleaseF = view.findViewById(R.id.radioReleaseF);
+        radioReleaseF.setChecked(true);
+        radioRejectF = view.findViewById(R.id.radioRejectF);
     }
 
     private void setOnClick() {
@@ -197,7 +201,18 @@ public class QAPageI extends Fragment {
                 txtDate.setText(sdf.format(myCalendar.getTime()));
             }
         };
-
+        radioReleaseF.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                radioRejectF.setChecked(false);
+            }
+        });
+        radioRejectF.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                radioReleaseF.setChecked(false);
+            }
+        });
 
     }
 
