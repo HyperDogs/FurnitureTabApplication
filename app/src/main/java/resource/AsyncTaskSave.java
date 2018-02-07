@@ -79,38 +79,38 @@ public class AsyncTaskSave extends AsyncTask<String, Void, String> {
 
                     //Detail
                     VariableName.dataTablesList = getDataTable();
-                    for (int i = 1; i <= VariableName.dataTablesList.size(); i++) {
+                    for (int i = 0; i < VariableName.dataTablesList.size(); i++) {
                         QADataTable qaDataTable = VariableName.dataTablesList.get(i);
                         sendDetailToServer(String.valueOf(i), qaDataTable);
                     }
 
                     //Image
-                    for (int i = 1; i <= MPList.size(); i++) {
+                    for (int i = 0; i < MPList.size(); i++) {
                         String fileName = MPList.get(i);
                         sendImageToServer(String.valueOf(i), "MP", fileName);
                     }
 
-                    for (int i = 1; i <= IBList.size(); i++) {
+                    for (int i = 0; i < IBList.size(); i++) {
                         String fileName = IBList.get(i);
                         sendImageToServer(String.valueOf(i), "IB", fileName);
                     }
 
-                    for (int i = 1; i <= MCList.size(); i++) {
+                    for (int i = 0; i < MCList.size(); i++) {
                         String fileName = MCList.get(i);
                         sendImageToServer(String.valueOf(i), "MC", fileName);
                     }
 
-                    for (int i = 1; i <= PRList.size(); i++) {
+                    for (int i = 0; i < PRList.size(); i++) {
                         String fileName = PRList.get(i);
                         sendImageToServer(String.valueOf(i), "PR", fileName);
                     }
 
-                    for (int i = 1; i <= FIList.size(); i++) {
+                    for (int i = 0; i < FIList.size(); i++) {
                         String fileName = FIList.get(i);
                         sendImageToServer(String.valueOf(i), "FI", fileName);
                     }
 
-                    for (int i = 1; i <= RMList.size(); i++) {
+                    for (int i = 0; i < RMList.size(); i++) {
                         String fileName = RMList.get(i);
                         sendImageToServer(String.valueOf(i), "RM", fileName);
                     }
@@ -118,7 +118,7 @@ public class AsyncTaskSave extends AsyncTask<String, Void, String> {
                     //Remark Text
                     for (int i = 1; i <= RTList.size(); i++) {
                         String text = RTList.get(i);
-                        sendRemarkToServer(String.valueOf(i), "RT", "");
+                        sendRemarkToServer(String.valueOf(i), "RT", text);
                     }
 
                 }
@@ -156,20 +156,20 @@ public class AsyncTaskSave extends AsyncTask<String, Void, String> {
         mUploadPhoto.sendFileToServer(VariableName.vaPicMainImg, mWebService.URL_uploadFile,"HEADER");
 
         FormBody params = new FormBody.Builder()
-                .add("PARAM_1", VariableName.vaPicMainImg)
-                .add("PARAM_2", VariableName.vaStockNo)
-                .add("PARAM_3", VariableName.vaAcmeNo)
-                .add("PARAM_4", VariableName.vaDesc)
-                .add("PARAM_5", VariableName.vaOrder)
-                .add("PARAM_6", VariableName.vaSampling)
-                .add("PARAM_7", VariableName.vaCusName)
-                .add("PARAM_8", VariableName.vaPoNo)
-                .add("PARAM_9", VariableName.vaAql)
-                .add("PARAM_10", VariableName.vaMajor)
-                .add("PARAM_11", VariableName.vaMinor)
-                .add("PARAM_12", VariableName.vaCheckBoxRegularIns)
-                .add("PARAM_13", VariableName.vaCheckBoxReIns)
-                .add("PARAM_14", VariableName.vaDate)
+                .add("PICMAINIMG", VariableName.vaPicMainImg)
+                .add("STOCKNO", VariableName.vaStockNo)
+                .add("ACMENO", VariableName.vaAcmeNo)
+                .add("DESC", VariableName.vaDesc)
+                .add("ORDER", VariableName.vaOrder)
+                .add("SAMPLING", VariableName.vaSampling)
+                .add("CUSNAME", VariableName.vaCusName)
+                .add("PONO", VariableName.vaPoNo)
+                .add("AQL", VariableName.vaAql)
+                .add("MAJOR", VariableName.vaMajor)
+                .add("MINOR", VariableName.vaMinor)
+                .add("REGULARINS", VariableName.vaCheckBoxRegularIns)
+                .add("REINS", VariableName.vaCheckBoxReIns)
+                .add("DATE", VariableName.vaDate)
 
                 .build();
 
@@ -189,12 +189,12 @@ public class AsyncTaskSave extends AsyncTask<String, Void, String> {
 
     private String sendDetailToServer(String seq, QADataTable qaDataTable){
         FormBody params = new FormBody.Builder()
-                .add("PARAM_1", seq)
-                .add("PARAM_2", qaDataTable.getSection())
-                .add("PARAM_3", qaDataTable.getDetail())
-                .add("PARAM_4", qaDataTable.getDetailExtra())
-                .add("PARAM_5", qaDataTable.getRadio())
-                .add("PARAM_6", qaDataTable.getComment())
+                .add("SEQ", seq)
+                .add("SECTION", qaDataTable.getSection())
+                .add("DETAIL", qaDataTable.getDetail())
+                .add("EDITTEXT", qaDataTable.getDetailExtra())
+                .add("STATUS", qaDataTable.getRadio())
+                .add("COMMENT", qaDataTable.getComment())
 
                 .build();
 
@@ -216,9 +216,9 @@ public class AsyncTaskSave extends AsyncTask<String, Void, String> {
         mUploadPhoto.sendFileToServer(fileName, mWebService.URL_uploadFile,"IMAGE");
 
         FormBody params = new FormBody.Builder()
-                .add("PARAM_1", seq)
-                .add("PARAM_2", type)
-                .add("PARAM_3", fileName)
+                .add("SEQ", seq)
+                .add("TYPE", type)
+                .add("PICNAME", fileName)
 
                 .build();
 
@@ -239,9 +239,9 @@ public class AsyncTaskSave extends AsyncTask<String, Void, String> {
     private String sendRemarkToServer(String seq, String type, String text){
 
         FormBody params = new FormBody.Builder()
-                .add("PARAM_1", seq)
-                .add("PARAM_2", type)
-                .add("PARAM_3", text)
+                .add("SEQ", seq)
+                .add("TYPE", type)
+                .add("REMARKTEXT", text)
 
                 .build();
 
