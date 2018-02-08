@@ -97,8 +97,8 @@ public class QAPageI extends Fragment {
             String headerStr = qaSectionModel.getQaSectionDesc();
             String type = qaSectionModel.getQaSectionType();
             TextView headerTxt = view.findViewById(R.id.header);
+            headerTxt.setId(1 + i);
             textViewsSectionList.add(headerTxt);
-            //headerTxt.setId(R.id.header + i);
             headerTxt.setText(headerStr);
             //VariableName.idHeader.add(headerTxt.getId());
 
