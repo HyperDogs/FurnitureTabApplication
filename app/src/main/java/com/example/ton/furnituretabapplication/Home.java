@@ -42,7 +42,7 @@ public class Home extends AppCompatActivity {
     private File file;
     private VariableName varName;
     private ImageView picMainImg;
-    private EditText txtStockNo, txtAcmeNo, txtDesc, txtOrder, txtSampling, txtCusName, txtPoNo, txtAql, txtMajor, txtMinor, txtDate, txtRT_I, txtRT_II, txtRT_III, txtRT_IIII;
+    private EditText txtStockNo, txtAcmeNo, txtDesc, txtOrder, txtSampling, txtCusName, txtPoNo, txtAql, txtMajor, txtMinor, txtDate, txtNW, txtGW, txtRT_I, txtRT_II, txtRT_III, txtRT_IIII;
     private CheckBox checkBoxRegular, checkBoxRe;
     public static Resources mResources;
 
@@ -99,6 +99,8 @@ public class Home extends AppCompatActivity {
         txtDate = findViewById(R.id.txtDate);
         checkBoxRegular  = findViewById(R.id.checkBoxRegular);
         checkBoxRe = findViewById(R.id.checkBoxRe);
+        txtNW = findViewById(R.id.txtNW);
+        txtGW = findViewById(R.id.txtGW);
 
         //Page II
 
@@ -121,8 +123,14 @@ public class Home extends AppCompatActivity {
         VariableName.vaMajor = txtMajor.getText().toString();
         VariableName.vaMinor = txtMinor.getText().toString();
         VariableName.vaDate = txtDate.getText().toString();
-        VariableName.vaCheckBoxRegularIns = checkBoxRegular.getText().toString();
-        VariableName.vaCheckBoxReIns = checkBoxRe.getText().toString();
+        if(checkBoxRegular.isChecked()){
+            VariableName.vaCheckBoxRegularIns = "REGULAR INSPECTION";
+        }
+        if(checkBoxRe.isChecked()){
+            VariableName.vaCheckBoxReIns = "RE INSPECTION";
+        }
+        VariableName.vaNW = txtNW.getText().toString();
+        VariableName.vaGW = txtGW.getText().toString();
 
         //Page II
 

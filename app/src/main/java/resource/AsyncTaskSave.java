@@ -115,12 +115,12 @@ public class AsyncTaskSave extends AsyncTask<String, Void, String> {
                     }
 
                     //Remark Text
-                    for (int i = 1; i <= RTList.size(); i++) {
+                    for (int i = 0; i < RTList.size(); i++) {
                         String text = RTList.get(i);
                         sendRemarkToServer(String.valueOf(i), "RT", text);
                     }
-                    Toast.makeText(activity,"Send Complete",Toast.LENGTH_LONG).show();
 
+                    SAVE_STATUS = true;
                 }
 
                 handler.postDelayed(new Runnable() {
@@ -170,6 +170,11 @@ public class AsyncTaskSave extends AsyncTask<String, Void, String> {
                 .add("REGULARINS", VariableName.vaCheckBoxRegularIns)
                 .add("REINS", VariableName.vaCheckBoxReIns)
                 .add("DATE", VariableName.vaDate)
+                .add("REGULAR_INSPECTION", VariableName.vaCheckBoxRegularIns)
+                .add("RE_INSPECTION", VariableName.vaCheckBoxReIns)
+                .add("NW", VariableName.vaNW)
+                .add("GW", VariableName.vaGW)
+                .add("FINAL_STATUS", VariableName.vaFinalStatus)
 
                 .build();
 
@@ -214,7 +219,7 @@ public class AsyncTaskSave extends AsyncTask<String, Void, String> {
 
     private String sendImageToServer(String seq, String type, String fileName){
         if (fileName != null){
-            mUploadPhoto.sendFileToServer(fileName, mWebService.URL_uploadFile,"IMAGE");
+            //mUploadPhoto.sendFileToServer(fileName, mWebService.URL_uploadFile,"IMAGE");
 
             FormBody params = new FormBody.Builder()
                     .add("SEQ", seq)

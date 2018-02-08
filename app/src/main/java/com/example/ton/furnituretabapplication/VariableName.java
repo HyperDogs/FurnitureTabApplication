@@ -41,6 +41,9 @@ public class VariableName {
     public static String vaCheckBoxRegularIns = "";
     public static String vaCheckBoxReIns = "";
     public static String vaDate = "";
+    public static String vaNW = "";
+    public static String vaGW = "";
+    public static String vaFinalStatus = "";
     public static String employeeName;
 
     //Qa Page II
