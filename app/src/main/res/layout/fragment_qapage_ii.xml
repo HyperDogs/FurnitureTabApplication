@@ -52,7 +52,7 @@
                 <RelativeLayout
                     android:id="@+id/relativeLayout2"
                     android:layout_width="match_parent"
-                    android:layout_height="200dp"
+                    android:layout_height="250dp"
                     android:layout_alignParentLeft="true"
                     android:layout_alignParentStart="true"
                     android:layout_below="@+id/relativeLayout"
@@ -78,7 +78,7 @@
                             android:layout_weight=".25"
                             android:background="@drawable/border"
                             android:src="@drawable/test"
-                            android:tag="defult"/>
+                            android:tag="defult" />
 
                         <ImageView
                             android:id="@+id/picMC_II"
@@ -91,7 +91,7 @@
                             android:layout_weight=".25"
                             android:background="@drawable/border"
                             android:src="@drawable/test"
-                            android:tag="defult"/>
+                            android:tag="defult" />
 
                         <ImageView
                             android:id="@+id/picMC_III"
@@ -104,7 +104,7 @@
                             android:layout_weight=".25"
                             android:background="@drawable/border"
                             android:src="@drawable/test"
-                            android:tag="defult"/>
+                            android:tag="defult" />
 
                         <ImageView
                             android:id="@+id/picMC_IIII"
@@ -117,7 +117,7 @@
                             android:layout_weight=".25"
                             android:background="@drawable/border"
                             android:src="@drawable/test"
-                            android:tag="defult"/>
+                            android:tag="defult" />
                     </LinearLayout>
 
                 </RelativeLayout>
@@ -125,7 +125,7 @@
                 <RelativeLayout
                     android:id="@+id/relativeLayout3"
                     android:layout_width="match_parent"
-                    android:layout_height="200dp"
+                    android:layout_height="250dp"
                     android:layout_alignParentLeft="true"
                     android:layout_alignParentStart="true"
                     android:layout_below="@+id/relativeLayout2"
@@ -151,7 +151,7 @@
                             android:layout_weight=".25"
                             android:background="@drawable/border"
                             android:src="@drawable/test"
-                            android:tag="defult"/>
+                            android:tag="defult" />
 
                         <ImageView
                             android:id="@+id/picMC_IV"
@@ -164,7 +164,7 @@
                             android:layout_weight=".25"
                             android:background="@drawable/border"
                             android:src="@drawable/test"
-                            android:tag="defult"/>
+                            android:tag="defult" />
 
                         <ImageView
                             android:id="@+id/picMC_VI"
@@ -177,7 +177,7 @@
                             android:layout_weight=".25"
                             android:background="@drawable/border"
                             android:src="@drawable/test"
-                            android:tag="defult"/>
+                            android:tag="defult" />
 
                         <ImageView
                             android:id="@+id/picMC_VII"
@@ -190,7 +190,7 @@
                             android:layout_weight=".25"
                             android:background="@drawable/border"
                             android:src="@drawable/test"
-                            android:tag="defult"/>
+                            android:tag="defult" />
                     </LinearLayout>
                 </RelativeLayout>
 
@@ -224,7 +224,7 @@
                 <RelativeLayout
                     android:id="@+id/relativeLayout2"
                     android:layout_width="match_parent"
-                    android:layout_height="200dp"
+                    android:layout_height="250dp"
                     android:layout_alignParentLeft="true"
                     android:layout_alignParentStart="true"
                     android:layout_below="@+id/relativeLayout"
@@ -250,7 +250,7 @@
                             android:layout_weight=".25"
                             android:background="@drawable/border"
                             android:src="@drawable/test"
-                            android:tag="defult"/>
+                            android:tag="defult" />
 
                         <ImageView
                             android:id="@+id/picIB_II"
@@ -263,7 +263,7 @@
                             android:layout_weight=".25"
                             android:background="@drawable/border"
                             android:src="@drawable/test"
-                            android:tag="defult"/>
+                            android:tag="defult" />
 
                         <ImageView
                             android:id="@+id/picIB_III"
@@ -276,7 +276,7 @@
                             android:layout_weight=".25"
                             android:background="@drawable/border"
                             android:src="@drawable/test"
-                            android:tag="defult"/>
+                            android:tag="defult" />
 
                         <ImageView
                             android:id="@+id/picIB_IIII"
@@ -289,7 +289,7 @@
                             android:layout_weight=".25"
                             android:background="@drawable/border"
                             android:src="@drawable/test"
-                            android:tag="defult"/>
+                            android:tag="defult" />
                     </LinearLayout>
 
                 </RelativeLayout>
@@ -324,7 +324,7 @@
                 <RelativeLayout
                     android:id="@+id/relativeLayout2"
                     android:layout_width="match_parent"
-                    android:layout_height="200dp"
+                    android:layout_height="250dp"
                     android:layout_alignParentLeft="true"
                     android:layout_alignParentStart="true"
                     android:layout_below="@+id/relativeLayout"
@@ -350,7 +350,7 @@
                             android:layout_weight=".25"
                             android:background="@drawable/border"
                             android:src="@drawable/test"
-                            android:tag="defult"/>
+                            android:tag="defult" />
 
                         <TextView
                             android:id="@+id/textView1"
