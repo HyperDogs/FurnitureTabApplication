@@ -8,6 +8,7 @@ import android.graphics.drawable.Drawable;
 import android.net.Uri;
 import android.provider.MediaStore;
 import android.support.v4.content.FileProvider;
+import android.util.Log;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.Toast;
@@ -40,6 +41,7 @@ public class HelperMethod extends Activity {
                             //uri = Uri.fromFile(filePagei);
                             uri = FileProvider.getUriForFile(mContext,BuildConfig.APPLICATION_ID + ".provider",filePagei);
                             intent.putExtra(MediaStore.EXTRA_OUTPUT, uri);
+                            Log.d("URI>>>>",String.valueOf(uri));
                             ((Activity)mContext).startActivityForResult(intent, imageViewInt);
                         }else if (position == 1){
                             Intent pickPhoto = new Intent(Intent.ACTION_PICK,

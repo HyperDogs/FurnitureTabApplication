@@ -178,7 +178,7 @@ public class QAPageI extends Fragment {
             @Override
             public void onClick(View view) {
 
-                file = HelperMethod.dialogImg(getActivity(), 1001, VariableName.vaPicMainImg, picMainImg);
+                file = HelperMethod.dialogImg(getContext(), 1001, VariableName.vaPicMainImg, picMainImg);
             }
         });
         myCalendar = Calendar.getInstance();

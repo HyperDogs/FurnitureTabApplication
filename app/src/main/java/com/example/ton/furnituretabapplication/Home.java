@@ -218,7 +218,7 @@ public class Home extends AppCompatActivity {
         String fileName = null;
         if (requestCode == 1001 && resultCode == RESULT_OK) {
             ImageView picMainImg = findViewById(R.id.picMainImg);
-                    if (data != null){
+                    if (data.getDataString() != null){
                         selectedImage = data.getData();
 
                         Uri uri = Uri.parse(getRealPathFromURI(Home.this,selectedImage));
