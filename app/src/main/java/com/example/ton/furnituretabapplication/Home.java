@@ -51,26 +51,34 @@ public class Home extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
 
-        mResources = getResources();
+        if (VariableName.qaSectionList != null && VariableName.qaSectionList.size() != 0) {
+            mResources = getResources();
 
-        //Toolbar
-        Toolbar toolbar = findViewById(R.id.toolbar);
-        setSupportActionBar(toolbar);
-        toolbar.setTitle("HOME");
-        // add back arrow to toolbar
-        if (getSupportActionBar() != null){
-            getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-            getSupportActionBar().setDisplayShowHomeEnabled(true);
+            //Toolbar
+            Toolbar toolbar = findViewById(R.id.toolbar);
+            setSupportActionBar(toolbar);
+            toolbar.setTitle("HOME");
+            // add back arrow to toolbar
+            if (getSupportActionBar() != null) {
+                getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+                getSupportActionBar().setDisplayShowHomeEnabled(true);
+            }
+
+
+            mSectionsPageAdapter = new SectionsPageAdapter(getSupportFragmentManager());
+            // Set up the ViewPager with the sections adapter.
+            mViewPager = findViewById(R.id.container);
+            setupViewPager(mViewPager);
+
+            TabLayout tabLayout = findViewById(R.id.tabs);
+            tabLayout.setupWithViewPager(mViewPager);
+        }else {
+            Intent mainactivity = new Intent(Home.this,MainActivity.class);
+            VariableName.qaSectionList.clear();
+            finish();
+            freeMemory();
+            startActivity(mainactivity);
         }
-
-
-        mSectionsPageAdapter = new SectionsPageAdapter(getSupportFragmentManager());
-        // Set up the ViewPager with the sections adapter.
-        mViewPager = findViewById(R.id.container);
-        setupViewPager(mViewPager);
-
-        TabLayout tabLayout = findViewById(R.id.tabs);
-        tabLayout.setupWithViewPager(mViewPager);
 
 
     }

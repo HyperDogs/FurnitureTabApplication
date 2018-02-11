@@ -1,17 +1,21 @@
 package com.example.ton.furnituretabapplication;
 
 import android.Manifest;
+import android.content.DialogInterface;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Build;
 import android.os.Bundle;
 import android.os.StrictMode;
+import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
+import android.util.DisplayMetrics;
+import android.util.Log;
+import android.view.Display;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
-import com.afollestad.materialdialogs.MaterialDialog;
 import com.karumi.dexter.Dexter;
 import com.karumi.dexter.MultiplePermissionsReport;
 import com.karumi.dexter.PermissionToken;
@@ -47,8 +51,31 @@ public class MainActivity extends AppCompatActivity {
         accessPermission();
         createDB();
 
-        //new MaterialDialog.Builder()
 
+        if (getAndroidVersion()<23) {
+            new AlertDialog.Builder(MainActivity.this)
+                    .setTitle("Alert")
+                    .setMessage("Application not support Android Version.")
+                    .setPositiveButton("Exit", new DialogInterface.OnClickListener() {
+
+                        public void onClick(DialogInterface dialog, int whichButton) {
+                            finish();
+                        }
+                    })
+                    .show();
+        }
+        if (!checkIsTablet()){
+            new AlertDialog.Builder(MainActivity.this)
+                    .setTitle("Alert")
+                    .setMessage("Application support Tablet.")
+                    .setPositiveButton("Exit", new DialogInterface.OnClickListener() {
+
+                        public void onClick(DialogInterface dialog, int whichButton) {
+                            finish();
+                        }
+                    })
+                    .show();
+        }
 
 
 
@@ -104,8 +131,24 @@ public class MainActivity extends AppCompatActivity {
     }
     private int getAndroidVersion() {
         String release = Build.VERSION.RELEASE;
+        Log.d("RELEASE",release);
         int sdkVersion = Build.VERSION.SDK_INT;
         return sdkVersion;
+    }
+    private boolean checkIsTablet() {
+        boolean isTablet = false;
+        Display display = MainActivity.this.getWindowManager().getDefaultDisplay();
+        DisplayMetrics metrics = new DisplayMetrics();
+        display.getMetrics(metrics);
+
+        float widthInches = metrics.widthPixels / metrics.xdpi;
+        float heightInches = metrics.heightPixels / metrics.ydpi;
+        double diagonalInches = Math.sqrt(Math.pow(widthInches, 2) + Math.pow(heightInches, 2));
+        if (diagonalInches >= 7.0) {
+            isTablet = true;
+        }
+
+        return isTablet;
     }
     @Override
     protected void onDestroy() {

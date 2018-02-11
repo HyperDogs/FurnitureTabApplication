@@ -2,11 +2,13 @@ package resource;
 
 import android.app.Activity;
 import android.app.ProgressDialog;
+import android.content.Intent;
 import android.os.AsyncTask;
 import android.os.Handler;
 import android.widget.Toast;
 
 import com.example.ton.furnituretabapplication.CopyImageToServer;
+import com.example.ton.furnituretabapplication.Home;
 import com.example.ton.furnituretabapplication.OkHttpHelper;
 import com.example.ton.furnituretabapplication.VariableName;
 import com.example.ton.furnituretabapplication.WebService;
@@ -130,7 +132,12 @@ public class AsyncTaskSave extends AsyncTask<String, Void, String> {
                         if (SAVE_STATUS == true) {
                             activity.runOnUiThread(new Runnable() {
                                 public void run() {
-                                Toast.makeText(activity, "Successfully Save.", Toast.LENGTH_SHORT).show();
+
+                                    Toast.makeText(activity, "Successfully Save.", Toast.LENGTH_SHORT).show();
+                                    //here
+                                    Intent home = new Intent(activity,Home.class);
+                                    activity.startActivity(home);
+                                    activity.finish();
                                 }
                             });
 
