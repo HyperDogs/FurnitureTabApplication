@@ -2,6 +2,7 @@ package com.example.ton.furnituretabapplication;
 
 import android.Manifest;
 import android.database.sqlite.SQLiteDatabase;
+import android.os.Build;
 import android.os.Bundle;
 import android.os.StrictMode;
 import android.support.v7.app.AppCompatActivity;
@@ -10,6 +11,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import com.afollestad.materialdialogs.MaterialDialog;
 import com.karumi.dexter.Dexter;
 import com.karumi.dexter.MultiplePermissionsReport;
 import com.karumi.dexter.PermissionToken;
@@ -41,8 +43,12 @@ public class MainActivity extends AppCompatActivity {
         username = findViewById(R.id.usernameEdt);
         password = findViewById(R.id.passwordEdt);
         loginBth.setOnClickListener(doLogin);
+        loginBth.setEnabled(true);
         accessPermission();
         createDB();
+
+        //new MaterialDialog.Builder()
+
 
 
 
@@ -60,7 +66,8 @@ public class MainActivity extends AppCompatActivity {
             } else if (passwordTxt.matches("")){
                 Toast.makeText(MainActivity.this,"Please enter Password !!",Toast.LENGTH_LONG).show();
             }else {
-                AsyncTaskLogin atlLogin = new AsyncTaskLogin(MainActivity.this,usernameTxt,passwordTxt);
+                loginBth.setEnabled(false);
+                AsyncTaskLogin atlLogin = new AsyncTaskLogin(MainActivity.this,usernameTxt,passwordTxt,loginBth);
                 atlLogin.execute();
             }
         }
@@ -94,6 +101,11 @@ public class MainActivity extends AppCompatActivity {
             }
         }, Manifest.permission.CAMERA, Manifest.permission.WRITE_EXTERNAL_STORAGE, Manifest.permission.READ_PHONE_STATE,Manifest.permission.READ_EXTERNAL_STORAGE);
 
+    }
+    private int getAndroidVersion() {
+        String release = Build.VERSION.RELEASE;
+        int sdkVersion = Build.VERSION.SDK_INT;
+        return sdkVersion;
     }
     @Override
     protected void onDestroy() {

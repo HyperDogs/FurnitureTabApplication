@@ -9,6 +9,7 @@ import android.database.sqlite.SQLiteDatabase;
 import android.os.AsyncTask;
 import android.os.Handler;
 import android.telephony.TelephonyManager;
+import android.widget.Button;
 import android.widget.Toast;
 
 import com.example.ton.furnituretabapplication.DatabaseHelper;
@@ -32,15 +33,17 @@ public class AsyncTaskLogin extends AsyncTask<String, Void, String> {
     private ProgressDialog progressDialog;
     private String getUser,getPassword;
     private Handler handler = new Handler();
+    private Button loginBtn;
 
     //DB
     SQLiteDatabase mDb;
     DatabaseHelper mHelper;
 
-    public AsyncTaskLogin(Activity act, String loginUser, String loginPassword){
+    public AsyncTaskLogin(Activity act, String loginUser, String loginPassword,Button login){
         this.activity = act;
         this.getUser = loginUser;
         this.getPassword = loginPassword;
+        this.loginBtn = login;
     }
 
     @Override
@@ -69,6 +72,7 @@ public class AsyncTaskLogin extends AsyncTask<String, Void, String> {
                             activity.startActivity(intent);
                             activity.finish();
                         } else {
+                            loginBtn.setEnabled(true);
                             activity.runOnUiThread(new Runnable() {
                                 public void run() {
                                     Toast.makeText(activity, errDesc, Toast.LENGTH_SHORT).show();

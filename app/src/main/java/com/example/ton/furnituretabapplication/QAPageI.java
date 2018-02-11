@@ -3,7 +3,9 @@ package com.example.ton.furnituretabapplication;
 
 import android.annotation.SuppressLint;
 import android.app.DatePickerDialog;
+import android.app.ProgressDialog;
 import android.os.Bundle;
+import android.os.Handler;
 import android.support.v4.app.Fragment;
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -50,6 +52,9 @@ public class QAPageI extends Fragment {
     public static ArrayList<RadioGroup> radioGroupsStatusList;
     public static ArrayList<EditText> editTextsComment;
     public static ArrayList<String> listType;
+    private ProgressDialog progressDialog;
+    private Handler mHandler = new Handler();
+    private LayoutInflater inflater;
 
 
     public QAPageI() {
@@ -60,21 +65,33 @@ public class QAPageI extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
+        this.inflater = inflater;
         // Inflate the layout for this fragment
         view = inflater.inflate(R.layout.fragment_qapage_i, container, false);
         initView(view);
         setOnClick();
-        initTable(inflater,view);
+
+
+         progressDialog = ProgressDialog.show(getContext(), "",
+                                "Moving...", true);
+
+                        mHandler.postDelayed(new Runnable() {
+                            @Override
+                            public void run() {
+                                initTable(view);
+                    progressDialog.dismiss();
+                }
+             }, 1500);
+
+
+
+
         txtEmployee.setText(VariableName.employeeName);
-
-
-
-
         return view;
     }
 
     @SuppressLint("ResourceAsColor")
-    private void initTable(LayoutInflater inflater,View view) {
+    private void initTable(View view) {
 
         List<QASectionModel> qaSectionlModelList = VariableName.qaSectionList;
         maintable.removeAllViews();
