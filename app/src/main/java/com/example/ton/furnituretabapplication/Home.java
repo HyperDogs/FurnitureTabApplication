@@ -51,7 +51,6 @@ public class Home extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
 
-        if (VariableName.qaSectionList != null && VariableName.qaSectionList.size() != 0) {
             mResources = getResources();
 
             //Toolbar
@@ -72,13 +71,6 @@ public class Home extends AppCompatActivity {
 
             TabLayout tabLayout = findViewById(R.id.tabs);
             tabLayout.setupWithViewPager(mViewPager);
-        }else {
-            Intent mainactivity = new Intent(Home.this,MainActivity.class);
-            VariableName.qaSectionList.clear();
-            finish();
-            freeMemory();
-            startActivity(mainactivity);
-        }
 
 
     }

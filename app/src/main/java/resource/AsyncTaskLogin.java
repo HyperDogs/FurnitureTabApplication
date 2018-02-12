@@ -9,7 +9,6 @@ import android.database.sqlite.SQLiteDatabase;
 import android.os.AsyncTask;
 import android.os.Handler;
 import android.telephony.TelephonyManager;
-import android.util.Log;
 import android.widget.Button;
 import android.widget.Toast;
 
@@ -110,8 +109,6 @@ public class AsyncTaskLogin extends AsyncTask<String, Void, String> {
         ArrayList<String> qaSectionTypeList = webServiceQASection.getQaSectionType();
         ArrayList<String> qaSectionDescList = webServiceQASection.getQaSectionDesc();
         VariableName.qaSectionList = new ArrayList();
-        Log.d("qaSectionList",String.valueOf(VariableName.qaSectionList.size()));
-        if(VariableName.qaSectionList != null && VariableName.qaSectionList.size() != 0) {
             for (int i = 0; i < qaSectionTypeList.size(); i++) {
                 QASectionModel qaSectionModel = new QASectionModel();
                 qaSectionModel.setQaSectionType(qaSectionTypeList.get(i));
@@ -145,10 +142,6 @@ public class AsyncTaskLogin extends AsyncTask<String, Void, String> {
                 VariableName.qaSectionList.set(i, qaSectionModel);
 
             }
-        }else {
-            VariableName.qaSectionList.clear();
-            Toast.makeText(activity,"Cannot get data from server.",Toast.LENGTH_LONG).show();
-        }
 
     }
 
