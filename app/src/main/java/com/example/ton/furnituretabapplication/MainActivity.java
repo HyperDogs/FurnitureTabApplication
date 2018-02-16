@@ -78,8 +78,6 @@ public class MainActivity extends AppCompatActivity {
         }
 
 
-
-
     }
 
     private View.OnClickListener doLogin = new View.OnClickListener() {

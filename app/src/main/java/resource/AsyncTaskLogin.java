@@ -136,6 +136,7 @@ public class AsyncTaskLogin extends AsyncTask<String, Void, String> {
                         qaDetailModel.setQaDetailDesc(qaDetailDescList.get(j));
                         qaDetailModel.setQaDetailTxtUse(qaDetailTxtUseList.get(j));
                         qaDetailModelList.add(qaDetailModel);
+                        VariableName.sizeTable = j;
                     }
                 }
                 qaSectionModel.setQaDetailModelList(qaDetailModelList);

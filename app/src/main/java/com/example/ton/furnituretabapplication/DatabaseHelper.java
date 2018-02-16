@@ -13,7 +13,7 @@ import android.database.sqlite.SQLiteOpenHelper;
 public class DatabaseHelper extends SQLiteOpenHelper {
     private SQLiteDatabase database;
     private static final String DATABASE_NAME = "SQLiteDatabase.db";
-    public static final int DATABASE_VERSION = 2;
+    public static final int DATABASE_VERSION = 3;
     public static final String TABLE_USERLOGIN = "TBUserLogin";
 
     public static final String COL_ULUSERLOGINID = "ulUserLoginId";
@@ -56,6 +56,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
                 "('party', '1589', 'Party Suwit', '867007020839046', '04', '01'), " +
                 "('2', 'admin', 'admin', '357220073447263', '02', '01'), " +
                 "('3', 'admin', 'admin', '357221073447261', '03', '01'), " +
+                "('xxx', 'xxx', 'admin', '359599070107972', '03', '01'), " +
                 "('4', 'admin', 'admin', '000000000000000', '01', '01');");
     }
 

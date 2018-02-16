@@ -225,8 +225,8 @@ public class AsyncTaskSave extends AsyncTask<String, Void, String> {
     }
 
     private String sendImageToServer(String seq, String type, String fileName){
-        if (fileName != null){
-            //mUploadPhoto.sendFileToServer(fileName, mWebService.URL_uploadFile,"IMAGE");
+        if (fileName != null && !fileName.equals("")){
+            mUploadPhoto.sendFileToServer(fileName, mWebService.URL_uploadFile,"IMAGE");
 
             FormBody params = new FormBody.Builder()
                     .add("SEQ", seq)

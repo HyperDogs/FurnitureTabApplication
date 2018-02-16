@@ -25,6 +25,7 @@ public class VariableName {
     final public static String ACCEPT = "ACCEPT";
     final public static String REJECT = "REJECT";
     final public static String REWORK = "REWORK";
+    public static int sizeTable = 0;
 
     //Qa Page I
     public static String vaPicMainImg = "";

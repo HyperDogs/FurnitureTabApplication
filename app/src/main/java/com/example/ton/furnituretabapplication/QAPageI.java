@@ -55,6 +55,7 @@ public class QAPageI extends Fragment {
     private ProgressDialog progressDialog;
     private Handler mHandler = new Handler();
     private LayoutInflater inflater;
+    private Thread thread;
 
 
     public QAPageI() {
@@ -72,16 +73,18 @@ public class QAPageI extends Fragment {
         setOnClick();
 
 
-         progressDialog = ProgressDialog.show(getContext(), "",
+        progressDialog = ProgressDialog.show(getContext(), "",
                                 "Moving...", true);
 
                         mHandler.postDelayed(new Runnable() {
                             @Override
                             public void run() {
                                 initTable(view);
-                    progressDialog.dismiss();
-                }
-             }, 1500);
+                                progressDialog.dismiss();
+                            }
+
+                        }, 1500);
+
 
 
 
@@ -92,6 +95,8 @@ public class QAPageI extends Fragment {
 
     @SuppressLint("ResourceAsColor")
     private void initTable(View view) {
+
+
 
         List<QASectionModel> qaSectionlModelList = VariableName.qaSectionList;
         maintable.removeAllViews();
