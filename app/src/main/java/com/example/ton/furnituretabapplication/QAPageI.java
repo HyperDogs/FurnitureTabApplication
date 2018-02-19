@@ -73,6 +73,7 @@ public class QAPageI extends Fragment {
         setOnClick();
 
 
+
         progressDialog = ProgressDialog.show(getContext(), "",
                                 "Moving...", true);
 
@@ -84,7 +85,6 @@ public class QAPageI extends Fragment {
                             }
 
                         }, 1500);
-
 
 
 

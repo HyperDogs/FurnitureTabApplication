@@ -78,8 +78,8 @@ public class Home extends AppCompatActivity {
     private void setupViewPager(ViewPager viewPager) {
         SectionsPageAdapter adapter = new SectionsPageAdapter(getSupportFragmentManager());
         adapter.addFragment(new QAPageI(), "HOME");
-        adapter.addFragment(new QAPageII(), "PAGE 2");
-        adapter.addFragment(new QAPageIII(), "PAGE 3");
+        adapter.addFragment(new QAPageII(), "SECTION 2");
+        adapter.addFragment(new QAPageIII(), "SECTION 3");
         viewPager.setAdapter(adapter);
     }
 

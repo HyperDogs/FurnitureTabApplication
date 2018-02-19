@@ -163,6 +163,7 @@ public class AsyncTaskSave extends AsyncTask<String, Void, String> {
         mUploadPhoto.sendFileToServer(VariableName.vaPicMainImg, mWebService.URL_uploadFile,"HEADER");
 
         FormBody params = new FormBody.Builder()
+                .add("ACTION_MODE", "HEADER")
                 .add("PICMAINIMG", VariableName.vaPicMainImg)
                 .add("STOCKNO", VariableName.vaStockNo)
                 .add("ACMENO", VariableName.vaAcmeNo)
@@ -202,6 +203,7 @@ public class AsyncTaskSave extends AsyncTask<String, Void, String> {
     private String sendDetailToServer(String seq, QADataTable qaDataTable){
         FormBody params = new FormBody.Builder()
                 .add("SEQ", seq)
+                .add("ACTION_MODE", "DETAIL")
                 .add("SECTION", qaDataTable.getSection())
                 .add("DETAIL", qaDataTable.getDetail())
                 .add("EDITTEXT", qaDataTable.getDetailExtra())
@@ -230,6 +232,7 @@ public class AsyncTaskSave extends AsyncTask<String, Void, String> {
 
             FormBody params = new FormBody.Builder()
                     .add("SEQ", seq)
+                    .add("ACTION_MODE", "IMAGE")
                     .add("TYPE", type)
                     .add("PICNAME", fileName)
 
@@ -257,6 +260,7 @@ public class AsyncTaskSave extends AsyncTask<String, Void, String> {
 
         FormBody params = new FormBody.Builder()
                 .add("SEQ", seq)
+                .add("ACTION_MODE", "REMARK_TEXT")
                 .add("TYPE", type)
                 .add("REMARKTEXT", text)
 
