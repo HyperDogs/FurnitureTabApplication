@@ -53,6 +53,7 @@ public class QAPageI extends Fragment {
     public static ArrayList<EditText> editTextsComment;
     public static ArrayList<String> listType;
     public static ArrayList<String> seqList;
+    public static ArrayList<String> detailNoList;
     private ProgressDialog progressDialog;
     private Handler mHandler = new Handler();
     private LayoutInflater inflater;
@@ -111,6 +112,7 @@ public class QAPageI extends Fragment {
         editTextsDetailList = new ArrayList<>();
         radioGroupsStatusList = new ArrayList<>();
         editTextsComment = new ArrayList<>();
+        detailNoList = new ArrayList<>();
         for (int i = 0;i < qaSectionlModelList.size();i++){
             QASectionModel qaSectionModel = qaSectionlModelList.get(i);
             List<QADetailModel> qaDetailModelList = qaSectionlModelList.get(i).getQaDetailModelList();
@@ -120,7 +122,7 @@ public class QAPageI extends Fragment {
 
 
             String seq = qaSectionModel.getQaSectionSeq();
-
+            seqList.add(seq);
             String headerStr = qaSectionModel.getQaSectionDesc();
             String type = qaSectionModel.getQaSectionType();
             TextView headerTxt = view.findViewById(R.id.header);
@@ -179,6 +181,11 @@ public class QAPageI extends Fragment {
                     EditText commentEdt = view.findViewById(R.id.txtComment);
                     editTextsComment.add(commentEdt);
                     commentEdt.setId(5+a);
+
+
+                    String qadetailNo = qaDetailModel.getQaDetailNo();
+                    detailNoList.add(qadetailNo);
+
 
             }
 
@@ -257,6 +264,13 @@ public class QAPageI extends Fragment {
             qaDataTable.setSection(typeSection);
             Log.d("type",String.valueOf(listType.get(i)));
 
+            String seq = seqList.get(i);
+            qaDataTable.setSeq(seq);
+            Log.d("seq",String.valueOf(seqList.get(i)));
+
+            String detailNo = detailNoList.get(i);
+            qaDataTable.setDetaioNo(detailNo);
+            Log.d("detailNo",String.valueOf(detailNoList.get(i)));
 
             TextView detail = textViewsDetailList.get(i);
             String detailStr =  detail.getText().toString();

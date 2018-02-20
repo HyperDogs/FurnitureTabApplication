@@ -11,9 +11,18 @@ public class QADataTable {
     String radio;
     String comment;
     String detaioNo;
+    String seq;
 
     public String getDetaioNo() {
         return detaioNo;
+    }
+
+    public String getSeq() {
+        return seq;
+    }
+
+    public void setSeq(String seq) {
+        this.seq = seq;
     }
 
     public void setDetaioNo(String detaioNo) {
