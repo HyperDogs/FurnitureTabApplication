@@ -210,7 +210,6 @@ public class AsyncTaskSave extends AsyncTask<String, Void, String> {
                 .add("STATUS", qaDataTable.getRadio())
                 .add("COMMENT", qaDataTable.getComment())
                 .add("DETAIL_NO", qaDataTable.getDetaioNo())
-                .add("SECTION_SEQ", qaDataTable.getSeq())
 
                 .build();
 
