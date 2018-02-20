@@ -10,6 +10,15 @@ public class QADataTable {
     String detailExtra;
     String radio;
     String comment;
+    String detaioNo;
+
+    public String getDetaioNo() {
+        return detaioNo;
+    }
+
+    public void setDetaioNo(String detaioNo) {
+        this.detaioNo = detaioNo;
+    }
 
     public String getComment() {
         return comment;
