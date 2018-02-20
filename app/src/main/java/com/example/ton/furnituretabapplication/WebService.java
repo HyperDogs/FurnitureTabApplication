@@ -54,8 +54,7 @@ public class WebService {
                     JSONObject c = data.getJSONObject(i);
                     qaSectionType.add(c.getString("TYPE").toString());
                     qaSectionDesc.add(c.getString("DESC").toString());
-                    qaSectionSeq.add(String.valueOf(c.getInt("SEQ")));
-                    Log.d("qaSectionSeq", qaSectionSeq.get(i));
+                    qaSectionSeq.add(c.getString("SEQ").toString());
                 }
             }
         } catch (JSONException e) {
