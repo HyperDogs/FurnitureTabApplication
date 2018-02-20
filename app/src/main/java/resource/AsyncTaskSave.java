@@ -134,7 +134,7 @@ public class AsyncTaskSave extends AsyncTask<String, Void, String> {
                                 public void run() {
 
                                     Toast.makeText(activity, "Successfully Save.", Toast.LENGTH_SHORT).show();
-                                    //here
+                                    VariableName.clearVar();
                                     Intent home = new Intent(activity,Home.class);
                                     activity.startActivity(home);
                                     activity.finish();

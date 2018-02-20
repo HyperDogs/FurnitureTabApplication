@@ -133,6 +133,17 @@ public class VariableName {
         vaRemarkText2 = "";
         vaRemarkText3 = "";
         vaRemarkText4 = "";
+
+
+
+        QAPageI.textViewsSectionList.clear();
+        QAPageI.textViewsDetailList.clear();
+        QAPageI.editTextsDetailList.clear();
+        QAPageI.radioGroupsStatusList.clear();
+        QAPageI.editTextsComment.clear();
+        QAPageI.listType.clear();
+        QAPageI.seqList.clear();
+        QAPageI.detailNoList.clear();
     }
 
 }
