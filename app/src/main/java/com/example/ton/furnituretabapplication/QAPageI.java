@@ -122,7 +122,6 @@ public class QAPageI extends Fragment {
 
 
             String seq = qaSectionModel.getQaSectionSeq();
-            seqList.add(seq);
             String headerStr = qaSectionModel.getQaSectionDesc();
             String type = qaSectionModel.getQaSectionType();
             TextView headerTxt = view.findViewById(R.id.header);
@@ -140,6 +139,7 @@ public class QAPageI extends Fragment {
             for (int a = 0;a < qaDetailModelList.size();a++){
 
                     listType.add(type);
+                    seqList.add(seq);
                     QADetailModel qaDetailModel = qaDetailModelList.get(a);
                     tableRow1 = new TableRow(getContext());
                     if (qaDetailModel.getQaDetailTxtUse().equals("N")) {
