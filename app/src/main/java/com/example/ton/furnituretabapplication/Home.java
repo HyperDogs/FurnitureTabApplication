@@ -16,6 +16,8 @@ import android.support.v7.widget.Toolbar;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.view.inputmethod.InputMethodManager;
 import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.ImageView;
@@ -69,16 +71,17 @@ public class Home extends AppCompatActivity {
             mViewPager = findViewById(R.id.container);
             setupViewPager(mViewPager);
 
-            TabLayout tabLayout = findViewById(R.id.tabs);
+            final TabLayout tabLayout = findViewById(R.id.tabs);
             tabLayout.setupWithViewPager(mViewPager);
             tabLayout.addOnTabSelectedListener(new TabLayout.OnTabSelectedListener() {
                 @Override
                 public void onTabSelected(TabLayout.Tab tab) {
+
                 }
 
                 @Override
                 public void onTabUnselected(TabLayout.Tab tab) {
-
+                   hideKeyboard();
                 }
 
                 @Override
@@ -88,6 +91,13 @@ public class Home extends AppCompatActivity {
             });
 
 
+    }
+    private void hideKeyboard() {
+        View view = getCurrentFocus();
+        if (view != null) {
+            InputMethodManager inputManager = (InputMethodManager) getSystemService(Context.INPUT_METHOD_SERVICE);
+            inputManager.hideSoftInputFromWindow(view.getWindowToken(), InputMethodManager.HIDE_NOT_ALWAYS);
+        }
     }
 
     private void setupViewPager(ViewPager viewPager) {
