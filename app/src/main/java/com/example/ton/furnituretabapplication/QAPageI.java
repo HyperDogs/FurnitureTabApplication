@@ -52,6 +52,7 @@ public class QAPageI extends Fragment {
     public static ArrayList<RadioGroup> radioGroupsStatusList;
     public static ArrayList<EditText> editTextsComment;
     public static ArrayList<String> listType;
+    public static ArrayList<String> seqList;
     private ProgressDialog progressDialog;
     private Handler mHandler = new Handler();
     private LayoutInflater inflater;
@@ -103,6 +104,7 @@ public class QAPageI extends Fragment {
         TableRow tableRow = null;
         TableRow tableRow1 = null;
 
+        seqList = new ArrayList<>();
         textViewsSectionList = new ArrayList<>();
         listType = new ArrayList();
         textViewsDetailList = new ArrayList<>();
@@ -116,13 +118,16 @@ public class QAPageI extends Fragment {
             inflater.inflate(R.layout.row_table_head,tableRow);
             maintable.addView(tableRow);
 
+
+            String seq = qaSectionModel.getQaSectionSeq();
+
             String headerStr = qaSectionModel.getQaSectionDesc();
             String type = qaSectionModel.getQaSectionType();
             TextView headerTxt = view.findViewById(R.id.header);
             headerTxt.setId(1 + i);
             textViewsSectionList.add(headerTxt);
             headerTxt.setText(headerStr);
-            //VariableName.idHeader.add(headerTxt.getId());
+
 
 
             TableLayout tableCom = view.findViewById(R.id.tableComponent);
