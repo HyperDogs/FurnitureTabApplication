@@ -9,6 +9,7 @@ import java.util.List;
 public class QASectionModel {
     String qaSectionType;
     String qaSectionDesc;
+    String qaSectionSeq;
     QADetailModel qaDetailModel;
     List<QADetailModel> qaDetailModelList;
 
@@ -26,6 +27,14 @@ public class QASectionModel {
 
     public void setQaSectionDesc(String qaSectionDesc) {
         this.qaSectionDesc = qaSectionDesc;
+    }
+
+    public String getQaSectionSeq() {
+        return qaSectionSeq;
+    }
+
+    public void setQaSectionSeq(String qaSectionSeq) {
+        this.qaSectionSeq = qaSectionSeq;
     }
 
     public QADetailModel getQaDetailModel() {

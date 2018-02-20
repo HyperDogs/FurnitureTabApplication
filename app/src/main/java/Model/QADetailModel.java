@@ -9,6 +9,7 @@ public class QADetailModel {
     String qaDetailType;
     String qaDetailDesc;
     String qaDetailTxtUse;
+    String qaDetailNo;
 
     public String getQaDetailSeq() {
         return qaDetailSeq;
@@ -40,5 +41,13 @@ public class QADetailModel {
 
     public void setQaDetailTxtUse(String qaDetailTxtUse) {
         this.qaDetailTxtUse = qaDetailTxtUse;
+    }
+
+    public String getQaDetailNo() {
+        return qaDetailNo;
+    }
+
+    public void setQaDetailNo(String qaDetailNo) {
+        this.qaDetailNo = qaDetailNo;
     }
 }

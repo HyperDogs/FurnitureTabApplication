@@ -108,11 +108,13 @@ public class AsyncTaskLogin extends AsyncTask<String, Void, String> {
         webServiceQASection.getQASection();
         ArrayList<String> qaSectionTypeList = webServiceQASection.getQaSectionType();
         ArrayList<String> qaSectionDescList = webServiceQASection.getQaSectionDesc();
+        ArrayList<String> qaSectionSeqList = webServiceQASection.getQaSectionSeq();
         VariableName.qaSectionList = new ArrayList();
             for (int i = 0; i < qaSectionTypeList.size(); i++) {
                 QASectionModel qaSectionModel = new QASectionModel();
                 qaSectionModel.setQaSectionType(qaSectionTypeList.get(i));
                 qaSectionModel.setQaSectionDesc(qaSectionDescList.get(i));
+                qaSectionModel.setQaSectionSeq(qaSectionSeqList.get(i));
                 VariableName.qaSectionList.add(qaSectionModel);
             }
 
@@ -123,6 +125,7 @@ public class AsyncTaskLogin extends AsyncTask<String, Void, String> {
             ArrayList<String> qaDetailTypeList = webServiceQADetail.getQaDetailType();
             ArrayList<String> qaDetailDescList = webServiceQADetail.getQaDetailDesc();
             ArrayList<String> qaDetailTxtUseList = webServiceQADetail.getQaDetailTxtUse();
+            ArrayList<String> qaDetailNoList = webServiceQADetail.getQaDetailNo();
 
             for (int i = 0; i < VariableName.qaSectionList.size(); i++) {
                 List<QADetailModel> qaDetailModelList = new ArrayList();
@@ -135,6 +138,7 @@ public class AsyncTaskLogin extends AsyncTask<String, Void, String> {
                         qaDetailModel.setQaDetailType(qaDetailTypeList.get(j));
                         qaDetailModel.setQaDetailDesc(qaDetailDescList.get(j));
                         qaDetailModel.setQaDetailTxtUse(qaDetailTxtUseList.get(j));
+                        qaDetailModel.setQaDetailNo(qaDetailNoList.get(j));
                         qaDetailModelList.add(qaDetailModel);
                         VariableName.sizeTable = j;
                     }

@@ -1,5 +1,7 @@
 package com.example.ton.furnituretabapplication;
 
+import android.util.Log;
+
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -26,7 +28,9 @@ public class WebService {
     OkHttpHelper okHttpHelper = new OkHttpHelper();
     public ArrayList<String> qaSectionType;
     public ArrayList<String> qaSectionDesc;
+    public ArrayList<String> qaSectionSeq;
 
+    public ArrayList<String> qaDetailNo;
     public ArrayList<String> qaDetailSeq;
     public ArrayList<String> qaDetailType;
     public ArrayList<String> qaDetailDesc;
@@ -44,11 +48,14 @@ public class WebService {
             if(data.length()>0) {
                 qaSectionType = new ArrayList<String>();
                 qaSectionDesc = new ArrayList<String>();
+                qaSectionSeq = new ArrayList<String>();
 
                 for (int i = 0; i < data.length(); i++) {
                     JSONObject c = data.getJSONObject(i);
                     qaSectionType.add(c.getString("TYPE").toString());
                     qaSectionDesc.add(c.getString("DESC").toString());
+                    qaSectionSeq.add(String.valueOf(c.getInt("SEQ")));
+                    Log.d("qaSectionSeq", qaSectionSeq.get(i));
                 }
             }
         } catch (JSONException e) {
@@ -64,6 +71,10 @@ public class WebService {
         return  qaSectionDesc;
     }
 
+    public ArrayList<String> getQaSectionSeq(){
+        return  qaSectionSeq;
+    }
+
     public void getQADetail(){
         RequestBody qaParams = new FormBody.Builder()
                 .build();
@@ -74,6 +85,7 @@ public class WebService {
             JSONArray data = new JSONArray(qaResult);
 
             if(data.length()>0) {
+                qaDetailNo = new ArrayList<String>();
                 qaDetailSeq = new ArrayList<String>();
                 qaDetailType = new ArrayList<String>();
                 qaDetailDesc = new ArrayList<String>();
@@ -81,6 +93,7 @@ public class WebService {
 
                 for (int i = 0; i < data.length(); i++) {
                     JSONObject c = data.getJSONObject(i);
+                    qaDetailNo.add(c.getString("NO").toString());
                     qaDetailSeq.add(c.getString("SEQ").toString());
                     qaDetailType.add(c.getString("TYPE").toString());
                     qaDetailDesc.add(c.getString("DESC").toString());
@@ -106,5 +119,9 @@ public class WebService {
 
     public ArrayList<String> getQaDetailTxtUse(){
         return  qaDetailTxtUse;
+    }
+
+    public ArrayList<String> getQaDetailNo(){
+        return  qaDetailNo;
     }
 }
