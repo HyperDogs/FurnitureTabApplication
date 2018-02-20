@@ -41,7 +41,7 @@ public class VariableName {
     public static String vaNW = "";
     public static String vaGW = "";
     public static String vaFinalStatus = "";
-    public static String employeeName;
+    public static String employeeName = "";
 
     //Qa Page II
     public static String vaPicMC1 = "";
@@ -79,7 +79,60 @@ public class VariableName {
     public static String vaRemarkText4 = "";
 
     public static void clearVar(){
+        //Qa Page I
+        vaPicMainImg = "";
+        vaStockNo = "";
+        vaAcmeNo = "";
+        vaDesc = "";
+        vaOrder = "";
+        vaSampling = "";
+        vaCusName = "";
+        vaPoNo = "";
+        vaAql = "";
+        vaMajor = "";
+        vaMinor = "";
+        vaCheckBoxRegularIns = "";
+        vaCheckBoxReIns = "";
+        vaDate = "";
+        vaNW = "";
+        vaGW = "";
+        vaFinalStatus = "";
+        employeeName = "";
 
+        //Qa Page II
+        vaPicMC1 = "";
+        vaPicMC2 = "";
+        vaPicMC3 = "";
+        vaPicMC4 = "";
+        vaPicMC5 = "";
+        vaPicMC6 = "";
+        vaPicMC7 = "";
+        vaPicMC8 = "";
+        vaPicIB1 = "";
+        vaPicIB2 = "";
+        vaPicIB3 = "";
+        vaPicIB4 = "";
+        vaPicMO1 = "";
+
+        //Qa Page III
+        vaPicPD1 = "";
+        vaPicPD2 = "";
+        vaPicPD3 = "";
+        vaPicPD4 = "";
+        vaPicPD5 = "";
+        vaPicPD6 = "";
+        vaPicPD7 = "";
+        vaPicPD8 = "";
+        vaPicFT1 = "";
+        vaPicFT2 = "";
+        vaPicFT3 = "";
+        vaPicFT4 = "";
+        vaPicRI1 = "";
+        vaPicRI2 = "";
+        vaRemarkText1 = "";
+        vaRemarkText2 = "";
+        vaRemarkText3 = "";
+        vaRemarkText4 = "";
     }
 
 }
