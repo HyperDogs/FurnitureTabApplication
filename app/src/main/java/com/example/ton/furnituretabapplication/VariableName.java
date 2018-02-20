@@ -16,10 +16,6 @@ import Model.QASectionModel;
 public class VariableName {
 
     public static String imageStorageFolder = Environment.getExternalStorageDirectory() + File.separator + "DCIM" + File.separator + "Camera" + File.separator;
-    public static ArrayList idHeader;
-    public static ArrayList idDetail;
-    public static ArrayList idRadio;
-    public static ArrayList dataTable;
     public static List<QASectionModel> qaSectionList;
     public static ArrayList<QADataTable> dataTablesList;
     final public static String ACCEPT = "ACCEPT";
@@ -82,6 +78,8 @@ public class VariableName {
     public static String vaRemarkText3 = "";
     public static String vaRemarkText4 = "";
 
+    public static void clearVar(){
 
+    }
 
 }
