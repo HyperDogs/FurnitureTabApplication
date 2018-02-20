@@ -107,11 +107,14 @@
                                     android:layout_marginBottom="-5dp"
                                     android:layout_weight="0.6"
                                     android:backgroundTint="@color/black"
-                                    android:maxLength="20"
+                                    android:maxLines="1"
                                     android:paddingLeft="2dp"
                                     android:paddingTop="1dp"
                                     android:textColor="@android:color/black"
-                                    android:textSize="14sp" />
+                                    android:textSize="14sp"
+                                    android:clickable="true"
+                                    android:focusable="true"
+                                    android:focusableInTouchMode ="true"/>
 
                             </LinearLayout>
 
@@ -149,11 +152,13 @@
                                     android:layout_marginBottom="-5dp"
                                     android:layout_weight="0.6"
                                     android:backgroundTint="@color/black"
-                                    android:maxLength="20"
+                                    android:maxLines="1"
                                     android:paddingLeft="2dp"
                                     android:paddingTop="1dp"
                                     android:textColor="@android:color/black"
-                                    android:textSize="14sp" />
+                                    android:textSize="14sp"
+                                    android:clickable="true"
+                                    android:focusableInTouchMode="true"  />
 
                             </LinearLayout>
 
@@ -191,10 +196,11 @@
                                     android:layout_marginTop="-5dp"
                                     android:layout_weight="0.6"
                                     android:backgroundTint="@color/black"
-                                    android:maxLength="20"
                                     android:maxLines="1"
                                     android:textColor="@android:color/black"
-                                    android:textSize="14sp" />
+                                    android:textSize="14sp"
+                                    android:clickable="true"
+                                    android:focusableInTouchMode="true"  />
                             </LinearLayout>
 
                             <LinearLayout
@@ -231,12 +237,13 @@
                                     android:layout_weight="0.5"
                                     android:backgroundTint="@color/black"
                                     android:inputType="numberDecimal"
-                                    android:maxLength="20"
                                     android:maxLines="1"
                                     android:paddingLeft="2dp"
                                     android:paddingTop="1dp"
                                     android:textColor="@android:color/black"
-                                    android:textSize="14sp" />
+                                    android:textSize="14sp"
+                                    android:clickable="true"
+                                    android:focusableInTouchMode="true"  />
 
                                 <TextView
                                     android:id="@+id/colorVV"
@@ -286,12 +293,13 @@
                                     android:layout_weight="0.5"
                                     android:backgroundTint="@color/black"
                                     android:inputType="numberDecimal"
-                                    android:maxLength="20"
                                     android:maxLines="1"
                                     android:paddingLeft="2dp"
                                     android:paddingTop="1dp"
                                     android:textColor="@android:color/black"
-                                    android:textSize="14sp" />
+                                    android:textSize="14sp"
+                                    android:clickable="true"
+                                    android:focusableInTouchMode="true"  />
 
                                 <TextView
                                     android:id="@+id/colorVV2"
@@ -384,7 +392,9 @@
                                     android:layout_gravity="center"
                                     android:layout_weight="1"
                                     android:textColor="@android:color/black"
-                                    android:textSize="14sp" />
+                                    android:textSize="14sp"
+                                    android:clickable="true"
+                                    android:focusableInTouchMode="true"  />
 
                             </LinearLayout>
 
@@ -414,7 +424,9 @@
                                     android:paddingLeft="2dp"
                                     android:paddingTop="1dp"
                                     android:textColor="@android:color/black"
-                                    android:textSize="14sp" />
+                                    android:textSize="14sp"
+                                    android:clickable="true"
+                                    android:focusableInTouchMode="true"  />
 
                             </LinearLayout>
 
@@ -442,11 +454,14 @@
                                     android:layout_height="wrap_content"
                                     android:layout_gravity="left|center_horizontal"
                                     android:layout_weight=".3"
+                                    android:inputType="numberDecimal"
                                     android:maxLines="1"
                                     android:paddingLeft="2dp"
                                     android:paddingTop="1dp"
                                     android:textColor="@android:color/black"
-                                    android:textSize="14sp" />
+                                    android:textSize="14sp"
+                                    android:clickable="true"
+                                    android:focusableInTouchMode="true"  />
 
                                 <TextView
                                     android:id="@+id/textView40"
@@ -466,11 +481,14 @@
                                     android:layout_height="wrap_content"
                                     android:layout_gravity="left|center_horizontal"
                                     android:layout_weight=".40"
+                                    android:inputType="numberDecimal"
                                     android:maxLines="1"
                                     android:paddingLeft="2dp"
                                     android:paddingTop="1dp"
                                     android:textColor="@android:color/black"
-                                    android:textSize="14sp" />
+                                    android:textSize="14sp"
+                                    android:clickable="true"
+                                    android:focusableInTouchMode="true"  />
 
                                 <TextView
                                     android:id="@+id/textView36"
@@ -490,11 +508,14 @@
                                     android:layout_height="wrap_content"
                                     android:layout_gravity="left|center_horizontal"
                                     android:layout_weight=".40"
+                                    android:inputType="numberDecimal"
                                     android:maxLines="1"
                                     android:paddingLeft="2dp"
                                     android:paddingTop="1dp"
                                     android:textColor="@android:color/black"
-                                    android:textSize="14sp" />
+                                    android:textSize="14sp"
+                                    android:clickable="true"
+                                    android:focusableInTouchMode="true"  />
                             </LinearLayout>
 
                         </LinearLayout>
@@ -678,9 +699,9 @@
                     android:layout_margin="5dp">
 
                     <TableRow
-                        android:visibility="gone"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
+                        android:visibility="gone"
                         android:weightSum="1">
 
                         <LinearLayout
@@ -827,6 +848,7 @@
             </RelativeLayout>
 
             <RelativeLayout
+                android:id="@+id/relativeLayout6"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/relativeLayout5"
@@ -869,8 +891,11 @@
                             android:layout_height="wrap_content"
                             android:layout_marginBottom="-5dp"
                             android:layout_weight="1"
+                            android:clickable="true"
                             android:ems="10"
-                            android:inputType="textPersonName"
+                            android:focusableInTouchMode="true"
+                            android:inputType="textPersonName|numberDecimal"
+                            android:maxLines="1"
                             android:textSize="14sp" />
 
                         <TextView
@@ -897,8 +922,11 @@
                             android:layout_height="wrap_content"
                             android:layout_marginBottom="-5dp"
                             android:layout_weight="1"
+                            android:clickable="true"
                             android:ems="10"
-                            android:inputType="textPersonName"
+                            android:focusableInTouchMode="true"
+                            android:inputType="textPersonName|numberDecimal"
+                            android:maxLines="1"
                             android:textSize="14sp" />
 
                         <TextView
@@ -1009,9 +1037,9 @@
                                         android:layout_weight=".05"
                                         android:background="@color/half_black"
                                         android:gravity="center"
-                                        app:lrb_outterPadding="20dp"
                                         app:lrb_checkedColor="@color/colorPrimary"
-                                        app:lrb_unCheckedColor="@color/album_title"/>
+                                        app:lrb_outterPadding="20dp"
+                                        app:lrb_unCheckedColor="@color/album_title" />
 
 
                                 </TableRow>
@@ -1039,9 +1067,9 @@
                                         android:layout_weight=".05"
                                         android:background="@color/half_black"
                                         android:gravity="center"
-                                        app:lrb_outterPadding="20dp"
                                         app:lrb_checkedColor="@color/colorPrimary"
-                                        app:lrb_unCheckedColor="@color/album_title"/>
+                                        app:lrb_outterPadding="20dp"
+                                        app:lrb_unCheckedColor="@color/album_title" />
 
                                 </TableRow>
 
@@ -1051,6 +1079,15 @@
 
                     </TableLayout>
                 </FrameLayout>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="250dp"
+                android:layout_alignLeft="@+id/relativeLayout6"
+                android:layout_alignStart="@+id/relativeLayout6"
+                android:layout_below="@+id/relativeLayout6">
 
             </RelativeLayout>
 
