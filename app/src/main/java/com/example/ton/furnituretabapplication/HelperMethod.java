@@ -24,8 +24,8 @@ import java.io.File;
 public class HelperMethod extends Activity {
 
 
-    final private static String[] action_camera = {"Take Picture","Choose Picture","Preview Picture","Delete Picture"};
-    final private static String[] action_camera2 = {"Take Picture","Choose Picture"};
+    final private static String[] action_camera = {"Take Picture","Open Gallery","Preview","Delete"};
+    final private static String[] action_camera2 = {"Take Picture","Open Gallery"};
     public static File filePagei;
     public static Uri uri;
 
