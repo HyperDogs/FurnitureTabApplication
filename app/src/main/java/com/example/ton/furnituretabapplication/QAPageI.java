@@ -239,7 +239,7 @@ public class QAPageI extends Fragment {
             @Override
             public void onClick(View v) {
                 radioRejectF.setChecked(false);
-                VariableName.vaFinalStatus = "RELRASE";
+                VariableName.vaFinalStatus = "RELEASE";
             }
         });
         radioRejectF.setOnClickListener(new View.OnClickListener() {
