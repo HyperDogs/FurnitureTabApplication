@@ -84,7 +84,7 @@ public class HelperMethod extends Activity {
                                 if (nameImage == null || nameImage.isEmpty() || imageView.getTag().equals("defult")){
                                     Toast.makeText(mContext,"Please take a  photo !! ",Toast.LENGTH_SHORT).show();
                                 } else {
-                                    @SuppressLint({"NewApi", "LocalSuppress"}) Drawable drawable = mContext.getDrawable(R.drawable.test);
+                                    @SuppressLint({"NewApi", "LocalSuppress"}) Drawable drawable = mContext.getDrawable(R.drawable.xxx);
 
                                     //String nameDrawable = mContext.getResources().getResourceEntryName(R.drawable.test);
                                     imageView.setImageDrawable(drawable);
