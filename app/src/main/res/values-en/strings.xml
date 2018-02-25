@@ -9,7 +9,7 @@
 
 
 
-    <string name="stock_no">STORCK NO  </string>
+    <string name="stock_no">STOCK NO  </string>
     <string name="acme_no">ACME ITEM NO  </string>
     <string name="desc">DESCRIPTION  </string>
     <string name="order">ORDER QUANTITY  </string>

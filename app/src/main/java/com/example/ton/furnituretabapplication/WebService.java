@@ -18,7 +18,7 @@ import okhttp3.RequestBody;
 
 public class WebService {
     public static String URL_server = "http://180.183.245.89/acme/qa/";
-    public static String URL_createNew = "createNewFile.php";
+    public static String URL_createNew = "createNewQA.php";
     public static String URL_uploadFile = "UploadFileToServer.php";
     public static String URL_createPDF = "mailer/mailer.php";
     public static String URL_qaSection = "qaSection.php";

@@ -610,7 +610,7 @@
                         android:gravity="center"
                         android:text="Detail"
                         android:textColor="@android:color/black"
-                        android:textSize="18sp"
+                        android:textSize="14sp"
                         android:textStyle="bold" />
 
                     <TextView
@@ -676,7 +676,8 @@
                         android:background="@android:color/darker_gray"
                         android:gravity="center"
                         android:padding="5dp"
-                        android:text="comment"
+                        android:textSize="14sp"
+                        android:text="Comment"
                         android:textColor="@android:color/black"
                         android:textStyle="bold" />
                 </TableRow>

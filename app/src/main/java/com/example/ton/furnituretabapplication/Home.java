@@ -103,8 +103,8 @@ public class Home extends AppCompatActivity {
     private void setupViewPager(ViewPager viewPager) {
         SectionsPageAdapter adapter = new SectionsPageAdapter(getSupportFragmentManager());
         adapter.addFragment(new QAPageI(), "HOME");
-        adapter.addFragment(new QAPageII(), "SECTION 2");
-        adapter.addFragment(new QAPageIII(), "SECTION 3");
+        adapter.addFragment(new QAPageII(), "SECTION 1");
+        adapter.addFragment(new QAPageIII(), "SECTION 2");
         viewPager.setAdapter(adapter);
     }
 
@@ -148,12 +148,19 @@ public class Home extends AppCompatActivity {
         VariableName.vaMajor = txtMajor.getText().toString();
         VariableName.vaMinor = txtMinor.getText().toString();
         VariableName.vaDate = txtDate.getText().toString();
-        if(checkBoxRegular.isChecked()){
-            VariableName.vaCheckBoxRegularIns = "REGULAR INSPECTION";
-        }
-        if(checkBoxRe.isChecked()){
-            VariableName.vaCheckBoxReIns = "RE INSPECTION";
-        }
+
+         if(checkBoxRegular.isChecked()){
+             VariableName.vaCheckBoxRegularIns = "1";
+         } else {
+             VariableName.vaCheckBoxRegularIns = "0";
+         }
+
+         if(checkBoxRe.isChecked()){
+             VariableName.vaCheckBoxReIns = "1";
+         } else {
+             VariableName.vaCheckBoxReIns = "0";
+         }
+
         VariableName.vaNW = txtNW.getText().toString();
         VariableName.vaGW = txtGW.getText().toString();
 
@@ -202,8 +209,8 @@ public class Home extends AppCompatActivity {
         if (item.getItemId() == R.id.mybutton) {
             // do something here
             initView();
-            if(VariableName.vaPicMainImg.equals("")
-                    || txtStockNo.getText().toString().isEmpty()
+            //if(VariableName.vaPicMainImg.equals("")||
+            if(txtStockNo.getText().toString().isEmpty()
                     || txtAcmeNo.getText().toString().isEmpty()
                     || txtDesc.getText().toString().isEmpty()
                     || txtOrder.getText().toString().isEmpty()
@@ -214,7 +221,7 @@ public class Home extends AppCompatActivity {
                     || txtMajor.getText().toString().isEmpty()
                     || txtMinor.getText().toString().isEmpty()
                     || txtDate.getText().toString().isEmpty()){
-                Toast.makeText(Home.this,"กรณากรอกข้อมูลสินค้าให้ครบถ้วน",Toast.LENGTH_SHORT).show();
+                Toast.makeText(Home.this,"Please fill in all fields !!",Toast.LENGTH_SHORT).show();
             }else {
                 new AlertDialog.Builder(Home.this)
                     .setTitle("Save")

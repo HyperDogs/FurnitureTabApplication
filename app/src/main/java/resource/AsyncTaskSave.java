@@ -5,6 +5,7 @@ import android.app.ProgressDialog;
 import android.content.Intent;
 import android.os.AsyncTask;
 import android.os.Handler;
+import android.util.Log;
 import android.widget.Toast;
 
 import com.example.ton.furnituretabapplication.CopyImageToServer;
@@ -74,9 +75,10 @@ public class AsyncTaskSave extends AsyncTask<String, Void, String> {
             public void run() {
                 if (Imei.equals("")){
                     SAVE_STATUS = false;
-                }else {
+                } else {
                     //Header
-                    sendHeaderToServer();
+                    String saveHeaderResult = sendHeaderToServer();
+                    Log.i("SAVE HEADER RESULT", saveHeaderResult);
 
                     //Detail
                     VariableName.dataTablesList = getDataTable();
@@ -85,41 +87,51 @@ public class AsyncTaskSave extends AsyncTask<String, Void, String> {
                         sendDetailToServer(String.valueOf(i), qaDataTable);
                     }
 
+
                     //Image
+                    int imageSeq = 0;
+
                     for (int i = 0; i < MPList.size(); i++) {
                         String fileName = MPList.get(i);
-                        sendImageToServer(String.valueOf(i), "MP", fileName);
+                        sendImageToServer(String.valueOf(imageSeq), "MP", fileName);
+                        imageSeq++;
                     }
 
                     for (int i = 0; i < IBList.size(); i++) {
                         String fileName = IBList.get(i);
-                        sendImageToServer(String.valueOf(i), "IB", fileName);
+                        sendImageToServer(String.valueOf(imageSeq), "IB", fileName);
+                        imageSeq++;
                     }
 
                     for (int i = 0; i < MCList.size(); i++) {
                         String fileName = MCList.get(i);
-                        sendImageToServer(String.valueOf(i), "MC", fileName);
+                        sendImageToServer(String.valueOf(imageSeq), "MC", fileName);
+                        imageSeq++;
                     }
 
                     for (int i = 0; i < PRList.size(); i++) {
                         String fileName = PRList.get(i);
-                        sendImageToServer(String.valueOf(i), "PR", fileName);
+                        sendImageToServer(String.valueOf(imageSeq), "PR", fileName);
+                        imageSeq++;
                     }
 
                     for (int i = 0; i < FIList.size(); i++) {
                         String fileName = FIList.get(i);
-                        sendImageToServer(String.valueOf(i), "FI", fileName);
+                        sendImageToServer(String.valueOf(imageSeq), "FI", fileName);
+                        imageSeq++;
                     }
 
                     for (int i = 0; i < RMList.size(); i++) {
                         String fileName = RMList.get(i);
-                        sendImageToServer(String.valueOf(i), "RM", fileName);
+                        sendImageToServer(String.valueOf(imageSeq), "RM", fileName);
+                        imageSeq++;
                     }
 
                     //Remark Text
                     for (int i = 0; i < RTList.size(); i++) {
                         String text = RTList.get(i);
-                        sendRemarkToServer(String.valueOf(i), "RT", text);
+                        sendRemarkToServer(String.valueOf(imageSeq), "RT", text);
+                        imageSeq++;
                     }
 
                     SAVE_STATUS = true;
@@ -160,29 +172,45 @@ public class AsyncTaskSave extends AsyncTask<String, Void, String> {
     }
 
     private String sendHeaderToServer(){
-        mUploadPhoto.sendFileToServer(VariableName.vaPicMainImg, mWebService.URL_uploadFile,"HEADER");
+        if(!VariableName.vaPicMainImg .equals("")) {
+            mUploadPhoto.sendFileToServer(VariableName.vaPicMainImg, mWebService.URL_uploadFile, "HEADER");
+        }
 
         FormBody params = new FormBody.Builder()
                 .add("ACTION_MODE", "HEADER")
-                .add("PICMAINIMG", VariableName.vaPicMainImg)
-                .add("STOCKNO", VariableName.vaStockNo)
-                .add("ACMENO", VariableName.vaAcmeNo)
-                .add("DESC", VariableName.vaDesc)
-                .add("ORDER", VariableName.vaOrder)
-                .add("SAMPLING", VariableName.vaSampling)
-                .add("CUSNAME", VariableName.vaCusName)
-                .add("PONO", VariableName.vaPoNo)
-                .add("AQL", VariableName.vaAql)
+                .add("DOC_CODE", "IN01")
+                .add("DOCUMENT", Imei)
+                .add("DOCUMENTNO", "0")
+                .add("DOC_BRANCH", VariableName.userBranchId)
+                .add("DOC_SEQ", "0")
+                .add("DOC_DATE", VariableName.vaDate)
+                .add("IMG_PATH", VariableName.vaPicMainImg)
+                .add("STOCK_NO", VariableName.vaStockNo)
+                .add("ITEM_NO", VariableName.vaAcmeNo)
+                .add("ITEM_NAME", "")
+                .add("COLOR_NO", "")
+                .add("DESCRIPTION", VariableName.vaDesc)
+                .add("DESCRIPTION_EX", "")
+                .add("ORDER_QTY", VariableName.vaOrder)
+                .add("SAMPLING_SIZE", VariableName.vaSampling)
+                .add("CUTOMER_NO", "")
+                .add("CUTOMER_NAME", VariableName.vaCusName)
+                .add("TYPE", "")
+                .add("PO_NO", VariableName.vaPoNo)
+                .add("AQL_LEVEL", VariableName.vaAql)
                 .add("MAJOR", VariableName.vaMajor)
                 .add("MINOR", VariableName.vaMinor)
-                .add("REGULARINS", VariableName.vaCheckBoxRegularIns)
                 .add("REINS", VariableName.vaCheckBoxReIns)
-                .add("DATE", VariableName.vaDate)
                 .add("REGULAR_INSPECTION", VariableName.vaCheckBoxRegularIns)
                 .add("RE_INSPECTION", VariableName.vaCheckBoxReIns)
                 .add("NW", VariableName.vaNW)
                 .add("GW", VariableName.vaGW)
                 .add("FINAL_STATUS", VariableName.vaFinalStatus)
+
+                .add("EMPLOYEE_NO", VariableName.employeeNo)
+                .add("EMPLOYEE_NAME", VariableName.employeeName)
+                .add("USER_NO", VariableName.userLogin)
+                .add("USERNAME", VariableName.userName)
 
                 .build();
 
@@ -193,6 +221,7 @@ public class AsyncTaskSave extends AsyncTask<String, Void, String> {
             if(c.getInt("STATUS") == 0){
                 return c.getString("DESCRIPTION");
             } else {
+                mNewDocumentNo = c.getInt("DOCUMENTNO");
                 return "";
             }
         } catch (JSONException e) {
@@ -202,15 +231,19 @@ public class AsyncTaskSave extends AsyncTask<String, Void, String> {
 
     private String sendDetailToServer(String seq, QADataTable qaDataTable){
         FormBody params = new FormBody.Builder()
-                .add("SEQ", seq)
                 .add("ACTION_MODE", "DETAIL")
-                .add("SECTION", qaDataTable.getSection())
-                .add("DETAIL", qaDataTable.getDetail())
-                .add("EDITTEXT", qaDataTable.getDetailExtra())
-                .add("STATUS", qaDataTable.getRadio())
-                .add("COMMENT", qaDataTable.getComment())
-                .add("DETAIL_NO", qaDataTable.getDetaioNo())
+                .add("DOC_CODE", "IN01")
+                .add("DOCUMENT", Imei)
+                .add("DOCUMENTNO", String.valueOf(mNewDocumentNo))
+                .add("DOC_BRANCH", VariableName.userBranchId)
+                .add("DOC_SEQ", seq)
 
+                .add("DOC_TYPE", qaDataTable.getSection())
+                .add("ITEM_NO", qaDataTable.getDetaioNo())
+                .add("ITEM_DESC", qaDataTable.getDetail())
+                .add("ITEM_DESC_EX", qaDataTable.getDetailExtra())
+                .add("STATUS", qaDataTable.getRadio())
+                .add("MEMO", qaDataTable.getComment())
                 .build();
 
         try {
@@ -228,15 +261,20 @@ public class AsyncTaskSave extends AsyncTask<String, Void, String> {
     }
 
     private String sendImageToServer(String seq, String type, String fileName){
-        if (fileName != null && !fileName.equals("")){
-            mUploadPhoto.sendFileToServer(fileName, mWebService.URL_uploadFile,"IMAGE");
+        if (fileName != null && !fileName.equals("")) {
+            mUploadPhoto.sendFileToServer(fileName, mWebService.URL_uploadFile, "IMAGE");
+        }
 
             FormBody params = new FormBody.Builder()
-                    .add("SEQ", seq)
                     .add("ACTION_MODE", "IMAGE")
+                    .add("DOC_CODE", "IN01")
+                    .add("DOCUMENT", Imei)
+                    .add("DOCUMENTNO", String.valueOf(mNewDocumentNo))
+                    .add("DOC_BRANCH", VariableName.userBranchId)
+                    .add("DOC_SEQ", seq)
                     .add("TYPE", type)
-                    .add("PICNAME", fileName)
-
+                    .add("IMG_PATH", fileName)
+                    .add("MEMO", "")
                     .build();
 
             try {
@@ -244,6 +282,7 @@ public class AsyncTaskSave extends AsyncTask<String, Void, String> {
                 JSONObject c = data.getJSONObject(0);
 
                 if(c.getInt("STATUS") == 0){
+                    Log.i("IMAGE RESULT",c.getString("DESCRIPTION"));
                     return c.getString("DESCRIPTION");
                 } else {
                     return "";
@@ -251,20 +290,20 @@ public class AsyncTaskSave extends AsyncTask<String, Void, String> {
             } catch (JSONException e) {
                 return e.getMessage().toString();
             }
-        }else {
-            return null;
-        }
 
     }
 
     private String sendRemarkToServer(String seq, String type, String text){
-
         FormBody params = new FormBody.Builder()
-                .add("SEQ", seq)
-                .add("ACTION_MODE", "REMARK_TEXT")
+                .add("ACTION_MODE", "IMAGE")
+                .add("DOC_CODE", "IN01")
+                .add("DOCUMENT", Imei)
+                .add("DOCUMENTNO", String.valueOf(mNewDocumentNo))
+                .add("DOC_BRANCH", VariableName.userBranchId)
+                .add("DOC_SEQ", seq)
                 .add("TYPE", type)
-                .add("REMARKTEXT", text)
-
+                .add("IMG_PATH", "")
+                .add("MEMO", text)
                 .build();
 
         try {
@@ -272,6 +311,7 @@ public class AsyncTaskSave extends AsyncTask<String, Void, String> {
             JSONObject c = data.getJSONObject(0);
 
             if(c.getInt("STATUS") == 0){
+                Log.i("REMARK RESULT",c.getString("DESCRIPTION"));
                 return c.getString("DESCRIPTION");
             } else {
                 return "";

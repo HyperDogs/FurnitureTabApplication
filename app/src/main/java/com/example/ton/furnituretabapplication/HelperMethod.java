@@ -49,23 +49,23 @@ public class HelperMethod extends Activity {
                             ((Activity)mContext).startActivityForResult(pickPhoto, imageViewInt);
                         }else if(position == 2){
                             if (nameImage == null || nameImage.isEmpty() || imageView.getTag().equals("defult")){
-                                Toast.makeText(mContext,"Please input image. ",Toast.LENGTH_SHORT).show();
-                            }
-                            else {
+                                Toast.makeText(mContext,"Please take a  photo !! ",Toast.LENGTH_SHORT).show();
+                            } else {
                                 Intent previewImg = new Intent(mContext,Preview.class);
                                 previewImg.putExtra("NAME_IMAGE_VIEW",nameImage);
                                 mContext.startActivity(previewImg);
                             }
-                        }
-                        else {
-                             @SuppressLint({"NewApi", "LocalSuppress"}) Drawable drawable = mContext.getDrawable(R.drawable.test);
+                        }  else {
+                            if (nameImage == null || nameImage.isEmpty() || imageView.getTag().equals("defult")){
+                                Toast.makeText(mContext,"Please take a  photo !! ",Toast.LENGTH_SHORT).show();
+                            } else {
+                                @SuppressLint({"NewApi", "LocalSuppress"}) Drawable drawable = mContext.getDrawable(R.drawable.test);
 
-                             //String nameDrawable = mContext.getResources().getResourceEntryName(R.drawable.test);
+                                //String nameDrawable = mContext.getResources().getResourceEntryName(R.drawable.test);
                                 imageView.setImageDrawable(drawable);
                                 imageView.setTag("defult");
-                                Toast.makeText(mContext,"Removed",Toast.LENGTH_SHORT).show();
-
-
+                                Toast.makeText(mContext, "Removed", Toast.LENGTH_SHORT).show();
+                            }
                         }
                     }
                 })

@@ -41,7 +41,12 @@ public class VariableName {
     public static String vaNW = "";
     public static String vaGW = "";
     public static String vaFinalStatus = "";
+
+    public static String userLogin = "";
+    public static String userName = "";
+    public static String employeeNo = "";
     public static String employeeName = "";
+    public static String userBranchId = "";
 
     //Qa Page II
     public static String vaPicMC1 = "";
