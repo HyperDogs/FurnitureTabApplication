@@ -2,7 +2,9 @@ package com.example.ton.furnituretabapplication;
 
 import android.Manifest;
 import android.content.DialogInterface;
+import android.content.Intent;
 import android.database.sqlite.SQLiteDatabase;
+import android.net.ConnectivityManager;
 import android.os.Build;
 import android.os.Bundle;
 import android.os.StrictMode;
@@ -51,7 +53,7 @@ public class MainActivity extends AppCompatActivity {
         accessPermission();
         createDB();
 
-
+        //check android varsion
         if (getAndroidVersion()<23) {
             new AlertDialog.Builder(MainActivity.this)
                     .setTitle("Alert")
@@ -64,13 +66,28 @@ public class MainActivity extends AppCompatActivity {
                     })
                     .show();
         }
+        //check tablet or phone
         if (!checkIsTablet()){
             new AlertDialog.Builder(MainActivity.this)
                     .setTitle("Alert")
-                    .setMessage("Application support Tablet.")
+                    .setMessage("Application support tablet.")
                     .setPositiveButton("Exit", new DialogInterface.OnClickListener() {
 
                         public void onClick(DialogInterface dialog, int whichButton) {
+                            finish();
+                        }
+                    })
+                    .show();
+        }
+        //check internet access
+        if (!isNetworkConnected()){
+            new AlertDialog.Builder(MainActivity.this)
+                    .setTitle("Alert")
+                    .setMessage("Application need internet.")
+                    .setPositiveButton("Exit", new DialogInterface.OnClickListener() {
+
+                        public void onClick(DialogInterface dialog, int whichButton) {
+                            startActivityForResult(new Intent(android.provider.Settings.ACTION_SETTINGS), 0);
                             finish();
                         }
                     })
@@ -124,7 +141,8 @@ public class MainActivity extends AppCompatActivity {
             public void onPermissionRationaleShouldBeShown(List<PermissionRequest> permissions, PermissionToken token) {
                 token.continuePermissionRequest();
             }
-        }, Manifest.permission.CAMERA, Manifest.permission.WRITE_EXTERNAL_STORAGE, Manifest.permission.READ_PHONE_STATE,Manifest.permission.READ_EXTERNAL_STORAGE);
+        }, Manifest.permission.CAMERA, Manifest.permission.WRITE_EXTERNAL_STORAGE, Manifest.permission.READ_PHONE_STATE
+                ,Manifest.permission.READ_EXTERNAL_STORAGE,Manifest.permission.ACCESS_WIFI_STATE,Manifest.permission.ACCESS_NETWORK_STATE);
 
     }
     private int getAndroidVersion() {
@@ -147,6 +165,11 @@ public class MainActivity extends AppCompatActivity {
         }
 
         return isTablet;
+    }
+    private boolean isNetworkConnected() {
+        ConnectivityManager cm = (ConnectivityManager) getSystemService(MainActivity.this.CONNECTIVITY_SERVICE);
+
+        return cm.getActiveNetworkInfo() != null;
     }
     @Override
     protected void onDestroy() {

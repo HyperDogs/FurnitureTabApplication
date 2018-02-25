@@ -101,7 +101,7 @@ public class VariableName {
         vaDate = "";
         vaNW = "";
         vaGW = "";
-        vaFinalStatus = "";
+        vaFinalStatus = "RELEASE";
         employeeName = "";
 
         //Qa Page II
