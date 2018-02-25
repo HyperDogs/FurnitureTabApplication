@@ -74,6 +74,7 @@
                             android:orientation="vertical"
                             android:paddingTop="5dp">
 
+
                             <LinearLayout
                                 android:layout_width="match_parent"
                                 android:layout_height="20dp"
@@ -344,6 +345,31 @@
 
                             </LinearLayout>
 
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="20dp"
+                                android:layout_weight="1"
+                                android:orientation="horizontal">
+
+
+                                <CheckBox
+                                    android:id="@+id/checkBoxRegular"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:text="Regular inspection"
+                                    android:textSize="14sp" />
+
+                                <CheckBox
+                                    android:id="@+id/checkBoxRe"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:text="Re-inspection"
+                                    android:textSize="14sp" />
+                            </LinearLayout>
+
                         </LinearLayout>
 
                         <LinearLayout
@@ -356,7 +382,8 @@
 
                             <LinearLayout
                                 android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
+                                android:layout_height="0dp"
+                                android:layout_weight="0.20"
                                 android:orientation="horizontal">
 
                                 <LinearLayout
@@ -399,8 +426,8 @@
 
                             <LinearLayout
                                 android:layout_width="match_parent"
-                                android:layout_height="10dp"
-                                android:layout_weight="1"
+                                android:layout_height="0dp"
+                                android:layout_weight="0.10"
                                 android:orientation="horizontal">
 
 
@@ -411,8 +438,8 @@
                                     android:layout_weight="1"
                                     android:text="@string/cus_name"
                                     android:textColor="@android:color/black"
-                                    android:textStyle="bold"
-                                    android:textSize="14sp" />
+                                    android:textSize="14sp"
+                                    android:textStyle="bold" />
 
                                 <EditText
                                     android:id="@+id/txtCusName"
@@ -420,18 +447,17 @@
                                     android:layout_height="wrap_content"
                                     android:layout_gravity="center"
                                     android:layout_weight="1"
-                                    android:textColor="@android:color/black"
-                                    android:textSize="14sp"
                                     android:clickable="true"
-                                    android:focusableInTouchMode="true"  />
+                                    android:focusableInTouchMode="true"
+                                    android:textColor="@android:color/black"
+                                    android:textSize="14sp" />
 
                             </LinearLayout>
 
                             <LinearLayout
                                 android:layout_width="match_parent"
-                                android:layout_height="20dp"
-                                android:layout_marginTop="-30dp"
-                                android:layout_weight="1"
+                                android:layout_height="0dp"
+                                android:layout_weight="0.10"
                                 android:orientation="horizontal">
 
                                 <TextView
@@ -450,19 +476,19 @@
                                     android:layout_gravity="center"
                                     android:layout_marginLeft="15dp"
                                     android:layout_weight="1"
+                                    android:clickable="true"
+                                    android:focusableInTouchMode="true"
                                     android:paddingLeft="2dp"
                                     android:paddingTop="1dp"
                                     android:textColor="@android:color/black"
-                                    android:textSize="14sp"
-                                    android:clickable="true"
-                                    android:focusableInTouchMode="true"  />
+                                    android:textSize="14sp" />
 
                             </LinearLayout>
 
                             <LinearLayout
                                 android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:layout_marginTop="-10dp"
+                                android:layout_height="0dp"
+                                android:layout_weight="0.10"
                                 android:orientation="horizontal">
 
                                 <TextView
@@ -483,14 +509,14 @@
                                     android:layout_height="wrap_content"
                                     android:layout_gravity="left|center_horizontal"
                                     android:layout_weight=".3"
+                                    android:clickable="true"
+                                    android:focusableInTouchMode="true"
                                     android:inputType="numberDecimal"
                                     android:maxLines="1"
                                     android:paddingLeft="2dp"
                                     android:paddingTop="1dp"
                                     android:textColor="@android:color/black"
-                                    android:textSize="14sp"
-                                    android:clickable="true"
-                                    android:focusableInTouchMode="true"  />
+                                    android:textSize="14sp" />
 
                                 <TextView
                                     android:id="@+id/textView40"
@@ -510,14 +536,14 @@
                                     android:layout_height="wrap_content"
                                     android:layout_gravity="left|center_horizontal"
                                     android:layout_weight=".40"
+                                    android:clickable="true"
+                                    android:focusableInTouchMode="true"
                                     android:inputType="numberDecimal"
                                     android:maxLines="1"
                                     android:paddingLeft="2dp"
                                     android:paddingTop="1dp"
                                     android:textColor="@android:color/black"
-                                    android:textSize="14sp"
-                                    android:clickable="true"
-                                    android:focusableInTouchMode="true"  />
+                                    android:textSize="14sp" />
 
                                 <TextView
                                     android:id="@+id/textView36"
@@ -537,14 +563,41 @@
                                     android:layout_height="wrap_content"
                                     android:layout_gravity="left|center_horizontal"
                                     android:layout_weight=".40"
+                                    android:clickable="true"
+                                    android:focusableInTouchMode="true"
                                     android:inputType="numberDecimal"
                                     android:maxLines="1"
                                     android:paddingLeft="2dp"
                                     android:paddingTop="1dp"
                                     android:textColor="@android:color/black"
+                                    android:textSize="14sp" />
+                            </LinearLayout>
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="0dp"
+                                android:layout_weight="0.10"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:id="@+id/textView9"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="0dp"
+                                    android:layout_weight="0.1"
+                                    android:gravity="left|center"
+                                    android:text="Date : "
+                                    android:textColor="#000000"
                                     android:textSize="14sp"
-                                    android:clickable="true"
-                                    android:focusableInTouchMode="true"  />
+                                    android:textStyle="bold" />
+
+                                <EditText
+                                    android:id="@+id/txtDate"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="0.7"
+                                    android:focusable="false"
+                                    android:inputType="textPersonName"
+                                    android:textSize="14sp" />
                             </LinearLayout>
 
                         </LinearLayout>
@@ -553,64 +606,6 @@
 
 
                 </LinearLayout>
-
-                <RelativeLayout
-                    android:id="@+id/relativeLayout3"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_alignParentBottom="true"
-                    android:layout_alignParentLeft="true"
-                    android:layout_alignParentStart="true">
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="-10dp"
-                        android:orientation="horizontal">
-
-
-                        <TableRow
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content">
-
-                            <CheckBox
-                                android:id="@+id/checkBoxRegular"
-                                android:layout_width="0dp"
-                                android:layout_height="wrap_content"
-                                android:layout_weight=".25"
-                                android:text="Regular inspection"
-                                android:textSize="14sp" />
-
-                            <CheckBox
-                                android:id="@+id/checkBoxRe"
-                                android:layout_width="0dp"
-                                android:layout_height="wrap_content"
-                                android:layout_weight=".25"
-                                android:text="Re-inspection"
-                                android:textSize="14sp" />
-
-                            <TextView
-                                android:id="@+id/textView15"
-                                android:layout_width="0dp"
-                                android:layout_height="wrap_content"
-                                android:layout_marginLeft="10dp"
-                                android:layout_weight=".05"
-                                android:gravity="left|center"
-                                android:text="Date : "
-                                android:textColor="#000000"
-                                android:textSize="14sp" />
-
-                            <EditText
-                                android:id="@+id/txtDate"
-                                android:layout_width="0dp"
-                                android:layout_height="wrap_content"
-                                android:layout_weight=".45"
-                                android:focusable="false"
-                                android:inputType="textPersonName"
-                                android:textSize="14sp" />
-                        </TableRow>
-                    </LinearLayout>
-                </RelativeLayout>
 
             </RelativeLayout>
 
